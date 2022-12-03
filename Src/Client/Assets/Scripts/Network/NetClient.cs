@@ -219,7 +219,7 @@ namespace Network
 
         }
 
-        //send a Protobuf message
+        //发送信息
         public void SendMessage(NetMessage message)
         {
             if (!running)
@@ -236,7 +236,7 @@ namespace Network
                 Debug.Log("Connect Server before Send Message!");
                 return;
             }
-
+            //发送队列
             sendQueue.Enqueue(message);
         
             if (this.lastSendTime == 0)
@@ -260,13 +260,16 @@ namespace Network
                 this.clientSocket.Blocking = true;
 
                 Debug.Log(string.Format("Connect[{0}] to server {1}", this.retryTimes, this.address) + "\n");
+                //异步加载
                 IAsyncResult result = this.clientSocket.BeginConnect(this.address, null, null);
+                //等待时间
                 bool success = result.AsyncWaitHandle.WaitOne(NetConnectTimeout);
                 if (success)
                 {
                     this.clientSocket.EndConnect(result);
                 }
             }
+            //服务器拒绝连接
             catch(SocketException ex)
             {
                 if(ex.SocketErrorCode == SocketError.ConnectionRefused)
@@ -275,13 +278,16 @@ namespace Network
                 }
                 Debug.LogErrorFormat("DoConnect SocketException:[{0},{1},{2}]{3} ", ex.ErrorCode,ex.SocketErrorCode,ex.NativeErrorCode, ex.ToString()); 
             }
+            //其他异常
             catch (Exception e)
             {
                 Debug.Log("DoConnect Exception:" + e.ToString() + "\n");
             }
 
+            //判断是否连接成功
             if (this.clientSocket.Connected)
             {
+                //不在阻塞   不在等待服务器响应
                 this.clientSocket.Blocking = false;
                 this.RaiseConnected(0, "Success");
             }
@@ -435,7 +441,9 @@ namespace Network
                 {
                     if (this.Connected)
                     {
+                        //发送消息
                         this.ProcessSend();
+                        //处理消息
                         this.ProceeMessage();
                     }
                 }
