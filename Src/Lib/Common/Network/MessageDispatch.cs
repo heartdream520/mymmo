@@ -5,6 +5,7 @@ namespace Network
 {
     public class MessageDispatch<T> : Singleton<MessageDispatch<T>>
     {
+        //判断消息类型并分发
         public void Dispatch(T sender, SkillBridge.Message.NetMessageResponse message)
         {
             if (message.userRegister != null) { MessageDistributer<T>.Instance.RaiseEvent(sender, message.userRegister); }
