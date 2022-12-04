@@ -107,7 +107,7 @@ message NetMessage{
 	NetMessageRequest Request = 1;
 	NetMessageResponse Response = 2;
 }
-
+//消息请求
 message NetMessageRequest{
 	UserRegisterRequest userRegister = 1;
 	UserLoginRequest userLogin = 2;
@@ -119,8 +119,13 @@ message NetMessageRequest{
 
 	MapEntitySyncRequest mapEntitySync = 8;
 	MapTeleportRequest mapTeleport = 9;
-}
+	//测试消息
+	FirstTestRequest firstRequest=10;
 
+
+
+}
+//消息响应
 message NetMessageResponse{
 	UserRegisterResponse userRegister = 1;
 	UserLoginResponse userLogin = 2;
@@ -134,14 +139,16 @@ message NetMessageResponse{
 	MapEntitySyncResponse mapEntitySync = 8;
 	
 }
-
-
+//测试消息
+message FirstTestRequest {
+	string helloword=1;
+}
 // User Protocol
 message UserLoginRequest {
 	string user = 1;
 	string passward = 2;
-}
 
+}
 message UserLoginResponse {
 	RESULT result = 1;
 	string errormsg = 2;
