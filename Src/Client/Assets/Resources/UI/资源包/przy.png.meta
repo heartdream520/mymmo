@@ -1,7 +1,22 @@
 fileFormatVersion: 2
 guid: 6228af90fa2e39749bf3e3d33a602dfa
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: przy_0
+    21300002: przy_1
+    21300004: przy_2
+    21300006: przy_3
+    21300008: przy_4
+    21300010: przy_5
+    21300012: przy_6
+    21300014: przy_7
+    21300016: przy_8
+    21300018: przy_9
+    21300020: przy_10
+    21300022: przy_11
+    21300024: przy_12
+    21300026: przy_13
+    21300028: przy_14
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -93,11 +108,311 @@ TextureImporter:
     androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: przy_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 487
+        width: 283
+        height: 84
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c37f01aae806d043aa3310ed123376a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: przy_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 325
+        width: 70
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96b1f73a4a18fb4448affc4b2e2e8a82
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: przy_2
+      rect:
+        serializedVersion: 2
+        x: 486
+        y: 0
+        width: 36
+        height: 1
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c15510791e7b3224fbe97372bd74c332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: przy_3
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 0
+        width: 477
+        height: 324
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 309}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6cfb9cb95e28ae24a911f8eb0871c92c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: przy_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 450
+        width: 66
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b8ddcfb09f1d3b4fadd5169dc293585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: przy_5
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 450
+        width: 68
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3317d18abfcfde449b7b60179ee5240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: przy_6
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 450
+        width: 140
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ecf2284fc77b61743aaf77268d987ad7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: przy_7
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 450
+        width: 138
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 614c5e8c07a02004d8f5e59dc929fd71
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: przy_8
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 325
+        width: 66
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 057510dd4c206754b884c8aa72b48c95
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: przy_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 366
+        width: 174
+        height: 84
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46c29a1579c6edd4d9e6ac69c0926a57
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: przy_10
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 367
+        width: 175
+        height: 84
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c74535f8c1e5cf14d91f446ab86a8650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: przy_11
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 328
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4943abc4868ae6a448182daa9a90280d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: przy_12
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 328
+        width: 27
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb0d283cb47f23f4482fc552a3f3d07f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: przy_13
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 326
+        width: 241
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 11, y: 0, z: 14, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54e769cabdba63f4da26f43dc72e43bb
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: przy_14
+      rect:
+        serializedVersion: 2
+        x: 483
+        y: 138
+        width: 39
+        height: 434
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 41, z: 0, w: 38}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fcfdeff0b37aef647a4c1b3c80719d83
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: e30842eebf271ce4da82653bd23f4cf8
     vertices: []
     indices: 
     edges: []

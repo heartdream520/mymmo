@@ -62,8 +62,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scenes\test\net_test\net_login.cs" />
+    <Compile Include="Assets\Scripts\Assets\Resloader.cs" />
+    <Compile Include="Assets\Scripts\loading\loading_bar.cs" />
+    <Compile Include="Assets\Scripts\loading\LoadingManager.cs" />
+    <Compile Include="Assets\Scripts\Log\UnityLogger.cs" />
     <Compile Include="Assets\Scripts\Network\NetClient.cs" />
     <Compile Include="Assets\Scripts\Scene\SceneManager.cs" />
+    <Compile Include="Assets\Scripts\Services\UserService.cs" />
+    <Compile Include="Assets\Scripts\UI\MessageBox.cs" />
+    <Compile Include="Assets\Scripts\UI\UIMessageBox.cs" />
+    <Compile Include="Assets\Scripts\UI\UIRegister.cs" />
     <Compile Include="Assets\Scripts\Utilities\GameUtil.cs" />
     <Compile Include="Assets\Scripts\Utilities\MonoSingleton.cs" />
     <Compile Include="Assets\Scripts\Utilities\Singleton.cs" />
