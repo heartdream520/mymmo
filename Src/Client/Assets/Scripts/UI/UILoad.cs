@@ -41,6 +41,7 @@ public class UILoad : MonoBehaviour
         if (result == SkillBridge.Message.Result.Success)
         {
             MessageBox.Show("登录成功！");
+            SceneManager.Instance.LoadScene("CharSelect");
             return;
         }
         MessageBox.Show(string.Format("结果：{0} msg:{1}", result, msg));
