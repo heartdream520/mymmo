@@ -1,0 +1,17 @@
+2022-12-06 12:35:35,200 [ 1] INFO  Unity: LoadingManager start
+2022-12-06 12:35:43,341 [ 1] INFO  Unity: UserLoadRequest::user :1 psw:1
+2022-12-06 12:35:43,343 [ 1] INFO  Unity: ConnectToServer() Start 
+2022-12-06 12:35:43,344 [ 1] INFO  Unity: DoConnect
+2022-12-06 12:35:43,346 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
+2022-12-06 12:35:43,348 [ 1] INFO  Unity: Connect[0] to server 127.0.0.1:8000
+
+2022-12-06 12:35:43,352 [ 1] INFO  Unity: LoadingMesager::OnGameServerConnect :0 reason:Success
+2022-12-06 12:35:43,434 [ 1] INFO  Unity: OnUserLoad:Success [None]
+2022-12-06 12:35:43,445 [ 1] ERROR Unity: Message handler exception:, Object reference not set to an instance of an object, Assembly-CSharp,   at Models.User.SetupUserInfo (SkillBridge.Message.NUserInfo info) [0x00002] in E:\极世界MMORPG\mymmo\Src\Client\Assets\Scripts\Models\User.cs:27 
+  at Services.UserService.OnUserLoad (System.Object sender, SkillBridge.Message.UserLoginResponse response) [0x00063] in E:\极世界MMORPG\mymmo\Src\Client\Assets\Scripts\Services\UserService.cs:182 
+  at Network.MessageDistributer`1[System.Object].RaiseEvent[UserLoginResponse] (System.Object sender, SkillBridge.Message.UserLoginResponse msg) [0x00000] in <filename unknown>:0 
+2022-12-06 12:35:43,446 [ 1] FATAL Unity: <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>{0
+{1}</format><args>{NullReferenceException: Object reference not set to an instance of an object, Models.User.SetupUserInfo (SkillBridge.Message.NUserInfo info) (at Assets/Scripts/Models/User.cs:27)
+Services.UserService.OnUserLoad (System.Object sender, SkillBridge.Message.UserLoginResponse response) (at Assets/Scripts/Services/UserService.cs:182)
+Network.MessageDistributer`1[System.Object].RaiseEvent[UserLoginResponse] (System.Object sender, SkillBridge.Message.UserLoginResponse msg)
+}</args></log4net.Error>

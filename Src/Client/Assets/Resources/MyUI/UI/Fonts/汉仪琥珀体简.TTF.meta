@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: 65d8001d5c6254849a05b25dc31eb52c
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: HYHuPoJ
+  fontNames:
+  - HYHuPoJ
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 422cb5e016a1f794d8f77c6667b3abb8, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

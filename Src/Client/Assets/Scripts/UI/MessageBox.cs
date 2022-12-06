@@ -3,16 +3,32 @@
 class MessageBox
 {
     static Object cacheObject = null;
-
+    static GameObject go;
+    /// <summary>
+    /// 创建消息提示
+    /// </summary>
+    /// <param name="message">提示的消息</param>
+    /// <param name="title">消息提示标题</param>
+    /// <param name="type">消息提示类型</param>
+    /// <param name="btnOK"></param>
+    /// <param name="btnCancel"></param>
+    /// <returns></returns>
     public static UIMessageBox Show(string message, string title="", MessageBoxType type = MessageBoxType.Information, string btnOK = "", string btnCancel = "")
     {
         if(cacheObject==null)
         {
-            cacheObject = Resloader.Load<Object>("UI/UIMessageBox");
+            //加载消息提示面板
+            cacheObject = Resloader.Load<Object>("MyUI/UIMessageBox");
         }
 
-        GameObject go = (GameObject)GameObject.Instantiate(cacheObject);
+        if(go!=null)
+        {
+            GameObject.Destroy(go);
+        }
+        //新建消息提示面板
+        go = (GameObject)GameObject.Instantiate(cacheObject);
         UIMessageBox msgbox = go.GetComponent<UIMessageBox>();
+        //初始化消息提示面板
         msgbox.Init(title, message, type, btnOK, btnCancel);
         return msgbox;
     }

@@ -9,17 +9,33 @@ public class UIRegister : MonoBehaviour {
     public InputField username;
     public InputField password;
     public InputField passwordConfirm;
-    public Button buttonRegister;
 
 
     // Use this for initialization
     void Start () {
-        UserService.Instance.OnRegister = this.OnRegister;
-
+        
+        UserService.Instance.OnRegister += this.OnRegister;
+       
     }
-	
+    private void OnEnable()
+    {
+        username.text = "";
+        password.text = "";
+        passwordConfirm.text = "";
+    }
+
     void OnRegister(SkillBridge.Message.Result result, string msg)
     {
+        if(msg=="用户已存在.")
+        {
+            MessageBox.Show("用户已存在！");
+            return;
+        }
+        if (result==SkillBridge.Message.Result.Success)
+        {
+            MessageBox.Show("注册成功！");
+            return;
+        }
         MessageBox.Show(string.Format("结果：{0} msg:{1}",result,msg));
     }
 	// Update is called once per frame

@@ -22,6 +22,15 @@ public class loading_bar :MonoSingleton<loading_bar>
         {
             progress_num = value;
             set_progress_text();
+            
+        }
+    }
+    public float Progress_Num_Float
+    {
+        set
+        {
+            loading_bar_image.fillAmount = value;
+            Progress_Num = (int)(value * 100f);
         }
     }
 

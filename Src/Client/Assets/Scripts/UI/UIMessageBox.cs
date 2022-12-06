@@ -2,8 +2,8 @@
 using UnityEngine.Events;
 using UnityEngine.UI;
 
-public class UIMessageBox : MonoBehaviour {
-
+public class UIMessageBox :MonoBehaviour
+{ 
     public Text title;
     public Text message;
     public Image[] icons;
@@ -20,7 +20,7 @@ public class UIMessageBox : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-		
+
 	}
 	
 	// Update is called once per frame
@@ -28,6 +28,15 @@ public class UIMessageBox : MonoBehaviour {
 		
 	}
 
+
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="title">提示标题</param>
+    /// <param name="message">提示信息</param>
+    /// <param name="type">提示类型</param>
+    /// <param name="btnOK"></param>
+    /// <param name="btnCancel"></param>
     public void Init(string title, string message, MessageBoxType type = MessageBoxType.Information, string btnOK = "", string btnCancel = "")
     {
         if (!string.IsNullOrEmpty(title)) this.title.text = title;
@@ -45,14 +54,14 @@ public class UIMessageBox : MonoBehaviour {
         this.buttonNo.gameObject.SetActive(type == MessageBoxType.Confirm);
     }
 
-    void OnClickYes()
+    public void OnClickYes()
     {
         Destroy(this.gameObject);
         if (this.OnYes != null)
             this.OnYes();
     }
 
-    void OnClickNo()
+    public void OnClickNo()
     {
         Destroy(this.gameObject);
         if (this.OnNo != null)
