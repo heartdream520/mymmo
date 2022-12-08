@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
@@ -16,19 +17,27 @@ public class UIMessageBox :MonoBehaviour
 
     public UnityAction OnYes;
     public UnityAction OnNo;
-    
+    public GameObject Panel;
+
+    public float v;
 
     // Use this for initialization
     void Start () {
-
+        Panel.transform.localScale = Vector3.zero;
+        StartCoroutine("appear");
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
-
-
+    IEnumerator appear()
+    {
+        float x = Panel.transform.localScale.x;
+        while (x < 1.0)
+        {
+            x = Mathf.Lerp(x, 2f, v * Time.deltaTime);
+            x = Mathf.Min(x, 1f);
+            Panel.transform.localScale = new Vector3(x, x, x);
+            yield return new WaitForEndOfFrame();
+        }
+        yield return null;
+    }
     /// <summary>
     /// 
     /// </summary>
