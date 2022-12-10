@@ -7,6 +7,7 @@ using Network;
 using UnityEngine;
 
 using SkillBridge.Message;
+using Models;
 
 namespace Services
 {
@@ -14,6 +15,7 @@ namespace Services
     {
         public UnityEngine.Events.UnityAction<Result, string> OnRegister;
         public UnityEngine.Events.UnityAction<Result, string> OnLoad;
+        public UnityEngine.Events.UnityAction<Result, string> OnCharacterCreate;
 
         //消息队列
         NetMessage pendingMessage = null;
@@ -26,8 +28,11 @@ namespace Services
             //绑定返回信息处理函数
             MessageDistributer.Instance.Subscribe<UserRegisterResponse>(this.OnUserRegister);
             MessageDistributer.Instance.Subscribe<UserLoginResponse>(this.OnUserLoad);
+            MessageDistributer.Instance.Subscribe<UserCreateCharacterResponse>(this.OnUserCharacterCreate);
             
         }
+
+        
 
         public void Dispose()
         {
@@ -36,6 +41,8 @@ namespace Services
             //解绑返回信息处理函数
             MessageDistributer.Instance.Unsubscribe<UserRegisterResponse>(this.OnUserRegister);
             MessageDistributer.Instance.Unsubscribe<UserLoginResponse>(this.OnUserLoad);
+            MessageDistributer.Instance.Unsubscribe<UserCreateCharacterResponse>(this.OnUserCharacterCreate);
+
         }
 
         public void Init()
@@ -75,6 +82,8 @@ namespace Services
             }
         }
 
+        
+
         public void OnGameServerDisconnect(int result, string reason)
         {
             this.DisconnectNotify(result, reason);
@@ -83,9 +92,17 @@ namespace Services
 
         bool DisconnectNotify(int result,string reason)
         {
+            //发送服务器断开信息
             if (this.pendingMessage != null)
             {
-                if (this.pendingMessage.Request.userRegister!=null)
+                if (this.pendingMessage.Request.userLogin!=null)
+                {
+                    if (this.OnLoad != null)
+                    {
+                        this.OnLoad(Result.Failed, string.Format("服务器断开！\n RESULT:{0} ERROR:{1}", result, reason));
+                    }
+                }
+                else if(this.pendingMessage.Request.userRegister!=null)
                 {
                     if (this.OnRegister != null)
                     {
@@ -150,10 +167,34 @@ namespace Services
             }
         }
         /// <summary>
+        /// 发送角色创建信息
+        /// </summary>
+        /// <param name="char_class">角色类型</param>
+        /// <param name="text">角色名</param>
+        public void SendCharacterCreate(CharacterClass char_class, string text)
+        {
+            Debug.LogFormat("UserCharacterCreate::CharacterClass :{0} name:{1}", char_class, text);
+            //发送消息到服务器
+            NetMessage message = new NetMessage();
+            message.Request = new NetMessageRequest();
+            message.Request.createChar = new UserCreateCharacterRequest();
+            message.Request.createChar.Class =char_class;
+            message.Request.createChar.Name = text;
+
+            if (this.connected && NetClient.Instance.Connected)
+            {
+                this.pendingMessage = null;
+                NetClient.Instance.SendMessage(message);
+            }
+            else
+            {
+                this.pendingMessage = message;
+                this.ConnectToServer();
+            }
+        }
+        /// <summary>
         /// 用户注册返回信息
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="response"></param>
         void OnUserRegister(object sender, UserRegisterResponse response)
         {
             Debug.LogFormat("OnUserRegister:{0} [{1}]", response.Result, response.Errormsg);
@@ -166,8 +207,6 @@ namespace Services
         /// <summary>
         /// 用户登录返回信息
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="response"></param>
         void OnUserLoad(object sender, UserLoginResponse response)
         {
             Debug.LogFormat("OnUserLoad:{0} [{1}]", response.Result, response.Errormsg);
@@ -180,6 +219,24 @@ namespace Services
             {
                 //设置当前角色
                 Models.User.Instance.SetupUserInfo(response.Userinfo);
+            }
+        }
+        /// <summary>
+        /// 角色创建返回信息
+        /// </summary>
+        private void OnUserCharacterCreate(object sender, UserCreateCharacterResponse response)
+        {
+            Debug.LogFormat("OnUserCharacterCreate:{0} [{1}]", response.Result, response.Errormsg);
+
+            if(response.Result==Result.Success)
+            {
+                //接受返回的新建角色
+                foreach(var x in response.Characters)
+                User.Instance.Info.Player.Characters.Add(x);
+            }
+            if (this.OnCharacterCreate != null)
+            {
+                this.OnCharacterCreate(response.Result, response.Errormsg);
             }
         }
     }

@@ -1,11 +1,32 @@
-﻿using System.Collections;
+﻿using Models;
+using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class UICharacterView : MonoBehaviour {
 
+    [Header("角色展示")]
     public GameObject[] characters;
 
+    [Header("角色info")]
+    public GameObject ui_character_info;
+
+    [Header("角色展示视图")]
+    public GameObject characters_content;
+
+    [Header("角色选择脚本")]
+    public character_scale character_Scale;
+
+    /// <summary>
+    /// 选择的角色idx
+    /// </summary>
+    private int selectCharacterIdx;
+    /// <summary>
+    /// 在面板上的角色
+    /// </summary>
+    private List<GameObject> content_chars_list;
 
     private int currentCharacter = 0;
 
@@ -18,25 +39,67 @@ public class UICharacterView : MonoBehaviour {
         set
         {
             currentCharacter = value;
-            this.UpdateCharacter();
+            character_Scale.selected_character(value+1);
         }
     }
-
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
-
-    void UpdateCharacter()
+    private void OnEnable()
     {
-        for(int i=0;i<3;i++)
+        selectCharacterIdx = -1;
+        CurrectCharacter = -1;
+        if(content_chars_list==null)
         {
-            characters[i].SetActive(i == this.currentCharacter);
+            content_chars_list = new List<GameObject>();
+        }
+        foreach(var y in content_chars_list)
+        {
+            Destroy(y);
+        }
+        content_chars_list.Clear();
+        for(int i=0;i<User.Instance.Info.Player.Characters.Count;i++)
+        {
+            GameObject go = Instantiate(ui_character_info, characters_content.transform, false);
+            UICharInfo uICharInfo = go.GetComponent<UICharInfo>();
+            uICharInfo.Info = User.Instance.Info.Player.Characters[i];
+            Button button = uICharInfo.select_button;
+            int idx = i;
+            button.onClick.AddListener(() =>
+            {
+                OnSelect_UI_character(idx);
+            });
+            content_chars_list.Add(go);
+            go.SetActive(true);
+        }
+        ///创建一个创建角色的UI
+        GameObject x = Instantiate(ui_character_info, characters_content.transform, false);
+        UICharInfo uIChar = x.GetComponent<UICharInfo>();
+        uIChar.Info = null;
+        content_chars_list.Add(x);
+        x.SetActive(true);
+
+    }
+    /// <summary>
+    /// 当选择角色时按钮点击事件
+    /// </summary>
+    /// <param name="idx"></param>
+    private void OnSelect_UI_character(int idx)
+    {
+        character_Scale.id= (int)User.Instance.Info.Player.Characters[idx].Class - 1;
+        CurrectCharacter =(int)User.Instance.Info.Player.Characters[idx].Class - 1;
+        selectCharacterIdx = idx;
+        for(int i=0;i<content_chars_list.Count-1;i++)
+        {
+            content_chars_list[i].GetComponent<UICharInfo>().selected_bg.SetActive(i == idx);
+        }
+
+    }
+    /// <summary>
+    /// 进入游戏按钮点击事件
+    /// </summary>
+    public void OnClickPlay()
+    {
+        if (selectCharacterIdx >= 0)
+        {
+            MessageBox.Show("进入游戏", "进入游戏", MessageBoxType.Confirm);
         }
     }
 }

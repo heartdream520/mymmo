@@ -17,7 +17,10 @@ namespace GameServer.Services
         {
             MessageDistributer<NetConnection<NetSession>>.Instance.Subscribe<UserRegisterRequest>(this.OnRegister);
             MessageDistributer<NetConnection<NetSession>>.Instance.Subscribe<UserLoginRequest>(this.OnLogin);
+            MessageDistributer<NetConnection<NetSession>>.Instance.Subscribe<UserCreateCharacterRequest>(this.OnCreateCharacter);
         }
+
+        
 
         public void Init()
         {
@@ -46,6 +49,7 @@ namespace GameServer.Services
             }
             else
             {
+                //会话，代表当前连接的用户
                 sender.Session.User = user;
     
                 message.Response.userLogin.Result = Result.Success;
@@ -64,6 +68,7 @@ namespace GameServer.Services
                     info.Id = c.ID;
                     info.Name = c.Name;
                     info.Class = (CharacterClass)c.Class;
+                    
                     message.Response.userLogin.Userinfo.Player.Characters.Add(info);
                 }
                
@@ -103,6 +108,49 @@ namespace GameServer.Services
             byte[] data = PackageHandler.PackMessage(message);
             sender.SendData(data, 0, data.Length);
         }
+
+        private void OnCreateCharacter(NetConnection<NetSession> sender, UserCreateCharacterRequest request)
+        {
+            Log.InfoFormat("UserCreateCharacter: charclass:{0}  name:{1}", request.Class, request.Name);
+            
+
+            //将新建的角色加入数据库
+            TCharacter character = new TCharacter()
+            {
+                Name = request.Name,
+                TID = (int)request.Class,
+                Class = (int)request.Class,
+                MapID = 1,
+                MapPosX = 5000,
+                MapPosY = 4000,
+                MapPosZ = 820
+            };
+            DBService.Instance.Entities.Characters.Add(character);
+            sender.Session.User.Player.Characters.Add(character);
+            DBService.Instance.Entities.SaveChanges();
+
+            NetMessage message = new NetMessage();
+            message.Response = new NetMessageResponse();
+            message.Response.createChar = new UserCreateCharacterResponse();
+
+            //将新建的角色返回
+            NCharacterInfo info = new NCharacterInfo();
+            info.Name = request.Name;
+            info.Tid = (int)request.Class;
+            info.Class = request.Class;
+            info.mapId = 1;
+            message.Response.createChar.Characters.Add(info);
+
+
+
+            message.Response.createChar.Result = Result.Success;
+            message.Response.createChar.Errormsg = "None";
+         
+
+            byte[] data = PackageHandler.PackMessage(message);
+            sender.SendData(data, 0, data.Length);
+        }
+        /*
         /// <summary>
         /// 处理登录信息
         /// </summary>
@@ -137,5 +185,6 @@ namespace GameServer.Services
             byte[] data = PackageHandler.PackMessage(message);
             sender.SendData(data, 0, data.Length);
         }
+        */
     }
 }

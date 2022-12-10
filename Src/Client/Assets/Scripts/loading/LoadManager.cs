@@ -74,7 +74,7 @@ public class LoadManager :MonoSingleton<LoadManager>
     }
     private void Start()
     {
-        Now_State = state.LOAD;
+        //Now_State = state.LOAD;
     }
 
     private state now_state;

@@ -73,9 +73,11 @@
     <Compile Include="Assets\Scripts\normal\dis_itself.cs" />
     <Compile Include="Assets\Scripts\normal\GameDataManage.cs" />
     <Compile Include="Assets\Scripts\normal\lode_scene.cs" />
+    <Compile Include="Assets\Scripts\normal\UGUI_back.cs" />
     <Compile Include="Assets\Scripts\normal\UI_appear.cs" />
     <Compile Include="Assets\Scripts\Scene\MySceneManager.cs" />
     <Compile Include="Assets\Scripts\Services\UserService.cs" />
+    <Compile Include="Assets\Scripts\UI\character_scale.cs" />
     <Compile Include="Assets\Scripts\UI\MessageBox.cs" />
     <Compile Include="Assets\Scripts\UI\MyUICharacterSelect.cs" />
     <Compile Include="Assets\Scripts\UI\UICharacterSelect.cs" />
