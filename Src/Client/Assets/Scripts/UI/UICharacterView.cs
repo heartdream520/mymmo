@@ -83,9 +83,12 @@ public class UICharacterView : MonoBehaviour {
     /// <param name="idx"></param>
     private void OnSelect_UI_character(int idx)
     {
-        character_Scale.id= (int)User.Instance.Info.Player.Characters[idx].Class - 1;
-        CurrectCharacter =(int)User.Instance.Info.Player.Characters[idx].Class - 1;
+        var cha = User.Instance.Info.Player.Characters[idx];
+        character_Scale.id= (int)cha.Class - 1;
+        CurrectCharacter =(int)cha.Class - 1;
         selectCharacterIdx = idx;
+        Debug.LogFormat("Select Character:[{0}]{1}[{2}] ", cha.Id, cha.Name, cha.Class);
+        
         for(int i=0;i<content_chars_list.Count-1;i++)
         {
             content_chars_list[i].GetComponent<UICharInfo>().selected_bg.SetActive(i == idx);
@@ -97,8 +100,11 @@ public class UICharacterView : MonoBehaviour {
     /// </summary>
     public void OnClickPlay()
     {
+       
         if (selectCharacterIdx >= 0)
         {
+            User.Instance.CurrentCharacter = User.Instance.Info.Player.Characters[selectCharacterIdx];
+            Debug.LogFormat("Character Enter game:[{0}]{1}[{2}] ", User.Instance.CurrentCharacter.Id, User.Instance.CurrentCharacter.Name, User.Instance.CurrentCharacter.Class);
             MessageBox.Show("进入游戏", "进入游戏", MessageBoxType.Confirm);
         }
     }

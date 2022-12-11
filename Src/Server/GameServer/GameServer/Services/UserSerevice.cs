@@ -139,6 +139,10 @@ namespace GameServer.Services
             info.Tid = (int)request.Class;
             info.Class = request.Class;
             info.mapId = 1;
+            NVector3 nVector3= new NVector3();
+            nVector3.X = 5000;nVector3.Y = 4000;nVector3.Z = 820;
+            info.Entity.Position = nVector3;
+           
             message.Response.createChar.Characters.Add(info);
 
 
