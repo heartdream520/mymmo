@@ -7,6 +7,7 @@ using Common;
 using Network;
 using SkillBridge.Message;
 using GameServer.Entities;
+using GameServer.Managers;
 
 namespace GameServer.Services
 {
@@ -18,9 +19,8 @@ namespace GameServer.Services
             MessageDistributer<NetConnection<NetSession>>.Instance.Subscribe<UserRegisterRequest>(this.OnRegister);
             MessageDistributer<NetConnection<NetSession>>.Instance.Subscribe<UserLoginRequest>(this.OnLogin);
             MessageDistributer<NetConnection<NetSession>>.Instance.Subscribe<UserCreateCharacterRequest>(this.OnCreateCharacter);
+            MessageDistributer<NetConnection<NetSession>>.Instance.Subscribe<UserGameEnterRequest>(this.OnGameEnter);
         }
-
-        
 
         public void Init()
         {
@@ -133,6 +133,8 @@ namespace GameServer.Services
             message.Response = new NetMessageResponse();
             message.Response.createChar = new UserCreateCharacterResponse();
 
+
+            
             //将新建的角色返回
             NCharacterInfo info = new NCharacterInfo();
             info.Name = request.Name;
@@ -141,10 +143,11 @@ namespace GameServer.Services
             info.mapId = 1;
             NVector3 nVector3= new NVector3();
             nVector3.X = 5000;nVector3.Y = 4000;nVector3.Z = 820;
+            info.Entity = new NEntity();
             info.Entity.Position = nVector3;
            
             message.Response.createChar.Characters.Add(info);
-
+            
 
 
             message.Response.createChar.Result = Result.Success;
@@ -154,6 +157,32 @@ namespace GameServer.Services
             byte[] data = PackageHandler.PackMessage(message);
             sender.SendData(data, 0, data.Length);
         }
+
+        private void OnGameEnter(NetConnection<NetSession> sender, UserGameEnterRequest request)
+        {
+
+            TCharacter db_character = sender.Session.User.Player.Characters.ElementAt(request.characterIdx);
+            Log.InfoFormat("UserCharacterEnter: userId：{0} character_Id：{1} character_Name：{2} MapId：{3}",
+                sender.Session.User.ID,db_character.MapID,db_character.Name,db_character.MapID );
+
+            Character character = CharacterManager.Instance.AddCharacter(db_character);
+
+
+            NetMessage message = new NetMessage();
+            message.Response = new NetMessageResponse();
+            message.Response.gameEnter = new UserGameEnterResponse();
+            message.Response.gameEnter.Result = Result.Success;
+            message.Response.gameEnter.Errormsg = "None"; 
+            
+            byte[] data = PackageHandler.PackMessage(message);
+            sender.SendData(data, 0, data.Length);
+
+            //设置
+            sender.Session.Character = character;
+            //地图管理器
+            MapManager.Instance[db_character.MapID].CharacterEnter(sender, character);
+        }
+
         /*
         /// <summary>
         /// 处理登录信息

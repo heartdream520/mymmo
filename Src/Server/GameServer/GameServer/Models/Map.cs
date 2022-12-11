@@ -63,18 +63,24 @@ namespace GameServer.Models
             message.Response.mapCharacterEnter.mapId = this.Define.ID;
             message.Response.mapCharacterEnter.Characters.Add(character.Info);
 
+            //通知此地图其他角色新角色的进入
             foreach (var kv in this.MapCharacters)
             {
                 message.Response.mapCharacterEnter.Characters.Add(kv.Value.character.Info);
                 this.SendCharacterEnterMap(kv.Value.connection, character.Info);
             }
             
+            //将新角色加入到此地图角色的字典中
             this.MapCharacters[character.Id] = new MapCharacter(conn, character);
 
             byte[] data = PackageHandler.PackMessage(message);
             conn.SendData(data, 0, data.Length);
         }
-
+        /// <summary>
+        /// 通知地图中现有角色其他角色进入地图
+        /// </summary>
+        /// <param name="conn"></param>
+        /// <param name="character"></param>
         void SendCharacterEnterMap(NetConnection<NetSession> conn, NCharacterInfo character)
         {
             NetMessage message = new NetMessage();

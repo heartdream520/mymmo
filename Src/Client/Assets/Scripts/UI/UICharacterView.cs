@@ -1,4 +1,5 @@
 ﻿using Models;
+using Services;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -105,7 +106,13 @@ public class UICharacterView : MonoBehaviour {
         {
             User.Instance.CurrentCharacter = User.Instance.Info.Player.Characters[selectCharacterIdx];
             Debug.LogFormat("Character Enter game:[{0}]{1}[{2}] ", User.Instance.CurrentCharacter.Id, User.Instance.CurrentCharacter.Name, User.Instance.CurrentCharacter.Class);
-            MessageBox.Show("进入游戏", "进入游戏", MessageBoxType.Confirm);
+
+            var go= MessageBox.Show("进入游戏", "进入游戏", MessageBoxType.Confirm);
+
+            go.OnYes += (() =>
+            {
+                UserService.Instance.SendCharacterEnter(selectCharacterIdx);
+            });
         }
     }
 }

@@ -16,6 +16,8 @@ namespace Services
         public UnityEngine.Events.UnityAction<Result, string> OnRegister;
         public UnityEngine.Events.UnityAction<Result, string> OnLoad;
         public UnityEngine.Events.UnityAction<Result, string> OnCharacterCreate;
+        public UnityEngine.Events.UnityAction<Result, string> OnGameEnter;
+        public UnityEngine.Events.UnityAction<Result, string> OnGameLeave;
 
         //消息队列
         NetMessage pendingMessage = null;
@@ -29,10 +31,12 @@ namespace Services
             MessageDistributer.Instance.Subscribe<UserRegisterResponse>(this.OnUserRegister);
             MessageDistributer.Instance.Subscribe<UserLoginResponse>(this.OnUserLoad);
             MessageDistributer.Instance.Subscribe<UserCreateCharacterResponse>(this.OnUserCharacterCreate);
+            MessageDistributer.Instance.Subscribe<UserGameEnterResponse>(this.OnUserGameEnter);
+            MessageDistributer.Instance.Subscribe<UserGameLeaveResponse>(this.OnUserGameLeave);
             
         }
 
-        
+       
 
         public void Dispose()
         {
@@ -42,6 +46,7 @@ namespace Services
             MessageDistributer.Instance.Unsubscribe<UserRegisterResponse>(this.OnUserRegister);
             MessageDistributer.Instance.Unsubscribe<UserLoginResponse>(this.OnUserLoad);
             MessageDistributer.Instance.Unsubscribe<UserCreateCharacterResponse>(this.OnUserCharacterCreate);
+            MessageDistributer.Instance.Unsubscribe<UserGameEnterResponse>(this.OnUserGameEnter);
 
         }
 
@@ -192,6 +197,52 @@ namespace Services
                 this.ConnectToServer();
             }
         }
+        public void SendCharacterEnter(int idx)
+        {
+
+            var cha = User.Instance.Info.Player.Characters[idx];
+            Debug.LogFormat("UserCharacterEnter:: userid{0} character_idx ", User.Instance.Info.Id,idx);
+            
+            //发送消息到服务器
+            NetMessage message = new NetMessage();
+            message.Request = new NetMessageRequest();
+            message.Request.gameEnter = new UserGameEnterRequest();
+            message.Request.gameEnter.characterIdx = idx;
+
+            if (this.connected && NetClient.Instance.Connected)
+            {
+                this.pendingMessage = null;
+                NetClient.Instance.SendMessage(message);
+            }
+            else
+            {
+                this.pendingMessage = message;
+                this.ConnectToServer();
+            }
+        }
+        public void SendCharacterLeave(int idx)
+        {
+
+            var cha = User.Instance.Info.Player.Characters[idx];
+            Debug.LogFormat("UserCharacterLeave:: userid{0} character_idx ", User.Instance.Info.Id,idx);
+            
+            //发送消息到服务器
+            NetMessage message = new NetMessage();
+            message.Request = new NetMessageRequest();
+            message.Request.gameLeave = new UserGameLeaveRequest();
+
+
+            if (this.connected && NetClient.Instance.Connected)
+            {
+                this.pendingMessage = null;
+                NetClient.Instance.SendMessage(message);
+            }
+            else
+            {
+                this.pendingMessage = message;
+                this.ConnectToServer();
+            }
+        }
         /// <summary>
         /// 用户注册返回信息
         /// </summary>
@@ -238,6 +289,50 @@ namespace Services
             {
                 this.OnCharacterCreate(response.Result, response.Errormsg);
             }
+        }
+        /// <summary>
+        /// 角色进入信息返回信息
+        /// </summary>
+        private void OnUserGameEnter(object sender, UserGameEnterResponse response)
+        {
+            Debug.LogFormat("OnUserCharacterEnter:{0} [{1}]", response.Result, response.Errormsg);
+
+            if (response.Result == Result.Success)
+            {
+                //接受返回的新建角色
+
+                switch (User.Instance.CurrentCharacter.mapId)
+                {
+                    case 1:
+                        MySceneManager.Instance.LoadScene("MainCity");
+                        break;
+                    case 2:
+                        MySceneManager.Instance.LoadScene("Map01");
+                        break;
+                    case 3:
+                        MySceneManager.Instance.LoadScene("Map02");
+                        break;
+                    case 4:
+                        MySceneManager.Instance.LoadScene("Map03");
+                        break;
+
+
+                    default:
+                        break;
+                }
+
+            }
+            if (this.OnGameEnter != null)
+            {
+                this.OnGameEnter(response.Result, response.Errormsg);
+            }
+        }
+        /// <summary>
+        /// 玩家离开信息返回信息
+        /// </summary>
+        private void OnUserGameLeave(object sender, UserGameLeaveResponse response)
+        {
+            throw new NotImplementedException();
         }
     }
 }

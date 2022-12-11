@@ -66,13 +66,13 @@ public class MyUICharacterSelect : MonoBehaviour {
 
     private void OnCharacterCreate(Result result, string msg)
     {
-        character_Select_panel.SetActive(true);
-        character_Creat_panel.SetActive(false);
+        
 
         if(result==Result.Success)
         {
             MessageBox.Show("角色创建成功");
-            
+            character_Select_panel.SetActive(true);
+            character_Creat_panel.SetActive(false);
         }
     }
 
@@ -113,8 +113,10 @@ public class MyUICharacterSelect : MonoBehaviour {
             MessageBox.Show("请输入昵称！");
             return;
         }
-        Debug.LogFormat("creat character: class{0}  name{1}", Now_Selected_Char, character_name_InputField.text);
+        Debug.LogFormat("creat character: class:{0}  name:{1}", Now_Selected_Char, character_name_InputField.text);
         Services.UserService.Instance.SendCharacterCreate(Now_Selected_Char,character_name_InputField.text);
+        
+        
 
     }
 }
