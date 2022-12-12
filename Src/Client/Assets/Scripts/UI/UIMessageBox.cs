@@ -57,23 +57,25 @@ public class UIMessageBox :MonoBehaviour
         if (!string.IsNullOrEmpty(btnOK)) this.buttonYesTitle.text = title;
         if (!string.IsNullOrEmpty(btnCancel)) this.buttonNoTitle.text = title;
 
-        this.buttonYes.onClick.AddListener(OnClickYes);
-        this.buttonNo.onClick.AddListener(OnClickNo);
+        //this.buttonYes.onClick.AddListener(OnClickYes);
+        //this.buttonNo.onClick.AddListener(OnClickNo);
 
         this.buttonNo.gameObject.SetActive(type == MessageBoxType.Confirm);
     }
 
     public void OnClickYes()
     {
-        Destroy(this.gameObject);
+        
         if (this.OnYes != null)
             this.OnYes();
+        Destroy(this.gameObject);
     }
 
     public void OnClickNo()
     {
-        Destroy(this.gameObject);
+        
         if (this.OnNo != null)
             this.OnNo();
+        Destroy(this.gameObject);
     }
 }

@@ -52,7 +52,7 @@ namespace GameServer.Models
         /// <param name="character"></param>
         internal void CharacterEnter(NetConnection<NetSession> conn, Character character)
         {
-            Log.InfoFormat("CharacterEnter: Map:{0} characterId:{1}", this.Define.ID, character.Id);
+            Log.InfoFormat("MapCharacterEnter: MapID:{0} characterId:{1}", this.Define.ID, character.Id);
 
             character.Info.mapId = this.ID;
 
@@ -61,6 +61,7 @@ namespace GameServer.Models
 
             message.Response.mapCharacterEnter = new MapCharacterEnterResponse();
             message.Response.mapCharacterEnter.mapId = this.Define.ID;
+
             message.Response.mapCharacterEnter.Characters.Add(character.Info);
 
             //通知此地图其他角色新角色的进入
@@ -69,10 +70,22 @@ namespace GameServer.Models
                 message.Response.mapCharacterEnter.Characters.Add(kv.Value.character.Info);
                 this.SendCharacterEnterMap(kv.Value.connection, character.Info);
             }
-            
+            //Log.ErrorFormat("新加入角色ID{0}", character.Id);
             //将新角色加入到此地图角色的字典中
-            this.MapCharacters[character.Id] = new MapCharacter(conn, character);
+            this.MapCharacters[character.Data.ID] = new MapCharacter(conn, character);
 
+            /*
+            int y = 1;
+            foreach(var x in message.Response.mapCharacterEnter.Characters)
+            {
+                Log.ErrorFormat("id:{0} MapCharacters:{1}",y++, x.Name);
+            }
+            y = 1;
+            foreach (var x in MapCharacters.Keys)
+            {
+                Log.ErrorFormat("id:{0} MapCharacters:{1}", y++, MapCharacters[x].character.Data.Name);
+            }
+            */
             byte[] data = PackageHandler.PackMessage(message);
             conn.SendData(data, 0, data.Length);
         }

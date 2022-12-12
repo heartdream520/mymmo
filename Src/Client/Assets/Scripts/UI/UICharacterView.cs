@@ -109,10 +109,11 @@ public class UICharacterView : MonoBehaviour {
 
             var go= MessageBox.Show("进入游戏", "进入游戏", MessageBoxType.Confirm);
 
-            go.OnYes += (() =>
+            go.OnYes = delegate()
             {
                 UserService.Instance.SendCharacterEnter(selectCharacterIdx);
-            });
+                //Debug.LogErrorFormat("TES函数执行了！");
+            };
         }
     }
 }

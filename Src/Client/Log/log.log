@@ -1,109 +1,232 @@
-2022-12-11 20:31:35,962 [ 1] INFO  Unity: LoadingManager start
-2022-12-11 20:31:40,483 [ 1] INFO  Unity: DataManager > DataManager()
-2022-12-11 20:31:45,653 [ 1] INFO  Unity: UserLoadRequest::user :4 psw:4
-2022-12-11 20:31:45,655 [ 1] INFO  Unity: ConnectToServer() Start 
-2022-12-11 20:31:45,657 [ 1] INFO  Unity: DoConnect
-2022-12-11 20:31:45,661 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
-2022-12-11 20:31:45,666 [ 1] INFO  Unity: Connect[0] to server 127.0.0.1:8000
+2022-12-12 21:48:50,707 [ 1] INFO  Unity: LoadingManager start
+2022-12-12 21:48:55,210 [ 1] INFO  Unity: DataManager > DataManager()
+2022-12-12 21:49:08,271 [ 1] INFO  Unity: UserLoadRequest::user :9 psw:9
+2022-12-12 21:49:08,274 [ 1] INFO  Unity: ConnectToServer() Start 
+2022-12-12 21:49:08,278 [ 1] INFO  Unity: DoConnect
+2022-12-12 21:49:08,284 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
+2022-12-12 21:49:08,289 [ 1] INFO  Unity: Connect[0] to server 127.0.0.1:8000
 
-2022-12-11 20:31:47,692 [ 1] WARN  Unity: CloseConnection(), errorCode: 1005
-UnityEngine.Debug:LogWarning(Object)
-Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:180)
-Network.NetClient:DoConnect() (at Assets/Scripts/Network/NetClient.cs:277)
-Network.NetClient:Connect(Int32) (at Assets/Scripts/Network/NetClient.cs:169)
-Services.UserService:ConnectToServer() (at Assets/Scripts/Services/UserService.cs:61)
-Services.UserService:SendLoad(String, String) (at Assets/Scripts/Services/UserService.cs:169)
-UILoad:OnClickLoad() (at Assets/Scripts/UI/UILoad.cs:71)
-UnityEngine.EventSystems.EventSystem:Update()
-
-2022-12-11 20:31:47,701 [ 1] ERROR Unity: DoConnect SocketException:[10061,ConnectionRefused,10061]System.Net.Sockets.SocketException: 由于目标计算机积极拒绝，无法连接。
-
-  at System.Net.Sockets.Socket.Connect (System.Net.EndPoint remoteEP, Boolean requireSocketPolicy) [0x00000] in <filename unknown>:0 
-  at System.Net.Sockets.Socket+Worker.Connect () [0x00000] in <filename unknown>:0  
+2022-12-12 21:49:08,295 [ 1] INFO  Unity: LoadingMesager::OnGameServerConnect :0 reason:Success
+2022-12-12 21:49:12,742 [ 1] INFO  Unity: OnUserLoad:Success [None]
+2022-12-12 21:49:17,155 [ 1] INFO  Unity: Select Character:[48]9-1[Archer] 
+2022-12-12 21:49:21,018 [ 1] INFO  Unity: Character Enter game:[48]9-1[Archer] 
+2022-12-12 21:49:22,022 [ 1] INFO  Unity: UserCharacterEnter:: userid1 character_idx 
+2022-12-12 21:49:22,067 [ 1] INFO  Unity: OnUserCharacterEnter:Success [None]
+2022-12-12 21:49:22,069 [ 1] INFO  Unity: OnMapCharacterEnter:Map:1 Count:1
+2022-12-12 21:49:22,073 [ 1] INFO  Unity: AddCharacter:48:9-1 Map:1 Entity:(0:pos:(5000,4000,820),dir:(100,0,0),spd:0
+2022-12-12 21:49:22,074 [ 1] ERROR Unity: character_info_id:48  User.Instance.CurrentCharacter.ID:48
 UnityEngine.Debug:LogErrorFormat(String, Object[])
-Network.NetClient:DoConnect() (at Assets/Scripts/Network/NetClient.cs:279)
-Network.NetClient:Connect(Int32) (at Assets/Scripts/Network/NetClient.cs:169)
-Services.UserService:ConnectToServer() (at Assets/Scripts/Services/UserService.cs:61)
-Services.UserService:SendLoad(String, String) (at Assets/Scripts/Services/UserService.cs:169)
-UILoad:OnClickLoad() (at Assets/Scripts/UI/UILoad.cs:71)
-UnityEngine.EventSystems.EventSystem:Update()
+Services.CharacterManager:AddCharacter(NCharacterInfo) (at Assets/Scripts/Managers/CharacterManager.cs:47)
+Services.MapService:OnMapCharacterEnter(Object, MapCharacterEnterResponse) (at Assets/Scripts/Services/MapService.cs:52)
+Network.MessageDistributer`1:RaiseEvent(Object, MapCharacterEnterResponse) (at E:/极世界MMORPG/mymmo/Src/Lib/Common/Network/MessageDistributer.cs:105)
+Network.MessageDispatch`1:Dispatch(Object, NetMessageResponse) (at E:/极世界MMORPG/mymmo/Src/Lib/Common/Network/MessageDispatch.cs:16)
+Network.MessageDistributer`1:Distribute() (at E:/极世界MMORPG/mymmo/Src/Lib/Common/Network/MessageDistributer.cs:148)
+Network.NetClient:ProceeMessage() (at Assets/Scripts/Network/NetClient.cs:427)
+Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:447)
 
-2022-12-11 20:31:47,702 [ 1] INFO  Unity: DoConnect
-2022-12-11 20:31:47,704 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
-2022-12-11 20:31:47,707 [ 1] INFO  Unity: Connect[1] to server 127.0.0.1:8000
-
-2022-12-11 20:31:49,730 [ 1] WARN  Unity: CloseConnection(), errorCode: 1005
-UnityEngine.Debug:LogWarning(Object)
-Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:180)
-Network.NetClient:DoConnect() (at Assets/Scripts/Network/NetClient.cs:277)
-Network.NetClient:Connect(Int32) (at Assets/Scripts/Network/NetClient.cs:169)
-Network.NetClient:KeepConnect() (at Assets/Scripts/Network/NetClient.cs:321)
-Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:438)
-
-2022-12-11 20:31:49,732 [ 1] ERROR Unity: DoConnect SocketException:[10061,ConnectionRefused,10061]System.Net.Sockets.SocketException: 由于目标计算机积极拒绝，无法连接。
-
-  at System.Net.Sockets.Socket.Connect (System.Net.EndPoint remoteEP, Boolean requireSocketPolicy) [0x00000] in <filename unknown>:0 
-  at System.Net.Sockets.Socket+Worker.Connect () [0x00000] in <filename unknown>:0  
-UnityEngine.Debug:LogErrorFormat(String, Object[])
-Network.NetClient:DoConnect() (at Assets/Scripts/Network/NetClient.cs:279)
-Network.NetClient:Connect(Int32) (at Assets/Scripts/Network/NetClient.cs:169)
-Network.NetClient:KeepConnect() (at Assets/Scripts/Network/NetClient.cs:321)
-Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:438)
-
-2022-12-11 20:31:49,782 [ 1] INFO  Unity: DoConnect
-2022-12-11 20:31:49,783 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
-2022-12-11 20:31:49,785 [ 1] INFO  Unity: Connect[2] to server 127.0.0.1:8000
-
-2022-12-11 20:31:51,810 [ 1] WARN  Unity: CloseConnection(), errorCode: 1005
-UnityEngine.Debug:LogWarning(Object)
-Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:180)
-Network.NetClient:DoConnect() (at Assets/Scripts/Network/NetClient.cs:277)
-Network.NetClient:Connect(Int32) (at Assets/Scripts/Network/NetClient.cs:169)
-Network.NetClient:KeepConnect() (at Assets/Scripts/Network/NetClient.cs:321)
-Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:438)
-
-2022-12-11 20:31:51,812 [ 1] ERROR Unity: DoConnect SocketException:[10061,ConnectionRefused,10061]System.Net.Sockets.SocketException: 由于目标计算机积极拒绝，无法连接。
-
-  at System.Net.Sockets.Socket.Connect (System.Net.EndPoint remoteEP, Boolean requireSocketPolicy) [0x00000] in <filename unknown>:0 
-  at System.Net.Sockets.Socket+Worker.Connect () [0x00000] in <filename unknown>:0  
-UnityEngine.Debug:LogErrorFormat(String, Object[])
-Network.NetClient:DoConnect() (at Assets/Scripts/Network/NetClient.cs:279)
-Network.NetClient:Connect(Int32) (at Assets/Scripts/Network/NetClient.cs:169)
-Network.NetClient:KeepConnect() (at Assets/Scripts/Network/NetClient.cs:321)
-Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:438)
-
-2022-12-11 20:31:51,813 [ 1] INFO  Unity: LoadingMesager::OnGameServerConnect :1 reason:Cannot connect to server
-2022-12-11 20:32:04,298 [ 1] INFO  Unity: UserLoadRequest::user :4 psw:4
-2022-12-11 20:32:04,300 [ 1] INFO  Unity: ConnectToServer() Start 
-2022-12-11 20:32:04,303 [ 1] INFO  Unity: DoConnect
-2022-12-11 20:32:04,305 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
-2022-12-11 20:32:04,309 [ 1] INFO  Unity: Connect[3] to server 127.0.0.1:8000
-
-2022-12-11 20:32:04,311 [ 1] INFO  Unity: LoadingMesager::OnGameServerConnect :0 reason:Success
-2022-12-11 20:32:10,201 [ 1] INFO  Unity: OnUserLoad:Success [None]
-2022-12-11 20:32:15,265 [ 1] INFO  Unity: Select Character:[31]2[Wizard] 
-2022-12-11 20:32:22,407 [ 1] INFO  Unity: creat character: classWarrior  name7
-2022-12-11 20:32:22,409 [ 1] INFO  Unity: UserCharacterCreate::CharacterClass :Warrior name:7
-2022-12-11 20:32:23,017 [ 1] INFO  Unity: OnUserCharacterCreate:Success [None]
-2022-12-11 20:32:27,439 [ 1] INFO  Unity: Select Character:[0]7[Warrior] 
-2022-12-11 20:32:28,068 [ 1] INFO  Unity: Character Enter game:[0]7[Warrior] 
-2022-12-11 20:32:29,581 [ 1] INFO  Unity: UserCharacterEnter:: userid1 character_idx 
-2022-12-11 20:32:29,584 [ 1] INFO  Unity: UserCharacterEnter:: userid1 character_idx 
-2022-12-11 20:32:29,643 [ 1] INFO  Unity: OnUserCharacterEnter:Success [None]
-2022-12-11 20:32:30,379 [ 1] INFO  Unity: OnUserCharacterEnter:Success [None]
-2022-12-11 20:33:40,241 [ 1] INFO  Unity: ProcessReceive exception:System.Net.Sockets.SocketException: 远程主机强迫关闭了一个现有的连接。
-
-  at System.Net.Sockets.Socket.Receive (System.Byte[] buffer, Int32 offset, Int32 size, SocketFlags flags) [0x00000] in <filename unknown>:0 
-  at Network.NetClient.ProcessRecv () [0x00084] in E:\极世界MMORPG\mymmo\Src\Client\Assets\Scripts\Network\NetClient.cs:346 
-
-2022-12-11 20:33:40,242 [ 1] WARN  Unity: CloseConnection(), errorCode: 1001
-UnityEngine.Debug:LogWarning(Object)
-Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:180)
-Network.NetClient:ProcessRecv() (at Assets/Scripts/Network/NetClient.cs:360)
-Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:440)
-
-2022-12-11 20:33:43,333 [ 1] INFO  Unity: OnDestroy NetworkManager.
-2022-12-11 20:33:43,334 [ 1] WARN  Unity: CloseConnection(), errorCode: 1007
+2022-12-12 21:49:25,480 [ 1] INFO  Unity: Player_character:48
+2022-12-12 21:49:27,341 [ 1] INFO  Unity: MoveForward
+2022-12-12 21:49:27,638 [ 1] INFO  Unity: SetDirection:(98, 20, 0)
+2022-12-12 21:49:27,748 [ 1] INFO  Unity: SetDirection:(93, 38, 0)
+2022-12-12 21:49:27,838 [ 1] INFO  Unity: SetDirection:(83, 56, 0)
+2022-12-12 21:49:27,924 [ 1] INFO  Unity: SetDirection:(72, 70, 0)
+2022-12-12 21:49:28,029 [ 1] INFO  Unity: SetDirection:(56, 83, 0)
+2022-12-12 21:49:28,114 [ 1] INFO  Unity: SetDirection:(41, 91, 0)
+2022-12-12 21:49:28,194 [ 1] INFO  Unity: SetDirection:(24, 97, 0)
+2022-12-12 21:49:28,296 [ 1] INFO  Unity: SetDirection:(3, 100, 0)
+2022-12-12 21:49:28,417 [ 1] INFO  Unity: SetDirection:(-16, 99, 0)
+2022-12-12 21:49:28,504 [ 1] INFO  Unity: SetDirection:(-33, 94, 0)
+2022-12-12 21:49:29,664 [ 1] INFO  Unity: Stop
+2022-12-12 21:49:31,131 [ 1] INFO  Unity: SetDirection:(-50, 87, 0)
+2022-12-12 21:49:31,307 [ 1] INFO  Unity: MoveForward
+2022-12-12 21:49:31,309 [ 1] INFO  Unity: SetDirection:(-65, 76, 0)
+2022-12-12 21:49:31,379 [ 1] INFO  Unity: SetDirection:(-77, 63, 0)
+2022-12-12 21:49:31,448 [ 1] INFO  Unity: SetDirection:(-89, 46, 0)
+2022-12-12 21:49:31,559 [ 1] INFO  Unity: SetDirection:(-96, 29, 0)
+2022-12-12 21:49:31,709 [ 1] INFO  Unity: Stop
+2022-12-12 21:49:36,679 [ 1] INFO  Unity: MoveForward
+2022-12-12 21:49:37,853 [ 1] INFO  Unity: Stop
+2022-12-12 21:49:38,842 [ 1] INFO  Unity: MoveForward
+2022-12-12 21:49:38,955 [ 1] INFO  Unity: SetPosition:(4639, 4685, 800)
+2022-12-12 21:49:39,968 [ 1] INFO  Unity: Stop
+2022-12-12 21:49:42,809 [ 1] INFO  Unity: MoveForward
+2022-12-12 21:49:43,526 [ 1] INFO  Unity: SetPosition:(4143, 4835, 801)
+2022-12-12 21:49:44,138 [ 1] INFO  Unity: Stop
+2022-12-12 21:49:44,332 [ 1] INFO  Unity: MoveForward
+2022-12-12 21:49:45,412 [ 1] INFO  Unity: SetPosition:(3653, 4983, 801)
+2022-12-12 21:49:45,854 [ 1] INFO  Unity: SetDirection:(-99, 11, 0)
+2022-12-12 21:49:46,001 [ 1] INFO  Unity: SetDirection:(-100, -7, 0)
+2022-12-12 21:49:46,109 [ 1] INFO  Unity: SetDirection:(-96, -27, 0)
+2022-12-12 21:49:46,221 [ 1] INFO  Unity: SetDirection:(-89, -46, 0)
+2022-12-12 21:49:46,298 [ 1] INFO  Unity: SetDirection:(-79, -61, 0)
+2022-12-12 21:49:46,408 [ 1] INFO  Unity: SetDirection:(-65, -76, 0)
+2022-12-12 21:49:46,479 [ 1] INFO  Unity: SetDirection:(-51, -86, 0)
+2022-12-12 21:49:46,574 [ 1] INFO  Unity: SetDirection:(-35, -94, 0)
+2022-12-12 21:49:46,650 [ 1] INFO  Unity: SetDirection:(-15, -99, 0)
+2022-12-12 21:49:46,758 [ 1] INFO  Unity: SetDirection:(3, -100, 0)
+2022-12-12 21:49:46,870 [ 1] INFO  Unity: SetDirection:(23, -97, 0)
+2022-12-12 21:49:46,920 [ 1] INFO  Unity: SetDirection:(40, -92, 0)
+2022-12-12 21:49:47,012 [ 1] INFO  Unity: SetDirection:(55, -83, 0)
+2022-12-12 21:49:47,138 [ 1] INFO  Unity: SetDirection:(69, -72, 0)
+2022-12-12 21:49:47,204 [ 1] INFO  Unity: SetDirection:(82, -57, 0)
+2022-12-12 21:49:47,330 [ 1] INFO  Unity: SetDirection:(91, -41, 0)
+2022-12-12 21:49:47,465 [ 1] INFO  Unity: SetDirection:(97, -24, 0)
+2022-12-12 21:49:50,131 [ 1] INFO  Unity: SetDirection:(100, -6, 0)
+2022-12-12 21:49:51,251 [ 1] INFO  Unity: SetPosition:(4564, 4523, 800)
+2022-12-12 21:49:51,284 [ 1] INFO  Unity: SetDirection:(97, -24, 0)
+2022-12-12 21:49:51,366 [ 1] INFO  Unity: SetDirection:(90, -44, 0)
+2022-12-12 21:49:51,473 [ 1] INFO  Unity: SetDirection:(79, -61, 0)
+2022-12-12 21:49:51,512 [ 1] INFO  Unity: Stop
+2022-12-12 21:49:51,560 [ 1] INFO  Unity: SetDirection:(67, -74, 0)
+2022-12-12 21:49:51,643 [ 1] INFO  Unity: SetDirection:(53, -85, 0)
+2022-12-12 21:49:51,734 [ 1] INFO  Unity: SetDirection:(34, -94, 0)
+2022-12-12 21:49:51,857 [ 1] INFO  Unity: MoveForward
+2022-12-12 21:49:51,860 [ 1] INFO  Unity: SetDirection:(14, -99, 0)
+2022-12-12 21:49:51,936 [ 1] INFO  Unity: SetDirection:(-7, -100, 0)
+2022-12-12 21:49:52,036 [ 1] INFO  Unity: SetDirection:(-27, -96, 0)
+2022-12-12 21:49:52,165 [ 1] INFO  Unity: SetDirection:(-45, -89, 0)
+2022-12-12 21:49:53,415 [ 1] INFO  Unity: Stop
+2022-12-12 21:49:53,923 [ 1] INFO  Unity: SetDirection:(-60, -80, 0)
+2022-12-12 21:49:53,952 [ 1] INFO  Unity: MoveForward
+2022-12-12 21:49:54,074 [ 1] INFO  Unity: SetDirection:(-75, -66, 0)
+2022-12-12 21:49:54,170 [ 1] INFO  Unity: SetDirection:(-87, -49, 0)
+2022-12-12 21:49:54,250 [ 1] INFO  Unity: SetDirection:(-95, -30, 0)
+2022-12-12 21:49:54,365 [ 1] INFO  Unity: SetDirection:(-100, -10, 0)
+2022-12-12 21:49:54,438 [ 1] INFO  Unity: SetDirection:(-100, 8, 0)
+2022-12-12 21:49:54,548 [ 1] INFO  Unity: SetDirection:(-96, 26, 0)
+2022-12-12 21:49:54,723 [ 1] INFO  Unity: SetDirection:(-90, 43, 0)
+2022-12-12 21:49:56,378 [ 1] INFO  Unity: Stop
+2022-12-12 21:49:57,657 [ 1] INFO  Unity: MoveForward
+2022-12-12 21:49:58,309 [ 1] INFO  Unity: SetPosition:(3629, 4303, 801)
+2022-12-12 21:49:58,361 [ 1] INFO  Unity: Stop
+2022-12-12 21:49:58,388 [ 1] INFO  Unity: MoveBack
+2022-12-12 21:49:59,414 [ 1] INFO  Unity: SetPosition:(3894, 4176, 800)
+2022-12-12 21:50:00,506 [ 1] INFO  Unity: SetPosition:(4168, 4046, 800)
+2022-12-12 21:50:01,562 [ 1] INFO  Unity: SetPosition:(4433, 3919, 800)
+2022-12-12 21:50:02,577 [ 1] INFO  Unity: SetDirection:(-80, 60, 0)
+2022-12-12 21:50:02,651 [ 1] INFO  Unity: Stop
+2022-12-12 21:50:02,674 [ 1] INFO  Unity: SetDirection:(-66, 75, 0)
+2022-12-12 21:50:02,739 [ 1] INFO  Unity: MoveForward
+2022-12-12 21:50:02,790 [ 1] INFO  Unity: SetDirection:(-49, 87, 0)
+2022-12-12 21:50:02,841 [ 1] INFO  Unity: SetPosition:(4678, 3819, 800)
+2022-12-12 21:50:02,866 [ 1] INFO  Unity: SetDirection:(-33, 94, 0)
+2022-12-12 21:50:02,954 [ 1] INFO  Unity: SetDirection:(-13, 99, 0)
+2022-12-12 21:50:03,054 [ 1] INFO  Unity: SetDirection:(5, 100, 0)
+2022-12-12 21:50:03,148 [ 1] INFO  Unity: SetDirection:(25, 97, 0)
+2022-12-12 21:50:03,237 [ 1] INFO  Unity: SetDirection:(41, 91, 0)
+2022-12-12 21:50:05,008 [ 1] INFO  Unity: SetPosition:(4889, 4419, 800)
+2022-12-12 21:50:05,894 [ 1] INFO  Unity: SetDirection:(24, 97, 0)
+2022-12-12 21:50:06,340 [ 1] INFO  Unity: SetPosition:(5023, 4761, 800)
+2022-12-12 21:50:06,516 [ 1] INFO  Unity: SetPosition:(5023, 4761, 800)
+2022-12-12 21:50:06,545 [ 1] INFO  Unity: SetDirection:(6, 100, 0)
+2022-12-12 21:50:06,691 [ 1] INFO  Unity: SetPosition:(5023, 4761, 800)
+2022-12-12 21:50:06,865 [ 1] INFO  Unity: SetPosition:(5023, 4761, 800)
+2022-12-12 21:50:07,061 [ 1] INFO  Unity: SetPosition:(5023, 4761, 800)
+2022-12-12 21:50:07,255 [ 1] INFO  Unity: SetPosition:(5023, 4761, 800)
+2022-12-12 21:50:07,446 [ 1] INFO  Unity: SetPosition:(5023, 4761, 800)
+2022-12-12 21:50:07,646 [ 1] INFO  Unity: SetPosition:(5023, 4761, 800)
+2022-12-12 21:50:07,844 [ 1] INFO  Unity: SetPosition:(5023, 4761, 800)
+2022-12-12 21:50:08,044 [ 1] INFO  Unity: SetPosition:(5023, 4761, 800)
+2022-12-12 21:50:08,254 [ 1] INFO  Unity: SetPosition:(5023, 4761, 800)
+2022-12-12 21:50:08,276 [ 1] INFO  Unity: Stop
+2022-12-12 21:50:08,634 [ 1] INFO  Unity: MoveForward
+2022-12-12 21:50:08,800 [ 1] INFO  Unity: SetPosition:(5023, 4761, 800)
+2022-12-12 21:50:08,993 [ 1] INFO  Unity: SetPosition:(5023, 4761, 800)
+2022-12-12 21:50:09,173 [ 1] INFO  Unity: SetPosition:(5023, 4761, 800)
+2022-12-12 21:50:09,355 [ 1] INFO  Unity: SetPosition:(5023, 4761, 800)
+2022-12-12 21:50:09,541 [ 1] INFO  Unity: SetPosition:(5023, 4761, 800)
+2022-12-12 21:50:09,716 [ 1] INFO  Unity: SetPosition:(5023, 4761, 800)
+2022-12-12 21:50:09,871 [ 1] INFO  Unity: Stop
+2022-12-12 21:50:09,928 [ 1] INFO  Unity: SetDirection:(-12, 99, 0)
+2022-12-12 21:50:10,049 [ 1] INFO  Unity: SetDirection:(-30, 95, 0)
+2022-12-12 21:50:10,160 [ 1] INFO  Unity: MoveForward
+2022-12-12 21:50:10,161 [ 1] INFO  Unity: SetDirection:(-49, 87, 0)
+2022-12-12 21:50:10,190 [ 1] INFO  Unity: SetPosition:(5023, 4761, 800)
+2022-12-12 21:50:10,246 [ 1] INFO  Unity: SetDirection:(-66, 75, 0)
+2022-12-12 21:50:10,352 [ 1] INFO  Unity: SetDirection:(-79, 61, 0)
+2022-12-12 21:50:10,377 [ 1] INFO  Unity: SetPosition:(5023, 4761, 800)
+2022-12-12 21:50:10,516 [ 1] INFO  Unity: SetDirection:(-89, 46, 0)
+2022-12-12 21:50:10,565 [ 1] INFO  Unity: SetPosition:(5020, 4761, 800)
+2022-12-12 21:50:10,822 [ 1] INFO  Unity: SetPosition:(5001, 4761, 800)
+2022-12-12 21:50:11,098 [ 1] INFO  Unity: SetPosition:(4983, 4761, 800)
+2022-12-12 21:50:11,342 [ 1] INFO  Unity: SetPosition:(4965, 4761, 800)
+2022-12-12 21:50:11,405 [ 1] INFO  Unity: Stop
+2022-12-12 21:50:21,420 [ 1] INFO  Unity: MoveForward
+2022-12-12 21:50:21,828 [ 1] INFO  Unity: SetDirection:(-79, 61, 0)
+2022-12-12 21:50:21,939 [ 1] INFO  Unity: SetDirection:(-66, 75, 0)
+2022-12-12 21:50:22,021 [ 1] INFO  Unity: SetDirection:(-52, 86, 0)
+2022-12-12 21:50:22,076 [ 1] INFO  Unity: Stop
+2022-12-12 21:50:22,109 [ 1] INFO  Unity: MoveBack
+2022-12-12 21:50:22,110 [ 1] INFO  Unity: SetDirection:(-36, 93, 0)
+2022-12-12 21:50:22,170 [ 1] INFO  Unity: SetDirection:(-19, 98, 0)
+2022-12-12 21:50:22,274 [ 1] INFO  Unity: SetDirection:(2, 100, 0)
+2022-12-12 21:50:22,390 [ 1] INFO  Unity: SetDirection:(22, 98, 0)
+2022-12-12 21:50:22,509 [ 1] INFO  Unity: SetDirection:(39, 92, 0)
+2022-12-12 21:50:22,671 [ 1] INFO  Unity: SetDirection:(56, 83, 0)
+2022-12-12 21:50:22,740 [ 1] INFO  Unity: Stop
+2022-12-12 21:50:22,784 [ 1] INFO  Unity: MoveForward
+2022-12-12 21:50:22,786 [ 1] INFO  Unity: SetDirection:(71, 70, 0)
+2022-12-12 21:50:22,909 [ 1] INFO  Unity: SetDirection:(83, 55, 0)
+2022-12-12 21:50:24,009 [ 1] INFO  Unity: Stop
+2022-12-12 21:50:24,042 [ 1] INFO  Unity: MoveBack
+2022-12-12 21:50:25,113 [ 1] INFO  Unity: Stop
+2022-12-12 21:50:25,238 [ 1] INFO  Unity: MoveBack
+2022-12-12 21:50:25,920 [ 1] INFO  Unity: Stop
+2022-12-12 21:50:30,205 [ 1] INFO  Unity: MoveForward
+2022-12-12 21:50:31,402 [ 1] INFO  Unity: SetPosition:(4912, 4797, 800)
+2022-12-12 21:50:31,575 [ 1] INFO  Unity: SetPosition:(4912, 4797, 800)
+2022-12-12 21:50:31,775 [ 1] INFO  Unity: SetPosition:(4912, 4797, 800)
+2022-12-12 21:50:31,978 [ 1] INFO  Unity: SetPosition:(4912, 4797, 800)
+2022-12-12 21:50:32,180 [ 1] INFO  Unity: SetPosition:(4912, 4797, 800)
+2022-12-12 21:50:32,387 [ 1] INFO  Unity: SetPosition:(4912, 4797, 800)
+2022-12-12 21:50:32,577 [ 1] INFO  Unity: SetPosition:(4912, 4797, 800)
+2022-12-12 21:50:32,772 [ 1] INFO  Unity: SetPosition:(4912, 4797, 800)
+2022-12-12 21:50:32,990 [ 1] INFO  Unity: SetPosition:(4912, 4797, 800)
+2022-12-12 21:50:33,146 [ 1] INFO  Unity: Stop
+2022-12-12 21:50:34,533 [ 1] INFO  Unity: MoveForward
+2022-12-12 21:50:35,250 [ 1] INFO  Unity: Stop
+2022-12-12 21:50:35,288 [ 1] INFO  Unity: MoveBack
+2022-12-12 21:50:36,054 [ 1] INFO  Unity: Stop
+2022-12-12 21:50:36,855 [ 1] INFO  Unity: MoveBack
+2022-12-12 21:50:37,324 [ 1] INFO  Unity: SetDirection:(92, 40, 0)
+2022-12-12 21:50:37,500 [ 1] INFO  Unity: SetDirection:(97, 23, 0)
+2022-12-12 21:50:37,573 [ 1] INFO  Unity: SetDirection:(100, 4, 0)
+2022-12-12 21:50:37,665 [ 1] INFO  Unity: Stop
+2022-12-12 21:50:37,667 [ 1] INFO  Unity: SetDirection:(99, -14, 0)
+2022-12-12 21:50:37,753 [ 1] INFO  Unity: SetDirection:(94, -34, 0)
+2022-12-12 21:50:37,868 [ 1] INFO  Unity: SetDirection:(85, -53, 0)
+2022-12-12 21:50:37,983 [ 1] INFO  Unity: SetDirection:(72, -69, 0)
+2022-12-12 21:50:38,031 [ 1] INFO  Unity: SetDirection:(59, -81, 0)
+2022-12-12 21:50:38,156 [ 1] INFO  Unity: SetDirection:(41, -91, 0)
+2022-12-12 21:50:38,227 [ 1] INFO  Unity: SetDirection:(25, -97, 0)
+2022-12-12 21:50:38,337 [ 1] INFO  Unity: SetDirection:(7, -100, 0)
+2022-12-12 21:50:38,430 [ 1] INFO  Unity: SetDirection:(-14, -99, 0)
+2022-12-12 21:50:38,502 [ 1] INFO  Unity: SetDirection:(-34, -94, 0)
+2022-12-12 21:50:38,548 [ 1] INFO  Unity: MoveForward
+2022-12-12 21:50:38,612 [ 1] INFO  Unity: SetDirection:(-53, -85, 0)
+2022-12-12 21:50:38,732 [ 1] INFO  Unity: SetDirection:(-68, -74, 0)
+2022-12-12 21:50:39,947 [ 1] INFO  Unity: Stop
+2022-12-12 21:50:40,553 [ 1] INFO  Unity: MoveBack
+2022-12-12 21:50:41,281 [ 1] INFO  Unity: Stop
+2022-12-12 21:50:54,726 [ 1] INFO  Unity: MoveBack
+2022-12-12 21:50:55,304 [ 1] INFO  Unity: SetDirection:(-54, -84, 0)
+2022-12-12 21:50:55,363 [ 1] INFO  Unity: Stop
+2022-12-12 21:50:55,403 [ 1] INFO  Unity: MoveForward
+2022-12-12 21:50:55,406 [ 1] INFO  Unity: SetDirection:(-37, -93, 0)
+2022-12-12 21:50:55,503 [ 1] INFO  Unity: SetDirection:(-20, -98, 0)
+2022-12-12 21:50:55,595 [ 1] INFO  Unity: SetDirection:(1, -100, 0)
+2022-12-12 21:50:55,682 [ 1] INFO  Unity: SetDirection:(21, -98, 0)
+2022-12-12 21:50:55,758 [ 1] INFO  Unity: SetDirection:(38, -92, 0)
+2022-12-12 21:50:55,872 [ 1] INFO  Unity: SetDirection:(56, -83, 0)
+2022-12-12 21:50:55,991 [ 1] INFO  Unity: SetDirection:(70, -72, 0)
+2022-12-12 21:50:56,766 [ 1] INFO  Unity: SetDirection:(55, -84, 0)
+2022-12-12 21:50:56,869 [ 1] INFO  Unity: SetDirection:(36, -93, 0)
+2022-12-12 21:50:56,969 [ 1] INFO  Unity: SetDirection:(17, -99, 0)
+2022-12-12 21:50:57,093 [ 1] INFO  Unity: SetDirection:(-2, -100, 0)
+2022-12-12 21:50:58,065 [ 1] INFO  Unity: Stop
+2022-12-12 21:51:58,226 [ 1] INFO  Unity: Character_48_9-1 OnDestroy :ID:0 POS:(4942, 3933, 800) DIR:(-2, -100, 0) SPD:0 
+2022-12-12 21:51:58,228 [ 1] INFO  Unity: OnDestroy NetworkManager.
+2022-12-12 21:51:58,229 [ 1] WARN  Unity: CloseConnection(), errorCode: 1007
 UnityEngine.Debug:LogWarning(Object)
 Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:180)
 Network.NetClient:OnDestroy() (at Assets/Scripts/Network/NetClient.cs:175)

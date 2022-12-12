@@ -64,12 +64,15 @@ namespace GameServer.Services
                 //更新玩家角色
                 foreach(var c in user.Player.Characters)
                 {
+                    /*
                     NCharacterInfo info = new NCharacterInfo();
                     info.Id = c.ID;
                     info.Name = c.Name;
                     info.Class = (CharacterClass)c.Class;
-                    
-                    message.Response.userLogin.Userinfo.Player.Characters.Add(info);
+                    */
+                    Character cha = new Character(CharacterType.Player, c);
+
+                    message.Response.userLogin.Userinfo.Player.Characters.Add(cha.Info);
                 }
                
             }
@@ -134,7 +137,7 @@ namespace GameServer.Services
             message.Response.createChar = new UserCreateCharacterResponse();
 
 
-            
+            /*
             //将新建的角色返回
             NCharacterInfo info = new NCharacterInfo();
             info.Name = request.Name;
@@ -145,9 +148,19 @@ namespace GameServer.Services
             nVector3.X = 5000;nVector3.Y = 4000;nVector3.Z = 820;
             info.Entity = new NEntity();
             info.Entity.Position = nVector3;
+
+            Character cha = new Character(CharacterType.Player,);
            
             message.Response.createChar.Characters.Add(info);
-            
+            */
+            TUser user = DBService.Instance.Entities.Users.Where(u => u.Username == sender.Session.User.Username).FirstOrDefault();
+
+            foreach (var c in user.Player.Characters)
+            {
+                Character cha = new Character(CharacterType.Player, c);
+
+                message.Response.createChar.Characters.Add(cha.Info);
+            }
 
 
             message.Response.createChar.Result = Result.Success;
@@ -160,11 +173,12 @@ namespace GameServer.Services
 
         private void OnGameEnter(NetConnection<NetSession> sender, UserGameEnterRequest request)
         {
-
+            //通关下标确定进入游戏的玩家
             TCharacter db_character = sender.Session.User.Player.Characters.ElementAt(request.characterIdx);
             Log.InfoFormat("UserCharacterEnter: userId：{0} character_Id：{1} character_Name：{2} MapId：{3}",
                 sender.Session.User.ID,db_character.MapID,db_character.Name,db_character.MapID );
 
+            //将此玩家加入当前在线玩家中
             Character character = CharacterManager.Instance.AddCharacter(db_character);
 
 
@@ -177,9 +191,12 @@ namespace GameServer.Services
             byte[] data = PackageHandler.PackMessage(message);
             sender.SendData(data, 0, data.Length);
 
-            //设置
+            
+            
+
+            //设置当前的玩家
             sender.Session.Character = character;
-            //地图管理器
+            //地图管理器，将进入游戏的角色加入相应地图中
             MapManager.Instance[db_character.MapID].CharacterEnter(sender, character);
         }
 

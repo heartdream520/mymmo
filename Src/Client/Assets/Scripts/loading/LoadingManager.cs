@@ -53,8 +53,9 @@ public class LoadingManager : MonoBehaviour {
 
         //Init basic services
 
-        //MapService.Instance.Init();
+        MapService.Instance.Init();
         UserService.Instance.Init();
+
         //StatusService.Instance.Init();
         //FriendService.Instance.Init();
         //TeamService.Instance.Init();

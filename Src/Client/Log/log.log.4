@@ -1,19 +1,38 @@
-2022-12-11 17:55:47,856 [ 1] INFO  Unity: LoadingManager start
-2022-12-11 17:55:52,230 [ 1] INFO  Unity: DataManager > DataManager()
-2022-12-11 17:55:57,754 [ 1] INFO  Unity: UserLoadRequest::user :3 psw:3
-2022-12-11 17:55:57,757 [ 1] INFO  Unity: ConnectToServer() Start 
-2022-12-11 17:55:57,760 [ 1] INFO  Unity: DoConnect
-2022-12-11 17:55:57,762 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
-2022-12-11 17:55:57,765 [ 1] INFO  Unity: Connect[0] to server 127.0.0.1:8000
+2022-12-12 21:21:40,338 [ 1] INFO  Unity: LoadingManager start
+2022-12-12 21:21:44,914 [ 1] INFO  Unity: DataManager > DataManager()
+2022-12-12 21:21:54,388 [ 1] INFO  Unity: UserRegisterRequest::user :10 psw:10
+2022-12-12 21:21:54,392 [ 1] INFO  Unity: ConnectToServer() Start 
+2022-12-12 21:21:54,405 [ 1] INFO  Unity: DoConnect
+2022-12-12 21:21:54,408 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
+2022-12-12 21:21:54,412 [ 1] INFO  Unity: Connect[0] to server 127.0.0.1:8000
 
-2022-12-11 17:55:57,770 [ 1] INFO  Unity: LoadingMesager::OnGameServerConnect :0 reason:Success
-2022-12-11 17:55:57,908 [ 1] INFO  Unity: OnUserLoad:Success [None]
-2022-12-11 17:56:05,984 [ 1] INFO  Unity: creat character: classWizard  name4
-2022-12-11 17:56:05,986 [ 1] INFO  Unity: UserCharacterCreate::CharacterClass :Wizard name:4
-2022-12-11 17:56:06,029 [ 1] INFO  Unity: OnUserCharacterCreate:Success [None]
-2022-12-11 17:56:11,479 [ 1] INFO  Unity: OnDestroy NetworkManager.
-2022-12-11 17:56:11,481 [ 1] WARN  Unity: CloseConnection(), errorCode: 1007
+2022-12-12 21:21:54,418 [ 1] INFO  Unity: LoadingMesager::OnGameServerConnect :0 reason:Success
+2022-12-12 21:21:59,121 [ 1] INFO  Unity: OnUserRegister:Success [None]
+2022-12-12 21:22:05,596 [ 1] INFO  Unity: UserLoadRequest::user :10 psw:10
+2022-12-12 21:22:05,724 [ 1] INFO  Unity: OnUserLoad:Success [None]
+2022-12-12 21:22:14,730 [ 1] INFO  Unity: creat character: class:Wizard  name:10-1
+2022-12-12 21:22:14,733 [ 1] INFO  Unity: UserCharacterCreate::CharacterClass :Wizard name:10-1
+2022-12-12 21:22:14,863 [ 1] INFO  Unity: OnUserCharacterCreate:Success [None]
+2022-12-12 21:22:16,804 [ 1] INFO  Unity: Select Character:[0]10-1[Wizard] 
+2022-12-12 21:22:17,721 [ 1] INFO  Unity: Character Enter game:[0]10-1[Wizard] 
+2022-12-12 21:22:19,120 [ 1] INFO  Unity: UserCharacterEnter:: userid1 character_idx 
+2022-12-12 21:22:19,224 [ 1] INFO  Unity: OnUserCharacterEnter:Success [None]
+2022-12-12 21:22:19,227 [ 1] INFO  Unity: OnMapCharacterEnter:Map:1 Count:1
+2022-12-12 21:22:19,231 [ 1] INFO  Unity: AddCharacter:49:10-1 Map:1 Entity:(0:pos:(5000,4000,820),dir:(100,0,0),spd:0
+2022-12-12 21:22:19,234 [ 1] ERROR Unity: character_info_id:49  User.Instance.CurrentCharacter.ID:0
+UnityEngine.Debug:LogErrorFormat(String, Object[])
+Services.CharacterManager:AddCharacter(NCharacterInfo) (at Assets/Scripts/Managers/CharacterManager.cs:47)
+Services.MapService:OnMapCharacterEnter(Object, MapCharacterEnterResponse) (at Assets/Scripts/Services/MapService.cs:52)
+Network.MessageDistributer`1:RaiseEvent(Object, MapCharacterEnterResponse) (at E:/极世界MMORPG/mymmo/Src/Lib/Common/Network/MessageDistributer.cs:105)
+Network.MessageDispatch`1:Dispatch(Object, NetMessageResponse) (at E:/极世界MMORPG/mymmo/Src/Lib/Common/Network/MessageDispatch.cs:16)
+Network.MessageDistributer`1:Distribute() (at E:/极世界MMORPG/mymmo/Src/Lib/Common/Network/MessageDistributer.cs:148)
+Network.NetClient:ProceeMessage() (at Assets/Scripts/Network/NetClient.cs:427)
+Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:447)
+
+2022-12-12 21:22:42,630 [ 1] INFO  Unity: OnDestroy NetworkManager.
+2022-12-12 21:22:42,631 [ 1] WARN  Unity: CloseConnection(), errorCode: 1007
 UnityEngine.Debug:LogWarning(Object)
 Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:180)
 Network.NetClient:OnDestroy() (at Assets/Scripts/Network/NetClient.cs:175)
 
+2022-12-12 21:22:42,643 [ 1] INFO  Unity: Character_49_10-1 OnDestroy :ID:0 POS:(5000, 4000, 820) DIR:(100, 0, 0) SPD:0 

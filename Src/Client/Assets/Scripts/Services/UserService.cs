@@ -282,8 +282,9 @@ namespace Services
             if(response.Result==Result.Success)
             {
                 //接受返回的新建角色
-                foreach(var x in response.Characters)
-                User.Instance.Info.Player.Characters.Add(x);
+                User.Instance.Info.Player.Characters.Clear();
+                foreach (var x in response.Characters)
+                    User.Instance.Info.Player.Characters.Add(x);
             }
             if (this.OnCharacterCreate != null)
             {
@@ -301,25 +302,9 @@ namespace Services
             {
                 //接受返回的新建角色
 
-                switch (User.Instance.CurrentCharacter.mapId)
-                {
-                    case 1:
-                        MySceneManager.Instance.LoadScene("MainCity");
-                        break;
-                    case 2:
-                        MySceneManager.Instance.LoadScene("Map01");
-                        break;
-                    case 3:
-                        MySceneManager.Instance.LoadScene("Map02");
-                        break;
-                    case 4:
-                        MySceneManager.Instance.LoadScene("Map03");
-                        break;
-
-
-                    default:
-                        break;
-                }
+                //加载新场景
+                //加载新场景
+                //MySceneManager.Instance.LoadScene(DataManager.Instance.Maps[User.Instance.CurrentCharacter.mapId].Resource);
 
             }
             if (this.OnGameEnter != null)

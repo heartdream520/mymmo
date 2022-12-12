@@ -16,9 +16,22 @@ namespace GameServer.Services
     {
         public MapService()
         {
-            //MessageDistributer<NetConnection<NetSession>>.Instance.Subscribe<MapCharacterEnterRequest>(this.OnMapCharacterEnter);
+            MessageDistributer<NetConnection<NetSession>>.Instance.Subscribe<MapCharacterEnterRequest>(this.OnMapCharacterEnter);
+            MessageDistributer<NetConnection<NetSession>>.Instance.Subscribe<MapCharacterEnterRequest>(this.OnMapCharacterLeave);
 
         }
+
+
+
+        private void OnMapCharacterEnter(NetConnection<NetSession> sender, MapCharacterEnterRequest request)
+        {
+            throw new NotImplementedException();
+        }
+        private void OnMapCharacterLeave(NetConnection<NetSession> sender, MapCharacterEnterRequest request)
+        {
+            throw new NotImplementedException();
+        }
+
 
         public void Init()
         {

@@ -1,27 +1,77 @@
-2022-12-11 17:54:55,220 [ 1] INFO  Unity: LoadingManager start
-2022-12-11 17:54:59,568 [ 1] INFO  Unity: DataManager > DataManager()
-2022-12-11 17:55:08,390 [ 1] INFO  Unity: UserRegisterRequest::user :4 psw:4
-2022-12-11 17:55:08,393 [ 1] INFO  Unity: ConnectToServer() Start 
-2022-12-11 17:55:08,396 [ 1] INFO  Unity: DoConnect
-2022-12-11 17:55:08,399 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
-2022-12-11 17:55:08,402 [ 1] INFO  Unity: Connect[0] to server 127.0.0.1:8000
+2022-12-12 21:12:21,203 [ 1] INFO  Unity: LoadingManager start
+2022-12-12 21:12:25,583 [ 1] INFO  Unity: DataManager > DataManager()
+2022-12-12 21:12:36,552 [ 1] INFO  Unity: UserRegisterRequest::user :9 psw:9
+2022-12-12 21:12:36,554 [ 1] INFO  Unity: ConnectToServer() Start 
+2022-12-12 21:12:36,557 [ 1] INFO  Unity: DoConnect
+2022-12-12 21:12:36,559 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
+2022-12-12 21:12:36,564 [ 1] INFO  Unity: Connect[0] to server 127.0.0.1:8000
 
-2022-12-11 17:55:08,409 [ 1] INFO  Unity: LoadingMesager::OnGameServerConnect :0 reason:Success
-2022-12-11 17:55:08,561 [ 1] INFO  Unity: OnUserRegister:Success [None]
-2022-12-11 17:55:16,561 [ 1] INFO  Unity: UserLoadRequest::user :4 psw:4
-2022-12-11 17:55:16,607 [ 1] INFO  Unity: OnUserLoad:Success [None]
-2022-12-11 17:55:26,568 [ 1] INFO  Unity: creat character: classWizard  name1
-2022-12-11 17:55:26,571 [ 1] INFO  Unity: UserCharacterCreate::CharacterClass :Wizard name:1
-2022-12-11 17:55:26,627 [ 1] INFO  Unity: OnUserCharacterCreate:Success [None]
-2022-12-11 17:55:34,051 [ 1] INFO  Unity: creat character: classWizard  name2
-2022-12-11 17:55:34,052 [ 1] INFO  Unity: UserCharacterCreate::CharacterClass :Wizard name:2
-2022-12-11 17:55:34,088 [ 1] INFO  Unity: OnUserCharacterCreate:Success [None]
-2022-12-11 17:55:40,774 [ 1] INFO  Unity: creat character: classArcher  name3
-2022-12-11 17:55:40,775 [ 1] INFO  Unity: UserCharacterCreate::CharacterClass :Archer name:3
-2022-12-11 17:55:40,810 [ 1] INFO  Unity: OnUserCharacterCreate:Success [None]
-2022-12-11 17:55:43,390 [ 1] INFO  Unity: OnDestroy NetworkManager.
-2022-12-11 17:55:43,392 [ 1] WARN  Unity: CloseConnection(), errorCode: 1007
+2022-12-12 21:12:36,569 [ 1] INFO  Unity: LoadingMesager::OnGameServerConnect :0 reason:Success
+2022-12-12 21:12:36,713 [ 1] INFO  Unity: OnUserRegister:Success [None]
+2022-12-12 21:12:41,694 [ 1] INFO  Unity: UserLoadRequest::user :9 psw:9
+2022-12-12 21:12:41,745 [ 1] INFO  Unity: OnUserLoad:Success [None]
+2022-12-12 21:12:51,536 [ 1] INFO  Unity: creat character: class:Archer  name:9-1
+2022-12-12 21:12:51,538 [ 1] INFO  Unity: UserCharacterCreate::CharacterClass :Archer name:9-1
+2022-12-12 21:12:51,590 [ 1] INFO  Unity: OnUserCharacterCreate:Success [None]
+2022-12-12 21:12:53,363 [ 1] INFO  Unity: Select Character:[0]9-1[Archer] 
+2022-12-12 21:12:54,853 [ 1] INFO  Unity: Character Enter game:[0]9-1[Archer] 
+2022-12-12 21:12:56,240 [ 1] INFO  Unity: UserCharacterEnter:: userid1 character_idx 
+2022-12-12 21:12:56,283 [ 1] INFO  Unity: OnUserCharacterEnter:Success [None]
+2022-12-12 21:12:56,288 [ 1] INFO  Unity: OnMapCharacterEnter:Map:1 Count:6
+2022-12-12 21:12:56,299 [ 1] INFO  Unity: AddCharacter:48:9-1 Map:1 Entity:(0:pos:(5000,4000,820),dir:(100,0,0),spd:0
+2022-12-12 21:12:56,303 [ 1] INFO  Unity: AddCharacter:42:6-1 Map:1 Entity:(0:pos:(5000,4000,820),dir:(100,0,0),spd:0
+2022-12-12 21:12:56,305 [ 1] INFO  Unity: AddCharacter:43:6-2 Map:1 Entity:(0:pos:(5000,4000,820),dir:(100,0,0),spd:0
+2022-12-12 21:12:56,306 [ 1] INFO  Unity: AddCharacter:44:6-3 Map:1 Entity:(0:pos:(5000,4000,820),dir:(100,0,0),spd:0
+2022-12-12 21:12:56,307 [ 1] INFO  Unity: AddCharacter:46:7-1 Map:1 Entity:(0:pos:(5000,4000,820),dir:(100,0,0),spd:0
+2022-12-12 21:12:56,308 [ 1] INFO  Unity: AddCharacter:47:8-1 Map:1 Entity:(0:pos:(5000,4000,820),dir:(100,0,0),spd:0
+2022-12-12 21:21:15,242 [ 1] INFO  Unity: ProcessReceive exception:System.Net.Sockets.SocketException: 远程主机强迫关闭了一个现有的连接。
+
+  at System.Net.Sockets.Socket.Receive (System.Byte[] buffer, Int32 offset, Int32 size, SocketFlags flags) [0x00000] in <filename unknown>:0 
+  at Network.NetClient.ProcessRecv () [0x00084] in E:\极世界MMORPG\mymmo\Src\Client\Assets\Scripts\Network\NetClient.cs:346 
+
+2022-12-12 21:21:15,244 [ 1] WARN  Unity: CloseConnection(), errorCode: 1001
 UnityEngine.Debug:LogWarning(Object)
 Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:180)
-Network.NetClient:OnDestroy() (at Assets/Scripts/Network/NetClient.cs:175)
+Network.NetClient:ProcessRecv() (at Assets/Scripts/Network/NetClient.cs:360)
+Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:440)
+
+2022-12-12 21:21:15,370 [ 1] INFO  Unity: DoConnect
+2022-12-12 21:21:15,371 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
+2022-12-12 21:21:15,381 [ 1] INFO  Unity: Connect[0] to server 127.0.0.1:8000
+
+2022-12-12 21:21:17,408 [ 1] WARN  Unity: CloseConnection(), errorCode: 1005
+UnityEngine.Debug:LogWarning(Object)
+Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:180)
+Network.NetClient:DoConnect() (at Assets/Scripts/Network/NetClient.cs:277)
+Network.NetClient:Connect(Int32) (at Assets/Scripts/Network/NetClient.cs:169)
+Network.NetClient:KeepConnect() (at Assets/Scripts/Network/NetClient.cs:321)
+Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:438)
+
+2022-12-12 21:21:17,411 [ 1] ERROR Unity: DoConnect SocketException:[10061,ConnectionRefused,10061]System.Net.Sockets.SocketException: 由于目标计算机积极拒绝，无法连接。
+
+  at System.Net.Sockets.Socket.Connect (System.Net.EndPoint remoteEP, Boolean requireSocketPolicy) [0x00000] in <filename unknown>:0 
+  at System.Net.Sockets.Socket+Worker.Connect () [0x00000] in <filename unknown>:0  
+UnityEngine.Debug:LogErrorFormat(String, Object[])
+Network.NetClient:DoConnect() (at Assets/Scripts/Network/NetClient.cs:279)
+Network.NetClient:Connect(Int32) (at Assets/Scripts/Network/NetClient.cs:169)
+Network.NetClient:KeepConnect() (at Assets/Scripts/Network/NetClient.cs:321)
+Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:438)
+
+2022-12-12 21:21:17,905 [ 1] WARN  Unity: Assets/Scripts/GameObject/MainPlayerCamera.cs(7,19): warning CS0108: `MainPlayerCamera.camera' hides inherited member `UnityEngine.Component.camera'. Use the new keyword if hiding was intended
+
+2022-12-12 21:21:17,906 [ 1] WARN  Unity: Assets/Scripts/UI/UICharInfo.cs(22,17): warning CS0108: `UICharInfo.name' hides inherited member `UnityEngine.Object.name'. Use the new keyword if hiding was intended
+
+2022-12-12 21:21:17,907 [ 1] WARN  Unity: Assets/Scripts/normal/GameDataManage.cs(31,26): warning CS0168: The variable `e' is declared but never used
+
+2022-12-12 21:21:17,908 [ 1] WARN  Unity: Assets/Scripts/GameObject/EntityController.cs(19,16): warning CS0649: Field `EntityController.rotation' is never assigned to, and will always have its default value
+
+2022-12-12 21:21:17,908 [ 1] WARN  Unity: Assets/Scripts/GameObject/EntityController.cs(22,16): warning CS0414: The private field `EntityController.lastRotation' is assigned but its value is never used
+
+2022-12-12 21:21:17,909 [ 1] WARN  Unity: Assets/Scripts/GameObject/PlayerInputController.cs(112,11): warning CS0414: The private field `PlayerInputController.lastSync' is assigned but its value is never used
+
+2022-12-12 21:21:17,911 [ 1] WARN  Unity: Assets/Scripts/Services/UserService.cs(19,63): warning CS0649: Field `Services.UserService.OnGameEnter' is never assigned to, and will always have its default value `null'
+
+2022-12-12 21:21:17,911 [ 1] WARN  Unity: Assets/Scripts/Services/UserService.cs(20,63): warning CS0649: Field `Services.UserService.OnGameLeave' is never assigned to, and will always have its default value `null'
+
+2022-12-12 21:21:17,912 [ 1] WARN  Unity: Assets/Scripts/UI/UICharacterSelect.cs(15,20): warning CS0414: The private field `UICharacterSelect.charClass' is assigned but its value is never used
 
