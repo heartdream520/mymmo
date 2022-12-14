@@ -53,7 +53,35 @@ public class PlayerInputController : MonoBehaviour {
 
         
         float v = Input.GetAxis("Vertical");
-        if (v > 0.01)
+        float h = Input.GetAxis("Horizontal");
+
+        Vector3 v_pos = new Vector3(h, 0, v).normalized;
+        Quaternion quaternion = Quaternion.Euler(0, MainPlayerCamera.Instance.x, 0);
+        v_pos = quaternion * v_pos;
+        if (v_pos.sqrMagnitude > 0)
+        {
+            character.SetDirection(GameObjectTool.WorldToLogic(v_pos));
+            rb.transform.forward = this.transform.forward;
+            this.transform.rotation = Quaternion.Euler(v_pos);
+
+            transform.eulerAngles = new Vector3(0, Quaternion.FromToRotation(Vector3.forward,v_pos).eulerAngles.y, 0);
+            
+            /*
+            Vector3 dir = GameObjectTool.LogicToWorld(character.direction);
+            Quaternion rot = new Quaternion();
+            rot.SetFromToRotation(dir, this.transform.forward);
+
+            if (rot.eulerAngles.y > this.turnAngle && rot.eulerAngles.y < (360 - this.turnAngle))
+            {
+                character.SetDirection(GameObjectTool.WorldToLogic(this.transform.forward));
+                rb.transform.forward = this.transform.forward;
+                this.SendEntityEvent(EntityEvent.None);
+            }
+            */
+
+        }
+           
+        if (v > 0.01 || h > 0.01 || v < -0.01 || h < -0.01)
         {
             if (state != SkillBridge.Message.CharacterState.Move)
             {
@@ -63,7 +91,8 @@ public class PlayerInputController : MonoBehaviour {
             }
             this.rb.velocity = this.rb.velocity.y * Vector3.up + GameObjectTool.LogicToWorld(character.direction) * (this.character.speed + 9.81f) / 100f;
         }
-        else if (v < -0.01)
+        /*
+        else if (v < -0.01 || h < -0.01)
         {
             if (state != SkillBridge.Message.CharacterState.Move)
             {
@@ -72,7 +101,7 @@ public class PlayerInputController : MonoBehaviour {
                 this.SendEntityEvent(EntityEvent.MoveBack);
             }
             this.rb.velocity = this.rb.velocity.y * Vector3.up + GameObjectTool.LogicToWorld(character.direction) * (this.character.speed + 9.81f) / 100f;
-        }
+        }*/
         else
         {
             if (state != SkillBridge.Message.CharacterState.Idle)
@@ -89,11 +118,13 @@ public class PlayerInputController : MonoBehaviour {
             this.SendEntityEvent(EntityEvent.Jump);
         }
 
-        float h = Input.GetAxis("Horizontal");
+        
         //转弯
+        
         if (h<-0.1 || h>0.1)
         {
             this.transform.Rotate(0, h * rotateSpeed, 0);
+            
             Vector3 dir = GameObjectTool.LogicToWorld(character.direction);
             Quaternion rot = new Quaternion();
             rot.SetFromToRotation(dir, this.transform.forward);
@@ -104,8 +135,8 @@ public class PlayerInputController : MonoBehaviour {
                 rb.transform.forward = this.transform.forward;
                 this.SendEntityEvent(EntityEvent.None);
             }
-
         }
+        
         //Debug.LogFormat("velocity {0}", this.rb.velocity.magnitude);
     }
     Vector3 lastPos;

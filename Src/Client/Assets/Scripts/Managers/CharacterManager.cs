@@ -44,7 +44,7 @@ namespace Services
             Debug.LogFormat("AddCharacter:{0}:{1} Map:{2} Entity:{3}", cha.Id, cha.Name, cha.mapId, cha.Entity.String());
 
             //.Info.Id == User.Instance.CurrentCharacter.Id
-            Debug.LogErrorFormat("character_info_id:{0}  User.Instance.CurrentCharacter.ID:{1}", cha.Id, User.Instance.CurrentCharacter.Id);
+            //Debug.LogErrorFormat("character_info_id:{0}  User.Instance.CurrentCharacter.ID:{1}", cha.Id, User.Instance.CurrentCharacter.Id);
             Character character = new Character(cha);
             this.Characters[cha.Id] = character;
 
