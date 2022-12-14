@@ -76,6 +76,8 @@
     <Compile Include="Assets\Scripts\Log\UnityLogger.cs" />
     <Compile Include="Assets\Scripts\Managers\CharacterManager.cs" />
     <Compile Include="Assets\Scripts\Managers\DataManager.cs" />
+    <Compile Include="Assets\Scripts\Managers\MinimapManager.cs" />
+    <Compile Include="Assets\Scripts\Managers\MouseManager.cs" />
     <Compile Include="Assets\Scripts\Models\User.cs" />
     <Compile Include="Assets\Scripts\Network\NetClient.cs" />
     <Compile Include="Assets\Scripts\normal\back_character_select.cs" />
@@ -89,6 +91,7 @@
     <Compile Include="Assets\Scripts\Services\UserService.cs" />
     <Compile Include="Assets\Scripts\UI\character_scale.cs" />
     <Compile Include="Assets\Scripts\UI\MessageBox.cs" />
+    <Compile Include="Assets\Scripts\UI\Minimap\UIMinimap.cs" />
     <Compile Include="Assets\Scripts\UI\MyUICharacterSelect.cs" />
     <Compile Include="Assets\Scripts\UI\UICharacterSelect.cs" />
     <Compile Include="Assets\Scripts\UI\UICharacterView.cs" />

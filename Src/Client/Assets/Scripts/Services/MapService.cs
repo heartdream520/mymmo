@@ -70,7 +70,9 @@ namespace Services
             if (DataManager.Instance.Maps.ContainsKey(mapId))
             {
                 MapDefine map = DataManager.Instance.Maps[mapId];
+                User.Instance.CurrentMapData = map;
                 MySceneManager.Instance.LoadScene(map.Resource);
+                
             }
             else
                 Debug.LogErrorFormat("EnterMap: Map {0} not existed", mapId);

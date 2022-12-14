@@ -1,7 +1,9 @@
-﻿using System;
+﻿using Common.Data;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using UnityEngine;
 
 namespace Models
 {
@@ -36,6 +38,12 @@ namespace Models
         /// 当前选择的角色信息
         /// </summary>
         public SkillBridge.Message.NCharacterInfo CurrentCharacter { get; set; }
+        
 
+        /// <summary>
+        /// 当前地图的数据
+        /// </summary>
+        public MapDefine CurrentMapData;
+        public GameObject CurrentCharacterObject { get;  set; }
     }
 }

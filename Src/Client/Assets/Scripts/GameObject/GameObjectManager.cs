@@ -5,6 +5,8 @@ using UnityEngine;
 using Entities;
 using Services;
 using SkillBridge.Message;
+using Models;
+using System;
 
 public class GameObjectManager : MonoBehaviour
 {
@@ -17,6 +19,12 @@ public class GameObjectManager : MonoBehaviour
     {
         //初始化所有游戏对象
         StartCoroutine(InitGameObjects());
+
+
+        //创建鼠标管理器
+        //CreatMouseManager();
+
+
         //设置事件
         CharacterManager.Instance.OnCharacterEnter = OnCharacterEnter;
     }
@@ -34,8 +42,13 @@ public class GameObjectManager : MonoBehaviour
     //玩家进入事件执行
     void OnCharacterEnter(Character cha)
     {
-
         CreateCharacterObject(cha);
+    }
+
+    private void CreatMouseManager()
+    {
+        Debug.LogError("生成鼠标管理器");
+        Instantiate( Resloader.Load<GameObject>("Prefabs/MouseManager"));
     }
 
     IEnumerator InitGameObjects()
@@ -56,7 +69,7 @@ public class GameObjectManager : MonoBehaviour
         if (!Characters.ContainsKey(character.Info.Id) || Characters[character.Info.Id] == null)
         {
             //根据角色资源位置获取游戏对象资源实体
-            Object obj = Resloader.Load<Object>(character.Define.Resource);
+            UnityEngine.Object obj = Resloader.Load<UnityEngine.Object>(character.Define.Resource);
             if(obj == null)
             {
                 Debug.LogErrorFormat("Character[{0}] Resource[{1}] not existed.",character.Define.TID, character.Define.Resource);
@@ -89,7 +102,11 @@ public class GameObjectManager : MonoBehaviour
                     MainPlayerCamera.Instance.player = go;
                     pc.enabled = true;
                     pc.character = character;
+
                     pc.entityController = ec;
+
+                    //设置当前控制角色的游戏对象
+                    User.Instance.CurrentCharacterObject = go;
                 }
                 else
                 {
