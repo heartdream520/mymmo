@@ -17,8 +17,15 @@ public class UIMinimap : MonoBehaviour {
     public Image minimap;
 
     private Transform playerTransform;
-	// Use this for initialization
-	void Start () {
+    private void Awake()
+    {
+        User.Instance.CurrentCharacterObject_Set_Action += delegate (GameObject game)
+         {
+             this.playerTransform = game.transform;
+         };
+    }
+    // Use this for initialization
+    void Start () {
         this.InitMap();
     }
 
@@ -39,6 +46,7 @@ public class UIMinimap : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        if (playerTransform == null) return;
         //地图实际大小
         float realWidth = minimapBoundingBox.bounds.size.x;
         float realHeight = minimapBoundingBox.bounds.size.z;

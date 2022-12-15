@@ -47,6 +47,7 @@ namespace Services
             MessageDistributer.Instance.Unsubscribe<UserLoginResponse>(this.OnUserLoad);
             MessageDistributer.Instance.Unsubscribe<UserCreateCharacterResponse>(this.OnUserCharacterCreate);
             MessageDistributer.Instance.Unsubscribe<UserGameEnterResponse>(this.OnUserGameEnter);
+            MessageDistributer.Instance.Unsubscribe<UserGameLeaveResponse>(this.OnUserGameLeave);
 
         }
 
@@ -230,7 +231,7 @@ namespace Services
             NetMessage message = new NetMessage();
             message.Request = new NetMessageRequest();
             message.Request.gameLeave = new UserGameLeaveRequest();
-
+           
 
             if (this.connected && NetClient.Instance.Connected)
             {
@@ -306,6 +307,7 @@ namespace Services
                 //加载新场景
                 //MySceneManager.Instance.LoadScene(DataManager.Instance.Maps[User.Instance.CurrentCharacter.mapId].Resource);
 
+                
             }
             if (this.OnGameEnter != null)
             {
@@ -317,7 +319,7 @@ namespace Services
         /// </summary>
         private void OnUserGameLeave(object sender, UserGameLeaveResponse response)
         {
-            throw new NotImplementedException();
+            
         }
     }
 }

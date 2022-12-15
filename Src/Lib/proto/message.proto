@@ -191,6 +191,7 @@ message UserGameEnterResponse {
 
 message UserGameLeaveRequest
 {
+	
 }
 
 message UserGameLeaveResponse {

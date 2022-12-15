@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace Models
 {
@@ -44,6 +45,16 @@ namespace Models
         /// 当前地图的数据
         /// </summary>
         public MapDefine CurrentMapData;
-        public GameObject CurrentCharacterObject { get;  set; }
+        private GameObject currentCharacterobject;
+        public UnityAction<GameObject> CurrentCharacterObject_Set_Action;
+        public GameObject CurrentCharacterObject
+        {
+            get { return currentCharacterobject; }
+            set
+            {
+                currentCharacterobject = value;
+                CurrentCharacterObject_Set_Action(value);
+            }
+        }
     }
 }

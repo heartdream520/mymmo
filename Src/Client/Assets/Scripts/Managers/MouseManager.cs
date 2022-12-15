@@ -31,7 +31,7 @@ namespace Assets.Scripts.Managers
         /// <summary>
         /// 隐藏鼠标
         /// </summary>
-        void ToHideCursor()
+        public void ToHideCursor()
         {
             
             Cursor.visible = false;
@@ -40,7 +40,7 @@ namespace Assets.Scripts.Managers
         /// <summary>
         /// 显示鼠标
         /// </summary>
-        void ToShowCursor()
+        public void ToShowCursor()
         {
             Cursor.visible = true;
             mouse_is_diplay = true;
