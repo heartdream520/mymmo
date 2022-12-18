@@ -21,6 +21,11 @@ public class UIMinimap : MonoBehaviour {
     {
         User.Instance.CurrentCharacterObject_Set_Action += delegate (GameObject game)
          {
+             if (game == null)
+             {
+                 this.playerTransform = null;
+                 return;
+             }
              this.playerTransform = game.transform;
          };
     }
@@ -41,7 +46,8 @@ public class UIMinimap : MonoBehaviour {
         //设置本地位置
         this.minimap.transform.localPosition = Vector3.zero;
         //设置玩家位置
-        this.playerTransform = User.Instance.CurrentCharacterObject.transform;
+        if (User.Instance.CurrentCharacterObject != null)
+            this.playerTransform = User.Instance.CurrentCharacterObject.transform;
     }
 	
 	// Update is called once per frame

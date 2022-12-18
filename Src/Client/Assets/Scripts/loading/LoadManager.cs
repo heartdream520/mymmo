@@ -72,7 +72,7 @@ public class LoadManager :MonoSingleton<LoadManager>
             Load_appear.stop_all_Coroutine();
         };
     }
-    private void Start()
+    public override void OnStart()
     {
         //Now_State = state.LOAD;
     }

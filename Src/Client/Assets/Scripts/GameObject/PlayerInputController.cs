@@ -4,6 +4,7 @@ using UnityEngine;
 
 using Entities;
 using SkillBridge.Message;
+using Services;
 
 public class PlayerInputController : MonoBehaviour {
 
@@ -50,8 +51,8 @@ public class PlayerInputController : MonoBehaviour {
     {
         if (character == null)
             return;
-
         
+
         float v = Input.GetAxis("Vertical");
         float h = Input.GetAxis("Horizontal");
 
@@ -151,7 +152,7 @@ public class PlayerInputController : MonoBehaviour {
         //Debug.LogFormat("LateUpdate velocity {0} : {1}", this.rb.velocity.magnitude, this.speed);
         this.lastPos = this.rb.transform.position;
 
-        if ((GameObjectTool.WorldToLogic(this.rb.transform.position) - this.character.position).magnitude > 50)
+        if ((GameObjectTool.WorldToLogic(this.rb.transform.position) - this.character.position).magnitude > 10)
         {
             this.character.SetPosition(GameObjectTool.WorldToLogic(this.rb.transform.position));
             this.SendEntityEvent(EntityEvent.None);
@@ -167,5 +168,7 @@ public class PlayerInputController : MonoBehaviour {
     {
         if (entityController != null)
             entityController.OnEntityEvent(entityEvent);
+        MapService.Instance.SendMapEntitySync(entityEvent, this.character.EntityData);
+
     }
 }

@@ -104,8 +104,6 @@ public class UICharacterView : MonoBehaviour {
        
         if (selectCharacterIdx >= 0)
         {
-            User.Instance.CurrentCharacter = User.Instance.Info.Player.Characters[selectCharacterIdx];
-            Debug.LogFormat("Character Enter game:[{0}]{1}[{2}] ", User.Instance.CurrentCharacter.Id, User.Instance.CurrentCharacter.Name, User.Instance.CurrentCharacter.Class);
 
             var go= MessageBox.Show("进入游戏", "进入游戏", MessageBoxType.Confirm);
 

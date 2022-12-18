@@ -191,7 +191,7 @@ message UserGameEnterResponse {
 
 message UserGameLeaveRequest
 {
-	
+	NCharacterInfo Character=1;
 }
 
 message UserGameLeaveResponse {

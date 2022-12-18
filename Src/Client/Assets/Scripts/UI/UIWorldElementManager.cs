@@ -9,8 +9,8 @@ public class UIWorldElementManager : MonoSingleton<UIWorldElementManager> {
 
     private Dictionary<Transform, GameObject> elements = new Dictionary<Transform, GameObject>();
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    public override void OnStart () {
 		
 	}
 	

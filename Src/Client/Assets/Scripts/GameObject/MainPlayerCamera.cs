@@ -17,8 +17,9 @@ public class MainPlayerCamera : MonoSingleton<MainPlayerCamera>
     public float max_rotate_x;
 
     public AnimationCurve camera_curve;
+
     // Use this for initialization
-    void Start () {
+    public override void OnStart () {
         mouse_pos = Input.mousePosition;
 	}
 

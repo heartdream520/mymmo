@@ -8,7 +8,7 @@ public class MySceneManager : MonoSingleton<MySceneManager>
     UnityAction<float> onProgress = null;
 
     // Use this for initialization
-    protected override void OnStart()
+    public override void OnStart()
     {
         
     }

@@ -74,21 +74,6 @@ namespace SkillBridge.Message
     public partial class NVector3 : global::ProtoBuf.IExtensible
     {
         private global::ProtoBuf.IExtension __pbn__extensionData;
-        private int v1;
-        private int v2;
-        private int v3;
-
-        public NVector3(int v1, int v2, int v3)
-        {
-            this.v1 = v1;
-            this.v2 = v2;
-            this.v3 = v3;
-        }
-
-        public NVector3()
-        {
-        }
-
         global::ProtoBuf.IExtension global::ProtoBuf.IExtensible.GetExtensionObject(bool createIfMissing)
             => global::ProtoBuf.Extensible.GetExtensionObject(ref __pbn__extensionData, createIfMissing);
 
@@ -377,6 +362,9 @@ namespace SkillBridge.Message
         private global::ProtoBuf.IExtension __pbn__extensionData;
         global::ProtoBuf.IExtension global::ProtoBuf.IExtensible.GetExtensionObject(bool createIfMissing)
             => global::ProtoBuf.Extensible.GetExtensionObject(ref __pbn__extensionData, createIfMissing);
+
+        [global::ProtoBuf.ProtoMember(1)]
+        public NCharacterInfo Character { get; set; }
 
     }
 

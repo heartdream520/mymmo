@@ -54,6 +54,7 @@ namespace GameServer.Entities
         {
             get
             {
+                
                 return entityData;
             }
             set
@@ -62,6 +63,8 @@ namespace GameServer.Entities
                 this.SetEntityData(value);
             }
         }
+
+        
 
         public Entity(Vector3Int pos,Vector3Int dir)
         {
@@ -81,6 +84,10 @@ namespace GameServer.Entities
             this.Position = entity.Position;
             this.Direction = entity.Direction;
             this.speed = entity.Speed;
+        }
+        private void UpdataEntityData()
+        {
+            throw new NotImplementedException();
         }
     }
 }

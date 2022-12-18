@@ -127,7 +127,8 @@ namespace Services
         /// <param name="psw">密码</param>
         public void SendRegister(string user, string psw)
         {
-            Debug.LogFormat("UserRegisterRequest::user :{0} psw:{1}", user, psw);
+            Debug.LogFormat("UserService->SendRegister: User:{0} Password:{1}",
+                user, psw);
             //发送消息到服务器
             NetMessage message = new NetMessage();
             message.Request = new NetMessageRequest();
@@ -153,7 +154,8 @@ namespace Services
         /// <param name="psw">登录用户密码</param>
         public void SendLoad(string user, string psw)
         {
-            Debug.LogFormat("UserLoadRequest::user :{0} psw:{1}", user, psw);
+            Debug.LogFormat("UserService->SendLoad: User:{0} Password:{1}",
+                user, psw);
             //发送消息到服务器
             NetMessage message = new NetMessage();
             message.Request = new NetMessageRequest();
@@ -179,7 +181,9 @@ namespace Services
         /// <param name="text">角色名</param>
         public void SendCharacterCreate(CharacterClass char_class, string text)
         {
-            Debug.LogFormat("UserCharacterCreate::CharacterClass :{0} name:{1}", char_class, text);
+            
+            Debug.LogFormat("UserService->SendCharacterCreate: CharacterName :{0} Class:{1}",
+                text ,char_class);
             //发送消息到服务器
             NetMessage message = new NetMessage();
             message.Request = new NetMessageRequest();
@@ -202,7 +206,8 @@ namespace Services
         {
 
             var cha = User.Instance.Info.Player.Characters[idx];
-            Debug.LogFormat("UserCharacterEnter:: userid{0} character_idx ", User.Instance.Info.Id,idx);
+            Debug.LogFormat("UserService->SendCharacterEnter: EnterCharacterID :{0} EnterCharacterName:{1} EnterCharacter_Idx",
+                cha.Id, cha.Name,idx);
             
             //发送消息到服务器
             NetMessage message = new NetMessage();
@@ -221,18 +226,18 @@ namespace Services
                 this.ConnectToServer();
             }
         }
-        public void SendCharacterLeave(int idx)
+        public void SendCharacterLeave()
         {
+            NCharacterInfo cha = User.Instance.CurrentCharacter;
+            Debug.LogFormat("UserService->SendCharacterLeave: LeaveCharacterID :{0} LeaveCharacterName:{1}", 
+                cha.Id,cha.Name);
 
-            var cha = User.Instance.Info.Player.Characters[idx];
-            Debug.LogFormat("UserCharacterLeave:: userid{0} character_idx ", User.Instance.Info.Id,idx);
             
             //发送消息到服务器
             NetMessage message = new NetMessage();
             message.Request = new NetMessageRequest();
             message.Request.gameLeave = new UserGameLeaveRequest();
-           
-
+            message.Request.gameLeave.Character = User.Instance.CurrentCharacter;
             if (this.connected && NetClient.Instance.Connected)
             {
                 this.pendingMessage = null;
@@ -249,7 +254,7 @@ namespace Services
         /// </summary>
         void OnUserRegister(object sender, UserRegisterResponse response)
         {
-            Debug.LogFormat("OnUserRegister:{0} [{1}]", response.Result, response.Errormsg);
+            Debug.LogFormat("UserService->OnUserRegister:{0} [{1}]", response.Result, response.Errormsg);
 
             if (this.OnRegister != null)
             {
@@ -261,7 +266,7 @@ namespace Services
         /// </summary>
         void OnUserLoad(object sender, UserLoginResponse response)
         {
-            Debug.LogFormat("OnUserLoad:{0} [{1}]", response.Result, response.Errormsg);
+            Debug.LogFormat("UserService->OnUserLoad:{0} [{1}]", response.Result, response.Errormsg);
 
             if (this.OnLoad != null)
             {
@@ -278,9 +283,9 @@ namespace Services
         /// </summary>
         private void OnUserCharacterCreate(object sender, UserCreateCharacterResponse response)
         {
-            Debug.LogFormat("OnUserCharacterCreate:{0} [{1}]", response.Result, response.Errormsg);
+            Debug.LogFormat("UserService->OnUserCharacterCreate:{0} [{1}]", response.Result, response.Errormsg);
 
-            if(response.Result==Result.Success)
+            if (response.Result==Result.Success)
             {
                 //接受返回的新建角色
                 User.Instance.Info.Player.Characters.Clear();
@@ -297,17 +302,11 @@ namespace Services
         /// </summary>
         private void OnUserGameEnter(object sender, UserGameEnterResponse response)
         {
-            Debug.LogFormat("OnUserCharacterEnter:{0} [{1}]", response.Result, response.Errormsg);
+            Debug.LogFormat("UserService->OnUserGameEnter:{0} [{1}]", response.Result, response.Errormsg);
 
             if (response.Result == Result.Success)
             {
-                //接受返回的新建角色
 
-                //加载新场景
-                //加载新场景
-                //MySceneManager.Instance.LoadScene(DataManager.Instance.Maps[User.Instance.CurrentCharacter.mapId].Resource);
-
-                
             }
             if (this.OnGameEnter != null)
             {
@@ -319,7 +318,9 @@ namespace Services
         /// </summary>
         private void OnUserGameLeave(object sender, UserGameLeaveResponse response)
         {
-            
+            Debug.LogFormat("UserService->OnUserGameLeave:{0} [{1}]", response.Result, response.Errormsg);
+            MapService.Instance.CurrentMapId = 0;
+            User.Instance.CurrentCharacter = null;
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Services;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,6 +18,7 @@ namespace Assets.Scripts.Managers
         }
         private void Update()
         {
+            if (MapService.Instance.CurrentMapId == 0) return;
             if (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift))
             {
                 ToShowCursor();
@@ -24,7 +26,7 @@ namespace Assets.Scripts.Managers
             else ToHideCursor();
 
         }
-        void Start()
+        public override void OnStart()
         {
             ToHideCursor();
         }

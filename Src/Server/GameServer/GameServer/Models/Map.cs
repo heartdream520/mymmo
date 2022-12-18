@@ -11,6 +11,7 @@ using Common.Data;
 using Network;
 using GameServer.Managers;
 using GameServer.Entities;
+using GameServer.Services;
 
 namespace GameServer.Models
 {
@@ -49,40 +50,50 @@ namespace GameServer.Models
         /// <summary>
         /// 角色进入地图
         /// </summary>
-        /// <param name="character"></param>
-        internal void CharacterEnter(NetConnection<NetSession> conn, Character character)
+        /// <param name="cha"></param>
+        internal void CharacterEnter(NetConnection<NetSession> conn, Character cha)
         {
-            Log.InfoFormat("MapCharacterEnter: MapID:{0} characterId:{1}", this.Define.ID, character.Id);
+            Log.InfoFormat("Map->CharacterEnter : MapID :{0} CharacterInfoId:{1} CharacterDataId:{2} EntityID:{3} ",
+               cha.Info.mapId, cha.Info.Id, cha.Data.ID, cha.entityId);
 
-            character.Info.mapId = this.ID;
+            cha.Info.mapId = this.ID;
 
             NetMessage message = new NetMessage();
             message.Response = new NetMessageResponse();
             message.Response.mapCharacterEnter = new MapCharacterEnterResponse();
 
             message.Response.mapCharacterEnter.mapId = this.Define.ID;
-            message.Response.mapCharacterEnter.Characters.Add(character.Info);
+            message.Response.mapCharacterEnter.Characters.Add(cha.Info);
 
+            Log.ErrorFormat("CharacterEnter");
             //通知此地图其他角色新角色的进入
             foreach (var kv in this.MapCharacters)
             {
+                Log.ErrorFormat("InMapCharacters: CharacterInfoId:{0} CharacterId:{1}  EntityID:{2}",
+                    kv.Value.character.Info.Id, kv.Value.character.Id, kv.Value.character.EntityData.Id);
                 message.Response.mapCharacterEnter.Characters.Add(kv.Value.character.Info);
-                this.SendCharacterEnterMap(kv.Value.connection, character.Info);
+                this.SendCharacterEnterMap(kv.Value.connection, cha.Info);
             }
             //Log.ErrorFormat("新加入角色ID{0}", character.Id);
             //将新角色加入到此地图角色的字典中
-            this.MapCharacters[character.Data.ID] = new MapCharacter(conn, character);
+            this.MapCharacters[cha.entityId] = new MapCharacter(conn, cha);
             
             byte[] data = PackageHandler.PackMessage(message);
             conn.SendData(data, 0, data.Length);
         }
+
+        
+
         /// <summary>
         /// 通知地图中现有角色其他角色进入地图
         /// </summary>
-        /// <param name="conn"></param>
+        /// <param name="sendconn"></param>
         /// <param name="character"></param>
-        void SendCharacterEnterMap(NetConnection<NetSession> conn, NCharacterInfo character)
+        void SendCharacterEnterMap(NetConnection<NetSession> sendconn, NCharacterInfo character)
         {
+            Character sendCha = sendconn.Session.Character;
+            Log.InfoFormat("Map->SendCharacterEnterMap sendCharacter : MapID:{0} CharacterDataId:{1} EntityID:{2} ",
+                sendCha.Data.MapID, sendCha.Data.ID, sendCha.entityId);
             NetMessage message = new NetMessage();
             message.Response = new NetMessageResponse();
 
@@ -91,7 +102,61 @@ namespace GameServer.Models
             message.Response.mapCharacterEnter.Characters.Add(character);
 
             byte[] data = PackageHandler.PackMessage(message);
-            conn.SendData(data, 0, data.Length);
+            sendconn.SendData(data, 0, data.Length);
+        }
+
+        public void CharacterLevel(NetConnection<NetSession> conn, Character cha)
+        {
+            Log.InfoFormat("Map->CharacterLevel : MapID :{0} CharacterDataId:{1} EntityID:{2} ",
+                cha.Info.mapId, cha.Data.ID,cha.entityId);
+            if(!MapCharacters.ContainsKey(cha.entityId))
+            {
+                Log.InfoFormat("Map->CharacterLevel : MapCharacters not have key EntityId :{0}",
+                    cha.entityId);
+                return;
+            }
+            //发送离开信息
+            foreach(var kv in this.MapCharacters)
+            {
+                this.SendCharacterLevelMap(kv.Value.connection, cha);
+            }
+            this.MapCharacters.Remove(cha.entityId);
+        }
+
+        private void SendCharacterLevelMap(NetConnection<NetSession> sendconn, Character cha)
+        {
+            Character sendCha = sendconn.Session.Character;
+            Log.InfoFormat("Map SendCharacterLevelMap sendCharacter : MapID:{0} CharacterDataId:{1} EntityID:{2} ", 
+                sendCha.Data.MapID,sendCha.Data.ID,sendCha.entityId);
+            NetMessage message = new NetMessage();
+            message.Response = new NetMessageResponse();
+
+            message.Response.mapCharacterLeave = new MapCharacterLeaveResponse();
+            message.Response.mapCharacterLeave.characterId = cha.entityId;
+
+            byte[] data = PackageHandler.PackMessage(message);
+            sendconn.SendData(data, 0, data.Length);
+        }
+        public void UpdateEntity(NEntitySync entitySync)
+        {
+            Log.InfoFormat("Map UpdateEntity SyncEntity : Id:{0}  ",
+                entitySync.Id);
+            foreach (var k in this.MapCharacters)
+            {
+                MapCharacter cha = this.MapCharacters[k.Key];
+                Log.InfoFormat("Map UpdateEntity SendMapCharacter : Id:{0} InfoId:{1} Name:{2} ",
+                cha.character.Id,cha.character.Info.Id,cha.character.Info.Name);
+                if (k.Value.character.entityId==entitySync.Id)
+                {
+                    k.Value.character.Position = entitySync.Entity.Position;
+                    k.Value.character.Direction = entitySync.Entity.Direction;
+                    k.Value.character.Speed = entitySync.Entity.Speed;
+                }
+                else
+                {
+                    MapService.Instance.SendEntityUpdata(k.Value.connection, entitySync);
+                }
+            }
         }
     }
 }

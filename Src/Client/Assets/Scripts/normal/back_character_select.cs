@@ -13,6 +13,7 @@ public class back_character_select : MonoBehaviour {
         MouseManager.Instance.ToShowCursor();
 
         UserService.Instance.SendCharacterLeave();
+
         MySceneManager.Instance.LoadScene("CharSelect");
 
         

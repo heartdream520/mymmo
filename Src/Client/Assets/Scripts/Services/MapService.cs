@@ -9,6 +9,8 @@ using UnityEngine;
 using SkillBridge.Message;
 using Models;
 using Common.Data;
+using Entities;
+using Assets.Scripts.Managers;
 
 namespace Services
 {
@@ -22,13 +24,17 @@ namespace Services
         {
             MessageDistributer.Instance.Subscribe<MapCharacterEnterResponse>(this.OnMapCharacterEnter);
             MessageDistributer.Instance.Subscribe<MapCharacterLeaveResponse>(this.OnMapCharacterLeave);
+            MessageDistributer.Instance.Subscribe<MapEntitySyncResponse>(this.OnMapEntitySync);
 
         }
+
+      
 
         public void Dispose()
         {
             MessageDistributer.Instance.Unsubscribe<MapCharacterEnterResponse>(this.OnMapCharacterEnter);
             MessageDistributer.Instance.Unsubscribe<MapCharacterLeaveResponse>(this.OnMapCharacterLeave);
+            MessageDistributer.Instance.Unsubscribe<MapEntitySyncResponse>(this.OnMapEntitySync);
         }
 
         public void Init()
@@ -38,12 +44,13 @@ namespace Services
 
         private void OnMapCharacterEnter(object sender, MapCharacterEnterResponse response)
         {
-            Debug.LogFormat("OnMapCharacterEnter:Map:{0} Count:{1}", response.mapId, response.Characters.Count);
+            Debug.LogFormat("MapService->OnMapCharacterEnter :Map:{0} Count:{1}",
+                response.mapId, response.Characters.Count);
             //遍历角色
             foreach (var cha in response.Characters)
             {
                 //刷新本地数据确保安全
-                if (User.Instance.CurrentCharacter.Id == cha.Id)
+                if (User.Instance.CurrentCharacter == null || User.Instance.CurrentCharacter.Id == cha.Id)
                 {
                     //当前角色切换地图
                     User.Instance.CurrentCharacter = cha;
@@ -62,7 +69,16 @@ namespace Services
 
         private void OnMapCharacterLeave(object sender, MapCharacterLeaveResponse response)
         {
-            
+            Character cha = CharacterManager.Instance.Characters[response.characterId];
+            Debug.LogFormat("MapService->OnMapCharacterLeave :Map:{0} CharacterId:{1} CharacterName:{2}",
+                CurrentMapId, cha.Info.Id,cha.Info.Name);
+
+            if (response.characterId == User.Instance.CurrentCharacter.Id)
+            {
+                CharacterManager.Instance.Clear();
+            }
+            else
+                CharacterManager.Instance.RemoveCharacter(response.characterId);
         }
 
         private void EnterMap(int mapId)
@@ -76,6 +92,35 @@ namespace Services
             }
             else
                 Debug.LogErrorFormat("EnterMap: Map {0} not existed", mapId);
+        }
+        public void SendMapEntitySync(EntityEvent entityEvent,NEntity entity)
+        {
+            Debug.LogFormat("MapService->SendMapEntitySync EntityId:{0} Pos:{1} Dir:{2},Spd:{3}",
+                entity.Id, entity.Position.ToString(), entity.Direction.ToString(), entity.Speed);
+            NetMessage message = new NetMessage();
+            message.Request = new NetMessageRequest();
+            message.Request.mapEntitySync = new MapEntitySyncRequest();
+            message.Request.mapEntitySync.entitySync = new NEntitySync()
+            {
+                Id = entity.Id,
+                Event = entityEvent,
+                Entity = entity
+            };
+            NetClient.Instance.SendMessage(message);
+        }
+        private void OnMapEntitySync(object sender, MapEntitySyncResponse response)
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.AppendFormat("MapService->OnMapEntitySync :Entitys:{0}",
+                response.entitySyncs.Count);
+            sb.AppendLine();
+            foreach(var entity in response.entitySyncs)
+            {
+                EntityManager.Instance.OnEnetitySync(entity);
+                sb.AppendFormat("EntityID:{0}  Enent:{1} Entity:{2}",
+                    entity.Id, entity.Event, entity.Event.ToString());
+            }
+            Debug.Log(sb);
         }
     }
 }

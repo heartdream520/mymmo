@@ -65,7 +65,7 @@ namespace Network
             running = true;
         }
 
-        protected override void OnStart()
+        public override void OnStart()
         {
             MessageDistributer.Instance.ThrowException = true;
         }

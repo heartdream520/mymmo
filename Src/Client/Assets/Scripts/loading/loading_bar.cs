@@ -39,9 +39,10 @@ public class loading_bar :MonoSingleton<loading_bar>
         progress_text.text = progress_num.ToString()+"%";
     }
 
-    void Start () {
-		
-	}
+    public override void OnStart()
+    { 
+
+    }
 	
 	// Update is called once per frame
 	void Update () {

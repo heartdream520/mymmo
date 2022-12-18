@@ -11,6 +11,9 @@ namespace GameServer.Managers
 {
     class CharacterManager : Singleton<CharacterManager>
     {
+        /// <summary>
+        /// ID 为数据库中的ID
+        /// </summary>
         public Dictionary<int, Character> Characters = new Dictionary<int, Character>();
 
         public CharacterManager()
@@ -28,20 +31,30 @@ namespace GameServer.Managers
 
         public void Clear()
         {
+            Log.InfoFormat("CharacterManager->Clear()");
             this.Characters.Clear();
         }
 
-        public Character AddCharacter(TCharacter cha)
+        public Character AddCharacter(Character cha)
         {
-            Character character = new Character(CharacterType.Player, cha);
-            this.Characters[cha.ID] = character;
-            return character;
+            
+            EntityManager.Instance.AddEntity(cha.Info.mapId, cha);
+            Log.InfoFormat("CharacterManager->AddCharacter(): MapId:{0} CharacterId:{1} EntityId:{2}",
+                cha.Data.MapID, cha.Id,cha.entityId);
+            this.Characters[cha.entityId] = cha;
+            
+            return cha;
         }
 
 
         public void RemoveCharacter(int characterId)
         {
+            Character cha = this.Characters[characterId];
+            Log.InfoFormat("CharacterManager->RemoveCharacter:  MapId:{0}  CharacterId:{1} EntityId:{2}", cha.Data.MapID,characterId,cha.entityId);
+            EntityManager.Instance.RemoveEntity(cha.Info.mapId,cha);
             this.Characters.Remove(characterId);
+
         }
+        
     }
 }

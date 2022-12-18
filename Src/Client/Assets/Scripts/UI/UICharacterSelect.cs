@@ -103,7 +103,6 @@ public class UICharacterSelect : MonoBehaviour {
         this.selectCharacterIdx = idx;
         var cha = User.Instance.Info.Player.Characters[idx];
         Debug.LogFormat("Select Char:[{0}]{1}[{2}]", cha.Id, cha.Name, cha.Class);
-        User.Instance.CurrentCharacter = cha;
         characterView.CurrectCharacter = idx;
     }
     public void OnClickPlay()
@@ -111,6 +110,7 @@ public class UICharacterSelect : MonoBehaviour {
         if (selectCharacterIdx >= 0)
         {
             MessageBox.Show("进入游戏", "进入游戏", MessageBoxType.Confirm);
+            
         }
     }
 }

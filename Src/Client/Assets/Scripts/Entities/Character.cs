@@ -5,10 +5,11 @@ using System.Text;
 using SkillBridge.Message;
 using UnityEngine;
 using Models;
+using Assets.Scripts.Managers;
 
 namespace Entities
 {
-    public class Character : Entity
+    public class Character : Entity 
     {
         /// <summary>
         /// 用于通信的角色定义
@@ -40,6 +41,7 @@ namespace Entities
         {
             this.Info = info;
             this.Define = DataManager.Instance.Characters[info.Tid];
+            
         }
 
         public void MoveForward()
@@ -70,6 +72,11 @@ namespace Entities
         {
             Debug.LogFormat("SetPosition:{0}", position);
             this.position = position;
+        }
+
+        public void OnEntityRemoved()
+        {
+            Debug.LogFormat("Character OnEntityRemoved()  EntityId :{0}",this.entityId);
         }
     }
 }

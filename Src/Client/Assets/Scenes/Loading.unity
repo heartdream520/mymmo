@@ -4563,6 +4563,10 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1813644301806410, guid: 80b5cbd39a2225445a26f9956701bffa, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 80b5cbd39a2225445a26f9956701bffa, type: 2}
   m_IsPrefabAsset: 0
