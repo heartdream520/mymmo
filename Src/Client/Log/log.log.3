@@ -1,1197 +1,141 @@
-2022-12-18 00:46:34,233 [ 1] INFO  Unity: LoadingManager start
-2022-12-18 00:46:38,653 [ 1] INFO  Unity: DataManager > DataManager()
-2022-12-18 00:46:42,892 [ 1] INFO  Unity: UserService->SendLoad: User:11 Password:11
-2022-12-18 00:46:42,895 [ 1] INFO  Unity: ConnectToServer() Start 
-2022-12-18 00:46:42,898 [ 1] INFO  Unity: DoConnect
-2022-12-18 00:46:42,901 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
-2022-12-18 00:46:42,904 [ 1] INFO  Unity: Connect[0] to server 127.0.0.1:8000
+2022-12-18 21:18:37,157 [ 1] INFO  Unity: LoadingManager start
+2022-12-18 21:18:41,742 [ 1] INFO  Unity: DataManager > DataManager()
+2022-12-18 21:18:50,249 [ 1] INFO  Unity: UserService->SendLoad: User:1 Password:1
+2022-12-18 21:18:50,251 [ 1] INFO  Unity: ConnectToServer() Start 
+2022-12-18 21:18:50,254 [ 1] INFO  Unity: DoConnect
+2022-12-18 21:18:50,256 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
+2022-12-18 21:18:50,260 [ 1] INFO  Unity: Connect[0] to server 127.0.0.1:8000
 
-2022-12-18 00:46:42,911 [ 1] INFO  Unity: LoadingMesager::OnGameServerConnect :0 reason:Success
-2022-12-18 00:46:47,501 [ 1] INFO  Unity: UserService->OnUserLoad:Success [None]
-2022-12-18 00:46:52,126 [ 1] INFO  Unity: Select Character:[54]11-1[Warrior] 
-2022-12-18 00:46:53,720 [ 1] INFO  Unity: UserService->SendCharacterEnter: EnterCharacterID :54 EnterCharacterName:11-1 EnterCharacter_Idx
-2022-12-18 00:46:53,766 [ 1] INFO  Unity: UserService->OnUserGameEnter:Success [None]
-2022-12-18 00:46:53,768 [ 1] INFO  Unity: MapService->OnMapCharacterEnter :Map:1 Count:1
-2022-12-18 00:46:53,770 [ 1] INFO  Unity: CharacterManager->AddCharacter:CharacterId:54 CharacterName:11-1 MapId:1 Entity:(1:pos:(5000,4000,820),dir:(100,0,0),spd:0
-2022-12-18 00:46:53,774 [ 1] INFO  Unity: EntityManager AddEntity EntityId :1 
-2022-12-18 00:46:57,014 [ 1] ERROR Unity: 初始化游戏对象！
+2022-12-18 21:18:50,266 [ 1] INFO  Unity: LoadingMesager::OnGameServerConnect :0 reason:Success
+2022-12-18 21:18:50,446 [ 1] INFO  Unity: UserService->OnUserLoad:Success [None]
+2022-12-18 21:18:56,061 [ 1] INFO  Unity: Select Character:[1]sdf[Warrior] 
+2022-12-18 21:18:56,639 [ 1] INFO  Unity: Select Character:[4]adsfadfadf[Archer] 
+2022-12-18 21:18:58,741 [ 1] INFO  Unity: UserService->SendCharacterEnter: EnterCharacterID :4 EnterCharacterName:adsfadfadf EnterCharacter_Idx
+2022-12-18 21:18:58,866 [ 1] INFO  Unity: UserService->OnUserGameEnter:Success [None]
+2022-12-18 21:18:58,998 [ 1] INFO  Unity: MapService->OnMapCharacterEnter :Map:1 Count:3
+2022-12-18 21:18:59,001 [ 1] INFO  Unity: CharacterManager->AddCharacter:CharacterId:4 CharacterName:adsfadfadf MapId:1 Entity:(3:pos:(5000,4000,820),dir:(100,0,0),spd:0
+2022-12-18 21:18:59,004 [ 1] INFO  Unity: EntityManager AddEntity EntityId :3 
+2022-12-18 21:18:59,006 [ 1] INFO  Unity: CharacterManager->AddCharacter:CharacterId:59 CharacterName:12-3 MapId:1 Entity:(1:pos:(4909,4447,820),dir:(-43,90,0),spd:0
+2022-12-18 21:18:59,008 [ 1] INFO  Unity: EntityManager AddEntity EntityId :1 
+2022-12-18 21:18:59,009 [ 1] INFO  Unity: CharacterManager->AddCharacter:CharacterId:61 CharacterName:13-2 MapId:1 Entity:(2:pos:(5000,4000,820),dir:(100,0,0),spd:0
+2022-12-18 21:18:59,010 [ 1] INFO  Unity: EntityManager AddEntity EntityId :2 
+2022-12-18 21:19:02,982 [ 1] ERROR Unity: 初始化游戏对象！
 UnityEngine.Debug:LogError(Object)
 <InitGameObjects>c__Iterator0:MoveNext() (at Assets/Scripts/GameObject/GameObjectManager.cs:80)
 UnityEngine.MonoBehaviour:StartCoroutine(IEnumerator)
 GameObjectManager:OnStart() (at Assets/Scripts/GameObject/GameObjectManager.cs:23)
 MonoSingleton`1:Start() (at Assets/Scripts/Utilities/MonoSingleton.cs:34)
 
-2022-12-18 00:46:57,017 [ 1] ERROR Unity: SceneManager.GetActiveScene().name
-UnityEngine.Debug:LogError(Object)
-<CreateCharacterObject>c__Iterator1:MoveNext() (at Assets/Scripts/GameObject/GameObjectManager.cs:94)
-UnityEngine.MonoBehaviour:StartCoroutine(IEnumerator)
-<InitGameObjects>c__Iterator0:MoveNext() (at Assets/Scripts/GameObject/GameObjectManager.cs:84)
-UnityEngine.MonoBehaviour:StartCoroutine(IEnumerator)
-GameObjectManager:OnStart() (at Assets/Scripts/GameObject/GameObjectManager.cs:23)
-MonoSingleton`1:Start() (at Assets/Scripts/Utilities/MonoSingleton.cs:34)
-
-2022-12-18 00:46:57,021 [ 1] INFO  Unity: Load MiniMap Image :buluzheng
-2022-12-18 00:46:57,099 [ 1] INFO  Unity: GameObjectManager->CreateCharacterObject CharacterId:1 CharacterName:11-1 CharacterEntityId:1
-2022-12-18 00:46:57,143 [ 1] INFO  Unity: GameObjectManager->InitGameObject Player_character:1
-2022-12-18 00:46:57,326 [ 1] INFO  Unity: SetPosition:(5000, 4000, 808)
-2022-12-18 00:46:57,329 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:46:59,624 [ 1] INFO  Unity: UserService->SendCharacterLeave: LeaveCharacterID :1 LeaveCharacterName:11-1
-2022-12-18 00:47:00,258 [ 1] INFO  Unity: MapService->OnMapCharacterLeave :Map:0 CharacterId:1 CharacterName:11-1
-2022-12-18 00:47:00,264 [ 1] INFO  Unity: CharacterManager->RemoveCharacter:CharacterId:1 CharacterName:11-1 MapId:1 Entity:(1:pos:(5000,4000,808),dir:(100,0,0),spd:0
-2022-12-18 00:47:00,265 [ 1] INFO  Unity: RemoveCharacter->RemoveCharacter:1
-2022-12-18 00:47:00,267 [ 1] INFO  Unity: EntityManager RemoveEntity EntityId :1 
-2022-12-18 00:47:00,268 [ 1] INFO  Unity: EntityController->OnEntityRemoved EntityId:1
-2022-12-18 00:47:00,273 [ 1] INFO  Unity: GameObjectManager->DestroyCharacterObject CharacterId:1 CharacterName:11-1 CharacterEntityId:1
-2022-12-18 00:47:00,275 [ 1] INFO  Unity: UserService->OnUserGameLeave:Success [None]
-2022-12-18 00:47:00,278 [ 1] INFO  Unity: Character_1_11-1 OnDestroy :ID:1 POS:(5000, 4000, 808) DIR:(100, 0, 0) SPD:0 
-2022-12-18 00:47:04,320 [ 1] INFO  Unity: Select Character:[55]11-2[Wizard] 
-2022-12-18 00:47:05,607 [ 1] INFO  Unity: UserService->SendCharacterEnter: EnterCharacterID :55 EnterCharacterName:11-2 EnterCharacter_Idx
-2022-12-18 00:47:05,652 [ 1] INFO  Unity: UserService->OnUserGameEnter:Success [None]
-2022-12-18 00:47:05,654 [ 1] INFO  Unity: MapService->OnMapCharacterEnter :Map:1 Count:1
-2022-12-18 00:47:05,656 [ 1] INFO  Unity: CharacterManager->AddCharacter:CharacterId:55 CharacterName:11-2 MapId:1 Entity:(2:pos:(5000,4000,820),dir:(100,0,0),spd:0
-2022-12-18 00:47:05,657 [ 1] INFO  Unity: EntityManager AddEntity EntityId :2 
-2022-12-18 00:47:05,660 [ 1] ERROR Unity: SceneManager.GetActiveScene().name
-UnityEngine.Debug:LogError(Object)
-<CreateCharacterObject>c__Iterator1:MoveNext() (at Assets/Scripts/GameObject/GameObjectManager.cs:94)
-UnityEngine.MonoBehaviour:StartCoroutine(IEnumerator)
-GameObjectManager:OnCharacterEnter(Character) (at Assets/Scripts/GameObject/GameObjectManager.cs:51)
-Services.CharacterManager:AddCharacter(NCharacterInfo) (at Assets/Scripts/Managers/CharacterManager.cs:68)
-Services.MapService:OnMapCharacterEnter(Object, MapCharacterEnterResponse) (at Assets/Scripts/Services/MapService.cs:59)
-Network.MessageDistributer`1:RaiseEvent(Object, MapCharacterEnterResponse) (at E:/极世界MMORPG/mymmo/Src/Lib/Common/Network/MessageDistributer.cs:105)
-Network.MessageDispatch`1:Dispatch(Object, NetMessageResponse) (at E:/极世界MMORPG/mymmo/Src/Lib/Common/Network/MessageDispatch.cs:16)
-Network.MessageDistributer`1:Distribute() (at E:/极世界MMORPG/mymmo/Src/Lib/Common/Network/MessageDistributer.cs:148)
-Network.NetClient:ProceeMessage() (at Assets/Scripts/Network/NetClient.cs:427)
-Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:447)
-
-2022-12-18 00:47:05,900 [ 1] INFO  Unity: GameObjectManager->CreateCharacterObject CharacterId:2 CharacterName:11-2 CharacterEntityId:2
-2022-12-18 00:47:06,307 [ 1] INFO  Unity: GameObjectManager->InitGameObject Player_character:2
-2022-12-18 00:47:06,590 [ 1] INFO  Unity: SetPosition:(5000, 4000, 808)
-2022-12-18 00:47:06,592 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:06,660 [ 1] INFO  Unity: SetPosition:(5000, 4000, 795)
-2022-12-18 00:47:06,662 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:06,700 [ 1] INFO  Unity: SetPosition:(5000, 4000, 783)
-2022-12-18 00:47:06,701 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:06,766 [ 1] INFO  Unity: SetPosition:(5000, 4000, 763)
-2022-12-18 00:47:06,767 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:06,799 [ 1] INFO  Unity: SetPosition:(5000, 4000, 751)
-2022-12-18 00:47:06,800 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:06,831 [ 1] INFO  Unity: SetPosition:(5000, 4000, 738)
-2022-12-18 00:47:06,833 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:06,868 [ 1] INFO  Unity: SetPosition:(5000, 4000, 724)
-2022-12-18 00:47:06,869 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:06,905 [ 1] INFO  Unity: SetPosition:(5000, 4000, 709)
-2022-12-18 00:47:06,906 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:06,946 [ 1] INFO  Unity: SetPosition:(5000, 4000, 693)
-2022-12-18 00:47:06,948 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:06,970 [ 1] INFO  Unity: SetPosition:(5000, 4000, 676)
-2022-12-18 00:47:06,971 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:07,005 [ 1] INFO  Unity: SetPosition:(5000, 4000, 657)
-2022-12-18 00:47:07,006 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:07,072 [ 1] INFO  Unity: SetPosition:(5000, 4000, 617)
-2022-12-18 00:47:07,074 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:07,101 [ 1] INFO  Unity: SetPosition:(5000, 4000, 596)
-2022-12-18 00:47:07,103 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:07,129 [ 1] INFO  Unity: SetPosition:(5000, 4000, 584)
-2022-12-18 00:47:07,131 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:07,155 [ 1] INFO  Unity: SetPosition:(5000, 4000, 561)
-2022-12-18 00:47:07,156 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:07,173 [ 1] INFO  Unity: SetPosition:(5000, 4000, 549)
-2022-12-18 00:47:07,174 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:07,189 [ 1] INFO  Unity: SetPosition:(5000, 4000, 537)
-2022-12-18 00:47:07,190 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:07,212 [ 1] INFO  Unity: SetPosition:(5000, 4000, 524)
-2022-12-18 00:47:07,214 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:07,238 [ 1] INFO  Unity: SetPosition:(5000, 4000, 498)
-2022-12-18 00:47:07,239 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:07,260 [ 1] INFO  Unity: SetPosition:(5000, 4000, 485)
-2022-12-18 00:47:07,262 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:07,281 [ 1] INFO  Unity: SetPosition:(5000, 4000, 471)
-2022-12-18 00:47:07,282 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:07,304 [ 1] INFO  Unity: SetPosition:(5000, 4000, 443)
-2022-12-18 00:47:07,305 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:07,331 [ 1] INFO  Unity: SetPosition:(5000, 4000, 428)
-2022-12-18 00:47:07,332 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:07,350 [ 1] INFO  Unity: SetPosition:(5000, 4000, 399)
-2022-12-18 00:47:07,353 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:07,374 [ 1] INFO  Unity: SetPosition:(5000, 4000, 383)
-2022-12-18 00:47:07,375 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:07,403 [ 1] INFO  Unity: SetPosition:(5000, 4000, 352)
-2022-12-18 00:47:07,405 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:07,425 [ 1] INFO  Unity: SetPosition:(5000, 4000, 336)
-2022-12-18 00:47:07,428 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:07,450 [ 1] INFO  Unity: SetPosition:(5000, 4000, 303)
-2022-12-18 00:47:07,451 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:07,472 [ 1] INFO  Unity: SetPosition:(5000, 4000, 286)
-2022-12-18 00:47:07,475 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:07,489 [ 1] INFO  Unity: SetPosition:(5000, 4000, 268)
-2022-12-18 00:47:07,491 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:07,515 [ 1] INFO  Unity: SetPosition:(5000, 4000, 251)
-2022-12-18 00:47:07,516 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:07,541 [ 1] INFO  Unity: SetPosition:(5000, 4000, 215)
-2022-12-18 00:47:07,542 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:07,560 [ 1] INFO  Unity: SetPosition:(5000, 4000, 197)
-2022-12-18 00:47:07,561 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:07,582 [ 1] INFO  Unity: SetPosition:(5000, 4000, 178)
-2022-12-18 00:47:07,583 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:07,605 [ 1] INFO  Unity: SetPosition:(5000, 4000, 140)
-2022-12-18 00:47:07,606 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:07,622 [ 1] INFO  Unity: SetPosition:(5000, 4000, 121)
-2022-12-18 00:47:07,624 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:07,647 [ 1] INFO  Unity: SetPosition:(5000, 4000, 101)
-2022-12-18 00:47:07,648 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:07,669 [ 1] INFO  Unity: SetPosition:(5000, 4000, 61)
-2022-12-18 00:47:07,671 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:07,691 [ 1] INFO  Unity: SetPosition:(5000, 4000, 40)
-2022-12-18 00:47:07,692 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:07,710 [ 1] INFO  Unity: SetPosition:(5000, 4000, 19)
-2022-12-18 00:47:07,711 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:07,731 [ 1] INFO  Unity: SetPosition:(5000, 4000, -2)
-2022-12-18 00:47:07,731 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:07,744 [ 1] INFO  Unity: SetPosition:(5000, 4000, -23)
-2022-12-18 00:47:07,746 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:07,767 [ 1] INFO  Unity: SetPosition:(5000, 4000, -66)
-2022-12-18 00:47:07,768 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:07,790 [ 1] INFO  Unity: SetPosition:(5000, 4000, -89)
-2022-12-18 00:47:07,791 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:07,809 [ 1] INFO  Unity: SetPosition:(5000, 4000, -111)
-2022-12-18 00:47:07,810 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:07,826 [ 1] INFO  Unity: SetPosition:(5000, 4000, -134)
-2022-12-18 00:47:07,827 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:07,852 [ 1] INFO  Unity: SetPosition:(5000, 4000, -180)
-2022-12-18 00:47:07,854 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:07,880 [ 1] INFO  Unity: SetPosition:(5000, 4000, -204)
-2022-12-18 00:47:07,881 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:07,904 [ 1] INFO  Unity: SetPosition:(5000, 4000, -251)
-2022-12-18 00:47:07,905 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:07,927 [ 1] INFO  Unity: SetPosition:(5000, 4000, -276)
-2022-12-18 00:47:07,928 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:07,957 [ 1] INFO  Unity: SetPosition:(5000, 4000, -325)
-2022-12-18 00:47:07,959 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:07,980 [ 1] INFO  Unity: SetPosition:(5000, 4000, -350)
-2022-12-18 00:47:07,982 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:07,997 [ 1] INFO  Unity: SetPosition:(5000, 4000, -376)
-2022-12-18 00:47:07,998 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:08,022 [ 1] INFO  Unity: SetPosition:(5000, 4000, -428)
-2022-12-18 00:47:08,023 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:08,046 [ 1] INFO  Unity: SetPosition:(5000, 4000, -454)
-2022-12-18 00:47:08,047 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:08,065 [ 1] INFO  Unity: SetPosition:(5000, 4000, -480)
-2022-12-18 00:47:08,067 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:08,084 [ 1] INFO  Unity: SetPosition:(5000, 4000, -534)
-2022-12-18 00:47:08,085 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:08,110 [ 1] INFO  Unity: SetPosition:(5000, 4000, -562)
-2022-12-18 00:47:08,111 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:08,130 [ 1] INFO  Unity: SetPosition:(5000, 4000, -589)
-2022-12-18 00:47:08,131 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:08,157 [ 1] INFO  Unity: SetPosition:(5000, 4000, -645)
-2022-12-18 00:47:08,160 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:08,176 [ 1] INFO  Unity: SetPosition:(5000, 4000, -674)
-2022-12-18 00:47:08,178 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:08,205 [ 1] INFO  Unity: SetPosition:(5000, 4000, -732)
-2022-12-18 00:47:08,206 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:08,228 [ 1] INFO  Unity: SetPosition:(5000, 4000, -761)
-2022-12-18 00:47:08,229 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:08,241 [ 1] INFO  Unity: SetPosition:(5000, 4000, -790)
-2022-12-18 00:47:08,242 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:08,266 [ 1] INFO  Unity: SetPosition:(5000, 4000, -820)
-2022-12-18 00:47:08,267 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:08,289 [ 1] INFO  Unity: SetPosition:(5000, 4000, -881)
-2022-12-18 00:47:08,290 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:08,314 [ 1] INFO  Unity: SetPosition:(5000, 4000, -911)
-2022-12-18 00:47:08,315 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:08,332 [ 1] INFO  Unity: SetPosition:(5000, 4000, -942)
-2022-12-18 00:47:08,334 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:08,360 [ 1] INFO  Unity: SetPosition:(5000, 4000, -1005)
-2022-12-18 00:47:08,362 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:08,378 [ 1] INFO  Unity: SetPosition:(5000, 4000, -1037)
-2022-12-18 00:47:08,379 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:08,405 [ 1] INFO  Unity: SetPosition:(5000, 4000, -1101)
-2022-12-18 00:47:08,405 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:08,424 [ 1] INFO  Unity: SetPosition:(5000, 4000, -1133)
-2022-12-18 00:47:08,425 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:08,446 [ 1] INFO  Unity: SetPosition:(5000, 4000, -1166)
-2022-12-18 00:47:08,448 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:08,471 [ 1] INFO  Unity: SetPosition:(5000, 4000, -1233)
-2022-12-18 00:47:08,472 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:08,493 [ 1] INFO  Unity: SetPosition:(5000, 4000, -1266)
-2022-12-18 00:47:08,496 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:08,523 [ 1] INFO  Unity: SetPosition:(5000, 4000, -1335)
-2022-12-18 00:47:08,525 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:08,547 [ 1] INFO  Unity: SetPosition:(5000, 4000, -1369)
-2022-12-18 00:47:08,548 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:08,574 [ 1] INFO  Unity: SetPosition:(5000, 4000, -1439)
-2022-12-18 00:47:08,575 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:08,600 [ 1] INFO  Unity: SetPosition:(5000, 4000, -1474)
-2022-12-18 00:47:08,601 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:08,684 [ 1] INFO  Unity: SetPosition:(5000, 4000, -1655)
-2022-12-18 00:47:08,686 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:08,708 [ 1] INFO  Unity: SetPosition:(5000, 4000, -1729)
-2022-12-18 00:47:08,708 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:08,729 [ 1] INFO  Unity: SetPosition:(5000, 4000, -1766)
-2022-12-18 00:47:08,730 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:08,748 [ 1] INFO  Unity: SetPosition:(5000, 4000, -1804)
-2022-12-18 00:47:08,750 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:08,770 [ 1] INFO  Unity: SetPosition:(5000, 4000, -1880)
-2022-12-18 00:47:08,771 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:08,788 [ 1] INFO  Unity: SetPosition:(5000, 4000, -1919)
-2022-12-18 00:47:08,790 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:08,803 [ 1] INFO  Unity: SetPosition:(5000, 4000, -1958)
-2022-12-18 00:47:08,804 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:08,824 [ 1] INFO  Unity: SetPosition:(5000, 4000, -1997)
-2022-12-18 00:47:08,825 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:08,843 [ 1] INFO  Unity: SetPosition:(5000, 4000, -2036)
-2022-12-18 00:47:08,844 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:08,882 [ 1] INFO  Unity: SetPosition:(5000, 4000, -2116)
-2022-12-18 00:47:08,884 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:08,913 [ 1] INFO  Unity: SetPosition:(5000, 4000, -2197)
-2022-12-18 00:47:08,915 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:08,944 [ 1] INFO  Unity: SetPosition:(5000, 4000, -2278)
-2022-12-18 00:47:08,945 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:08,977 [ 1] INFO  Unity: SetPosition:(5000, 4000, -2361)
-2022-12-18 00:47:08,978 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:09,001 [ 1] INFO  Unity: SetPosition:(5000, 4000, -2403)
-2022-12-18 00:47:09,002 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:09,031 [ 1] INFO  Unity: SetPosition:(5000, 4000, -2488)
-2022-12-18 00:47:09,033 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:09,055 [ 1] INFO  Unity: SetPosition:(5000, 4000, -2573)
-2022-12-18 00:47:09,057 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:09,075 [ 1] INFO  Unity: SetPosition:(5000, 4000, -2617)
-2022-12-18 00:47:09,076 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:09,100 [ 1] INFO  Unity: SetPosition:(5000, 4000, -2660)
-2022-12-18 00:47:09,101 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:09,122 [ 1] INFO  Unity: SetPosition:(5000, 4000, -2748)
-2022-12-18 00:47:09,124 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:09,141 [ 1] INFO  Unity: SetPosition:(5000, 4000, -2792)
-2022-12-18 00:47:09,141 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:09,163 [ 1] INFO  Unity: SetPosition:(5000, 4000, -2837)
-2022-12-18 00:47:09,164 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:09,179 [ 1] INFO  Unity: SetPosition:(5000, 4000, -2882)
-2022-12-18 00:47:09,180 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:09,203 [ 1] INFO  Unity: SetPosition:(5000, 4000, -2972)
-2022-12-18 00:47:09,204 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:09,238 [ 1] INFO  Unity: SetPosition:(5000, 4000, -3064)
-2022-12-18 00:47:09,239 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:09,258 [ 1] INFO  Unity: SetPosition:(5000, 4000, -3110)
-2022-12-18 00:47:09,259 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:09,282 [ 1] INFO  Unity: SetPosition:(5000, 4000, -3157)
-2022-12-18 00:47:09,284 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:09,302 [ 1] INFO  Unity: SetPosition:(5000, 4000, -3250)
-2022-12-18 00:47:09,303 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:09,326 [ 1] INFO  Unity: SetPosition:(5000, 4000, -3298)
-2022-12-18 00:47:09,329 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:09,349 [ 1] INFO  Unity: SetPosition:(5000, 4000, -3345)
-2022-12-18 00:47:09,350 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:09,377 [ 1] INFO  Unity: SetPosition:(5000, 4000, -3441)
-2022-12-18 00:47:09,378 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:09,401 [ 1] INFO  Unity: SetPosition:(5000, 4000, -3490)
-2022-12-18 00:47:09,403 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:09,422 [ 1] INFO  Unity: SetPosition:(5000, 4000, -3588)
-2022-12-18 00:47:09,423 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:09,441 [ 1] INFO  Unity: SetPosition:(5000, 4000, -3637)
-2022-12-18 00:47:09,442 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:09,468 [ 1] INFO  Unity: SetPosition:(5000, 4000, -3686)
-2022-12-18 00:47:09,469 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:09,491 [ 1] INFO  Unity: SetPosition:(5000, 4000, -3786)
-2022-12-18 00:47:09,492 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:09,512 [ 1] INFO  Unity: SetPosition:(5000, 4000, -3837)
-2022-12-18 00:47:09,514 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:09,534 [ 1] INFO  Unity: SetPosition:(5000, 4000, -3887)
-2022-12-18 00:47:09,535 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:09,550 [ 1] INFO  Unity: SetPosition:(5000, 4000, -3938)
-2022-12-18 00:47:09,552 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:09,573 [ 1] INFO  Unity: SetPosition:(5000, 4000, -4041)
-2022-12-18 00:47:09,574 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:09,600 [ 1] INFO  Unity: SetPosition:(5000, 4000, -4092)
-2022-12-18 00:47:09,601 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:09,615 [ 1] INFO  Unity: SetPosition:(5000, 4000, -4144)
-2022-12-18 00:47:09,617 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:09,638 [ 1] INFO  Unity: SetPosition:(5000, 4000, -4249)
-2022-12-18 00:47:09,639 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:09,665 [ 1] INFO  Unity: SetPosition:(5000, 4000, -4302)
-2022-12-18 00:47:09,666 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:09,678 [ 1] INFO  Unity: SetPosition:(5000, 4000, -4355)
-2022-12-18 00:47:09,679 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:09,698 [ 1] INFO  Unity: SetPosition:(5000, 4000, -4408)
-2022-12-18 00:47:09,699 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:09,713 [ 1] INFO  Unity: SetPosition:(5000, 4000, -4462)
-2022-12-18 00:47:09,716 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:09,749 [ 1] INFO  Unity: SetPosition:(5000, 4000, -4570)
-2022-12-18 00:47:09,751 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:09,780 [ 1] INFO  Unity: SetPosition:(5000, 4000, -4679)
-2022-12-18 00:47:09,783 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:09,806 [ 1] INFO  Unity: SetPosition:(5000, 4000, -4789)
-2022-12-18 00:47:09,807 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:09,828 [ 1] INFO  Unity: SetPosition:(5000, 4000, -4845)
-2022-12-18 00:47:09,829 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:09,851 [ 1] INFO  Unity: SetPosition:(5000, 4000, -4901)
-2022-12-18 00:47:09,853 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:09,870 [ 1] INFO  Unity: SetPosition:(5000, 4000, -5013)
-2022-12-18 00:47:09,871 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:09,891 [ 1] INFO  Unity: SetPosition:(5000, 4000, -5070)
-2022-12-18 00:47:09,892 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:09,907 [ 1] INFO  Unity: SetPosition:(5000, 4000, -5127)
-2022-12-18 00:47:09,909 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:09,924 [ 1] INFO  Unity: SetPosition:(5000, 4000, -5184)
-2022-12-18 00:47:09,927 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:09,940 [ 1] INFO  Unity: SetPosition:(5000, 4000, -5241)
-2022-12-18 00:47:09,941 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:09,962 [ 1] INFO  Unity: SetPosition:(5000, 4000, -5299)
-2022-12-18 00:47:09,970 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:09,989 [ 1] INFO  Unity: SetPosition:(5000, 4000, -5415)
-2022-12-18 00:47:09,990 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:10,003 [ 1] INFO  Unity: SetPosition:(5000, 4000, -5474)
-2022-12-18 00:47:10,004 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:10,024 [ 1] INFO  Unity: SetPosition:(5000, 4000, -5533)
-2022-12-18 00:47:10,025 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:10,189 [ 1] INFO  Unity: Load MiniMap Image :buluzheng
-2022-12-18 00:47:10,195 [ 1] INFO  Unity: SetPosition:(5000, 4000, -5592)
-2022-12-18 00:47:10,196 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:10,301 [ 1] INFO  Unity: SetPosition:(5000, 4000, -5651)
-2022-12-18 00:47:10,303 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:10,335 [ 1] INFO  Unity: SetPosition:(5000, 4000, -5771)
-2022-12-18 00:47:10,336 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:10,360 [ 1] INFO  Unity: SetPosition:(5000, 4000, -5891)
-2022-12-18 00:47:10,362 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:10,388 [ 1] INFO  Unity: SetPosition:(5000, 4000, -5952)
-2022-12-18 00:47:10,389 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:10,422 [ 1] INFO  Unity: SetPosition:(5000, 4000, -6075)
-2022-12-18 00:47:10,423 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:10,450 [ 1] INFO  Unity: SetPosition:(5000, 4000, -6198)
-2022-12-18 00:47:10,452 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:10,477 [ 1] INFO  Unity: SetPosition:(5000, 4000, -6322)
-2022-12-18 00:47:10,478 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:10,506 [ 1] INFO  Unity: SetPosition:(5000, 4000, -6385)
-2022-12-18 00:47:10,507 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:10,533 [ 1] INFO  Unity: SetPosition:(5000, 4000, -6511)
-2022-12-18 00:47:10,534 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:10,554 [ 1] INFO  Unity: SetPosition:(5000, 4000, -6575)
-2022-12-18 00:47:10,555 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:10,579 [ 1] INFO  Unity: SetPosition:(5000, 4000, -6702)
-2022-12-18 00:47:10,581 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:10,605 [ 1] INFO  Unity: SetPosition:(5000, 4000, -6767)
-2022-12-18 00:47:10,606 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:10,627 [ 1] INFO  Unity: SetPosition:(5000, 4000, -6896)
-2022-12-18 00:47:10,628 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:10,648 [ 1] INFO  Unity: SetPosition:(5000, 4000, -6961)
-2022-12-18 00:47:10,649 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:10,674 [ 1] INFO  Unity: SetPosition:(5000, 4000, -7092)
-2022-12-18 00:47:10,675 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:10,739 [ 1] INFO  Unity: SetPosition:(5000, 4000, -7291)
-2022-12-18 00:47:10,741 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:10,778 [ 1] INFO  Unity: SetPosition:(5000, 4000, -7492)
-2022-12-18 00:47:10,779 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:10,810 [ 1] INFO  Unity: SetPosition:(5000, 4000, -7627)
-2022-12-18 00:47:10,811 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:10,843 [ 1] INFO  Unity: SetPosition:(5000, 4000, -7764)
-2022-12-18 00:47:10,844 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:10,873 [ 1] INFO  Unity: SetPosition:(5000, 4000, -7833)
-2022-12-18 00:47:10,873 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:10,905 [ 1] INFO  Unity: SetPosition:(5000, 4000, -7971)
-2022-12-18 00:47:10,906 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:10,931 [ 1] INFO  Unity: SetPosition:(5000, 4000, -8110)
-2022-12-18 00:47:10,932 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:10,963 [ 1] INFO  Unity: SetPosition:(5000, 4000, -8250)
-2022-12-18 00:47:10,964 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:10,992 [ 1] INFO  Unity: SetPosition:(5000, 4000, -8392)
-2022-12-18 00:47:10,993 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:11,023 [ 1] INFO  Unity: SetPosition:(5000, 4000, -8463)
-2022-12-18 00:47:11,026 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:11,053 [ 1] INFO  Unity: SetPosition:(5000, 4000, -8606)
-2022-12-18 00:47:11,056 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:11,081 [ 1] INFO  Unity: SetPosition:(5000, 4000, -8750)
-2022-12-18 00:47:11,082 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:11,107 [ 1] INFO  Unity: SetPosition:(5000, 4000, -8823)
-2022-12-18 00:47:11,108 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:11,134 [ 1] INFO  Unity: SetPosition:(5000, 4000, -8969)
-2022-12-18 00:47:11,135 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:11,155 [ 1] INFO  Unity: SetPosition:(5000, 4000, -9042)
-2022-12-18 00:47:11,156 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:11,179 [ 1] INFO  Unity: SetPosition:(5000, 4000, -9189)
-2022-12-18 00:47:11,180 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:11,206 [ 1] INFO  Unity: SetPosition:(5000, 4000, -9263)
-2022-12-18 00:47:11,207 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:11,233 [ 1] INFO  Unity: SetPosition:(5000, 4000, -9413)
-2022-12-18 00:47:11,234 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:11,260 [ 1] INFO  Unity: SetPosition:(5000, 4000, -9563)
-2022-12-18 00:47:11,261 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:11,295 [ 1] INFO  Unity: SetPosition:(5000, 4000, -9714)
-2022-12-18 00:47:11,296 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:11,333 [ 1] INFO  Unity: SetPosition:(5000, 4000, -9866)
-2022-12-18 00:47:11,336 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:11,374 [ 1] INFO  Unity: SetPosition:(5000, 4000, -10020)
-2022-12-18 00:47:11,374 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:11,439 [ 1] INFO  Unity: SetPosition:(5000, 4000, -10330)
-2022-12-18 00:47:11,440 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:11,478 [ 1] INFO  Unity: SetPosition:(5000, 4000, -10566)
-2022-12-18 00:47:11,479 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:11,510 [ 1] INFO  Unity: SetPosition:(5000, 4000, -10724)
-2022-12-18 00:47:11,511 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:11,540 [ 1] INFO  Unity: SetPosition:(5000, 4000, -10804)
-2022-12-18 00:47:11,541 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:11,573 [ 1] INFO  Unity: SetPosition:(5000, 4000, -10964)
-2022-12-18 00:47:11,573 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:11,604 [ 1] INFO  Unity: SetPosition:(5000, 4000, -11125)
-2022-12-18 00:47:11,604 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:11,631 [ 1] INFO  Unity: SetPosition:(5000, 4000, -11287)
-2022-12-18 00:47:11,633 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:11,657 [ 1] INFO  Unity: SetPosition:(5000, 4000, -11369)
-2022-12-18 00:47:11,659 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:11,678 [ 1] INFO  Unity: SetPosition:(5000, 4000, -11533)
-2022-12-18 00:47:11,680 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:11,716 [ 1] INFO  Unity: SetPosition:(5000, 4000, -11698)
-2022-12-18 00:47:11,717 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:11,749 [ 1] INFO  Unity: SetPosition:(5000, 4000, -11864)
-2022-12-18 00:47:11,751 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:11,778 [ 1] INFO  Unity: SetPosition:(5000, 4000, -12031)
-2022-12-18 00:47:11,779 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:11,807 [ 1] INFO  Unity: SetPosition:(5000, 4000, -12115)
-2022-12-18 00:47:11,808 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:11,836 [ 1] INFO  Unity: SetPosition:(5000, 4000, -12284)
-2022-12-18 00:47:11,837 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:11,859 [ 1] INFO  Unity: SetPosition:(5000, 4000, -12368)
-2022-12-18 00:47:11,860 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:11,878 [ 1] INFO  Unity: SetPosition:(5000, 4000, -12539)
-2022-12-18 00:47:11,879 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:11,905 [ 1] INFO  Unity: SetPosition:(5000, 4000, -12625)
-2022-12-18 00:47:11,906 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:11,930 [ 1] INFO  Unity: SetPosition:(5000, 4000, -12797)
-2022-12-18 00:47:11,931 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:11,955 [ 1] INFO  Unity: SetPosition:(5000, 4000, -12883)
-2022-12-18 00:47:11,956 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:11,978 [ 1] INFO  Unity: SetPosition:(5000, 4000, -13057)
-2022-12-18 00:47:11,979 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:12,001 [ 1] INFO  Unity: SetPosition:(5000, 4000, -13144)
-2022-12-18 00:47:12,002 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:12,029 [ 1] INFO  Unity: SetPosition:(5000, 4000, -13319)
-2022-12-18 00:47:12,030 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:12,093 [ 1] INFO  Unity: SetPosition:(5000, 4000, -13585)
-2022-12-18 00:47:12,094 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:12,152 [ 1] INFO  Unity: SetPosition:(5000, 4000, -13942)
-2022-12-18 00:47:12,153 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:12,196 [ 1] INFO  Unity: SetPosition:(5000, 4000, -14213)
-2022-12-18 00:47:12,198 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:12,231 [ 1] INFO  Unity: SetPosition:(5000, 4000, -14395)
-2022-12-18 00:47:12,231 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:12,261 [ 1] INFO  Unity: SetPosition:(5000, 4000, -14486)
-2022-12-18 00:47:12,262 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:12,292 [ 1] INFO  Unity: SetPosition:(5000, 4000, -14670)
-2022-12-18 00:47:12,294 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:12,326 [ 1] INFO  Unity: SetPosition:(5000, 4000, -14854)
-2022-12-18 00:47:12,328 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:12,351 [ 1] INFO  Unity: SetPosition:(5000, 4000, -15040)
-2022-12-18 00:47:12,353 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:12,374 [ 1] INFO  Unity: SetPosition:(5000, 4000, -15133)
-2022-12-18 00:47:12,374 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:12,401 [ 1] INFO  Unity: SetPosition:(5000, 4000, -15321)
-2022-12-18 00:47:12,402 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:12,429 [ 1] INFO  Unity: SetPosition:(5000, 4000, -15509)
-2022-12-18 00:47:12,431 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:12,457 [ 1] INFO  Unity: SetPosition:(5000, 4000, -15604)
-2022-12-18 00:47:12,458 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:12,475 [ 1] INFO  Unity: SetPosition:(5000, 4000, -15699)
-2022-12-18 00:47:12,476 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:12,501 [ 1] INFO  Unity: SetPosition:(5000, 4000, -15890)
-2022-12-18 00:47:12,502 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:12,527 [ 1] INFO  Unity: SetPosition:(5000, 4000, -15985)
-2022-12-18 00:47:12,528 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:12,552 [ 1] INFO  Unity: SetPosition:(5000, 4000, -16178)
-2022-12-18 00:47:12,553 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:12,580 [ 1] INFO  Unity: SetPosition:(5000, 4000, -16371)
-2022-12-18 00:47:12,581 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:12,611 [ 1] INFO  Unity: SetPosition:(5000, 4000, -16566)
-2022-12-18 00:47:12,613 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:12,641 [ 1] INFO  Unity: SetPosition:(5000, 4000, -16663)
-2022-12-18 00:47:12,642 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:12,678 [ 1] INFO  Unity: SetPosition:(5000, 4000, -16958)
-2022-12-18 00:47:12,679 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:12,711 [ 1] INFO  Unity: SetPosition:(5000, 4000, -17156)
-2022-12-18 00:47:12,713 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:12,748 [ 1] INFO  Unity: SetPosition:(5000, 4000, -17355)
-2022-12-18 00:47:12,750 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:12,779 [ 1] INFO  Unity: SetPosition:(5000, 4000, -17555)
-2022-12-18 00:47:12,781 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:12,808 [ 1] INFO  Unity: SetPosition:(5000, 4000, -17655)
-2022-12-18 00:47:12,809 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:12,834 [ 1] INFO  Unity: SetPosition:(5000, 4000, -17857)
-2022-12-18 00:47:12,835 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:12,861 [ 1] INFO  Unity: SetPosition:(5000, 4000, -17958)
-2022-12-18 00:47:12,863 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:12,896 [ 1] INFO  Unity: SetPosition:(5000, 4000, -18263)
-2022-12-18 00:47:12,897 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:12,931 [ 1] INFO  Unity: SetPosition:(5000, 4000, -18468)
-2022-12-18 00:47:12,933 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:12,960 [ 1] INFO  Unity: SetPosition:(5000, 4000, -18571)
-2022-12-18 00:47:12,961 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:12,985 [ 1] INFO  Unity: SetPosition:(5000, 4000, -18778)
-2022-12-18 00:47:12,986 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:13,013 [ 1] INFO  Unity: SetPosition:(5000, 4000, -18985)
-2022-12-18 00:47:13,015 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:13,046 [ 1] INFO  Unity: SetPosition:(5000, 4000, -19194)
-2022-12-18 00:47:13,048 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:13,075 [ 1] INFO  Unity: SetPosition:(5000, 4000, -19299)
-2022-12-18 00:47:13,076 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:13,108 [ 1] INFO  Unity: SetPosition:(5000, 4000, -19509)
-2022-12-18 00:47:13,108 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:13,139 [ 1] INFO  Unity: SetPosition:(5000, 4000, -19721)
-2022-12-18 00:47:13,141 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:13,170 [ 1] INFO  Unity: SetPosition:(5000, 4000, -19933)
-2022-12-18 00:47:13,171 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:13,199 [ 1] INFO  Unity: SetPosition:(5000, 4000, -20147)
-2022-12-18 00:47:13,202 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:13,231 [ 1] INFO  Unity: SetPosition:(5000, 4000, -20362)
-2022-12-18 00:47:13,233 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:13,257 [ 1] INFO  Unity: SetPosition:(5000, 4000, -20469)
-2022-12-18 00:47:13,259 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:13,282 [ 1] INFO  Unity: SetPosition:(5000, 4000, -20686)
-2022-12-18 00:47:13,284 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:13,314 [ 1] INFO  Unity: SetPosition:(5000, 4000, -20795)
-2022-12-18 00:47:13,315 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:13,345 [ 1] INFO  Unity: SetPosition:(5000, 4000, -21013)
-2022-12-18 00:47:13,346 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:13,378 [ 1] INFO  Unity: SetPosition:(5000, 4000, -21232)
-2022-12-18 00:47:13,380 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:13,405 [ 1] INFO  Unity: SetPosition:(5000, 4000, -21452)
-2022-12-18 00:47:13,407 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:13,438 [ 1] INFO  Unity: SetPosition:(5000, 4000, -21673)
-2022-12-18 00:47:13,439 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:13,469 [ 1] INFO  Unity: SetPosition:(5000, 4000, -21896)
-2022-12-18 00:47:13,471 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:13,496 [ 1] INFO  Unity: SetPosition:(5000, 4000, -22007)
-2022-12-18 00:47:13,498 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:13,531 [ 1] INFO  Unity: SetPosition:(5000, 4000, -22231)
-2022-12-18 00:47:13,533 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:13,567 [ 1] INFO  Unity: SetPosition:(5000, 4000, -22570)
-2022-12-18 00:47:13,569 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:13,611 [ 1] INFO  Unity: SetPosition:(5000, 4000, -22796)
-2022-12-18 00:47:13,613 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:13,642 [ 1] INFO  Unity: SetPosition:(5000, 4000, -23024)
-2022-12-18 00:47:13,644 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:13,676 [ 1] INFO  Unity: SetPosition:(5000, 4000, -23253)
-2022-12-18 00:47:13,677 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:13,708 [ 1] INFO  Unity: SetPosition:(5000, 4000, -23483)
-2022-12-18 00:47:13,708 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:13,737 [ 1] INFO  Unity: SetPosition:(5000, 4000, -23715)
-2022-12-18 00:47:13,738 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:13,760 [ 1] INFO  Unity: SetPosition:(5000, 4000, -23831)
-2022-12-18 00:47:13,762 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:13,784 [ 1] INFO  Unity: SetPosition:(5000, 4000, -24063)
-2022-12-18 00:47:13,787 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:13,813 [ 1] INFO  Unity: SetPosition:(5000, 4000, -24180)
-2022-12-18 00:47:13,815 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:13,849 [ 1] INFO  Unity: SetPosition:(5000, 4000, -24532)
-2022-12-18 00:47:13,851 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:13,876 [ 1] INFO  Unity: SetPosition:(5000, 4000, -24650)
-2022-12-18 00:47:13,877 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:13,907 [ 1] INFO  Unity: SetPosition:(5000, 4000, -24887)
-2022-12-18 00:47:13,908 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:13,946 [ 1] INFO  Unity: SetPosition:(5000, 4000, -25125)
-2022-12-18 00:47:13,949 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:13,988 [ 1] INFO  Unity: SetPosition:(5000, 4000, -25483)
-2022-12-18 00:47:13,990 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:14,019 [ 1] INFO  Unity: SetPosition:(5000, 4000, -25724)
-2022-12-18 00:47:14,020 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:14,049 [ 1] INFO  Unity: SetPosition:(5000, 4000, -25965)
-2022-12-18 00:47:14,051 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:14,078 [ 1] INFO  Unity: SetPosition:(5000, 4000, -26087)
-2022-12-18 00:47:14,079 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:14,179 [ 1] INFO  Unity: SetPosition:(5000, 4000, -26820)
-2022-12-18 00:47:14,181 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:14,260 [ 1] INFO  Unity: SetPosition:(5000, 4000, -27438)
-2022-12-18 00:47:14,262 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:14,314 [ 1] INFO  Unity: SetPosition:(5000, 4000, -27812)
-2022-12-18 00:47:14,316 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:14,356 [ 1] INFO  Unity: SetPosition:(5000, 4000, -28189)
-2022-12-18 00:47:14,359 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:14,400 [ 1] INFO  Unity: SetPosition:(5000, 4000, -28568)
-2022-12-18 00:47:14,402 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:14,442 [ 1] INFO  Unity: SetPosition:(5000, 4000, -28822)
-2022-12-18 00:47:14,444 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:14,476 [ 1] INFO  Unity: SetPosition:(5000, 4000, -29077)
-2022-12-18 00:47:14,477 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:14,520 [ 1] INFO  Unity: SetPosition:(5000, 4000, -29462)
-2022-12-18 00:47:14,523 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:14,552 [ 1] INFO  Unity: SetPosition:(5000, 4000, -29720)
-2022-12-18 00:47:14,553 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:14,581 [ 1] INFO  Unity: SetPosition:(5000, 4000, -29850)
-2022-12-18 00:47:14,583 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:14,635 [ 1] INFO  Unity: SetPosition:(5000, 4000, -30109)
-2022-12-18 00:47:14,636 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:14,672 [ 1] INFO  Unity: SetPosition:(5000, 4000, -30632)
-2022-12-18 00:47:14,674 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:14,705 [ 1] INFO  Unity: SetPosition:(5000, 4000, -30895)
-2022-12-18 00:47:14,706 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:14,748 [ 1] INFO  Unity: SetPosition:(5000, 4000, -31159)
-2022-12-18 00:47:14,750 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:14,773 [ 1] INFO  Unity: SetPosition:(5000, 4000, -31424)
-2022-12-18 00:47:14,775 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:14,804 [ 1] INFO  Unity: SetPosition:(5000, 4000, -31690)
-2022-12-18 00:47:14,805 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:14,836 [ 1] INFO  Unity: SetPosition:(5000, 4000, -31958)
-2022-12-18 00:47:14,837 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:14,861 [ 1] INFO  Unity: SetPosition:(5000, 4000, -32092)
-2022-12-18 00:47:14,862 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:14,890 [ 1] INFO  Unity: SetPosition:(5000, 4000, -32361)
-2022-12-18 00:47:14,891 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:14,927 [ 1] INFO  Unity: SetPosition:(5000, 4000, -32631)
-2022-12-18 00:47:14,929 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:14,970 [ 1] INFO  Unity: SetPosition:(5000, 4000, -33038)
-2022-12-18 00:47:14,972 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:15,001 [ 1] INFO  Unity: SetPosition:(5000, 4000, -33310)
-2022-12-18 00:47:15,003 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:15,027 [ 1] INFO  Unity: SetPosition:(5000, 4000, -33447)
-2022-12-18 00:47:15,028 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:15,053 [ 1] INFO  Unity: SetPosition:(5000, 4000, -33722)
-2022-12-18 00:47:15,054 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:15,077 [ 1] INFO  Unity: SetPosition:(5000, 4000, -33859)
-2022-12-18 00:47:15,079 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:15,102 [ 1] INFO  Unity: SetPosition:(5000, 4000, -34135)
-2022-12-18 00:47:15,103 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:15,127 [ 1] INFO  Unity: SetPosition:(5000, 4000, -34274)
-2022-12-18 00:47:15,129 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:15,160 [ 1] INFO  Unity: SetPosition:(5000, 4000, -34551)
-2022-12-18 00:47:15,161 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:15,188 [ 1] INFO  Unity: SetPosition:(5000, 4000, -34830)
-2022-12-18 00:47:15,189 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:15,214 [ 1] INFO  Unity: SetPosition:(5000, 4000, -34970)
-2022-12-18 00:47:15,216 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:15,238 [ 1] INFO  Unity: SetPosition:(5000, 4000, -35250)
-2022-12-18 00:47:15,239 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:15,269 [ 1] INFO  Unity: SetPosition:(5000, 4000, -35532)
-2022-12-18 00:47:15,271 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:15,294 [ 1] INFO  Unity: SetPosition:(5000, 4000, -35673)
-2022-12-18 00:47:15,295 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:15,316 [ 1] INFO  Unity: SetPosition:(5000, 4000, -35815)
-2022-12-18 00:47:15,317 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:15,358 [ 1] INFO  Unity: SetPosition:(5000, 4000, -36241)
-2022-12-18 00:47:15,359 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:15,401 [ 1] INFO  Unity: SetPosition:(5000, 4000, -36526)
-2022-12-18 00:47:15,403 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:15,430 [ 1] INFO  Unity: SetPosition:(5000, 4000, -36812)
-2022-12-18 00:47:15,431 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:15,453 [ 1] INFO  Unity: SetPosition:(5000, 4000, -37100)
-2022-12-18 00:47:15,454 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:15,476 [ 1] INFO  Unity: SetPosition:(5000, 4000, -37244)
-2022-12-18 00:47:15,477 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:15,503 [ 1] INFO  Unity: SetPosition:(5000, 4000, -37533)
-2022-12-18 00:47:15,504 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:15,529 [ 1] INFO  Unity: SetPosition:(5000, 4000, -37678)
-2022-12-18 00:47:15,531 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:15,555 [ 1] INFO  Unity: SetPosition:(5000, 4000, -37969)
-2022-12-18 00:47:15,557 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:15,578 [ 1] INFO  Unity: SetPosition:(5000, 4000, -38115)
-2022-12-18 00:47:15,579 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:15,609 [ 1] INFO  Unity: SetPosition:(5000, 4000, -38407)
-2022-12-18 00:47:15,610 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:15,639 [ 1] INFO  Unity: SetPosition:(5000, 4000, -38701)
-2022-12-18 00:47:15,640 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:15,667 [ 1] INFO  Unity: SetPosition:(5000, 4000, -38848)
-2022-12-18 00:47:15,668 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:15,696 [ 1] INFO  Unity: SetPosition:(5000, 4000, -39143)
-2022-12-18 00:47:15,697 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:15,722 [ 1] INFO  Unity: SetPosition:(5000, 4000, -39440)
-2022-12-18 00:47:15,723 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:15,747 [ 1] INFO  Unity: SetPosition:(5000, 4000, -39588)
-2022-12-18 00:47:15,749 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:15,776 [ 1] INFO  Unity: SetPosition:(5000, 4000, -39886)
-2022-12-18 00:47:15,777 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:15,797 [ 1] INFO  Unity: SetPosition:(5000, 4000, -40036)
-2022-12-18 00:47:15,799 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:15,830 [ 1] INFO  Unity: SetPosition:(5000, 4000, -40335)
-2022-12-18 00:47:15,831 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:15,857 [ 1] INFO  Unity: SetPosition:(5000, 4000, -40636)
-2022-12-18 00:47:15,858 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:15,888 [ 1] INFO  Unity: SetPosition:(5000, 4000, -40938)
-2022-12-18 00:47:15,889 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:15,916 [ 1] INFO  Unity: SetPosition:(5000, 4000, -41089)
-2022-12-18 00:47:15,917 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:15,941 [ 1] INFO  Unity: SetPosition:(5000, 4000, -41392)
-2022-12-18 00:47:15,943 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:15,967 [ 1] INFO  Unity: SetPosition:(5000, 4000, -41544)
-2022-12-18 00:47:15,969 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:15,993 [ 1] INFO  Unity: SetPosition:(5000, 4000, -41849)
-2022-12-18 00:47:15,994 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:16,020 [ 1] INFO  Unity: SetPosition:(5000, 4000, -42156)
-2022-12-18 00:47:16,021 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:16,054 [ 1] INFO  Unity: SetPosition:(5000, 4000, -42463)
-2022-12-18 00:47:16,055 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:16,079 [ 1] INFO  Unity: SetPosition:(5000, 4000, -42617)
-2022-12-18 00:47:16,080 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:16,103 [ 1] INFO  Unity: SetPosition:(5000, 4000, -42926)
-2022-12-18 00:47:16,104 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:16,128 [ 1] INFO  Unity: SetPosition:(5000, 4000, -43081)
-2022-12-18 00:47:16,129 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:16,152 [ 1] INFO  Unity: SetPosition:(5000, 4000, -43236)
-2022-12-18 00:47:16,153 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:16,174 [ 1] INFO  Unity: SetPosition:(5000, 4000, -43547)
-2022-12-18 00:47:16,175 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:16,198 [ 1] INFO  Unity: SetPosition:(5000, 4000, -43703)
-2022-12-18 00:47:16,200 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:16,224 [ 1] INFO  Unity: SetPosition:(5000, 4000, -44016)
-2022-12-18 00:47:16,225 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:16,246 [ 1] INFO  Unity: SetPosition:(5000, 4000, -44172)
-2022-12-18 00:47:16,248 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:16,269 [ 1] INFO  Unity: SetPosition:(5000, 4000, -44487)
-2022-12-18 00:47:16,269 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:16,290 [ 1] INFO  Unity: SetPosition:(5000, 4000, -44644)
-2022-12-18 00:47:16,292 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:16,320 [ 1] INFO  Unity: SetPosition:(5000, 4000, -44960)
-2022-12-18 00:47:16,322 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:16,344 [ 1] INFO  Unity: SetPosition:(5000, 4000, -45119)
-2022-12-18 00:47:16,345 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:16,372 [ 1] INFO  Unity: SetPosition:(5000, 4000, -45436)
-2022-12-18 00:47:16,373 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:16,404 [ 1] INFO  Unity: SetPosition:(5000, 4000, -45755)
-2022-12-18 00:47:16,405 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:16,430 [ 1] INFO  Unity: SetPosition:(5000, 4000, -45915)
-2022-12-18 00:47:16,431 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:16,461 [ 1] INFO  Unity: SetPosition:(5000, 4000, -46235)
-2022-12-18 00:47:16,462 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:16,484 [ 1] INFO  Unity: SetPosition:(5000, 4000, -46396)
-2022-12-18 00:47:16,485 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:16,511 [ 1] INFO  Unity: SetPosition:(5000, 4000, -46718)
-2022-12-18 00:47:16,511 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:16,537 [ 1] INFO  Unity: SetPosition:(5000, 4000, -46879)
-2022-12-18 00:47:16,538 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:16,560 [ 1] INFO  Unity: SetPosition:(5000, 4000, -47203)
-2022-12-18 00:47:16,561 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:16,578 [ 1] INFO  Unity: SetPosition:(5000, 4000, -47365)
-2022-12-18 00:47:16,580 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:16,609 [ 1] INFO  Unity: SetPosition:(5000, 4000, -47690)
-2022-12-18 00:47:16,610 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:16,638 [ 1] INFO  Unity: SetPosition:(5000, 4000, -48017)
-2022-12-18 00:47:16,639 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:16,670 [ 1] INFO  Unity: SetPosition:(5000, 4000, -48344)
-2022-12-18 00:47:16,671 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:16,695 [ 1] INFO  Unity: SetPosition:(5000, 4000, -48508)
-2022-12-18 00:47:16,696 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:16,714 [ 1] INFO  Unity: SetPosition:(5000, 4000, -48673)
-2022-12-18 00:47:16,716 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:16,743 [ 1] INFO  Unity: SetPosition:(5000, 4000, -49003)
-2022-12-18 00:47:16,744 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:16,769 [ 1] INFO  Unity: SetPosition:(5000, 4000, -49333)
-2022-12-18 00:47:16,770 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:16,797 [ 1] INFO  Unity: SetPosition:(5000, 4000, -49499)
-2022-12-18 00:47:16,798 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:16,819 [ 1] INFO  Unity: SetPosition:(5000, 4000, -49831)
-2022-12-18 00:47:16,820 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:16,839 [ 1] INFO  Unity: SetPosition:(5000, 4000, -49998)
-2022-12-18 00:47:16,840 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:16,867 [ 1] INFO  Unity: SetPosition:(5000, 4000, -50165)
-2022-12-18 00:47:16,868 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:16,889 [ 1] INFO  Unity: SetPosition:(5000, 4000, -50500)
-2022-12-18 00:47:16,891 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:16,916 [ 1] INFO  Unity: SetPosition:(5000, 4000, -50667)
-2022-12-18 00:47:16,918 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:16,947 [ 1] INFO  Unity: SetPosition:(5000, 4000, -51004)
-2022-12-18 00:47:16,949 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:16,977 [ 1] INFO  Unity: SetPosition:(5000, 4000, -51341)
-2022-12-18 00:47:16,979 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:17,008 [ 1] INFO  Unity: SetPosition:(5000, 4000, -51679)
-2022-12-18 00:47:17,009 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:17,032 [ 1] INFO  Unity: SetPosition:(5000, 4000, -51849)
-2022-12-18 00:47:17,033 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:17,060 [ 1] INFO  Unity: SetPosition:(5000, 4000, -52189)
-2022-12-18 00:47:17,061 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:17,090 [ 1] INFO  Unity: SetPosition:(5000, 4000, -52530)
-2022-12-18 00:47:17,092 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:17,114 [ 1] INFO  Unity: SetPosition:(5000, 4000, -52701)
-2022-12-18 00:47:17,117 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:17,138 [ 1] INFO  Unity: SetPosition:(5000, 4000, -53044)
-2022-12-18 00:47:17,140 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:17,165 [ 1] INFO  Unity: SetPosition:(5000, 4000, -53216)
-2022-12-18 00:47:17,166 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:17,188 [ 1] INFO  Unity: SetPosition:(5000, 4000, -53388)
-2022-12-18 00:47:17,190 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:17,210 [ 1] INFO  Unity: SetPosition:(5000, 4000, -53733)
-2022-12-18 00:47:17,211 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:17,233 [ 1] INFO  Unity: SetPosition:(5000, 4000, -53906)
-2022-12-18 00:47:17,235 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:17,267 [ 1] INFO  Unity: SetPosition:(5000, 4000, -54252)
-2022-12-18 00:47:17,268 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:17,300 [ 1] INFO  Unity: SetPosition:(5000, 4000, -54600)
-2022-12-18 00:47:17,301 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:17,326 [ 1] INFO  Unity: SetPosition:(5000, 4000, -54949)
-2022-12-18 00:47:17,328 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:17,352 [ 1] INFO  Unity: SetPosition:(5000, 4000, -55124)
-2022-12-18 00:47:17,354 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:17,382 [ 1] INFO  Unity: SetPosition:(5000, 4000, -55474)
-2022-12-18 00:47:17,384 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:17,405 [ 1] INFO  Unity: SetPosition:(5000, 4000, -55826)
-2022-12-18 00:47:17,406 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:17,429 [ 1] INFO  Unity: SetPosition:(5000, 4000, -56002)
-2022-12-18 00:47:17,430 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:17,449 [ 1] INFO  Unity: SetPosition:(5000, 4000, -56179)
-2022-12-18 00:47:17,451 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:17,475 [ 1] INFO  Unity: SetPosition:(5000, 4000, -56532)
-2022-12-18 00:47:17,476 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:17,506 [ 1] INFO  Unity: SetPosition:(5000, 4000, -56887)
-2022-12-18 00:47:17,508 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:17,533 [ 1] INFO  Unity: SetPosition:(5000, 4000, -57065)
-2022-12-18 00:47:17,535 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:17,558 [ 1] INFO  Unity: SetPosition:(5000, 4000, -57421)
-2022-12-18 00:47:17,560 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:17,587 [ 1] INFO  Unity: SetPosition:(5000, 4000, -57600)
-2022-12-18 00:47:17,587 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:17,609 [ 1] INFO  Unity: SetPosition:(5000, 4000, -57958)
-2022-12-18 00:47:17,610 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:17,632 [ 1] INFO  Unity: SetPosition:(5000, 4000, -58138)
-2022-12-18 00:47:17,633 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:17,658 [ 1] INFO  Unity: SetPosition:(5000, 4000, -58497)
-2022-12-18 00:47:17,659 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:17,688 [ 1] INFO  Unity: SetPosition:(5000, 4000, -58678)
-2022-12-18 00:47:17,689 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:17,726 [ 1] INFO  Unity: SetPosition:(5000, 4000, -59220)
-2022-12-18 00:47:17,728 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:17,758 [ 1] INFO  Unity: SetPosition:(5000, 4000, -59583)
-2022-12-18 00:47:17,759 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:17,787 [ 1] INFO  Unity: SetPosition:(5000, 4000, -59765)
-2022-12-18 00:47:17,788 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:17,815 [ 1] INFO  Unity: SetPosition:(5000, 4000, -60130)
-2022-12-18 00:47:17,816 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:17,838 [ 1] INFO  Unity: SetPosition:(5000, 4000, -60313)
-2022-12-18 00:47:17,840 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:17,862 [ 1] INFO  Unity: SetPosition:(5000, 4000, -60679)
-2022-12-18 00:47:17,863 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:17,882 [ 1] INFO  Unity: SetPosition:(5000, 4000, -60863)
-2022-12-18 00:47:17,884 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:17,908 [ 1] INFO  Unity: SetPosition:(5000, 4000, -61231)
-2022-12-18 00:47:17,910 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:17,938 [ 1] INFO  Unity: SetPosition:(5000, 4000, -61415)
-2022-12-18 00:47:17,939 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:17,960 [ 1] INFO  Unity: SetPosition:(5000, 4000, -61785)
-2022-12-18 00:47:17,961 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:17,981 [ 1] INFO  Unity: SetPosition:(5000, 4000, -61970)
-2022-12-18 00:47:17,982 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:18,007 [ 1] INFO  Unity: SetPosition:(5000, 4000, -62341)
-2022-12-18 00:47:18,007 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:18,030 [ 1] INFO  Unity: SetPosition:(5000, 4000, -62527)
-2022-12-18 00:47:18,031 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:18,052 [ 1] INFO  Unity: SetPosition:(5000, 4000, -62713)
-2022-12-18 00:47:18,053 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:18,073 [ 1] INFO  Unity: SetPosition:(5000, 4000, -63087)
-2022-12-18 00:47:18,075 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:18,100 [ 1] INFO  Unity: SetPosition:(5000, 4000, -63274)
-2022-12-18 00:47:18,102 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:18,125 [ 1] INFO  Unity: SetPosition:(5000, 4000, -63649)
-2022-12-18 00:47:18,127 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:18,153 [ 1] INFO  Unity: SetPosition:(5000, 4000, -63837)
-2022-12-18 00:47:18,155 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:18,175 [ 1] INFO  Unity: SetPosition:(5000, 4000, -64214)
-2022-12-18 00:47:18,177 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:18,196 [ 1] INFO  Unity: SetPosition:(5000, 4000, -64403)
-2022-12-18 00:47:18,197 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:18,231 [ 1] INFO  Unity: SetPosition:(5000, 4000, -64781)
-2022-12-18 00:47:18,233 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:18,277 [ 1] INFO  Unity: SetPosition:(5000, 4000, -65351)
-2022-12-18 00:47:18,279 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:18,318 [ 1] INFO  Unity: SetPosition:(5000, 4000, -65732)
-2022-12-18 00:47:18,320 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:18,344 [ 1] INFO  Unity: SetPosition:(5000, 4000, -66114)
-2022-12-18 00:47:18,345 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:18,377 [ 1] INFO  Unity: SetPosition:(5000, 4000, -66497)
-2022-12-18 00:47:18,378 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:18,426 [ 1] INFO  Unity: SetPosition:(5000, 4000, -67074)
-2022-12-18 00:47:18,426 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:18,444 [ 1] INFO  Unity: SetPosition:(5000, 4000, -67267)
-2022-12-18 00:47:18,445 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:18,468 [ 1] INFO  Unity: SetPosition:(5000, 4000, -67460)
-2022-12-18 00:47:18,469 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:18,500 [ 1] INFO  Unity: SetPosition:(5000, 4000, -67847)
-2022-12-18 00:47:18,502 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:18,521 [ 1] INFO  Unity: SetPosition:(5000, 4000, -68041)
-2022-12-18 00:47:18,522 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:18,547 [ 1] INFO  Unity: SetPosition:(5000, 4000, -68430)
-2022-12-18 00:47:18,548 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:18,577 [ 1] INFO  Unity: SetPosition:(5000, 4000, -68820)
-2022-12-18 00:47:18,579 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:18,606 [ 1] INFO  Unity: SetPosition:(5000, 4000, -69015)
-2022-12-18 00:47:18,608 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:18,633 [ 1] INFO  Unity: SetPosition:(5000, 4000, -69407)
-2022-12-18 00:47:18,634 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:18,654 [ 1] INFO  Unity: SetPosition:(5000, 4000, -69603)
-2022-12-18 00:47:18,655 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:18,677 [ 1] INFO  Unity: SetPosition:(5000, 4000, -69996)
-2022-12-18 00:47:18,678 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:18,696 [ 1] INFO  Unity: SetPosition:(5000, 4000, -70193)
-2022-12-18 00:47:18,698 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:18,722 [ 1] INFO  Unity: SetPosition:(5000, 4000, -70390)
-2022-12-18 00:47:18,724 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:18,744 [ 1] INFO  Unity: SetPosition:(5000, 4000, -70786)
-2022-12-18 00:47:18,745 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:18,774 [ 1] INFO  Unity: SetPosition:(5000, 4000, -71182)
-2022-12-18 00:47:18,774 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:18,807 [ 1] INFO  Unity: SetPosition:(5000, 4000, -71580)
-2022-12-18 00:47:18,808 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:18,844 [ 1] INFO  Unity: SetPosition:(5000, 4000, -71978)
-2022-12-18 00:47:18,847 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:18,875 [ 1] INFO  Unity: SetPosition:(5000, 4000, -72378)
-2022-12-18 00:47:18,876 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:18,903 [ 1] INFO  Unity: SetPosition:(5000, 4000, -72578)
-2022-12-18 00:47:18,904 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:18,937 [ 1] INFO  Unity: SetPosition:(5000, 4000, -72980)
-2022-12-18 00:47:18,939 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:18,965 [ 1] INFO  Unity: SetPosition:(5000, 4000, -73382)
-2022-12-18 00:47:18,966 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:18,994 [ 1] INFO  Unity: SetPosition:(5000, 4000, -73786)
-2022-12-18 00:47:18,996 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:19,035 [ 1] INFO  Unity: SetPosition:(5000, 4000, -74190)
-2022-12-18 00:47:19,036 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:19,061 [ 1] INFO  Unity: SetPosition:(5000, 4000, -74596)
-2022-12-18 00:47:19,063 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:19,083 [ 1] INFO  Unity: SetPosition:(5000, 4000, -74799)
-2022-12-18 00:47:19,084 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:19,107 [ 1] INFO  Unity: SetPosition:(5000, 4000, -75003)
-2022-12-18 00:47:19,108 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:19,130 [ 1] INFO  Unity: SetPosition:(5000, 4000, -75411)
-2022-12-18 00:47:19,132 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:19,152 [ 1] INFO  Unity: SetPosition:(5000, 4000, -75615)
-2022-12-18 00:47:19,154 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:19,181 [ 1] INFO  Unity: SetPosition:(5000, 4000, -76025)
-2022-12-18 00:47:19,182 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:19,212 [ 1] INFO  Unity: SetPosition:(5000, 4000, -76435)
-2022-12-18 00:47:19,214 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:19,249 [ 1] INFO  Unity: SetPosition:(5000, 4000, -76847)
-2022-12-18 00:47:19,252 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:19,287 [ 1] INFO  Unity: SetPosition:(5000, 4000, -77260)
-2022-12-18 00:47:19,289 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:19,314 [ 1] INFO  Unity: SetPosition:(5000, 4000, -77674)
-2022-12-18 00:47:19,315 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:19,344 [ 1] INFO  Unity: SetPosition:(5000, 4000, -78089)
-2022-12-18 00:47:19,345 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:19,371 [ 1] INFO  Unity: SetPosition:(5000, 4000, -78297)
-2022-12-18 00:47:19,372 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:19,397 [ 1] INFO  Unity: SetPosition:(5000, 4000, -78714)
-2022-12-18 00:47:19,399 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:19,420 [ 1] INFO  Unity: SetPosition:(5000, 4000, -78922)
-2022-12-18 00:47:19,422 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:19,445 [ 1] INFO  Unity: SetPosition:(5000, 4000, -79341)
-2022-12-18 00:47:19,447 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:19,473 [ 1] INFO  Unity: SetPosition:(5000, 4000, -79550)
-2022-12-18 00:47:19,473 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:19,501 [ 1] INFO  Unity: SetPosition:(5000, 4000, -79970)
-2022-12-18 00:47:19,502 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:19,525 [ 1] INFO  Unity: SetPosition:(5000, 4000, -80181)
-2022-12-18 00:47:19,527 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:19,551 [ 1] INFO  Unity: SetPosition:(5000, 4000, -80602)
-2022-12-18 00:47:19,553 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:19,574 [ 1] INFO  Unity: SetPosition:(5000, 4000, -80813)
-2022-12-18 00:47:19,574 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:19,597 [ 1] INFO  Unity: SetPosition:(5000, 4000, -81237)
-2022-12-18 00:47:19,598 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:19,619 [ 1] INFO  Unity: SetPosition:(5000, 4000, -81449)
-2022-12-18 00:47:19,620 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:19,639 [ 1] INFO  Unity: SetPosition:(5000, 4000, -81661)
-2022-12-18 00:47:19,641 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:19,671 [ 1] INFO  Unity: SetPosition:(5000, 4000, -82086)
-2022-12-18 00:47:19,672 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:19,694 [ 1] INFO  Unity: SetPosition:(5000, 4000, -82513)
-2022-12-18 00:47:19,696 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:19,714 [ 1] INFO  Unity: SetPosition:(5000, 4000, -82727)
-2022-12-18 00:47:19,717 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:19,746 [ 1] INFO  Unity: SetPosition:(5000, 4000, -83155)
-2022-12-18 00:47:19,748 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:19,777 [ 1] INFO  Unity: SetPosition:(5000, 4000, -83584)
-2022-12-18 00:47:19,779 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:19,810 [ 1] INFO  Unity: SetPosition:(5000, 4000, -84014)
-2022-12-18 00:47:19,812 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:19,845 [ 1] INFO  Unity: SetPosition:(5000, 4000, -84446)
-2022-12-18 00:47:19,846 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:19,880 [ 1] INFO  Unity: SetPosition:(5000, 4000, -84878)
-2022-12-18 00:47:19,882 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:19,907 [ 1] INFO  Unity: SetPosition:(5000, 4000, -85095)
-2022-12-18 00:47:19,908 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:19,928 [ 1] INFO  Unity: SetPosition:(5000, 4000, -85529)
-2022-12-18 00:47:19,929 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:19,949 [ 1] INFO  Unity: SetPosition:(5000, 4000, -85747)
-2022-12-18 00:47:19,950 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:19,971 [ 1] INFO  Unity: SetPosition:(5000, 4000, -85965)
-2022-12-18 00:47:19,973 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:19,999 [ 1] INFO  Unity: SetPosition:(5000, 4000, -86401)
-2022-12-18 00:47:20,000 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:20,021 [ 1] INFO  Unity: SetPosition:(5000, 4000, -86620)
-2022-12-18 00:47:20,022 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:20,045 [ 1] INFO  Unity: SetPosition:(5000, 4000, -87058)
-2022-12-18 00:47:20,046 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:20,075 [ 1] INFO  Unity: SetPosition:(5000, 4000, -87277)
-2022-12-18 00:47:20,076 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:20,094 [ 1] INFO  Unity: SetPosition:(5000, 4000, -87717)
-2022-12-18 00:47:20,096 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:20,116 [ 1] INFO  Unity: SetPosition:(5000, 4000, -87937)
-2022-12-18 00:47:20,117 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:20,139 [ 1] INFO  Unity: SetPosition:(5000, 4000, -88157)
-2022-12-18 00:47:20,139 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:20,162 [ 1] INFO  Unity: SetPosition:(5000, 4000, -88599)
-2022-12-18 00:47:20,164 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:20,183 [ 1] INFO  Unity: SetPosition:(5000, 4000, -88821)
-2022-12-18 00:47:20,185 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:20,209 [ 1] INFO  Unity: SetPosition:(5000, 4000, -89042)
-2022-12-18 00:47:20,211 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:20,236 [ 1] INFO  Unity: SetPosition:(5000, 4000, -89486)
-2022-12-18 00:47:20,238 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:20,263 [ 1] INFO  Unity: SetPosition:(5000, 4000, -89931)
-2022-12-18 00:47:20,265 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:20,295 [ 1] INFO  Unity: SetPosition:(5000, 4000, -90378)
-2022-12-18 00:47:20,295 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:20,321 [ 1] INFO  Unity: SetPosition:(5000, 4000, -90601)
-2022-12-18 00:47:20,323 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:20,353 [ 1] INFO  Unity: SetPosition:(5000, 4000, -91049)
-2022-12-18 00:47:20,354 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:20,379 [ 1] INFO  Unity: SetPosition:(5000, 4000, -91498)
-2022-12-18 00:47:20,381 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:20,403 [ 1] INFO  Unity: SetPosition:(5000, 4000, -91723)
-2022-12-18 00:47:20,404 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:20,429 [ 1] INFO  Unity: SetPosition:(5000, 4000, -92173)
-2022-12-18 00:47:20,430 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:20,479 [ 1] INFO  Unity: SetPosition:(5000, 4000, -92851)
-2022-12-18 00:47:20,481 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:20,509 [ 1] INFO  Unity: SetPosition:(5000, 4000, -93078)
-2022-12-18 00:47:20,511 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:20,532 [ 1] INFO  Unity: SetPosition:(5000, 4000, -93532)
-2022-12-18 00:47:20,534 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:20,557 [ 1] INFO  Unity: SetPosition:(5000, 4000, -93759)
-2022-12-18 00:47:20,558 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:20,583 [ 1] INFO  Unity: SetPosition:(5000, 4000, -94215)
-2022-12-18 00:47:20,584 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:20,615 [ 1] INFO  Unity: SetPosition:(5000, 4000, -94671)
-2022-12-18 00:47:20,617 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:20,652 [ 1] INFO  Unity: SetPosition:(5000, 4000, -95129)
-2022-12-18 00:47:20,654 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:20,697 [ 1] INFO  Unity: SetPosition:(5000, 4000, -95818)
-2022-12-18 00:47:20,700 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:20,753 [ 1] INFO  Unity: SetPosition:(5000, 4000, -96509)
-2022-12-18 00:47:20,754 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:20,778 [ 1] INFO  Unity: SetPosition:(5000, 4000, -96971)
-2022-12-18 00:47:20,780 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:20,808 [ 1] INFO  Unity: SetPosition:(5000, 4000, -97202)
-2022-12-18 00:47:20,810 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:20,838 [ 1] INFO  Unity: SetPosition:(5000, 4000, -97666)
-2022-12-18 00:47:20,840 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:20,869 [ 1] INFO  Unity: SetPosition:(5000, 4000, -98131)
-2022-12-18 00:47:20,870 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:20,899 [ 1] INFO  Unity: SetPosition:(5000, 4000, -98597)
-2022-12-18 00:47:20,900 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:20,923 [ 1] INFO  Unity: SetPosition:(5000, 4000, -98830)
-2022-12-18 00:47:20,924 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:20,953 [ 1] INFO  Unity: SetPosition:(5000, 4000, -99298)
-2022-12-18 00:47:20,955 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:20,977 [ 1] INFO  Unity: SetPosition:(5000, 4000, -99532)
-2022-12-18 00:47:20,978 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:21,007 [ 1] INFO  Unity: SetPosition:(5000, 4000, -100001)
-2022-12-18 00:47:21,008 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:21,036 [ 1] INFO  Unity: SetPosition:(5000, 4000, -100471)
-2022-12-18 00:47:21,037 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:21,061 [ 1] INFO  Unity: SetPosition:(5000, 4000, -100707)
-2022-12-18 00:47:21,063 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:21,084 [ 1] INFO  Unity: SetPosition:(5000, 4000, -101179)
-2022-12-18 00:47:21,085 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:21,107 [ 1] INFO  Unity: SetPosition:(5000, 4000, -101415)
-2022-12-18 00:47:21,109 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:21,135 [ 1] INFO  Unity: SetPosition:(5000, 4000, -101889)
-2022-12-18 00:47:21,136 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:21,161 [ 1] INFO  Unity: SetPosition:(5000, 4000, -102126)
-2022-12-18 00:47:21,163 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:21,186 [ 1] INFO  Unity: SetPosition:(5000, 4000, -102601)
-2022-12-18 00:47:21,187 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:21,209 [ 1] INFO  Unity: SetPosition:(5000, 4000, -102839)
-2022-12-18 00:47:21,210 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:21,237 [ 1] INFO  Unity: SetPosition:(5000, 4000, -103316)
-2022-12-18 00:47:21,237 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:21,266 [ 1] INFO  Unity: SetPosition:(5000, 4000, -103794)
-2022-12-18 00:47:21,267 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:21,295 [ 1] INFO  Unity: SetPosition:(5000, 4000, -104034)
-2022-12-18 00:47:21,297 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:21,326 [ 1] INFO  Unity: SetPosition:(5000, 4000, -104513)
-2022-12-18 00:47:21,328 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:21,350 [ 1] INFO  Unity: SetPosition:(5000, 4000, -104994)
-2022-12-18 00:47:21,351 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:21,374 [ 1] INFO  Unity: SetPosition:(5000, 4000, -105235)
-2022-12-18 00:47:21,376 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:21,399 [ 1] INFO  Unity: SetPosition:(5000, 4000, -105717)
-2022-12-18 00:47:21,403 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:21,429 [ 1] INFO  Unity: SetPosition:(5000, 4000, -105959)
-2022-12-18 00:47:21,432 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:21,462 [ 1] INFO  Unity: SetPosition:(5000, 4000, -106443)
-2022-12-18 00:47:21,464 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:21,487 [ 1] INFO  Unity: SetPosition:(5000, 4000, -106928)
-2022-12-18 00:47:21,488 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:21,510 [ 1] INFO  Unity: SetPosition:(5000, 4000, -107171)
-2022-12-18 00:47:21,511 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:21,537 [ 1] INFO  Unity: SetPosition:(5000, 4000, -107657)
-2022-12-18 00:47:21,538 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:21,560 [ 1] INFO  Unity: SetPosition:(5000, 4000, -107901)
-2022-12-18 00:47:21,562 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:21,585 [ 1] INFO  Unity: SetPosition:(5000, 4000, -108389)
-2022-12-18 00:47:21,586 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:21,614 [ 1] INFO  Unity: SetPosition:(5000, 4000, -108879)
-2022-12-18 00:47:21,615 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:21,643 [ 1] INFO  Unity: SetPosition:(5000, 4000, -109124)
-2022-12-18 00:47:21,643 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:21,673 [ 1] INFO  Unity: SetPosition:(5000, 4000, -109615)
-2022-12-18 00:47:21,674 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:21,698 [ 1] INFO  Unity: SetPosition:(5000, 4000, -110107)
-2022-12-18 00:47:21,700 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:21,725 [ 1] INFO  Unity: SetPosition:(5000, 4000, -110354)
-2022-12-18 00:47:21,726 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:21,749 [ 1] INFO  Unity: SetPosition:(5000, 4000, -110848)
-2022-12-18 00:47:21,751 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:21,774 [ 1] INFO  Unity: SetPosition:(5000, 4000, -111095)
-2022-12-18 00:47:21,775 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:21,807 [ 1] INFO  Unity: SetPosition:(5000, 4000, -111590)
-2022-12-18 00:47:21,809 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:21,839 [ 1] INFO  Unity: SetPosition:(5000, 4000, -112087)
-2022-12-18 00:47:21,841 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:21,867 [ 1] INFO  Unity: SetPosition:(5000, 4000, -112585)
-2022-12-18 00:47:21,869 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:21,895 [ 1] INFO  Unity: SetPosition:(5000, 4000, -112834)
-2022-12-18 00:47:21,897 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:21,928 [ 1] INFO  Unity: SetPosition:(5000, 4000, -113333)
-2022-12-18 00:47:21,929 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:21,950 [ 1] INFO  Unity: SetPosition:(5000, 4000, -113834)
-2022-12-18 00:47:21,952 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:21,975 [ 1] INFO  Unity: SetPosition:(5000, 4000, -114084)
-2022-12-18 00:47:21,976 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:22,005 [ 1] INFO  Unity: SetPosition:(5000, 4000, -114586)
-2022-12-18 00:47:22,006 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:22,031 [ 1] INFO  Unity: SetPosition:(5000, 4000, -115089)
-2022-12-18 00:47:22,032 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:22,054 [ 1] INFO  Unity: SetPosition:(5000, 4000, -115341)
-2022-12-18 00:47:22,056 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:22,078 [ 1] INFO  Unity: SetPosition:(5000, 4000, -115594)
-2022-12-18 00:47:22,079 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:22,102 [ 1] INFO  Unity: SetPosition:(5000, 4000, -116099)
-2022-12-18 00:47:22,104 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:22,129 [ 1] INFO  Unity: SetPosition:(5000, 4000, -116352)
-2022-12-18 00:47:22,130 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:22,159 [ 1] INFO  Unity: SetPosition:(5000, 4000, -116859)
-2022-12-18 00:47:22,161 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:22,182 [ 1] INFO  Unity: SetPosition:(5000, 4000, -117367)
-2022-12-18 00:47:22,183 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:22,210 [ 1] INFO  Unity: SetPosition:(5000, 4000, -117622)
-2022-12-18 00:47:22,212 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:22,241 [ 1] INFO  Unity: SetPosition:(5000, 4000, -118131)
-2022-12-18 00:47:22,257 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:22,277 [ 1] INFO  Unity: SetPosition:(5000, 4000, -118642)
-2022-12-18 00:47:22,278 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:22,300 [ 1] INFO  Unity: SetPosition:(5000, 4000, -119154)
-2022-12-18 00:47:22,302 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:22,323 [ 1] INFO  Unity: SetPosition:(5000, 4000, -119410)
-2022-12-18 00:47:22,324 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:22,349 [ 1] INFO  Unity: SetPosition:(5000, 4000, -119924)
-2022-12-18 00:47:22,351 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:22,372 [ 1] INFO  Unity: SetPosition:(5000, 4000, -120181)
-2022-12-18 00:47:22,372 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:22,401 [ 1] INFO  Unity: SetPosition:(5000, 4000, -120696)
-2022-12-18 00:47:22,402 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:22,426 [ 1] INFO  Unity: SetPosition:(5000, 4000, -120954)
-2022-12-18 00:47:22,427 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:22,453 [ 1] INFO  Unity: SetPosition:(5000, 4000, -121471)
-2022-12-18 00:47:22,454 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:22,481 [ 1] INFO  Unity: SetPosition:(5000, 4000, -121989)
-2022-12-18 00:47:22,482 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:2 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 00:47:22,544 [ 1] INFO  Unity: OnDestroy NetworkManager.
-2022-12-18 00:47:22,546 [ 1] WARN  Unity: CloseConnection(), errorCode: 1007
+2022-12-18 21:19:02,987 [ 1] INFO  Unity: GameObjectManager->CreateCharacterObject CharacterId:3 CharacterName:adsfadfadf CharacterEntityId:3
+2022-12-18 21:19:03,009 [ 1] INFO  Unity: GameObjectManager->InitGameObject Player_character:3
+2022-12-18 21:19:03,018 [ 1] INFO  Unity: Load MiniMap Image :buluzheng
+2022-12-18 21:19:03,163 [ 1] INFO  Unity: GameObjectManager->CreateCharacterObject CharacterId:1 CharacterName:12-3 CharacterEntityId:1
+2022-12-18 21:19:03,223 [ 1] INFO  Unity: GameObjectManager->CreateCharacterObject CharacterId:2 CharacterName:13-2 CharacterEntityId:2
+2022-12-18 21:19:03,933 [ 1] INFO  Unity: SetDirection:(1, 100, 0)
+2022-12-18 21:19:03,935 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:3 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
+2022-12-18 21:19:03,936 [ 1] INFO  Unity: MoveForward
+2022-12-18 21:19:03,937 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:3 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
+2022-12-18 21:19:04,943 [ 1] INFO  Unity: SetDirection:(1, 100, 0)
+2022-12-18 21:19:04,945 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:3 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
+2022-12-18 21:19:05,030 [ 1] INFO  Unity: SetDirection:(-33, 94, 0)
+2022-12-18 21:19:05,064 [ 1] INFO  Unity: SetDirection:(-73, 69, 0)
+2022-12-18 21:19:05,065 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:3 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
+2022-12-18 21:19:05,093 [ 1] INFO  Unity: SetDirection:(-94, 34, 0)
+2022-12-18 21:19:05,128 [ 1] INFO  Unity: SetDirection:(-100, 1, 0)
+2022-12-18 21:19:05,322 [ 1] INFO  Unity: SetDirection:(-99, -17, 0)
+2022-12-18 21:19:05,323 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:3 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
+2022-12-18 21:19:05,356 [ 1] INFO  Unity: SetDirection:(-94, -34, 0)
+2022-12-18 21:19:05,406 [ 1] INFO  Unity: SetDirection:(-78, -63, 0)
+2022-12-18 21:19:05,430 [ 1] INFO  Unity: SetDirection:(-66, -75, 0)
+2022-12-18 21:19:05,432 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:3 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
+2022-12-18 21:19:05,463 [ 1] INFO  Unity: SetDirection:(-48, -88, 0)
+2022-12-18 21:19:05,483 [ 1] INFO  Unity: SetDirection:(-36, -93, 0)
+2022-12-18 21:19:05,510 [ 1] INFO  Unity: SetDirection:(-23, -97, 0)
+2022-12-18 21:19:05,540 [ 1] INFO  Unity: SetDirection:(-9, -100, 0)
+2022-12-18 21:19:05,541 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:3 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
+2022-12-18 21:19:05,567 [ 1] INFO  Unity: SetDirection:(-1, -100, 0)
+2022-12-18 21:19:05,712 [ 1] INFO  Unity: SetDirection:(14, -99, 0)
+2022-12-18 21:19:05,713 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:3 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
+2022-12-18 21:19:05,741 [ 1] INFO  Unity: SetDirection:(25, -97, 0)
+2022-12-18 21:19:05,779 [ 1] INFO  Unity: SetDirection:(39, -92, 0)
+2022-12-18 21:19:05,825 [ 1] INFO  Unity: SetDirection:(59, -81, 0)
+2022-12-18 21:19:05,826 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:3 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
+2022-12-18 21:19:05,850 [ 1] INFO  Unity: SetDirection:(69, -73, 0)
+2022-12-18 21:19:05,891 [ 1] INFO  Unity: SetDirection:(82, -57, 0)
+2022-12-18 21:19:05,920 [ 1] INFO  Unity: SetDirection:(90, -44, 0)
+2022-12-18 21:19:05,920 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:3 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
+2022-12-18 21:19:05,948 [ 1] INFO  Unity: SetDirection:(94, -33, 0)
+2022-12-18 21:19:05,990 [ 1] INFO  Unity: SetDirection:(98, -18, 0)
+2022-12-18 21:19:06,027 [ 1] INFO  Unity: SetDirection:(100, -7, 0)
+2022-12-18 21:19:06,088 [ 1] INFO  Unity: SetDirection:(100, -1, 0)
+2022-12-18 21:19:06,090 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:3 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
+2022-12-18 21:19:06,125 [ 1] INFO  Unity: SetDirection:(99, 10, 0)
+2022-12-18 21:19:06,155 [ 1] INFO  Unity: SetDirection:(98, 19, 0)
+2022-12-18 21:19:06,183 [ 1] INFO  Unity: SetDirection:(97, 26, 0)
+2022-12-18 21:19:06,185 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:3 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
+2022-12-18 21:19:06,218 [ 1] INFO  Unity: SetDirection:(92, 39, 0)
+2022-12-18 21:19:06,262 [ 1] INFO  Unity: SetDirection:(83, 56, 0)
+2022-12-18 21:19:06,304 [ 1] INFO  Unity: SetDirection:(1, 100, 0)
+2022-12-18 21:19:06,305 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:3 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
+2022-12-18 21:19:06,337 [ 1] INFO  Unity: SetDirection:(-12, 99, 0)
+2022-12-18 21:19:06,365 [ 1] INFO  Unity: SetDirection:(-20, 98, 0)
+2022-12-18 21:19:06,389 [ 1] INFO  Unity: SetDirection:(-26, 97, 0)
+2022-12-18 21:19:06,391 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:3 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
+2022-12-18 21:19:06,432 [ 1] INFO  Unity: SetDirection:(-43, 90, 0)
+2022-12-18 21:19:06,469 [ 1] INFO  Unity: SetDirection:(-59, 81, 0)
+2022-12-18 21:19:06,492 [ 1] INFO  Unity: SetDirection:(-68, 73, 0)
+2022-12-18 21:19:06,494 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:3 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
+2022-12-18 21:19:06,529 [ 1] INFO  Unity: SetDirection:(-80, 59, 0)
+2022-12-18 21:19:06,557 [ 1] INFO  Unity: SetDirection:(-88, 48, 0)
+2022-12-18 21:19:06,586 [ 1] INFO  Unity: SetDirection:(-93, 36, 0)
+2022-12-18 21:19:06,620 [ 1] INFO  Unity: SetDirection:(-97, 23, 0)
+2022-12-18 21:19:06,622 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:3 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
+2022-12-18 21:19:06,649 [ 1] INFO  Unity: SetDirection:(-99, 13, 0)
+2022-12-18 21:19:06,693 [ 1] INFO  Unity: SetDirection:(-100, 1, 0)
+2022-12-18 21:19:07,031 [ 1] INFO  Unity: Stop
+2022-12-18 21:19:07,033 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:3 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
+2022-12-18 21:19:07,069 [ 1] INFO  Unity: SetDirection:(100, -1, 0)
+2022-12-18 21:19:07,071 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:3 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
+2022-12-18 21:19:07,072 [ 1] INFO  Unity: MoveForward
+2022-12-18 21:19:07,073 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:3 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
+2022-12-18 21:19:08,251 [ 1] INFO  Unity: Stop
+2022-12-18 21:19:08,253 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:3 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
+2022-12-18 21:19:13,352 [ 1] INFO  Unity: SetDirection:(-100, 1, 0)
+2022-12-18 21:19:13,353 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:3 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
+2022-12-18 21:19:13,353 [ 1] INFO  Unity: MoveForward
+2022-12-18 21:19:13,354 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:3 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
+2022-12-18 21:19:14,088 [ 1] INFO  Unity: Stop
+2022-12-18 21:19:14,089 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:3 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
+2022-12-18 21:19:15,166 [ 1] INFO  Unity: SetDirection:(100, -1, 0)
+2022-12-18 21:19:15,167 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:3 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
+2022-12-18 21:19:15,168 [ 1] INFO  Unity: MoveForward
+2022-12-18 21:19:15,168 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:3 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
+2022-12-18 21:19:16,122 [ 1] INFO  Unity: Stop
+2022-12-18 21:19:16,123 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:3 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
+2022-12-18 21:19:16,478 [ 1] INFO  Unity: SetDirection:(-100, 1, 0)
+2022-12-18 21:19:16,479 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:3 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
+2022-12-18 21:19:16,480 [ 1] INFO  Unity: MoveForward
+2022-12-18 21:19:16,481 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:3 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
+2022-12-18 21:19:19,133 [ 1] INFO  Unity: Stop
+2022-12-18 21:19:19,135 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:3 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
+2022-12-18 21:19:20,216 [ 1] INFO  Unity: SetDirection:(100, -1, 0)
+2022-12-18 21:19:20,217 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:3 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
+2022-12-18 21:19:20,218 [ 1] INFO  Unity: MoveForward
+2022-12-18 21:19:20,219 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:3 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
+2022-12-18 21:19:22,533 [ 1] INFO  Unity: Stop
+2022-12-18 21:19:22,535 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:3 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
+2022-12-18 21:19:23,862 [ 1] INFO  Unity: SetDirection:(-100, 1, 0)
+2022-12-18 21:19:23,864 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:3 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
+2022-12-18 21:19:23,864 [ 1] INFO  Unity: MoveForward
+2022-12-18 21:19:23,865 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:3 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
+2022-12-18 21:19:24,689 [ 1] INFO  Unity: Stop
+2022-12-18 21:19:24,690 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:3 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
+2022-12-18 21:19:27,157 [ 1] INFO  Unity: Entity Character_3_adsfadfadf OnDestroy :ID:3 POS:(4925, 4297, 820) DIR:(-100, 1, 0) SPD:0 
+2022-12-18 21:19:27,159 [ 1] INFO  Unity: Entity Character_1_12-3 OnDestroy :ID:1 POS:(4909, 4447, 820) DIR:(-43, 90, 0) SPD:0 
+2022-12-18 21:19:27,161 [ 1] INFO  Unity: Entity Character_2_13-2 OnDestroy :ID:2 POS:(5000, 4000, 820) DIR:(100, 0, 0) SPD:0 
+2022-12-18 21:19:27,166 [ 1] INFO  Unity: OnDestroy NetworkManager.
+2022-12-18 21:19:27,168 [ 1] WARN  Unity: CloseConnection(), errorCode: 1007
 UnityEngine.Debug:LogWarning(Object)
 Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:180)
 Network.NetClient:OnDestroy() (at Assets/Scripts/Network/NetClient.cs:175)
 
-2022-12-18 00:47:22,551 [ 1] INFO  Unity: Character_2_11-2 OnDestroy :ID:2 POS:(5000, 4000, -121989) DIR:(100, 0, 0) SPD:0 

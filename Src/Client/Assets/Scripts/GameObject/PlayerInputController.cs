@@ -45,10 +45,15 @@ public class PlayerInputController : MonoBehaviour {
             if (entityController != null) entityController.entity = this.character;
         }
     }
+    float jump_cd = 0f;
 
-
+    private Vector3 old_v_pos;
+    public float time = 0.1f;
+    float time_space = 0f;
     void FixedUpdate()
     {
+        time_space -= Time.deltaTime;
+        jump_cd -= Time.deltaTime;
         if (character == null)
             return;
         
@@ -57,31 +62,36 @@ public class PlayerInputController : MonoBehaviour {
         float h = Input.GetAxis("Horizontal");
 
         Vector3 v_pos = new Vector3(h, 0, v).normalized;
+        
         Quaternion quaternion = Quaternion.Euler(0, MainPlayerCamera.Instance.x, 0);
         v_pos = quaternion * v_pos;
-        if (v_pos.sqrMagnitude > 0)
+        if (v_pos.sqrMagnitude > 0.1f)
         {
-            character.SetDirection(GameObjectTool.WorldToLogic(v_pos));
-            rb.transform.forward = this.transform.forward;
-            this.transform.rotation = Quaternion.Euler(v_pos);
-
-            transform.eulerAngles = new Vector3(0, Quaternion.FromToRotation(Vector3.forward,v_pos).eulerAngles.y, 0);
-            
-            /*
-            Vector3 dir = GameObjectTool.LogicToWorld(character.direction);
-            Quaternion rot = new Quaternion();
-            rot.SetFromToRotation(dir, this.transform.forward);
-
-            if (rot.eulerAngles.y > this.turnAngle && rot.eulerAngles.y < (360 - this.turnAngle))
+            if (v_pos != old_v_pos)
             {
-                character.SetDirection(GameObjectTool.WorldToLogic(this.transform.forward));
+                old_v_pos = v_pos;
+                //Debug.LogErrorFormat("v:{0},h:{1},v_pos.sqrMagnitude:{2}", v, h, v_pos.sqrMagnitude);
+                this.transform.rotation = Quaternion.Euler(v_pos);
+                this.transform.eulerAngles = new Vector3(0, Quaternion.FromToRotation(Vector3.forward, v_pos).eulerAngles.y, 0);
+                character.SetDirection(GameObjectTool.WorldToLogic(v_pos));
                 rb.transform.forward = this.transform.forward;
-                this.SendEntityEvent(EntityEvent.None);
+                if(time_space<0)
+                {
+                    time_space = time;
+                    this.SendEntityEvent(EntityEvent.None);
+                }
+                
             }
-            */
-
+            if (state != SkillBridge.Message.CharacterState.Move)
+            {
+                state = SkillBridge.Message.CharacterState.Move;
+                this.character.MoveForward();
+                this.SendEntityEvent(EntityEvent.MoveFwd);
+            }
+            this.rb.velocity = this.rb.velocity.y * Vector3.up + GameObjectTool.LogicToWorld(character.direction) * (this.character.speed + 9.81f) / 100f;
+            
         }
-           
+        /*
         if (v > 0.01 || h > 0.01 || v < -0.01 || h < -0.01)
         {
             if (state != SkillBridge.Message.CharacterState.Move)
@@ -116,13 +126,19 @@ public class PlayerInputController : MonoBehaviour {
 
         if (Input.GetButtonDown("Jump"))
         {
-            this.SendEntityEvent(EntityEvent.Jump);
+            if (jump_cd > 0) return;
+            else
+            {
+                jump_cd = 0.5f;
+                this.SendEntityEvent(EntityEvent.Jump);
+            }
+            
         }
 
         
         //转弯
-        
-        if (h<-0.1 || h>0.1)
+        /*
+        if (h<-0.01 || h>0.01)
         {
             this.transform.Rotate(0, h * rotateSpeed, 0);
             
@@ -137,27 +153,36 @@ public class PlayerInputController : MonoBehaviour {
                 this.SendEntityEvent(EntityEvent.None);
             }
         }
+        */
         
         //Debug.LogFormat("velocity {0}", this.rb.velocity.magnitude);
     }
     Vector3 lastPos;
+   
     float lastSync = 0;
+    
+    public float x=40f;
+    
+
+    
     /// <summary>
     /// 每帧结束后更新刚体的位置
     /// </summary>
     private void LateUpdate()
     {
+        
         Vector3 offset = this.rb.transform.position - lastPos;
         this.speed = (int)(offset.magnitude * 100f / Time.deltaTime);
         //Debug.LogFormat("LateUpdate velocity {0} : {1}", this.rb.velocity.magnitude, this.speed);
         this.lastPos = this.rb.transform.position;
 
-        if ((GameObjectTool.WorldToLogic(this.rb.transform.position) - this.character.position).magnitude > 10)
+        if ((GameObjectTool.WorldToLogic(this.rb.transform.position) - this.character.position).magnitude > x)
         {
             this.character.SetPosition(GameObjectTool.WorldToLogic(this.rb.transform.position));
             this.SendEntityEvent(EntityEvent.None);
         }
         this.transform.position = this.rb.transform.position;
+        time_space -= Time.deltaTime;
     }
 
     /// <summary>
@@ -168,7 +193,9 @@ public class PlayerInputController : MonoBehaviour {
     {
         if (entityController != null)
             entityController.OnEntityEvent(entityEvent);
+        
         MapService.Instance.SendMapEntitySync(entityEvent, this.character.EntityData);
 
     }
+    
 }

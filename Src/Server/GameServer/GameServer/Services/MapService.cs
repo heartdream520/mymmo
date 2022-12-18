@@ -41,8 +41,11 @@ namespace GameServer.Services
         private void OnMapSyncRequest(NetConnection<NetSession> sender, MapEntitySyncRequest request)
         {
             Character character = sender.Session.Character;
-            Log.InfoFormat("MapService->OnMapSyncRequest SyncCharacterId:{0} Name:{1} EntityID:{2} Event:{3} Entity:{4}",
-                character.Id,character.Info.Name,character.entityId,request.entitySync.Event,request.entitySync.Entity.ToString());
+            Log.InfoFormat("MapService->OnMapSyncRequest SyncCharacterId:{0} Name:{1} EntityID:{2} Event:{3} ",
+                character.Id,character.Info.Name,character.entityId,request.entitySync.Event);
+            NEntitySync entity = request.entitySync;
+            Log.InfoFormat("SyncEntityData Entitypos:{0} EntityDir:{1} Event:{2} EntitySpeed:{3} ",
+                entity.Entity.Position,entity.Entity.Direction,entity.Event,entity.Entity.Speed);
             MapManager.Instance[character.Info.mapId].UpdateEntity(request.entitySync);
         }
 
