@@ -16,6 +16,9 @@ namespace Services
 {
     class MapService : Singleton<MapService>, IDisposable
     {
+
+        public bool switchover_scene = false;
+        public string new_scene_name;
         /// <summary>
         /// 当前地图ID
         /// </summary>
@@ -46,6 +49,8 @@ namespace Services
         {
             Debug.LogFormat("MapService->OnMapCharacterEnter :Map:{0} Count:{1}",
                 response.mapId, response.Characters.Count);
+
+            new_scene_name = DataManager.Instance.Maps[response.mapId].Resource;
             //遍历角色
             foreach (var cha in response.Characters)
             {
@@ -121,6 +126,16 @@ namespace Services
                     entity.Id, entity.Event, entity.Event.ToString());
             }
             Debug.Log(sb);
+        }
+        public void SendMapTeleport(int id)
+        {
+            Debug.LogFormat("Mapservice->SendMapTeleport TeleportID:{0}", id);
+            NetMessage message = new NetMessage();
+            message.Request = new NetMessageRequest();
+            message.Request.mapTeleport = new MapTeleportRequest();
+            message.Request.mapTeleport.teleporterId = id;
+            NetClient.Instance.SendMessage(message);
+
         }
     }
 }

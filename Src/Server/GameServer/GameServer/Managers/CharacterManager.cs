@@ -39,8 +39,9 @@ namespace GameServer.Managers
         {
             
             EntityManager.Instance.AddEntity(cha.Info.mapId, cha);
-            Log.InfoFormat("CharacterManager->AddCharacter(): MapId:{0} CharacterId:{1} EntityId:{2}",
-                cha.Data.MapID, cha.Id,cha.entityId);
+            Log.InfoFormat("CharacterManager->AddCharacter(): MapId:{0} CharacterId:{1} EntityId:{2} InfoId:{3} ",
+                cha.Data.MapID, cha.Id,cha.entityId, cha.Info.Id);
+            //cha.Info.Id = cha.Id;
             this.Characters[cha.entityId] = cha;
             
             return cha;
@@ -51,6 +52,13 @@ namespace GameServer.Managers
         {
             Character cha = this.Characters[characterId];
             Log.InfoFormat("CharacterManager->RemoveCharacter:  MapId:{0}  CharacterId:{1} EntityId:{2}", cha.Data.MapID,characterId,cha.entityId);
+            if(!this.Characters.ContainsKey(characterId))
+            {
+                Log.WarningFormat("CharacterManager->RemoveCharacter:  MapId:{0} not Exist CharacterId:{1} EntityId:{2}", 
+                    cha.Data.MapID, characterId, cha.entityId);
+                return;
+
+            }
             EntityManager.Instance.RemoveEntity(cha.Info.mapId,cha);
             this.Characters.Remove(characterId);
 

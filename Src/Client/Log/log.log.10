@@ -1,1429 +1,379 @@
-2022-12-18 20:44:49,566 [ 1] INFO  Unity: LoadingManager start
-2022-12-18 20:44:54,271 [ 1] INFO  Unity: DataManager > DataManager()
-2022-12-18 20:45:00,288 [ 1] INFO  Unity: UserService->SendLoad: User:12 Password:12
-2022-12-18 20:45:00,290 [ 1] INFO  Unity: ConnectToServer() Start 
-2022-12-18 20:45:00,291 [ 1] INFO  Unity: DoConnect
-2022-12-18 20:45:00,294 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
-2022-12-18 20:45:00,299 [ 1] INFO  Unity: Connect[0] to server 127.0.0.1:8000
+2022-12-20 22:55:20,486 [ 1] INFO  Unity: LoadingManager start
+2022-12-20 22:55:25,047 [ 1] INFO  Unity: DataManager > DataManager()
+2022-12-20 22:55:31,553 [ 1] INFO  Unity: UserService->SendLoad: User:12 Password:12
+2022-12-20 22:55:31,555 [ 1] INFO  Unity: ConnectToServer() Start 
+2022-12-20 22:55:31,558 [ 1] INFO  Unity: DoConnect
+2022-12-20 22:55:31,560 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
+2022-12-20 22:55:31,565 [ 1] INFO  Unity: Connect[0] to server 127.0.0.1:8000
 
-2022-12-18 20:45:00,308 [ 1] INFO  Unity: LoadingMesager::OnGameServerConnect :0 reason:Success
-2022-12-18 20:45:00,542 [ 1] INFO  Unity: UserService->OnUserLoad:Success [None]
-2022-12-18 20:45:05,802 [ 1] INFO  Unity: Select Character:[59]12-3[Archer] 
-2022-12-18 20:45:07,911 [ 1] INFO  Unity: UserService->SendCharacterEnter: EnterCharacterID :59 EnterCharacterName:12-3 EnterCharacter_Idx
-2022-12-18 20:45:07,979 [ 1] INFO  Unity: UserService->OnUserGameEnter:Success [None]
-2022-12-18 20:45:07,983 [ 1] INFO  Unity: MapService->OnMapCharacterEnter :Map:1 Count:5
-2022-12-18 20:45:07,990 [ 1] INFO  Unity: CharacterManager->AddCharacter:CharacterId:59 CharacterName:12-3 MapId:1 Entity:(5:pos:(5000,4000,820),dir:(100,0,0),spd:0
-2022-12-18 20:45:07,999 [ 1] INFO  Unity: EntityManager AddEntity EntityId :5 
-2022-12-18 20:45:08,007 [ 1] INFO  Unity: CharacterManager->AddCharacter:CharacterId:61 CharacterName:13-2 MapId:1 Entity:(1:pos:(5188,3530,820),dir:(33,-94,0),spd:0
-2022-12-18 20:45:08,009 [ 1] INFO  Unity: EntityManager AddEntity EntityId :1 
-2022-12-18 20:45:08,012 [ 1] INFO  Unity: CharacterManager->AddCharacter:CharacterId:59 CharacterName:12-3 MapId:1 Entity:(2:pos:(4781,4398,820),dir:(-22,97,0),spd:0
-2022-12-18 20:45:08,015 [ 1] INFO  Unity: EntityManager AddEntity EntityId :2 
-2022-12-18 20:45:08,019 [ 1] INFO  Unity: CharacterManager->AddCharacter:CharacterId:59 CharacterName:12-3 MapId:1 Entity:(3:pos:(5055,3935,820),dir:(100,4,0),spd:0
-2022-12-18 20:45:08,020 [ 1] INFO  Unity: EntityManager AddEntity EntityId :3 
-2022-12-18 20:45:08,022 [ 1] INFO  Unity: CharacterManager->AddCharacter:CharacterId:59 CharacterName:12-3 MapId:1 Entity:(4:pos:(5097,4104,820),dir:(100,-9,0),spd:0
-2022-12-18 20:45:08,024 [ 1] INFO  Unity: EntityManager AddEntity EntityId :4 
-2022-12-18 20:45:12,581 [ 1] ERROR Unity: 初始化游戏对象！
+2022-12-20 22:55:31,571 [ 1] INFO  Unity: LoadingMesager::OnGameServerConnect :0 reason:Success
+2022-12-20 22:55:36,863 [ 1] INFO  Unity: UserService->OnUserLoad:Success [None]
+2022-12-20 22:55:41,831 [ 1] INFO  Unity: Select Character:[59]12-3[Archer] 
+2022-12-20 22:55:43,214 [ 1] INFO  Unity: UserService->SendCharacterEnter: EnterCharacterID :59 EnterCharacterName:12-3 EnterCharacter_Idx
+2022-12-20 22:55:43,273 [ 1] INFO  Unity: UserService->OnUserGameEnter:Success [None]
+2022-12-20 22:55:43,274 [ 1] INFO  Unity: MapService->OnMapCharacterEnter :Map:1 Count:1
+2022-12-20 22:55:43,277 [ 1] INFO  Unity: CharacterManager->AddCharacter:CharacterId:59 CharacterName:12-3 MapId:1 Entity:(1:pos:(5000,4000,820),dir:(100,0,0),spd:0
+2022-12-20 22:55:43,282 [ 1] INFO  Unity: EntityManager AddEntity EntityId :1 
+2022-12-20 22:55:46,605 [ 1] WARN  Unity: DontDestroyOnLoad only work for root GameObjects or components on root GameObjects.
+UnityEngine.Object:DontDestroyOnLoad(Object)
+MonoSingleton`1:Awake() (at Assets/Scripts/Utilities/MonoSingleton.cs:32)
+
+2022-12-20 22:55:46,607 [ 1] WARN  Unity: DontDestroyOnLoad only work for root GameObjects or components on root GameObjects.
+UnityEngine.Object:DontDestroyOnLoad(Object)
+MonoSingleton`1:Awake() (at Assets/Scripts/Utilities/MonoSingleton.cs:32)
+
+2022-12-20 22:55:46,608 [ 1] ERROR Unity: 初始化游戏对象！
 UnityEngine.Debug:LogError(Object)
 <InitGameObjects>c__Iterator0:MoveNext() (at Assets/Scripts/GameObject/GameObjectManager.cs:80)
 UnityEngine.MonoBehaviour:StartCoroutine(IEnumerator)
 GameObjectManager:OnStart() (at Assets/Scripts/GameObject/GameObjectManager.cs:23)
-MonoSingleton`1:Start() (at Assets/Scripts/Utilities/MonoSingleton.cs:34)
-
-2022-12-18 20:45:12,585 [ 1] INFO  Unity: GameObjectManager->CreateCharacterObject CharacterId:5 CharacterName:12-3 CharacterEntityId:5
-2022-12-18 20:45:12,606 [ 1] INFO  Unity: GameObjectManager->InitGameObject Player_character:5
-2022-12-18 20:45:12,615 [ 1] INFO  Unity: Load MiniMap Image :buluzheng
-2022-12-18 20:45:12,774 [ 1] INFO  Unity: GameObjectManager->CreateCharacterObject CharacterId:1 CharacterName:13-2 CharacterEntityId:1
-2022-12-18 20:45:13,001 [ 1] INFO  Unity: GameObjectManager->CreateCharacterObject CharacterId:2 CharacterName:12-3 CharacterEntityId:2
-2022-12-18 20:45:13,131 [ 1] INFO  Unity: GameObjectManager->CreateCharacterObject CharacterId:3 CharacterName:12-3 CharacterEntityId:3
-2022-12-18 20:45:13,197 [ 1] INFO  Unity: GameObjectManager->CreateCharacterObject CharacterId:4 CharacterName:12-3 CharacterEntityId:4
-2022-12-18 20:45:14,087 [ 1] INFO  Unity: SetDirection:(0, -100, 0)
-2022-12-18 20:45:14,090 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 20:45:14,092 [ 1] INFO  Unity: MoveForward
-2022-12-18 20:45:14,094 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:14,098 [ 1] INFO  Unity: SetDirection:(0, -100, 0)
-2022-12-18 20:45:14,100 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:14,101 [ 1] INFO  Unity: SetDirection:(0, -100, 0)
-2022-12-18 20:45:14,102 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:14,109 [ 1] ERROR Unity: Speed:309
-UnityEngine.Debug:LogError(Object)
-PlayerInputController:LateUpdate() (at Assets/Scripts/GameObject/PlayerInputController.cs:188)
-
-2022-12-18 20:45:14,142 [ 1] INFO  Unity: SetDirection:(0, -100, 0)
-2022-12-18 20:45:14,144 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:14,147 [ 1] INFO  Unity: SetDirection:(0, -100, 0)
-2022-12-18 20:45:14,149 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:14,153 [ 1] INFO  Unity: SetDirection:(0, -100, 0)
-2022-12-18 20:45:14,153 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:14,190 [ 1] INFO  Unity: SetDirection:(0, -100, 0)
-2022-12-18 20:45:14,191 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:14,192 [ 1] INFO  Unity: SetDirection:(0, -100, 0)
-2022-12-18 20:45:14,193 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:14,194 [ 1] INFO  Unity: SetDirection:(0, -100, 0)
-2022-12-18 20:45:14,195 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:14,200 [ 1] ERROR Unity: Speed:309
-UnityEngine.Debug:LogError(Object)
-PlayerInputController:LateUpdate() (at Assets/Scripts/GameObject/PlayerInputController.cs:188)
-
-2022-12-18 20:45:14,234 [ 1] INFO  Unity: SetDirection:(0, -100, 0)
-2022-12-18 20:45:14,235 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:14,238 [ 1] INFO  Unity: SetDirection:(0, -100, 0)
-2022-12-18 20:45:14,241 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:14,279 [ 1] INFO  Unity: SetDirection:(0, -100, 0)
-2022-12-18 20:45:14,280 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:14,283 [ 1] INFO  Unity: SetDirection:(0, -100, 0)
-2022-12-18 20:45:14,284 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:14,285 [ 1] INFO  Unity: SetDirection:(0, -100, 0)
-2022-12-18 20:45:14,286 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:14,316 [ 1] INFO  Unity: SetDirection:(0, -100, 0)
-2022-12-18 20:45:14,318 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:14,322 [ 1] INFO  Unity: SetDirection:(0, -100, 0)
-2022-12-18 20:45:14,324 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:14,328 [ 1] ERROR Unity: Speed:272
-UnityEngine.Debug:LogError(Object)
-PlayerInputController:LateUpdate() (at Assets/Scripts/GameObject/PlayerInputController.cs:188)
-
-2022-12-18 20:45:14,381 [ 1] INFO  Unity: SetDirection:(0, -100, 0)
-2022-12-18 20:45:14,383 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:14,387 [ 1] INFO  Unity: SetDirection:(0, -100, 0)
-2022-12-18 20:45:14,389 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:14,392 [ 1] INFO  Unity: SetDirection:(0, -100, 0)
-2022-12-18 20:45:14,393 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:14,395 [ 1] INFO  Unity: SetDirection:(0, -100, 0)
-2022-12-18 20:45:14,397 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:14,428 [ 1] INFO  Unity: SetDirection:(0, -100, 0)
-2022-12-18 20:45:14,431 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:14,435 [ 1] INFO  Unity: SetDirection:(0, -100, 0)
-2022-12-18 20:45:14,438 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:14,442 [ 1] INFO  Unity: SetDirection:(0, -100, 0)
-2022-12-18 20:45:14,444 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:14,448 [ 1] ERROR Unity: Speed:314
-UnityEngine.Debug:LogError(Object)
-PlayerInputController:LateUpdate() (at Assets/Scripts/GameObject/PlayerInputController.cs:188)
-
-2022-12-18 20:45:14,497 [ 1] INFO  Unity: SetDirection:(0, -100, 0)
-2022-12-18 20:45:14,498 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:14,501 [ 1] INFO  Unity: SetDirection:(0, -100, 0)
-2022-12-18 20:45:14,503 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:14,505 [ 1] INFO  Unity: SetDirection:(0, -100, 0)
-2022-12-18 20:45:14,506 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:14,507 [ 1] INFO  Unity: SetDirection:(0, -100, 0)
-2022-12-18 20:45:14,509 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:14,540 [ 1] INFO  Unity: SetDirection:(0, -100, 0)
-2022-12-18 20:45:14,541 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:14,543 [ 1] INFO  Unity: SetDirection:(0, -100, 0)
-2022-12-18 20:45:14,545 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:14,547 [ 1] INFO  Unity: SetDirection:(0, -100, 0)
-2022-12-18 20:45:14,551 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:14,557 [ 1] ERROR Unity: Speed:345
-UnityEngine.Debug:LogError(Object)
-PlayerInputController:LateUpdate() (at Assets/Scripts/GameObject/PlayerInputController.cs:188)
-
-2022-12-18 20:45:14,609 [ 1] INFO  Unity: SetDirection:(0, -100, 0)
-2022-12-18 20:45:14,611 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:14,613 [ 1] INFO  Unity: SetDirection:(0, -100, 0)
-2022-12-18 20:45:14,614 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:14,616 [ 1] INFO  Unity: SetDirection:(0, -100, 0)
-2022-12-18 20:45:14,617 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:14,620 [ 1] INFO  Unity: SetDirection:(0, -100, 0)
-2022-12-18 20:45:14,622 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:14,659 [ 1] INFO  Unity: SetDirection:(0, -100, 0)
-2022-12-18 20:45:14,660 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:14,662 [ 1] INFO  Unity: SetDirection:(0, -100, 0)
-2022-12-18 20:45:14,664 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:14,666 [ 1] INFO  Unity: SetDirection:(0, -100, 0)
-2022-12-18 20:45:14,667 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:14,672 [ 1] ERROR Unity: Speed:296
-UnityEngine.Debug:LogError(Object)
-PlayerInputController:LateUpdate() (at Assets/Scripts/GameObject/PlayerInputController.cs:188)
-
-2022-12-18 20:45:14,724 [ 1] INFO  Unity: SetDirection:(0, -100, 0)
-2022-12-18 20:45:14,726 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:14,729 [ 1] INFO  Unity: SetDirection:(0, -100, 0)
-2022-12-18 20:45:14,732 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:14,736 [ 1] INFO  Unity: SetDirection:(0, -100, 0)
-2022-12-18 20:45:14,738 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:14,741 [ 1] INFO  Unity: SetDirection:(0, -100, 0)
-2022-12-18 20:45:14,743 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:14,780 [ 1] INFO  Unity: SetDirection:(0, -100, 0)
-2022-12-18 20:45:14,781 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:14,783 [ 1] INFO  Unity: SetDirection:(0, -100, 0)
-2022-12-18 20:45:14,784 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:14,787 [ 1] INFO  Unity: SetDirection:(0, -100, 0)
-2022-12-18 20:45:14,789 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:14,795 [ 1] ERROR Unity: Speed:270
-UnityEngine.Debug:LogError(Object)
-PlayerInputController:LateUpdate() (at Assets/Scripts/GameObject/PlayerInputController.cs:188)
-
-2022-12-18 20:45:14,851 [ 1] INFO  Unity: SetDirection:(0, -100, 0)
-2022-12-18 20:45:14,853 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:14,855 [ 1] INFO  Unity: SetDirection:(0, -100, 0)
-2022-12-18 20:45:14,857 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:14,861 [ 1] INFO  Unity: SetDirection:(0, -100, 0)
-2022-12-18 20:45:14,865 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:14,870 [ 1] INFO  Unity: SetDirection:(0, -100, 0)
-2022-12-18 20:45:14,872 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:14,902 [ 1] INFO  Unity: SetDirection:(0, -100, 0)
-2022-12-18 20:45:14,904 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:14,906 [ 1] INFO  Unity: SetDirection:(0, -100, 0)
-2022-12-18 20:45:14,908 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:14,911 [ 1] INFO  Unity: SetDirection:(0, -100, 0)
-2022-12-18 20:45:14,913 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:14,918 [ 1] ERROR Unity: Speed:292
-UnityEngine.Debug:LogError(Object)
-PlayerInputController:LateUpdate() (at Assets/Scripts/GameObject/PlayerInputController.cs:188)
-
-2022-12-18 20:45:14,953 [ 1] INFO  Unity: SetDirection:(0, -100, 0)
-2022-12-18 20:45:14,955 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:14,959 [ 1] INFO  Unity: SetDirection:(0, -100, 0)
-2022-12-18 20:45:14,962 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:14,964 [ 1] INFO  Unity: SetDirection:(0, -100, 0)
-2022-12-18 20:45:14,966 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:14,996 [ 1] INFO  Unity: SetDirection:(0, -100, 0)
-2022-12-18 20:45:14,998 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:15,000 [ 1] INFO  Unity: SetDirection:(0, -100, 0)
-2022-12-18 20:45:15,000 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:15,002 [ 1] INFO  Unity: SetDirection:(0, -100, 0)
-2022-12-18 20:45:15,003 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:15,050 [ 1] INFO  Unity: SetDirection:(0, -100, 0)
-2022-12-18 20:45:15,053 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:15,055 [ 1] INFO  Unity: SetDirection:(0, -100, 0)
-2022-12-18 20:45:15,056 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:15,058 [ 1] INFO  Unity: SetDirection:(0, -100, 0)
-2022-12-18 20:45:15,058 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:15,061 [ 1] ERROR Unity: Speed:281
-UnityEngine.Debug:LogError(Object)
-PlayerInputController:LateUpdate() (at Assets/Scripts/GameObject/PlayerInputController.cs:188)
-
-2022-12-18 20:45:15,086 [ 1] INFO  Unity: SetDirection:(0, -100, 0)
-2022-12-18 20:45:15,087 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:15,089 [ 1] INFO  Unity: SetDirection:(0, -100, 0)
-2022-12-18 20:45:15,090 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:15,138 [ 1] INFO  Unity: SetDirection:(100, 0, 0)
-2022-12-18 20:45:15,140 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:15,144 [ 1] INFO  Unity: SetDirection:(100, 0, 0)
-2022-12-18 20:45:15,146 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:15,148 [ 1] INFO  Unity: SetDirection:(100, 0, 0)
-2022-12-18 20:45:15,150 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:15,151 [ 1] INFO  Unity: SetDirection:(100, 0, 0)
-2022-12-18 20:45:15,152 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:15,192 [ 1] INFO  Unity: SetDirection:(100, 0, 0)
-2022-12-18 20:45:15,194 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:15,197 [ 1] INFO  Unity: SetDirection:(100, 0, 0)
-2022-12-18 20:45:15,201 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:15,205 [ 1] INFO  Unity: SetDirection:(100, 0, 0)
-2022-12-18 20:45:15,206 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:15,210 [ 1] ERROR Unity: Speed:276
-UnityEngine.Debug:LogError(Object)
-PlayerInputController:LateUpdate() (at Assets/Scripts/GameObject/PlayerInputController.cs:188)
-
-2022-12-18 20:45:15,235 [ 1] INFO  Unity: SetDirection:(100, 0, 0)
-2022-12-18 20:45:15,238 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:15,241 [ 1] INFO  Unity: SetDirection:(100, 0, 0)
-2022-12-18 20:45:15,244 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:15,290 [ 1] INFO  Unity: SetDirection:(100, 0, 0)
-2022-12-18 20:45:15,292 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:15,296 [ 1] INFO  Unity: SetDirection:(100, 0, 0)
-2022-12-18 20:45:15,298 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:15,300 [ 1] INFO  Unity: SetDirection:(100, 0, 0)
-2022-12-18 20:45:15,303 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:15,305 [ 1] INFO  Unity: SetDirection:(100, 0, 0)
-2022-12-18 20:45:15,306 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:15,345 [ 1] INFO  Unity: SetDirection:(100, 0, 0)
-2022-12-18 20:45:15,347 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:15,349 [ 1] INFO  Unity: SetDirection:(100, 0, 0)
-2022-12-18 20:45:15,351 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:15,354 [ 1] INFO  Unity: SetDirection:(100, 0, 0)
-2022-12-18 20:45:15,355 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:15,357 [ 1] ERROR Unity: Speed:279
-UnityEngine.Debug:LogError(Object)
-PlayerInputController:LateUpdate() (at Assets/Scripts/GameObject/PlayerInputController.cs:188)
-
-2022-12-18 20:45:15,385 [ 1] INFO  Unity: SetDirection:(100, 0, 0)
-2022-12-18 20:45:15,386 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:15,388 [ 1] INFO  Unity: SetDirection:(100, 0, 0)
-2022-12-18 20:45:15,389 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:15,417 [ 1] INFO  Unity: SetDirection:(100, 0, 0)
-2022-12-18 20:45:15,419 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:15,421 [ 1] INFO  Unity: SetDirection:(100, 0, 0)
-2022-12-18 20:45:15,422 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:15,468 [ 1] INFO  Unity: SetDirection:(100, 0, 0)
-2022-12-18 20:45:15,470 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:15,474 [ 1] INFO  Unity: SetDirection:(100, 0, 0)
-2022-12-18 20:45:15,476 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:15,479 [ 1] INFO  Unity: SetDirection:(100, 0, 0)
-2022-12-18 20:45:15,481 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:15,486 [ 1] ERROR Unity: Speed:297
-UnityEngine.Debug:LogError(Object)
-PlayerInputController:LateUpdate() (at Assets/Scripts/GameObject/PlayerInputController.cs:188)
-
-2022-12-18 20:45:15,542 [ 1] INFO  Unity: SetDirection:(100, 0, 0)
-2022-12-18 20:45:15,543 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:15,546 [ 1] INFO  Unity: SetDirection:(100, 0, 0)
-2022-12-18 20:45:15,547 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:15,550 [ 1] INFO  Unity: SetDirection:(100, 0, 0)
-2022-12-18 20:45:15,552 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:15,556 [ 1] INFO  Unity: SetDirection:(100, 0, 0)
-2022-12-18 20:45:15,558 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:15,561 [ 1] INFO  Unity: SetDirection:(100, 0, 0)
-2022-12-18 20:45:15,563 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:15,606 [ 1] INFO  Unity: SetDirection:(100, 0, 0)
-2022-12-18 20:45:15,609 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:15,614 [ 1] INFO  Unity: SetDirection:(100, 0, 0)
-2022-12-18 20:45:15,617 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:15,620 [ 1] INFO  Unity: SetDirection:(100, 0, 0)
-2022-12-18 20:45:15,621 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:15,627 [ 1] ERROR Unity: Speed:238
-UnityEngine.Debug:LogError(Object)
-PlayerInputController:LateUpdate() (at Assets/Scripts/GameObject/PlayerInputController.cs:188)
-
-2022-12-18 20:45:15,668 [ 1] INFO  Unity: SetDirection:(100, 0, 0)
-2022-12-18 20:45:15,670 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:15,673 [ 1] INFO  Unity: SetDirection:(100, 0, 0)
-2022-12-18 20:45:15,674 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:15,677 [ 1] INFO  Unity: SetDirection:(100, 0, 0)
-2022-12-18 20:45:15,679 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:15,682 [ 1] INFO  Unity: SetDirection:(100, 0, 0)
-2022-12-18 20:45:15,683 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:15,747 [ 1] INFO  Unity: SetDirection:(100, 0, 0)
-2022-12-18 20:45:15,749 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:15,752 [ 1] INFO  Unity: SetDirection:(100, 0, 0)
-2022-12-18 20:45:15,754 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:15,757 [ 1] INFO  Unity: SetDirection:(100, 0, 0)
-2022-12-18 20:45:15,758 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:15,760 [ 1] INFO  Unity: SetDirection:(100, 0, 0)
-2022-12-18 20:45:15,761 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:15,762 [ 1] INFO  Unity: SetDirection:(100, 0, 0)
-2022-12-18 20:45:15,763 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:15,765 [ 1] ERROR Unity: Speed:316
-UnityEngine.Debug:LogError(Object)
-PlayerInputController:LateUpdate() (at Assets/Scripts/GameObject/PlayerInputController.cs:188)
-
-2022-12-18 20:45:15,808 [ 1] INFO  Unity: SetDirection:(100, 0, 0)
-2022-12-18 20:45:15,810 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:15,813 [ 1] INFO  Unity: SetDirection:(100, 0, 0)
-2022-12-18 20:45:15,815 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:15,818 [ 1] INFO  Unity: SetDirection:(100, 0, 0)
-2022-12-18 20:45:15,819 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:15,821 [ 1] INFO  Unity: SetDirection:(100, 0, 0)
-2022-12-18 20:45:15,823 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:15,865 [ 1] INFO  Unity: SetDirection:(100, 0, 0)
-2022-12-18 20:45:15,866 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:15,868 [ 1] INFO  Unity: SetDirection:(100, 0, 0)
-2022-12-18 20:45:15,871 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:15,873 [ 1] INFO  Unity: SetDirection:(100, 0, 0)
-2022-12-18 20:45:15,875 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:15,880 [ 1] ERROR Unity: Speed:257
-UnityEngine.Debug:LogError(Object)
-PlayerInputController:LateUpdate() (at Assets/Scripts/GameObject/PlayerInputController.cs:188)
-
-2022-12-18 20:45:15,946 [ 1] INFO  Unity: SetDirection:(95, 30, 0)
-2022-12-18 20:45:15,948 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:15,951 [ 1] INFO  Unity: SetDirection:(95, 30, 0)
-2022-12-18 20:45:15,953 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:15,955 [ 1] INFO  Unity: SetDirection:(95, 30, 0)
-2022-12-18 20:45:15,957 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:15,959 [ 1] INFO  Unity: SetDirection:(95, 30, 0)
-2022-12-18 20:45:15,960 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:15,962 [ 1] INFO  Unity: SetDirection:(95, 30, 0)
-2022-12-18 20:45:15,964 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:16,024 [ 1] INFO  Unity: SetDirection:(74, 67, 0)
-2022-12-18 20:45:16,026 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:16,029 [ 1] INFO  Unity: SetDirection:(74, 67, 0)
-2022-12-18 20:45:16,031 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:16,033 [ 1] INFO  Unity: SetDirection:(74, 67, 0)
-2022-12-18 20:45:16,034 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:16,037 [ 1] INFO  Unity: SetDirection:(74, 67, 0)
-2022-12-18 20:45:16,038 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:16,041 [ 1] INFO  Unity: SetDirection:(74, 67, 0)
-2022-12-18 20:45:16,043 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:16,047 [ 1] ERROR Unity: Speed:321
-UnityEngine.Debug:LogError(Object)
-PlayerInputController:LateUpdate() (at Assets/Scripts/GameObject/PlayerInputController.cs:188)
-
-2022-12-18 20:45:16,089 [ 1] INFO  Unity: SetDirection:(44, 90, 0)
-2022-12-18 20:45:16,090 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:16,093 [ 1] INFO  Unity: SetDirection:(44, 90, 0)
-2022-12-18 20:45:16,095 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:16,101 [ 1] INFO  Unity: SetDirection:(44, 90, 0)
-2022-12-18 20:45:16,106 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:16,151 [ 1] INFO  Unity: SetDirection:(17, 99, 0)
-2022-12-18 20:45:16,153 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:16,156 [ 1] INFO  Unity: SetDirection:(17, 99, 0)
-2022-12-18 20:45:16,157 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:16,159 [ 1] INFO  Unity: SetDirection:(17, 99, 0)
-2022-12-18 20:45:16,161 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:16,165 [ 1] INFO  Unity: SetDirection:(17, 99, 0)
-2022-12-18 20:45:16,169 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:16,176 [ 1] ERROR Unity: Speed:327
-UnityEngine.Debug:LogError(Object)
-PlayerInputController:LateUpdate() (at Assets/Scripts/GameObject/PlayerInputController.cs:188)
-
-2022-12-18 20:45:16,238 [ 1] INFO  Unity: SetDirection:(0, 100, 0)
-2022-12-18 20:45:16,239 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:16,241 [ 1] INFO  Unity: SetDirection:(0, 100, 0)
-2022-12-18 20:45:16,243 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:16,246 [ 1] INFO  Unity: SetDirection:(0, 100, 0)
-2022-12-18 20:45:16,248 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:16,252 [ 1] INFO  Unity: SetDirection:(0, 100, 0)
-2022-12-18 20:45:16,254 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:16,258 [ 1] INFO  Unity: SetDirection:(0, 100, 0)
-2022-12-18 20:45:16,262 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:16,300 [ 1] INFO  Unity: SetDirection:(0, 100, 0)
-2022-12-18 20:45:16,303 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:16,306 [ 1] INFO  Unity: SetDirection:(0, 100, 0)
-2022-12-18 20:45:16,308 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:16,310 [ 1] INFO  Unity: SetDirection:(0, 100, 0)
-2022-12-18 20:45:16,311 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:16,314 [ 1] INFO  Unity: SetDirection:(0, 100, 0)
-2022-12-18 20:45:16,316 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:16,321 [ 1] ERROR Unity: Speed:321
-UnityEngine.Debug:LogError(Object)
-PlayerInputController:LateUpdate() (at Assets/Scripts/GameObject/PlayerInputController.cs:188)
-
-2022-12-18 20:45:16,352 [ 1] INFO  Unity: SetDirection:(0, 100, 0)
-2022-12-18 20:45:16,354 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:16,356 [ 1] INFO  Unity: SetDirection:(0, 100, 0)
-2022-12-18 20:45:16,357 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:16,360 [ 1] INFO  Unity: SetDirection:(0, 100, 0)
-2022-12-18 20:45:16,363 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:16,409 [ 1] INFO  Unity: SetDirection:(0, 100, 0)
-2022-12-18 20:45:16,411 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:16,412 [ 1] INFO  Unity: SetDirection:(0, 100, 0)
-2022-12-18 20:45:16,412 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:16,414 [ 1] INFO  Unity: SetDirection:(0, 100, 0)
-2022-12-18 20:45:16,414 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:16,415 [ 1] INFO  Unity: SetDirection:(0, 100, 0)
-2022-12-18 20:45:16,415 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:16,418 [ 1] ERROR Unity: Speed:350
-UnityEngine.Debug:LogError(Object)
-PlayerInputController:LateUpdate() (at Assets/Scripts/GameObject/PlayerInputController.cs:188)
-
-2022-12-18 20:45:16,478 [ 1] INFO  Unity: SetDirection:(0, 100, 0)
-2022-12-18 20:45:16,479 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:16,480 [ 1] INFO  Unity: SetDirection:(0, 100, 0)
-2022-12-18 20:45:16,481 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:16,482 [ 1] INFO  Unity: SetDirection:(0, 100, 0)
-2022-12-18 20:45:16,483 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:16,485 [ 1] INFO  Unity: SetDirection:(0, 100, 0)
-2022-12-18 20:45:16,486 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:16,525 [ 1] INFO  Unity: SetDirection:(-14, 99, 0)
-2022-12-18 20:45:16,527 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:16,530 [ 1] INFO  Unity: SetDirection:(-14, 99, 0)
-2022-12-18 20:45:16,533 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:16,536 [ 1] INFO  Unity: SetDirection:(-14, 99, 0)
-2022-12-18 20:45:16,539 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:16,543 [ 1] ERROR Unity: Speed:319
-UnityEngine.Debug:LogError(Object)
-PlayerInputController:LateUpdate() (at Assets/Scripts/GameObject/PlayerInputController.cs:188)
-
-2022-12-18 20:45:16,586 [ 1] INFO  Unity: SetDirection:(-31, 95, 0)
-2022-12-18 20:45:16,587 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:16,590 [ 1] INFO  Unity: SetDirection:(-31, 95, 0)
-2022-12-18 20:45:16,591 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:16,592 [ 1] INFO  Unity: SetDirection:(-31, 95, 0)
-2022-12-18 20:45:16,594 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:16,645 [ 1] INFO  Unity: SetDirection:(-45, 89, 0)
-2022-12-18 20:45:16,647 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:16,649 [ 1] INFO  Unity: SetDirection:(-45, 89, 0)
-2022-12-18 20:45:16,650 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:16,651 [ 1] INFO  Unity: SetDirection:(-45, 89, 0)
-2022-12-18 20:45:16,652 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:16,653 [ 1] INFO  Unity: SetDirection:(-45, 89, 0)
-2022-12-18 20:45:16,653 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:16,656 [ 1] ERROR Unity: Speed:338
-UnityEngine.Debug:LogError(Object)
-PlayerInputController:LateUpdate() (at Assets/Scripts/GameObject/PlayerInputController.cs:188)
-
-2022-12-18 20:45:16,702 [ 1] INFO  Unity: SetDirection:(-63, 78, 0)
-2022-12-18 20:45:16,704 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:16,705 [ 1] INFO  Unity: SetDirection:(-63, 78, 0)
-2022-12-18 20:45:16,706 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:16,708 [ 1] INFO  Unity: SetDirection:(-63, 78, 0)
-2022-12-18 20:45:16,710 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:16,757 [ 1] INFO  Unity: SetDirection:(-77, 63, 0)
-2022-12-18 20:45:16,759 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:16,763 [ 1] INFO  Unity: SetDirection:(-77, 63, 0)
-2022-12-18 20:45:16,765 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:16,767 [ 1] INFO  Unity: SetDirection:(-77, 63, 0)
-2022-12-18 20:45:16,768 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:16,773 [ 1] ERROR Unity: Speed:287
-UnityEngine.Debug:LogError(Object)
-PlayerInputController:LateUpdate() (at Assets/Scripts/GameObject/PlayerInputController.cs:188)
-
-2022-12-18 20:45:16,832 [ 1] INFO  Unity: SetDirection:(-91, 40, 0)
-2022-12-18 20:45:16,834 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:16,837 [ 1] INFO  Unity: SetDirection:(-91, 40, 0)
-2022-12-18 20:45:16,839 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:16,842 [ 1] INFO  Unity: SetDirection:(-91, 40, 0)
-2022-12-18 20:45:16,844 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:16,847 [ 1] INFO  Unity: SetDirection:(-91, 40, 0)
-2022-12-18 20:45:16,850 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:16,853 [ 1] INFO  Unity: SetDirection:(-91, 40, 0)
-2022-12-18 20:45:16,856 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:16,906 [ 1] INFO  Unity: SetDirection:(-98, 21, 0)
-2022-12-18 20:45:16,906 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:16,907 [ 1] INFO  Unity: SetDirection:(-98, 21, 0)
-2022-12-18 20:45:16,908 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:16,910 [ 1] INFO  Unity: SetDirection:(-98, 21, 0)
-2022-12-18 20:45:16,911 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:16,913 [ 1] INFO  Unity: SetDirection:(-98, 21, 0)
-2022-12-18 20:45:16,914 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:16,917 [ 1] ERROR Unity: Speed:269
-UnityEngine.Debug:LogError(Object)
-PlayerInputController:LateUpdate() (at Assets/Scripts/GameObject/PlayerInputController.cs:188)
-
-2022-12-18 20:45:16,950 [ 1] INFO  Unity: SetDirection:(-100, 9, 0)
-2022-12-18 20:45:16,952 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:16,955 [ 1] INFO  Unity: SetDirection:(-100, 9, 0)
-2022-12-18 20:45:16,958 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:16,961 [ 1] INFO  Unity: SetDirection:(-100, 9, 0)
-2022-12-18 20:45:16,963 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:17,016 [ 1] INFO  Unity: SetDirection:(-100, 0, 0)
-2022-12-18 20:45:17,018 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:17,019 [ 1] INFO  Unity: SetDirection:(-100, 0, 0)
-2022-12-18 20:45:17,020 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:17,021 [ 1] INFO  Unity: SetDirection:(-100, 0, 0)
-2022-12-18 20:45:17,022 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:17,023 [ 1] INFO  Unity: SetDirection:(-100, 0, 0)
-2022-12-18 20:45:17,024 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:17,028 [ 1] ERROR Unity: Speed:305
-UnityEngine.Debug:LogError(Object)
-PlayerInputController:LateUpdate() (at Assets/Scripts/GameObject/PlayerInputController.cs:188)
-
-2022-12-18 20:45:17,082 [ 1] INFO  Unity: SetDirection:(-100, 0, 0)
-2022-12-18 20:45:17,084 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:17,085 [ 1] INFO  Unity: SetDirection:(-100, 0, 0)
-2022-12-18 20:45:17,087 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:17,090 [ 1] INFO  Unity: SetDirection:(-100, 0, 0)
-2022-12-18 20:45:17,092 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:17,094 [ 1] INFO  Unity: SetDirection:(-100, 0, 0)
-2022-12-18 20:45:17,095 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:17,155 [ 1] INFO  Unity: SetDirection:(-100, 0, 0)
-2022-12-18 20:45:17,157 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:17,159 [ 1] INFO  Unity: SetDirection:(-100, 0, 0)
-2022-12-18 20:45:17,161 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:17,164 [ 1] INFO  Unity: SetDirection:(-100, 0, 0)
-2022-12-18 20:45:17,165 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:17,167 [ 1] INFO  Unity: SetDirection:(-100, 0, 0)
-2022-12-18 20:45:17,168 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:17,171 [ 1] ERROR Unity: Speed:277
-UnityEngine.Debug:LogError(Object)
-PlayerInputController:LateUpdate() (at Assets/Scripts/GameObject/PlayerInputController.cs:188)
-
-2022-12-18 20:45:17,211 [ 1] INFO  Unity: SetDirection:(-100, 0, 0)
-2022-12-18 20:45:17,213 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:17,216 [ 1] INFO  Unity: SetDirection:(-100, 0, 0)
-2022-12-18 20:45:17,218 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:17,220 [ 1] INFO  Unity: SetDirection:(-100, 0, 0)
-2022-12-18 20:45:17,222 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:17,225 [ 1] INFO  Unity: SetDirection:(-100, 0, 0)
-2022-12-18 20:45:17,226 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:17,254 [ 1] INFO  Unity: SetDirection:(-100, 0, 0)
-2022-12-18 20:45:17,257 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:17,260 [ 1] INFO  Unity: SetDirection:(-100, 0, 0)
-2022-12-18 20:45:17,262 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:17,318 [ 1] INFO  Unity: SetDirection:(-100, 0, 0)
-2022-12-18 20:45:17,321 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:17,323 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:17,327 [ 1] INFO  Unity: SetDirection:(-100, 0, 0)
-2022-12-18 20:45:17,329 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:17,332 [ 1] INFO  Unity: SetDirection:(-100, 0, 0)
-2022-12-18 20:45:17,335 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:17,339 [ 1] INFO  Unity: SetDirection:(-100, 0, 0)
-2022-12-18 20:45:17,341 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:17,346 [ 1] ERROR Unity: Speed:314
-UnityEngine.Debug:LogError(Object)
-PlayerInputController:LateUpdate() (at Assets/Scripts/GameObject/PlayerInputController.cs:188)
-
-2022-12-18 20:45:17,404 [ 1] INFO  Unity: SetDirection:(-100, 0, 0)
-2022-12-18 20:45:17,406 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:17,409 [ 1] INFO  Unity: SetDirection:(-100, 0, 0)
-2022-12-18 20:45:17,410 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:17,413 [ 1] INFO  Unity: SetDirection:(-100, 0, 0)
-2022-12-18 20:45:17,415 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:17,418 [ 1] INFO  Unity: SetDirection:(-100, 0, 0)
-2022-12-18 20:45:17,420 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:17,423 [ 1] INFO  Unity: SetDirection:(-100, 0, 0)
-2022-12-18 20:45:17,426 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:17,483 [ 1] INFO  Unity: Stop
-2022-12-18 20:45:17,485 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 20:45:19,216 [ 1] INFO  Unity: SetDirection:(100, 0, 0)
-2022-12-18 20:45:19,218 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 20:45:19,220 [ 1] INFO  Unity: MoveForward
-2022-12-18 20:45:19,221 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:19,223 [ 1] INFO  Unity: SetDirection:(100, 0, 0)
-2022-12-18 20:45:19,224 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:19,225 [ 1] INFO  Unity: SetDirection:(100, 0, 0)
-2022-12-18 20:45:19,227 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:19,235 [ 1] ERROR Unity: Speed:313
-UnityEngine.Debug:LogError(Object)
-PlayerInputController:LateUpdate() (at Assets/Scripts/GameObject/PlayerInputController.cs:188)
-
-2022-12-18 20:45:19,281 [ 1] INFO  Unity: SetDirection:(100, 0, 0)
-2022-12-18 20:45:19,297 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:19,300 [ 1] INFO  Unity: SetDirection:(100, 0, 0)
-2022-12-18 20:45:19,301 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:19,303 [ 1] INFO  Unity: SetDirection:(100, 0, 0)
-2022-12-18 20:45:19,304 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:19,306 [ 1] INFO  Unity: SetDirection:(100, 0, 0)
-2022-12-18 20:45:19,307 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:19,341 [ 1] INFO  Unity: SetDirection:(100, 0, 0)
-2022-12-18 20:45:19,344 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:19,347 [ 1] INFO  Unity: SetDirection:(100, 0, 0)
-2022-12-18 20:45:19,349 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:19,352 [ 1] INFO  Unity: SetDirection:(100, 0, 0)
-2022-12-18 20:45:19,354 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:19,358 [ 1] ERROR Unity: Speed:250
-UnityEngine.Debug:LogError(Object)
-PlayerInputController:LateUpdate() (at Assets/Scripts/GameObject/PlayerInputController.cs:188)
-
-2022-12-18 20:45:19,406 [ 1] INFO  Unity: SetDirection:(100, 0, 0)
-2022-12-18 20:45:19,408 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:19,409 [ 1] INFO  Unity: SetDirection:(100, 0, 0)
-2022-12-18 20:45:19,410 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:19,411 [ 1] INFO  Unity: SetDirection:(100, 0, 0)
-2022-12-18 20:45:19,412 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:19,413 [ 1] INFO  Unity: SetDirection:(100, 0, 0)
-2022-12-18 20:45:19,415 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:19,453 [ 1] INFO  Unity: SetDirection:(100, 0, 0)
-2022-12-18 20:45:19,454 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:19,455 [ 1] INFO  Unity: SetDirection:(100, 0, 0)
-2022-12-18 20:45:19,456 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:19,458 [ 1] INFO  Unity: SetDirection:(100, 0, 0)
-2022-12-18 20:45:19,459 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:19,464 [ 1] ERROR Unity: Speed:316
-UnityEngine.Debug:LogError(Object)
-PlayerInputController:LateUpdate() (at Assets/Scripts/GameObject/PlayerInputController.cs:188)
-
-2022-12-18 20:45:19,499 [ 1] INFO  Unity: SetDirection:(100, 0, 0)
-2022-12-18 20:45:19,502 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:19,505 [ 1] INFO  Unity: SetDirection:(100, 0, 0)
-2022-12-18 20:45:19,507 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:19,509 [ 1] INFO  Unity: SetDirection:(100, 0, 0)
-2022-12-18 20:45:19,512 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:19,542 [ 1] INFO  Unity: SetDirection:(100, 0, 0)
-2022-12-18 20:45:19,543 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:19,546 [ 1] INFO  Unity: SetDirection:(100, 0, 0)
-2022-12-18 20:45:19,547 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:19,581 [ 1] INFO  Unity: SetDirection:(100, 0, 0)
-2022-12-18 20:45:19,582 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:19,584 [ 1] INFO  Unity: SetDirection:(100, 0, 0)
-2022-12-18 20:45:19,585 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:19,586 [ 1] INFO  Unity: SetDirection:(100, 0, 0)
-2022-12-18 20:45:19,588 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:19,591 [ 1] ERROR Unity: Speed:389
-UnityEngine.Debug:LogError(Object)
-PlayerInputController:LateUpdate() (at Assets/Scripts/GameObject/PlayerInputController.cs:188)
-
-2022-12-18 20:45:19,623 [ 1] INFO  Unity: SetDirection:(100, 0, 0)
-2022-12-18 20:45:19,625 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:19,626 [ 1] INFO  Unity: SetDirection:(100, 0, 0)
-2022-12-18 20:45:19,628 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:19,660 [ 1] INFO  Unity: SetDirection:(100, 0, 0)
-2022-12-18 20:45:19,662 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:19,664 [ 1] INFO  Unity: SetDirection:(100, 0, 0)
-2022-12-18 20:45:19,666 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:19,702 [ 1] INFO  Unity: SetDirection:(100, 0, 0)
-2022-12-18 20:45:19,703 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:19,705 [ 1] INFO  Unity: SetDirection:(100, 0, 0)
-2022-12-18 20:45:19,707 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:19,712 [ 1] INFO  Unity: SetDirection:(100, 0, 0)
-2022-12-18 20:45:19,715 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:19,720 [ 1] ERROR Unity: Speed:361
-UnityEngine.Debug:LogError(Object)
-PlayerInputController:LateUpdate() (at Assets/Scripts/GameObject/PlayerInputController.cs:188)
-
-2022-12-18 20:45:19,760 [ 1] INFO  Unity: SetDirection:(100, 0, 0)
-2022-12-18 20:45:19,761 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:19,765 [ 1] INFO  Unity: SetDirection:(100, 0, 0)
-2022-12-18 20:45:19,766 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:19,770 [ 1] INFO  Unity: SetDirection:(100, 0, 0)
-2022-12-18 20:45:19,772 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:19,827 [ 1] INFO  Unity: SetDirection:(100, 0, 0)
-2022-12-18 20:45:19,829 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:19,833 [ 1] INFO  Unity: SetDirection:(100, 0, 0)
-2022-12-18 20:45:19,834 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:19,837 [ 1] INFO  Unity: SetDirection:(100, 0, 0)
-2022-12-18 20:45:19,838 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:19,839 [ 1] INFO  Unity: SetDirection:(100, 0, 0)
-2022-12-18 20:45:19,840 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:19,843 [ 1] ERROR Unity: Speed:302
-UnityEngine.Debug:LogError(Object)
-PlayerInputController:LateUpdate() (at Assets/Scripts/GameObject/PlayerInputController.cs:188)
-
-2022-12-18 20:45:19,884 [ 1] INFO  Unity: SetDirection:(100, 0, 0)
-2022-12-18 20:45:19,886 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:19,888 [ 1] INFO  Unity: SetDirection:(100, 0, 0)
-2022-12-18 20:45:19,889 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:19,892 [ 1] INFO  Unity: SetDirection:(100, 0, 0)
-2022-12-18 20:45:19,893 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:19,897 [ 1] INFO  Unity: SetDirection:(100, 0, 0)
-2022-12-18 20:45:19,899 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:19,935 [ 1] INFO  Unity: SetDirection:(100, 0, 0)
-2022-12-18 20:45:19,936 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:19,938 [ 1] INFO  Unity: SetDirection:(100, 0, 0)
-2022-12-18 20:45:19,940 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:19,942 [ 1] INFO  Unity: SetDirection:(100, 0, 0)
-2022-12-18 20:45:19,943 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:19,947 [ 1] ERROR Unity: Speed:296
-UnityEngine.Debug:LogError(Object)
-PlayerInputController:LateUpdate() (at Assets/Scripts/GameObject/PlayerInputController.cs:188)
-
-2022-12-18 20:45:19,985 [ 1] INFO  Unity: SetDirection:(100, 0, 0)
-2022-12-18 20:45:19,987 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:19,989 [ 1] INFO  Unity: SetDirection:(100, 0, 0)
-2022-12-18 20:45:19,991 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:19,995 [ 1] INFO  Unity: SetDirection:(100, 0, 0)
-2022-12-18 20:45:20,001 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:20,058 [ 1] INFO  Unity: SetDirection:(100, 0, 0)
-2022-12-18 20:45:20,060 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:20,063 [ 1] INFO  Unity: SetDirection:(100, 0, 0)
-2022-12-18 20:45:20,064 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:20,067 [ 1] INFO  Unity: SetDirection:(100, 0, 0)
-2022-12-18 20:45:20,069 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:20,072 [ 1] INFO  Unity: SetDirection:(100, 0, 0)
-2022-12-18 20:45:20,074 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:20,078 [ 1] ERROR Unity: Speed:273
-UnityEngine.Debug:LogError(Object)
-PlayerInputController:LateUpdate() (at Assets/Scripts/GameObject/PlayerInputController.cs:188)
-
-2022-12-18 20:45:20,115 [ 1] INFO  Unity: Stop
-2022-12-18 20:45:20,116 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 20:45:20,678 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 20:45:48,258 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 20:45:54,321 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 20:45:56,335 [ 1] INFO  Unity: SetDirection:(-94, 35, 0)
-2022-12-18 20:45:56,336 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 20:45:56,337 [ 1] INFO  Unity: MoveForward
-2022-12-18 20:45:56,338 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:56,341 [ 1] INFO  Unity: SetDirection:(-94, 35, 0)
-2022-12-18 20:45:56,342 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:56,344 [ 1] INFO  Unity: SetDirection:(-94, 35, 0)
-2022-12-18 20:45:56,346 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:56,350 [ 1] ERROR Unity: Speed:345
-UnityEngine.Debug:LogError(Object)
-PlayerInputController:LateUpdate() (at Assets/Scripts/GameObject/PlayerInputController.cs:188)
-
-2022-12-18 20:45:56,384 [ 1] INFO  Unity: SetDirection:(-94, 35, 0)
-2022-12-18 20:45:56,386 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:56,387 [ 1] INFO  Unity: SetDirection:(-94, 35, 0)
-2022-12-18 20:45:56,388 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:56,388 [ 1] INFO  Unity: SetDirection:(-94, 35, 0)
-2022-12-18 20:45:56,389 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:56,420 [ 1] INFO  Unity: SetDirection:(-94, 35, 0)
-2022-12-18 20:45:56,422 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:56,423 [ 1] INFO  Unity: SetDirection:(-94, 35, 0)
-2022-12-18 20:45:56,425 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:56,469 [ 1] INFO  Unity: SetDirection:(-94, 35, 0)
-2022-12-18 20:45:56,471 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:56,474 [ 1] INFO  Unity: SetDirection:(-94, 35, 0)
-2022-12-18 20:45:56,475 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:56,478 [ 1] INFO  Unity: SetDirection:(-94, 35, 0)
-2022-12-18 20:45:56,479 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:56,482 [ 1] ERROR Unity: Speed:308
-UnityEngine.Debug:LogError(Object)
-PlayerInputController:LateUpdate() (at Assets/Scripts/GameObject/PlayerInputController.cs:188)
-
-2022-12-18 20:45:56,540 [ 1] INFO  Unity: SetDirection:(-94, 35, 0)
-2022-12-18 20:45:56,543 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:56,546 [ 1] INFO  Unity: SetDirection:(-94, 35, 0)
-2022-12-18 20:45:56,547 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:56,549 [ 1] INFO  Unity: SetDirection:(-94, 35, 0)
-2022-12-18 20:45:56,551 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:56,553 [ 1] INFO  Unity: SetDirection:(-94, 35, 0)
-2022-12-18 20:45:56,554 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:56,593 [ 1] INFO  Unity: Stop
-2022-12-18 20:45:56,594 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 20:45:58,425 [ 1] INFO  Unity: SetDirection:(94, -35, 0)
-2022-12-18 20:45:58,427 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 20:45:58,428 [ 1] INFO  Unity: MoveForward
-2022-12-18 20:45:58,430 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:58,433 [ 1] INFO  Unity: SetDirection:(94, -35, 0)
-2022-12-18 20:45:58,434 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:58,436 [ 1] INFO  Unity: SetDirection:(94, -35, 0)
-2022-12-18 20:45:58,438 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:58,440 [ 1] ERROR Unity: Speed:364
-UnityEngine.Debug:LogError(Object)
-PlayerInputController:LateUpdate() (at Assets/Scripts/GameObject/PlayerInputController.cs:188)
-
-2022-12-18 20:45:58,475 [ 1] INFO  Unity: SetDirection:(94, -35, 0)
-2022-12-18 20:45:58,476 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:58,480 [ 1] INFO  Unity: SetDirection:(94, -35, 0)
-2022-12-18 20:45:58,481 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:58,484 [ 1] INFO  Unity: SetDirection:(94, -35, 0)
-2022-12-18 20:45:58,485 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:58,520 [ 1] INFO  Unity: SetDirection:(94, -35, 0)
-2022-12-18 20:45:58,522 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:58,528 [ 1] INFO  Unity: SetDirection:(94, -35, 0)
-2022-12-18 20:45:58,533 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:58,538 [ 1] INFO  Unity: SetDirection:(94, -35, 0)
-2022-12-18 20:45:58,543 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:58,578 [ 1] INFO  Unity: Stop
-2022-12-18 20:45:58,579 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 20:45:59,892 [ 1] INFO  Unity: SetDirection:(-94, 35, 0)
-2022-12-18 20:45:59,893 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 20:45:59,894 [ 1] INFO  Unity: MoveForward
-2022-12-18 20:45:59,895 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:59,897 [ 1] INFO  Unity: SetDirection:(-94, 35, 0)
-2022-12-18 20:45:59,897 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:59,899 [ 1] INFO  Unity: SetDirection:(-94, 35, 0)
-2022-12-18 20:45:59,900 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:59,903 [ 1] ERROR Unity: Speed:378
-UnityEngine.Debug:LogError(Object)
-PlayerInputController:LateUpdate() (at Assets/Scripts/GameObject/PlayerInputController.cs:188)
-
-2022-12-18 20:45:59,944 [ 1] INFO  Unity: SetDirection:(-94, 35, 0)
-2022-12-18 20:45:59,947 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:59,949 [ 1] INFO  Unity: SetDirection:(-94, 35, 0)
-2022-12-18 20:45:59,951 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:59,954 [ 1] INFO  Unity: SetDirection:(-94, 35, 0)
-2022-12-18 20:45:59,956 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:59,996 [ 1] INFO  Unity: SetDirection:(-94, 35, 0)
-2022-12-18 20:45:59,997 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:45:59,998 [ 1] INFO  Unity: SetDirection:(-94, 35, 0)
-2022-12-18 20:45:59,999 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:00,000 [ 1] INFO  Unity: SetDirection:(-94, 35, 0)
-2022-12-18 20:46:00,002 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:00,005 [ 1] ERROR Unity: Speed:283
-UnityEngine.Debug:LogError(Object)
-PlayerInputController:LateUpdate() (at Assets/Scripts/GameObject/PlayerInputController.cs:188)
-
-2022-12-18 20:46:00,055 [ 1] INFO  Unity: Stop
-2022-12-18 20:46:00,058 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 20:46:01,839 [ 1] INFO  Unity: SetDirection:(94, -35, 0)
-2022-12-18 20:46:01,840 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 20:46:01,840 [ 1] INFO  Unity: MoveForward
-2022-12-18 20:46:01,841 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:01,842 [ 1] INFO  Unity: SetDirection:(94, -35, 0)
-2022-12-18 20:46:01,845 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:01,850 [ 1] ERROR Unity: Speed:246
-UnityEngine.Debug:LogError(Object)
-PlayerInputController:LateUpdate() (at Assets/Scripts/GameObject/PlayerInputController.cs:188)
-
-2022-12-18 20:46:01,886 [ 1] INFO  Unity: SetDirection:(94, -35, 0)
-2022-12-18 20:46:01,891 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:01,894 [ 1] INFO  Unity: SetDirection:(94, -35, 0)
-2022-12-18 20:46:01,896 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:01,898 [ 1] INFO  Unity: SetDirection:(94, -35, 0)
-2022-12-18 20:46:01,899 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:01,940 [ 1] INFO  Unity: SetDirection:(94, -35, 0)
-2022-12-18 20:46:01,943 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:01,946 [ 1] INFO  Unity: SetDirection:(94, -35, 0)
-2022-12-18 20:46:01,949 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:01,953 [ 1] INFO  Unity: SetDirection:(94, -35, 0)
-2022-12-18 20:46:01,955 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:01,958 [ 1] ERROR Unity: Speed:270
-UnityEngine.Debug:LogError(Object)
-PlayerInputController:LateUpdate() (at Assets/Scripts/GameObject/PlayerInputController.cs:188)
-
-2022-12-18 20:46:01,992 [ 1] INFO  Unity: Stop
-2022-12-18 20:46:01,996 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 20:46:03,789 [ 1] INFO  Unity: SetDirection:(-94, 35, 0)
-2022-12-18 20:46:03,790 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 20:46:03,791 [ 1] INFO  Unity: MoveForward
-2022-12-18 20:46:03,792 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:03,793 [ 1] INFO  Unity: SetDirection:(-94, 35, 0)
-2022-12-18 20:46:03,794 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:03,797 [ 1] INFO  Unity: SetDirection:(-94, 35, 0)
-2022-12-18 20:46:03,799 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:03,802 [ 1] ERROR Unity: Speed:328
-UnityEngine.Debug:LogError(Object)
-PlayerInputController:LateUpdate() (at Assets/Scripts/GameObject/PlayerInputController.cs:188)
-
-2022-12-18 20:46:03,842 [ 1] INFO  Unity: SetDirection:(-94, 35, 0)
-2022-12-18 20:46:03,844 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:03,847 [ 1] INFO  Unity: SetDirection:(-94, 35, 0)
-2022-12-18 20:46:03,851 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:03,854 [ 1] INFO  Unity: SetDirection:(-94, 35, 0)
-2022-12-18 20:46:03,856 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:03,915 [ 1] INFO  Unity: SetDirection:(-94, 35, 0)
-2022-12-18 20:46:03,916 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:03,918 [ 1] INFO  Unity: SetDirection:(-94, 35, 0)
-2022-12-18 20:46:03,919 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:03,921 [ 1] INFO  Unity: SetDirection:(-94, 35, 0)
-2022-12-18 20:46:03,923 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:03,926 [ 1] INFO  Unity: SetDirection:(-94, 35, 0)
-2022-12-18 20:46:03,927 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:03,930 [ 1] ERROR Unity: Speed:276
-UnityEngine.Debug:LogError(Object)
-PlayerInputController:LateUpdate() (at Assets/Scripts/GameObject/PlayerInputController.cs:188)
-
-2022-12-18 20:46:03,964 [ 1] INFO  Unity: Stop
-2022-12-18 20:46:03,965 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 20:46:05,245 [ 1] INFO  Unity: SetDirection:(94, -35, 0)
-2022-12-18 20:46:05,247 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 20:46:05,248 [ 1] INFO  Unity: MoveForward
-2022-12-18 20:46:05,248 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:05,250 [ 1] INFO  Unity: SetDirection:(94, -35, 0)
-2022-12-18 20:46:05,251 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:05,252 [ 1] INFO  Unity: SetDirection:(94, -35, 0)
-2022-12-18 20:46:05,254 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:05,256 [ 1] ERROR Unity: Speed:334
-UnityEngine.Debug:LogError(Object)
-PlayerInputController:LateUpdate() (at Assets/Scripts/GameObject/PlayerInputController.cs:188)
-
-2022-12-18 20:46:05,295 [ 1] INFO  Unity: SetDirection:(94, -35, 0)
-2022-12-18 20:46:05,296 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:05,298 [ 1] INFO  Unity: SetDirection:(94, -35, 0)
-2022-12-18 20:46:05,299 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:05,303 [ 1] INFO  Unity: SetDirection:(94, -35, 0)
-2022-12-18 20:46:05,305 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:05,342 [ 1] INFO  Unity: SetDirection:(94, -35, 0)
-2022-12-18 20:46:05,344 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:05,347 [ 1] INFO  Unity: SetDirection:(94, -35, 0)
-2022-12-18 20:46:05,348 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:05,350 [ 1] INFO  Unity: SetDirection:(94, -35, 0)
-2022-12-18 20:46:05,352 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:05,417 [ 1] INFO  Unity: Stop
-2022-12-18 20:46:05,419 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 20:46:08,207 [ 1] INFO  Unity: SetDirection:(-94, 35, 0)
-2022-12-18 20:46:08,208 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 20:46:08,209 [ 1] INFO  Unity: MoveForward
-2022-12-18 20:46:08,210 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:08,212 [ 1] INFO  Unity: SetDirection:(-94, 35, 0)
-2022-12-18 20:46:08,213 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:08,217 [ 1] ERROR Unity: Speed:224
-UnityEngine.Debug:LogError(Object)
-PlayerInputController:LateUpdate() (at Assets/Scripts/GameObject/PlayerInputController.cs:188)
-
-2022-12-18 20:46:08,257 [ 1] INFO  Unity: SetDirection:(-94, 35, 0)
-2022-12-18 20:46:08,258 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:08,260 [ 1] INFO  Unity: SetDirection:(-94, 35, 0)
-2022-12-18 20:46:08,262 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:08,264 [ 1] INFO  Unity: SetDirection:(-94, 35, 0)
-2022-12-18 20:46:08,265 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:08,312 [ 1] INFO  Unity: SetDirection:(-94, 35, 0)
-2022-12-18 20:46:08,314 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:08,316 [ 1] INFO  Unity: SetDirection:(-94, 35, 0)
-2022-12-18 20:46:08,317 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:08,318 [ 1] INFO  Unity: SetDirection:(-94, 35, 0)
-2022-12-18 20:46:08,319 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:08,322 [ 1] INFO  Unity: SetDirection:(-94, 35, 0)
-2022-12-18 20:46:08,324 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:08,329 [ 1] ERROR Unity: Speed:363
-UnityEngine.Debug:LogError(Object)
-PlayerInputController:LateUpdate() (at Assets/Scripts/GameObject/PlayerInputController.cs:188)
-
-2022-12-18 20:46:08,364 [ 1] INFO  Unity: Stop
-2022-12-18 20:46:08,366 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 20:46:09,216 [ 1] INFO  Unity: SetDirection:(94, -35, 0)
-2022-12-18 20:46:09,217 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 20:46:09,217 [ 1] INFO  Unity: MoveForward
-2022-12-18 20:46:09,218 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:09,219 [ 1] INFO  Unity: SetDirection:(94, -35, 0)
-2022-12-18 20:46:09,221 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:09,224 [ 1] INFO  Unity: SetDirection:(94, -35, 0)
-2022-12-18 20:46:09,225 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:09,229 [ 1] ERROR Unity: Speed:377
-UnityEngine.Debug:LogError(Object)
-PlayerInputController:LateUpdate() (at Assets/Scripts/GameObject/PlayerInputController.cs:188)
-
-2022-12-18 20:46:09,258 [ 1] INFO  Unity: SetDirection:(94, -35, 0)
-2022-12-18 20:46:09,260 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:09,263 [ 1] INFO  Unity: SetDirection:(94, -35, 0)
-2022-12-18 20:46:09,265 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:09,299 [ 1] INFO  Unity: SetDirection:(94, -35, 0)
-2022-12-18 20:46:09,300 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:09,302 [ 1] INFO  Unity: SetDirection:(94, -35, 0)
-2022-12-18 20:46:09,303 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:09,305 [ 1] INFO  Unity: SetDirection:(94, -35, 0)
-2022-12-18 20:46:09,307 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:09,338 [ 1] INFO  Unity: SetDirection:(94, -35, 0)
-2022-12-18 20:46:09,340 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:09,344 [ 1] INFO  Unity: SetDirection:(94, -35, 0)
-2022-12-18 20:46:09,349 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:09,354 [ 1] ERROR Unity: Speed:257
-UnityEngine.Debug:LogError(Object)
-PlayerInputController:LateUpdate() (at Assets/Scripts/GameObject/PlayerInputController.cs:188)
-
-2022-12-18 20:46:09,390 [ 1] INFO  Unity: SetDirection:(94, -35, 0)
-2022-12-18 20:46:09,391 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:09,392 [ 1] INFO  Unity: SetDirection:(94, -35, 0)
-2022-12-18 20:46:09,393 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:09,395 [ 1] INFO  Unity: SetDirection:(94, -35, 0)
-2022-12-18 20:46:09,396 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:09,425 [ 1] INFO  Unity: Stop
-2022-12-18 20:46:09,426 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 20:46:11,036 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 20:46:12,240 [ 1] INFO  Unity: SetDirection:(-94, 35, 0)
-2022-12-18 20:46:12,241 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 20:46:12,242 [ 1] INFO  Unity: MoveForward
-2022-12-18 20:46:12,243 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:12,245 [ 1] INFO  Unity: SetDirection:(-94, 35, 0)
-2022-12-18 20:46:12,247 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:12,251 [ 1] ERROR Unity: Speed:256
-UnityEngine.Debug:LogError(Object)
-PlayerInputController:LateUpdate() (at Assets/Scripts/GameObject/PlayerInputController.cs:188)
-
-2022-12-18 20:46:12,281 [ 1] INFO  Unity: SetDirection:(-94, 35, 0)
-2022-12-18 20:46:12,284 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:12,287 [ 1] INFO  Unity: SetDirection:(-94, 35, 0)
-2022-12-18 20:46:12,289 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:12,318 [ 1] INFO  Unity: SetDirection:(-94, 35, 0)
-2022-12-18 20:46:12,320 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:12,323 [ 1] INFO  Unity: SetDirection:(-94, 35, 0)
-2022-12-18 20:46:12,325 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:12,327 [ 1] INFO  Unity: SetDirection:(-94, 35, 0)
-2022-12-18 20:46:12,331 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:12,368 [ 1] INFO  Unity: SetDirection:(-94, 35, 0)
-2022-12-18 20:46:12,370 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:12,373 [ 1] INFO  Unity: SetDirection:(-94, 35, 0)
-2022-12-18 20:46:12,376 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:12,379 [ 1] INFO  Unity: SetDirection:(-94, 35, 0)
-2022-12-18 20:46:12,380 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:12,383 [ 1] ERROR Unity: Speed:301
-UnityEngine.Debug:LogError(Object)
-PlayerInputController:LateUpdate() (at Assets/Scripts/GameObject/PlayerInputController.cs:188)
-
-2022-12-18 20:46:12,412 [ 1] INFO  Unity: SetDirection:(-94, 35, 0)
-2022-12-18 20:46:12,415 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:12,417 [ 1] INFO  Unity: SetDirection:(-94, 35, 0)
-2022-12-18 20:46:12,419 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:12,455 [ 1] INFO  Unity: SetDirection:(-94, 35, 0)
-2022-12-18 20:46:12,456 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:12,458 [ 1] INFO  Unity: SetDirection:(-94, 35, 0)
-2022-12-18 20:46:12,458 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:12,460 [ 1] INFO  Unity: SetDirection:(-94, 35, 0)
-2022-12-18 20:46:12,461 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:12,502 [ 1] INFO  Unity: SetDirection:(-94, 35, 0)
-2022-12-18 20:46:12,504 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:12,510 [ 1] INFO  Unity: SetDirection:(-94, 35, 0)
-2022-12-18 20:46:12,513 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:12,515 [ 1] INFO  Unity: SetDirection:(-94, 35, 0)
-2022-12-18 20:46:12,517 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:12,521 [ 1] ERROR Unity: Speed:328
-UnityEngine.Debug:LogError(Object)
-PlayerInputController:LateUpdate() (at Assets/Scripts/GameObject/PlayerInputController.cs:188)
-
-2022-12-18 20:46:12,549 [ 1] INFO  Unity: SetDirection:(-94, 35, 0)
-2022-12-18 20:46:12,551 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:12,554 [ 1] INFO  Unity: SetDirection:(-94, 35, 0)
-2022-12-18 20:46:12,556 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:12,591 [ 1] INFO  Unity: SetDirection:(-94, 35, 0)
-2022-12-18 20:46:12,593 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:12,597 [ 1] INFO  Unity: SetDirection:(-94, 35, 0)
-2022-12-18 20:46:12,599 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:12,623 [ 1] INFO  Unity: SetDirection:(-94, 35, 0)
-2022-12-18 20:46:12,624 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:12,666 [ 1] INFO  Unity: SetDirection:(-94, 35, 0)
-2022-12-18 20:46:12,667 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:12,668 [ 1] INFO  Unity: SetDirection:(-94, 35, 0)
-2022-12-18 20:46:12,670 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:12,672 [ 1] INFO  Unity: SetDirection:(-94, 35, 0)
-2022-12-18 20:46:12,673 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:12,676 [ 1] INFO  Unity: SetDirection:(-94, 35, 0)
-2022-12-18 20:46:12,678 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:12,683 [ 1] ERROR Unity: Speed:269
-UnityEngine.Debug:LogError(Object)
-PlayerInputController:LateUpdate() (at Assets/Scripts/GameObject/PlayerInputController.cs:188)
-
-2022-12-18 20:46:12,738 [ 1] INFO  Unity: SetDirection:(-94, 35, 0)
-2022-12-18 20:46:12,739 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:12,740 [ 1] INFO  Unity: SetDirection:(-94, 35, 0)
-2022-12-18 20:46:12,741 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:12,744 [ 1] INFO  Unity: SetDirection:(-94, 35, 0)
-2022-12-18 20:46:12,748 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:12,751 [ 1] INFO  Unity: SetDirection:(-94, 35, 0)
-2022-12-18 20:46:12,754 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:12,757 [ 1] INFO  Unity: SetDirection:(-94, 35, 0)
-2022-12-18 20:46:12,759 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:12,807 [ 1] INFO  Unity: SetDirection:(-94, 35, 0)
-2022-12-18 20:46:12,809 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:12,811 [ 1] INFO  Unity: SetDirection:(-94, 35, 0)
-2022-12-18 20:46:12,812 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:12,816 [ 1] INFO  Unity: SetDirection:(-94, 35, 0)
-2022-12-18 20:46:12,818 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:12,820 [ 1] INFO  Unity: SetDirection:(-94, 35, 0)
-2022-12-18 20:46:12,821 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:12,827 [ 1] ERROR Unity: Speed:292
-UnityEngine.Debug:LogError(Object)
-PlayerInputController:LateUpdate() (at Assets/Scripts/GameObject/PlayerInputController.cs:188)
-
-2022-12-18 20:46:12,869 [ 1] INFO  Unity: SetDirection:(-94, 35, 0)
-2022-12-18 20:46:12,870 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:12,872 [ 1] INFO  Unity: SetDirection:(-94, 35, 0)
-2022-12-18 20:46:12,874 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:12,877 [ 1] INFO  Unity: SetDirection:(-94, 35, 0)
-2022-12-18 20:46:12,880 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:12,883 [ 1] INFO  Unity: SetDirection:(-94, 35, 0)
-2022-12-18 20:46:12,884 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:12,931 [ 1] INFO  Unity: SetDirection:(-94, 35, 0)
-2022-12-18 20:46:12,932 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:12,934 [ 1] INFO  Unity: SetDirection:(-94, 35, 0)
-2022-12-18 20:46:12,935 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:12,936 [ 1] INFO  Unity: SetDirection:(-94, 35, 0)
-2022-12-18 20:46:12,936 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:12,938 [ 1] ERROR Unity: Speed:243
-UnityEngine.Debug:LogError(Object)
-PlayerInputController:LateUpdate() (at Assets/Scripts/GameObject/PlayerInputController.cs:188)
-
-2022-12-18 20:46:12,983 [ 1] INFO  Unity: SetDirection:(-94, 35, 0)
-2022-12-18 20:46:12,985 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:12,988 [ 1] INFO  Unity: SetDirection:(-94, 35, 0)
-2022-12-18 20:46:12,991 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:12,994 [ 1] INFO  Unity: SetDirection:(-94, 35, 0)
-2022-12-18 20:46:12,995 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:13,035 [ 1] INFO  Unity: SetDirection:(-94, 35, 0)
-2022-12-18 20:46:13,036 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:13,037 [ 1] INFO  Unity: SetDirection:(-94, 35, 0)
-2022-12-18 20:46:13,038 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:13,039 [ 1] INFO  Unity: SetDirection:(-94, 35, 0)
-2022-12-18 20:46:13,040 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:13,043 [ 1] INFO  Unity: SetDirection:(-94, 35, 0)
-2022-12-18 20:46:13,045 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:13,051 [ 1] ERROR Unity: Speed:383
-UnityEngine.Debug:LogError(Object)
-PlayerInputController:LateUpdate() (at Assets/Scripts/GameObject/PlayerInputController.cs:188)
-
-2022-12-18 20:46:13,101 [ 1] INFO  Unity: SetDirection:(-94, 35, 0)
-2022-12-18 20:46:13,102 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:13,104 [ 1] INFO  Unity: SetDirection:(-94, 35, 0)
-2022-12-18 20:46:13,105 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:13,107 [ 1] INFO  Unity: SetDirection:(-94, 35, 0)
-2022-12-18 20:46:13,110 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:13,113 [ 1] INFO  Unity: SetDirection:(-94, 35, 0)
-2022-12-18 20:46:13,115 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:13,169 [ 1] INFO  Unity: SetDirection:(-94, 35, 0)
-2022-12-18 20:46:13,171 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:13,174 [ 1] INFO  Unity: SetDirection:(-94, 35, 0)
-2022-12-18 20:46:13,176 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:13,177 [ 1] INFO  Unity: SetDirection:(-94, 35, 0)
-2022-12-18 20:46:13,179 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:13,180 [ 1] INFO  Unity: SetDirection:(-94, 35, 0)
-2022-12-18 20:46:13,181 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:13,183 [ 1] ERROR Unity: Speed:300
-UnityEngine.Debug:LogError(Object)
-PlayerInputController:LateUpdate() (at Assets/Scripts/GameObject/PlayerInputController.cs:188)
-
-2022-12-18 20:46:13,240 [ 1] INFO  Unity: SetDirection:(-84, 54, 0)
-2022-12-18 20:46:13,242 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:13,245 [ 1] INFO  Unity: SetDirection:(-84, 54, 0)
-2022-12-18 20:46:13,247 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:13,249 [ 1] INFO  Unity: SetDirection:(-84, 54, 0)
-2022-12-18 20:46:13,250 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:13,251 [ 1] INFO  Unity: SetDirection:(-84, 54, 0)
-2022-12-18 20:46:13,251 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:13,283 [ 1] INFO  Unity: SetDirection:(-77, 64, 0)
-2022-12-18 20:46:13,284 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:13,286 [ 1] INFO  Unity: SetDirection:(-77, 64, 0)
-2022-12-18 20:46:13,287 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:13,290 [ 1] ERROR Unity: Speed:227
-UnityEngine.Debug:LogError(Object)
-PlayerInputController:LateUpdate() (at Assets/Scripts/GameObject/PlayerInputController.cs:188)
-
-2022-12-18 20:46:13,329 [ 1] INFO  Unity: SetDirection:(-69, 72, 0)
-2022-12-18 20:46:13,330 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:13,333 [ 1] INFO  Unity: SetDirection:(-69, 72, 0)
-2022-12-18 20:46:13,335 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:13,338 [ 1] INFO  Unity: SetDirection:(-69, 72, 0)
-2022-12-18 20:46:13,341 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:13,378 [ 1] INFO  Unity: SetDirection:(-60, 80, 0)
-2022-12-18 20:46:13,380 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:13,382 [ 1] INFO  Unity: SetDirection:(-60, 80, 0)
-2022-12-18 20:46:13,384 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:13,385 [ 1] INFO  Unity: SetDirection:(-60, 80, 0)
-2022-12-18 20:46:13,386 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:13,421 [ 1] INFO  Unity: SetDirection:(-53, 85, 0)
-2022-12-18 20:46:13,421 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:13,422 [ 1] INFO  Unity: SetDirection:(-53, 85, 0)
-2022-12-18 20:46:13,423 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:13,424 [ 1] INFO  Unity: SetDirection:(-53, 85, 0)
-2022-12-18 20:46:13,426 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:13,430 [ 1] ERROR Unity: Speed:350
-UnityEngine.Debug:LogError(Object)
-PlayerInputController:LateUpdate() (at Assets/Scripts/GameObject/PlayerInputController.cs:188)
-
-2022-12-18 20:46:13,467 [ 1] INFO  Unity: SetDirection:(-55, 83, 0)
-2022-12-18 20:46:13,470 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:13,473 [ 1] INFO  Unity: SetDirection:(-55, 83, 0)
-2022-12-18 20:46:13,474 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:13,510 [ 1] INFO  Unity: SetDirection:(-58, 81, 0)
-2022-12-18 20:46:13,513 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:13,516 [ 1] INFO  Unity: SetDirection:(-58, 81, 0)
-2022-12-18 20:46:13,519 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:13,520 [ 1] INFO  Unity: SetDirection:(-58, 81, 0)
-2022-12-18 20:46:13,521 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:13,554 [ 1] INFO  Unity: SetDirection:(-62, 78, 0)
-2022-12-18 20:46:13,554 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:13,555 [ 1] INFO  Unity: SetDirection:(-62, 78, 0)
-2022-12-18 20:46:13,556 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:13,557 [ 1] INFO  Unity: SetDirection:(-62, 78, 0)
-2022-12-18 20:46:13,558 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:13,562 [ 1] ERROR Unity: Speed:337
-UnityEngine.Debug:LogError(Object)
-PlayerInputController:LateUpdate() (at Assets/Scripts/GameObject/PlayerInputController.cs:188)
-
-2022-12-18 20:46:13,600 [ 1] INFO  Unity: SetDirection:(-70, 72, 0)
-2022-12-18 20:46:13,602 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:13,607 [ 1] INFO  Unity: SetDirection:(-70, 72, 0)
-2022-12-18 20:46:13,612 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:13,654 [ 1] INFO  Unity: SetDirection:(-85, 53, 0)
-2022-12-18 20:46:13,656 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:13,658 [ 1] INFO  Unity: SetDirection:(-85, 53, 0)
-2022-12-18 20:46:13,659 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:13,660 [ 1] INFO  Unity: SetDirection:(-85, 53, 0)
-2022-12-18 20:46:13,662 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:13,664 [ 1] INFO  Unity: SetDirection:(-85, 53, 0)
-2022-12-18 20:46:13,665 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:13,705 [ 1] INFO  Unity: SetDirection:(-94, 35, 0)
-2022-12-18 20:46:13,706 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:13,708 [ 1] INFO  Unity: SetDirection:(-94, 35, 0)
-2022-12-18 20:46:13,711 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:13,714 [ 1] INFO  Unity: SetDirection:(-94, 35, 0)
-2022-12-18 20:46:13,716 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:13,721 [ 1] ERROR Unity: Speed:293
-UnityEngine.Debug:LogError(Object)
-PlayerInputController:LateUpdate() (at Assets/Scripts/GameObject/PlayerInputController.cs:188)
-
-2022-12-18 20:46:13,748 [ 1] INFO  Unity: SetDirection:(-94, 35, 0)
-2022-12-18 20:46:13,750 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:13,754 [ 1] INFO  Unity: SetDirection:(-94, 35, 0)
-2022-12-18 20:46:13,755 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:13,792 [ 1] INFO  Unity: Stop
-2022-12-18 20:46:13,794 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 20:46:16,380 [ 1] INFO  Unity: SetDirection:(94, -35, 0)
-2022-12-18 20:46:16,381 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 20:46:16,382 [ 1] INFO  Unity: MoveForward
-2022-12-18 20:46:16,383 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:16,384 [ 1] INFO  Unity: SetDirection:(94, -35, 0)
-2022-12-18 20:46:16,386 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:16,391 [ 1] ERROR Unity: Speed:276
-UnityEngine.Debug:LogError(Object)
-PlayerInputController:LateUpdate() (at Assets/Scripts/GameObject/PlayerInputController.cs:188)
-
-2022-12-18 20:46:16,443 [ 1] INFO  Unity: SetDirection:(94, -35, 0)
-2022-12-18 20:46:16,444 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:16,445 [ 1] INFO  Unity: SetDirection:(94, -35, 0)
-2022-12-18 20:46:16,446 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:16,448 [ 1] INFO  Unity: SetDirection:(94, -35, 0)
-2022-12-18 20:46:16,448 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:16,450 [ 1] INFO  Unity: SetDirection:(94, -35, 0)
-2022-12-18 20:46:16,451 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:16,491 [ 1] INFO  Unity: SetDirection:(94, -35, 0)
-2022-12-18 20:46:16,492 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:16,494 [ 1] INFO  Unity: SetDirection:(94, -35, 0)
-2022-12-18 20:46:16,496 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:16,499 [ 1] INFO  Unity: SetDirection:(94, -35, 0)
-2022-12-18 20:46:16,501 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:16,507 [ 1] ERROR Unity: Speed:305
-UnityEngine.Debug:LogError(Object)
-PlayerInputController:LateUpdate() (at Assets/Scripts/GameObject/PlayerInputController.cs:188)
-
-2022-12-18 20:46:16,536 [ 1] INFO  Unity: SetDirection:(94, -35, 0)
-2022-12-18 20:46:16,538 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:16,541 [ 1] INFO  Unity: SetDirection:(94, -35, 0)
-2022-12-18 20:46:16,544 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:16,581 [ 1] INFO  Unity: SetDirection:(94, -35, 0)
-2022-12-18 20:46:16,583 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:16,585 [ 1] INFO  Unity: SetDirection:(94, -35, 0)
-2022-12-18 20:46:16,587 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:16,591 [ 1] INFO  Unity: SetDirection:(94, -35, 0)
-2022-12-18 20:46:16,592 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:16,630 [ 1] INFO  Unity: SetDirection:(94, -35, 0)
-2022-12-18 20:46:16,631 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:16,634 [ 1] INFO  Unity: SetDirection:(94, -35, 0)
-2022-12-18 20:46:16,634 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:16,635 [ 1] INFO  Unity: SetDirection:(94, -35, 0)
-2022-12-18 20:46:16,636 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:16,638 [ 1] ERROR Unity: Speed:311
-UnityEngine.Debug:LogError(Object)
-PlayerInputController:LateUpdate() (at Assets/Scripts/GameObject/PlayerInputController.cs:188)
-
-2022-12-18 20:46:16,670 [ 1] INFO  Unity: SetDirection:(94, -35, 0)
-2022-12-18 20:46:16,672 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:16,676 [ 1] INFO  Unity: SetDirection:(94, -35, 0)
-2022-12-18 20:46:16,678 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:16,723 [ 1] INFO  Unity: SetDirection:(94, -35, 0)
-2022-12-18 20:46:16,725 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:16,728 [ 1] INFO  Unity: SetDirection:(94, -35, 0)
-2022-12-18 20:46:16,730 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:16,731 [ 1] INFO  Unity: SetDirection:(94, -35, 0)
-2022-12-18 20:46:16,734 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:16,762 [ 1] INFO  Unity: SetDirection:(94, -35, 0)
-2022-12-18 20:46:16,764 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:16,767 [ 1] INFO  Unity: SetDirection:(94, -35, 0)
-2022-12-18 20:46:16,770 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:16,774 [ 1] INFO  Unity: SetDirection:(94, -35, 0)
-2022-12-18 20:46:16,776 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:16,780 [ 1] ERROR Unity: Speed:379
-UnityEngine.Debug:LogError(Object)
-PlayerInputController:LateUpdate() (at Assets/Scripts/GameObject/PlayerInputController.cs:188)
-
-2022-12-18 20:46:16,814 [ 1] INFO  Unity: SetDirection:(94, -35, 0)
-2022-12-18 20:46:16,816 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:16,819 [ 1] INFO  Unity: SetDirection:(94, -35, 0)
-2022-12-18 20:46:16,821 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:16,823 [ 1] INFO  Unity: SetDirection:(94, -35, 0)
-2022-12-18 20:46:16,824 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:16,855 [ 1] INFO  Unity: SetDirection:(94, -35, 0)
-2022-12-18 20:46:16,856 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:16,857 [ 1] INFO  Unity: SetDirection:(94, -35, 0)
-2022-12-18 20:46:16,858 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:16,901 [ 1] INFO  Unity: SetDirection:(94, -35, 0)
-2022-12-18 20:46:16,904 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:16,909 [ 1] INFO  Unity: SetDirection:(94, -35, 0)
-2022-12-18 20:46:16,911 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:16,914 [ 1] INFO  Unity: SetDirection:(94, -35, 0)
-2022-12-18 20:46:16,915 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:16,918 [ 1] ERROR Unity: Speed:332
-UnityEngine.Debug:LogError(Object)
-PlayerInputController:LateUpdate() (at Assets/Scripts/GameObject/PlayerInputController.cs:188)
-
-2022-12-18 20:46:16,959 [ 1] INFO  Unity: SetDirection:(94, -35, 0)
-2022-12-18 20:46:16,960 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:16,964 [ 1] INFO  Unity: SetDirection:(94, -35, 0)
-2022-12-18 20:46:16,966 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:16,971 [ 1] INFO  Unity: SetDirection:(94, -35, 0)
-2022-12-18 20:46:16,974 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:17,023 [ 1] INFO  Unity: SetDirection:(94, -35, 0)
-2022-12-18 20:46:17,024 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:17,025 [ 1] INFO  Unity: SetDirection:(94, -35, 0)
-2022-12-18 20:46:17,026 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:17,027 [ 1] INFO  Unity: SetDirection:(94, -35, 0)
-2022-12-18 20:46:17,029 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:17,030 [ 1] INFO  Unity: SetDirection:(94, -35, 0)
-2022-12-18 20:46:17,031 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:17,035 [ 1] ERROR Unity: Speed:311
-UnityEngine.Debug:LogError(Object)
-PlayerInputController:LateUpdate() (at Assets/Scripts/GameObject/PlayerInputController.cs:188)
-
-2022-12-18 20:46:17,091 [ 1] INFO  Unity: SetDirection:(94, -35, 0)
-2022-12-18 20:46:17,092 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:17,094 [ 1] INFO  Unity: SetDirection:(94, -35, 0)
-2022-12-18 20:46:17,096 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:17,099 [ 1] INFO  Unity: SetDirection:(94, -35, 0)
-2022-12-18 20:46:17,100 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:17,102 [ 1] INFO  Unity: SetDirection:(94, -35, 0)
-2022-12-18 20:46:17,104 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:17,150 [ 1] INFO  Unity: SetDirection:(94, -35, 0)
-2022-12-18 20:46:17,150 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:17,152 [ 1] INFO  Unity: SetDirection:(94, -35, 0)
-2022-12-18 20:46:17,153 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:17,154 [ 1] INFO  Unity: SetDirection:(94, -35, 0)
-2022-12-18 20:46:17,154 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:17,156 [ 1] INFO  Unity: SetDirection:(94, -35, 0)
-2022-12-18 20:46:17,156 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:17,162 [ 1] ERROR Unity: Speed:345
-UnityEngine.Debug:LogError(Object)
-PlayerInputController:LateUpdate() (at Assets/Scripts/GameObject/PlayerInputController.cs:188)
-
-2022-12-18 20:46:17,208 [ 1] INFO  Unity: SetDirection:(94, -35, 0)
-2022-12-18 20:46:17,209 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:17,211 [ 1] INFO  Unity: SetDirection:(94, -35, 0)
-2022-12-18 20:46:17,213 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:17,216 [ 1] INFO  Unity: SetDirection:(94, -35, 0)
-2022-12-18 20:46:17,218 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:17,272 [ 1] INFO  Unity: SetDirection:(94, -35, 0)
-2022-12-18 20:46:17,274 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:17,276 [ 1] INFO  Unity: SetDirection:(94, -35, 0)
-2022-12-18 20:46:17,277 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:17,280 [ 1] INFO  Unity: SetDirection:(94, -35, 0)
-2022-12-18 20:46:17,281 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:17,283 [ 1] INFO  Unity: SetDirection:(94, -35, 0)
-2022-12-18 20:46:17,284 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:17,287 [ 1] ERROR Unity: Speed:313
-UnityEngine.Debug:LogError(Object)
-PlayerInputController:LateUpdate() (at Assets/Scripts/GameObject/PlayerInputController.cs:188)
-
-2022-12-18 20:46:17,324 [ 1] INFO  Unity: SetDirection:(94, -35, 0)
-2022-12-18 20:46:17,325 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:17,326 [ 1] INFO  Unity: SetDirection:(94, -35, 0)
-2022-12-18 20:46:17,328 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:17,330 [ 1] INFO  Unity: SetDirection:(94, -35, 0)
-2022-12-18 20:46:17,331 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:17,375 [ 1] INFO  Unity: SetDirection:(94, -35, 0)
-2022-12-18 20:46:17,377 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:17,381 [ 1] INFO  Unity: SetDirection:(94, -35, 0)
-2022-12-18 20:46:17,383 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:17,385 [ 1] INFO  Unity: SetDirection:(94, -35, 0)
-2022-12-18 20:46:17,387 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:17,392 [ 1] ERROR Unity: Speed:299
-UnityEngine.Debug:LogError(Object)
-PlayerInputController:LateUpdate() (at Assets/Scripts/GameObject/PlayerInputController.cs:188)
-
-2022-12-18 20:46:17,443 [ 1] INFO  Unity: SetDirection:(94, -35, 0)
-2022-12-18 20:46:17,445 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:17,449 [ 1] INFO  Unity: SetDirection:(94, -35, 0)
-2022-12-18 20:46:17,452 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:17,454 [ 1] INFO  Unity: SetDirection:(94, -35, 0)
-2022-12-18 20:46:17,456 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:17,458 [ 1] INFO  Unity: SetDirection:(94, -35, 0)
-2022-12-18 20:46:17,460 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:17,497 [ 1] INFO  Unity: SetDirection:(94, -35, 0)
-2022-12-18 20:46:17,499 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:17,502 [ 1] INFO  Unity: SetDirection:(94, -35, 0)
-2022-12-18 20:46:17,503 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:17,505 [ 1] INFO  Unity: SetDirection:(94, -35, 0)
-2022-12-18 20:46:17,506 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:17,509 [ 1] INFO  Unity: SetDirection:(94, -35, 0)
-2022-12-18 20:46:17,511 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:17,516 [ 1] ERROR Unity: Speed:373
-UnityEngine.Debug:LogError(Object)
-PlayerInputController:LateUpdate() (at Assets/Scripts/GameObject/PlayerInputController.cs:188)
-
-2022-12-18 20:46:17,552 [ 1] INFO  Unity: SetDirection:(94, -35, 0)
-2022-12-18 20:46:17,554 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:17,557 [ 1] INFO  Unity: SetDirection:(94, -35, 0)
-2022-12-18 20:46:17,559 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:17,563 [ 1] INFO  Unity: SetDirection:(94, -35, 0)
-2022-12-18 20:46:17,564 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:17,615 [ 1] INFO  Unity: SetDirection:(94, -35, 0)
-2022-12-18 20:46:17,616 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:17,618 [ 1] INFO  Unity: SetDirection:(94, -35, 0)
-2022-12-18 20:46:17,619 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:17,622 [ 1] INFO  Unity: SetDirection:(94, -35, 0)
-2022-12-18 20:46:17,625 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:17,627 [ 1] INFO  Unity: SetDirection:(94, -35, 0)
-2022-12-18 20:46:17,630 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:17,635 [ 1] ERROR Unity: Speed:316
-UnityEngine.Debug:LogError(Object)
-PlayerInputController:LateUpdate() (at Assets/Scripts/GameObject/PlayerInputController.cs:188)
-
-2022-12-18 20:46:17,678 [ 1] INFO  Unity: SetDirection:(94, -35, 0)
-2022-12-18 20:46:17,680 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:17,681 [ 1] INFO  Unity: SetDirection:(94, -35, 0)
-2022-12-18 20:46:17,683 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:17,685 [ 1] INFO  Unity: SetDirection:(94, -35, 0)
-2022-12-18 20:46:17,686 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:17,689 [ 1] INFO  Unity: SetDirection:(94, -35, 0)
-2022-12-18 20:46:17,690 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:17,723 [ 1] INFO  Unity: SetDirection:(94, -35, 0)
-2022-12-18 20:46:17,724 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:17,727 [ 1] INFO  Unity: SetDirection:(94, -35, 0)
-2022-12-18 20:46:17,728 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:17,732 [ 1] ERROR Unity: Speed:223
-UnityEngine.Debug:LogError(Object)
-PlayerInputController:LateUpdate() (at Assets/Scripts/GameObject/PlayerInputController.cs:188)
-
-2022-12-18 20:46:17,768 [ 1] INFO  Unity: SetDirection:(94, -35, 0)
-2022-12-18 20:46:17,770 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:17,773 [ 1] INFO  Unity: SetDirection:(94, -35, 0)
-2022-12-18 20:46:17,774 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:17,777 [ 1] INFO  Unity: SetDirection:(94, -35, 0)
-2022-12-18 20:46:17,778 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:17,807 [ 1] INFO  Unity: SetDirection:(94, -35, 0)
-2022-12-18 20:46:17,809 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:17,814 [ 1] INFO  Unity: SetDirection:(94, -35, 0)
-2022-12-18 20:46:17,817 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:17,844 [ 1] INFO  Unity: SetDirection:(94, -35, 0)
-2022-12-18 20:46:17,846 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:17,850 [ 1] INFO  Unity: SetDirection:(94, -35, 0)
-2022-12-18 20:46:17,852 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:17,855 [ 1] INFO  Unity: SetDirection:(94, -35, 0)
-2022-12-18 20:46:17,857 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-18 20:46:17,860 [ 1] ERROR Unity: Speed:400
-UnityEngine.Debug:LogError(Object)
-PlayerInputController:LateUpdate() (at Assets/Scripts/GameObject/PlayerInputController.cs:188)
-
-2022-12-18 20:46:17,903 [ 1] INFO  Unity: Stop
-2022-12-18 20:46:17,905 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:5 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-18 20:53:23,017 [ 1] INFO  Unity: Entity Character_5_12-3 OnDestroy :ID:5 POS:(5338, 3991, 820) DIR:(94, -35, 0) SPD:0 
-2022-12-18 20:53:23,019 [ 1] INFO  Unity: Entity Character_1_13-2 OnDestroy :ID:1 POS:(5188, 3530, 820) DIR:(33, -94, 0) SPD:0 
-2022-12-18 20:53:23,020 [ 1] INFO  Unity: Entity Character_2_12-3 OnDestroy :ID:2 POS:(4781, 4398, 820) DIR:(-22, 97, 0) SPD:0 
-2022-12-18 20:53:23,021 [ 1] INFO  Unity: Entity Character_3_12-3 OnDestroy :ID:3 POS:(5055, 3935, 820) DIR:(100, 4, 0) SPD:0 
-2022-12-18 20:53:23,022 [ 1] INFO  Unity: Entity Character_4_12-3 OnDestroy :ID:4 POS:(5097, 4104, 820) DIR:(100, -9, 0) SPD:0 
-2022-12-18 20:53:23,027 [ 1] INFO  Unity: OnDestroy NetworkManager.
-2022-12-18 20:53:23,029 [ 1] WARN  Unity: CloseConnection(), errorCode: 1007
+MonoSingleton`1:Awake() (at Assets/Scripts/Utilities/MonoSingleton.cs:35)
+
+2022-12-20 22:55:46,612 [ 1] INFO  Unity: GameObjectManager->CreateCharacterObject CharacterId:1 CharacterName:12-3 CharacterEntityId:1
+2022-12-20 22:55:46,693 [ 1] INFO  Unity: GameObjectManager->InitGameObject Player_character:1
+2022-12-20 22:55:46,696 [ 1] WARN  Unity: DontDestroyOnLoad only work for root GameObjects or components on root GameObjects.
+UnityEngine.Object:DontDestroyOnLoad(Object)
+MonoSingleton`1:Awake() (at Assets/Scripts/Utilities/MonoSingleton.cs:32)
+
+2022-12-20 22:55:46,698 [ 1] WARN  Unity: DontDestroyOnLoad only work for root GameObjects or components on root GameObjects.
+UnityEngine.Object:DontDestroyOnLoad(Object)
+MonoSingleton`1:Awake() (at Assets/Scripts/Utilities/MonoSingleton.cs:32)
+
+2022-12-20 22:55:46,701 [ 1] INFO  Unity: Load MiniMap Image :buluzheng
+2022-12-20 22:55:46,705 [ 1] INFO  Unity: Load MiniMap Image :buluzheng
+2022-12-20 22:55:46,775 [ 1] INFO  Unity: MinimapManager->UpdataMiniMap
+2022-12-20 22:55:46,776 [ 1] INFO  Unity: Load MiniMap Image :buluzheng
+2022-12-20 22:55:46,777 [ 1] INFO  Unity: Load MiniMap Image :buluzheng
+2022-12-20 22:55:48,676 [ 1] INFO  Unity: SetDirection:(82, -58, 0)
+2022-12-20 22:55:48,678 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
+2022-12-20 22:55:48,680 [ 1] INFO  Unity: MoveForward
+2022-12-20 22:55:48,681 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
+2022-12-20 22:55:48,744 [ 1] INFO  Unity: SetDirection:(80, -60, 0)
+2022-12-20 22:55:48,745 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
+2022-12-20 22:55:48,804 [ 1] INFO  Unity: SetDirection:(74, -67, 0)
+2022-12-20 22:55:48,806 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
+2022-12-20 22:55:48,843 [ 1] INFO  Unity: SetDirection:(67, -75, 0)
+2022-12-20 22:55:48,845 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
+2022-12-20 22:55:49,085 [ 1] INFO  Unity: SetDirection:(54, -84, 0)
+2022-12-20 22:55:49,086 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
+2022-12-20 22:55:49,129 [ 1] INFO  Unity: SetDirection:(38, -93, 0)
+2022-12-20 22:55:49,130 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
+2022-12-20 22:55:49,169 [ 1] INFO  Unity: SetDirection:(24, -97, 0)
+2022-12-20 22:55:49,209 [ 1] INFO  Unity: SetDirection:(13, -99, 0)
+2022-12-20 22:55:49,211 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
+2022-12-20 22:55:49,261 [ 1] INFO  Unity: SetDirection:(25, -97, 0)
+2022-12-20 22:55:49,291 [ 1] INFO  Unity: SetDirection:(31, -95, 0)
+2022-12-20 22:55:49,293 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
+2022-12-20 22:55:49,330 [ 1] INFO  Unity: SetDirection:(41, -91, 0)
+2022-12-20 22:55:49,364 [ 1] INFO  Unity: SetDirection:(50, -87, 0)
+2022-12-20 22:55:49,365 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
+2022-12-20 22:55:49,398 [ 1] INFO  Unity: SetDirection:(55, -83, 0)
+2022-12-20 22:55:49,491 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
+2022-12-20 22:55:49,729 [ 1] INFO  Unity: SetDirection:(55, -83, 0)
+2022-12-20 22:55:49,731 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
+2022-12-20 22:55:49,757 [ 1] INFO  Unity: SetDirection:(55, -84, 0)
+2022-12-20 22:55:49,795 [ 1] INFO  Unity: SetDirection:(55, -84, 0)
+2022-12-20 22:55:49,797 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
+2022-12-20 22:55:49,912 [ 1] INFO  Unity: SetDirection:(54, -84, 0)
+2022-12-20 22:55:49,914 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
+2022-12-20 22:55:49,947 [ 1] INFO  Unity: SetDirection:(54, -84, 0)
+2022-12-20 22:55:49,982 [ 1] INFO  Unity: SetDirection:(54, -84, 0)
+2022-12-20 22:55:49,984 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
+2022-12-20 22:55:50,055 [ 1] INFO  Unity: SetDirection:(43, -90, 0)
+2022-12-20 22:55:50,056 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
+2022-12-20 22:55:50,090 [ 1] INFO  Unity: SetDirection:(34, -94, 0)
+2022-12-20 22:55:50,120 [ 1] INFO  Unity: SetDirection:(26, -96, 0)
+2022-12-20 22:55:50,122 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
+2022-12-20 22:55:50,155 [ 1] INFO  Unity: SetDirection:(17, -99, 0)
+2022-12-20 22:55:50,180 [ 1] INFO  Unity: SetDirection:(11, -99, 0)
+2022-12-20 22:55:50,181 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
+2022-12-20 22:55:50,210 [ 1] INFO  Unity: SetDirection:(4, -100, 0)
+2022-12-20 22:55:50,256 [ 1] INFO  Unity: SetDirection:(15, -99, 0)
+2022-12-20 22:55:50,257 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
+2022-12-20 22:55:50,289 [ 1] INFO  Unity: SetDirection:(23, -97, 0)
+2022-12-20 22:55:50,324 [ 1] INFO  Unity: SetDirection:(32, -95, 0)
+2022-12-20 22:55:50,325 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
+2022-12-20 22:55:50,367 [ 1] INFO  Unity: SetDirection:(44, -90, 0)
+2022-12-20 22:55:50,406 [ 1] INFO  Unity: SetDirection:(54, -84, 0)
+2022-12-20 22:55:50,408 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
+2022-12-20 22:55:50,658 [ 1] INFO  Unity: SetDirection:(45, -90, 0)
+2022-12-20 22:55:50,660 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
+2022-12-20 22:55:50,690 [ 1] INFO  Unity: SetDirection:(36, -93, 0)
+2022-12-20 22:55:50,721 [ 1] INFO  Unity: SetDirection:(28, -96, 0)
+2022-12-20 22:55:50,723 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
+2022-12-20 22:55:50,750 [ 1] INFO  Unity: SetDirection:(20, -98, 0)
+2022-12-20 22:55:50,778 [ 1] INFO  Unity: SetDirection:(13, -99, 0)
+2022-12-20 22:55:50,779 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
+2022-12-20 22:55:50,815 [ 1] INFO  Unity: SetDirection:(22, -98, 0)
+2022-12-20 22:55:50,865 [ 1] INFO  Unity: SetDirection:(35, -94, 0)
+2022-12-20 22:55:50,866 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
+2022-12-20 22:55:50,894 [ 1] INFO  Unity: SetDirection:(41, -91, 0)
+2022-12-20 22:55:50,895 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
+2022-12-20 22:55:50,920 [ 1] INFO  Unity: SetDirection:(48, -88, 0)
+2022-12-20 22:55:50,950 [ 1] INFO  Unity: SetDirection:(51, -86, 0)
+2022-12-20 22:55:50,952 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
+2022-12-20 22:55:51,418 [ 1] INFO  Unity: SetDirection:(51, -86, 0)
+2022-12-20 22:55:51,420 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
+2022-12-20 22:55:51,692 [ 1] INFO  Unity: SetPosition:(5447, 3211, 800)
+2022-12-20 22:55:51,693 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
+2022-12-20 22:55:51,764 [ 1] INFO  Unity: SetDirection:(41, -91, 0)
+2022-12-20 22:55:51,766 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
+2022-12-20 22:55:51,804 [ 1] INFO  Unity: SetDirection:(30, -95, 0)
+2022-12-20 22:55:51,842 [ 1] INFO  Unity: SetDirection:(20, -98, 0)
+2022-12-20 22:55:51,843 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
+2022-12-20 22:55:51,877 [ 1] INFO  Unity: SetDirection:(11, -99, 0)
+2022-12-20 22:55:51,910 [ 1] INFO  Unity: SetDirection:(19, -98, 0)
+2022-12-20 22:55:51,912 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
+2022-12-20 22:55:51,944 [ 1] INFO  Unity: SetDirection:(28, -96, 0)
+2022-12-20 22:55:51,977 [ 1] INFO  Unity: SetDirection:(37, -93, 0)
+2022-12-20 22:55:51,978 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
+2022-12-20 22:55:52,013 [ 1] INFO  Unity: SetDirection:(47, -88, 0)
+2022-12-20 22:55:52,047 [ 1] INFO  Unity: SetDirection:(51, -86, 0)
+2022-12-20 22:55:52,049 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
+2022-12-20 22:55:53,003 [ 1] INFO  Unity: SetDirection:(61, -79, 0)
+2022-12-20 22:55:53,004 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
+2022-12-20 22:55:53,036 [ 1] INFO  Unity: SetDirection:(68, -73, 0)
+2022-12-20 22:55:53,067 [ 1] INFO  Unity: SetDirection:(74, -67, 0)
+2022-12-20 22:55:53,068 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
+2022-12-20 22:55:53,102 [ 1] INFO  Unity: SetDirection:(80, -60, 0)
+2022-12-20 22:55:53,136 [ 1] INFO  Unity: SetDirection:(85, -53, 0)
+2022-12-20 22:55:53,137 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
+2022-12-20 22:55:53,171 [ 1] INFO  Unity: SetDirection:(89, -46, 0)
+2022-12-20 22:55:53,205 [ 1] INFO  Unity: SetDirection:(92, -39, 0)
+2022-12-20 22:55:53,206 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
+2022-12-20 22:55:53,231 [ 1] INFO  Unity: SetDirection:(94, -35, 0)
+2022-12-20 22:55:53,260 [ 1] INFO  Unity: SetDirection:(95, -30, 0)
+2022-12-20 22:55:53,262 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
+2022-12-20 22:55:53,285 [ 1] INFO  Unity: SetDirection:(97, -26, 0)
+2022-12-20 22:55:53,360 [ 1] INFO  Unity: SetDirection:(97, -24, 0)
+2022-12-20 22:55:53,362 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
+2022-12-20 22:55:53,416 [ 1] INFO  Unity: SetDirection:(99, -11, 0)
+2022-12-20 22:55:53,417 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
+2022-12-20 22:55:53,459 [ 1] INFO  Unity: SetDirection:(100, -4, 0)
+2022-12-20 22:55:53,460 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
+2022-12-20 22:55:53,509 [ 1] INFO  Unity: SetDirection:(100, -6, 0)
+2022-12-20 22:55:53,564 [ 1] INFO  Unity: SetDirection:(100, -6, 0)
+2022-12-20 22:55:53,565 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
+2022-12-20 22:55:53,599 [ 1] INFO  Unity: SetDirection:(100, -2, 0)
+2022-12-20 22:55:53,601 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
+2022-12-20 22:55:53,647 [ 1] INFO  Unity: SetDirection:(100, -4, 0)
+2022-12-20 22:55:53,680 [ 1] INFO  Unity: SetDirection:(100, -2, 0)
+2022-12-20 22:55:53,681 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
+2022-12-20 22:55:53,717 [ 1] INFO  Unity: SetDirection:(99, -11, 0)
+2022-12-20 22:55:53,747 [ 1] INFO  Unity: SetDirection:(98, -19, 0)
+2022-12-20 22:55:53,748 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
+2022-12-20 22:55:53,783 [ 1] INFO  Unity: SetDirection:(96, -30, 0)
+2022-12-20 22:55:53,816 [ 1] INFO  Unity: SetDirection:(95, -32, 0)
+2022-12-20 22:55:53,817 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
+2022-12-20 22:55:54,128 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
+2022-12-20 22:55:54,612 [ 1] INFO  Unity: SetPosition:(6087, 2727, 800)
+2022-12-20 22:55:54,613 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
+2022-12-20 22:55:54,676 [ 1] INFO  Unity: SetDirection:(97, -23, 0)
+2022-12-20 22:55:54,678 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
+2022-12-20 22:55:54,714 [ 1] INFO  Unity: SetDirection:(99, -12, 0)
+2022-12-20 22:55:54,742 [ 1] INFO  Unity: SetDirection:(100, -4, 0)
+2022-12-20 22:55:54,743 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
+2022-12-20 22:55:54,771 [ 1] INFO  Unity: SetDirection:(100, 4, 0)
+2022-12-20 22:55:54,795 [ 1] INFO  Unity: SetDirection:(99, 10, 0)
+2022-12-20 22:55:54,796 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
+2022-12-20 22:55:54,825 [ 1] INFO  Unity: SetDirection:(99, 17, 0)
+2022-12-20 22:55:54,850 [ 1] INFO  Unity: SetDirection:(97, 23, 0)
+2022-12-20 22:55:54,852 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
+2022-12-20 22:55:54,891 [ 1] INFO  Unity: SetDirection:(99, 13, 0)
+2022-12-20 22:55:54,923 [ 1] INFO  Unity: SetDirection:(100, 6, 0)
+2022-12-20 22:55:54,924 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
+2022-12-20 22:55:54,953 [ 1] INFO  Unity: SetDirection:(100, -2, 0)
+2022-12-20 22:55:54,980 [ 1] INFO  Unity: SetDirection:(99, -10, 0)
+2022-12-20 22:55:54,982 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
+2022-12-20 22:55:55,018 [ 1] INFO  Unity: SetDirection:(98, -21, 0)
+2022-12-20 22:55:55,049 [ 1] INFO  Unity: SetDirection:(96, -30, 0)
+2022-12-20 22:55:55,051 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
+2022-12-20 22:55:55,081 [ 1] INFO  Unity: SetDirection:(95, -32, 0)
+2022-12-20 22:55:55,086 [ 1] INFO  Unity: TeleportObject :Character:12-3 Enter Teleporter3 
+2022-12-20 22:55:55,378 [ 1] INFO  Unity: SetDirection:(98, -21, 0)
+2022-12-20 22:55:55,381 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
+2022-12-20 22:55:55,416 [ 1] INFO  Unity: SetDirection:(99, -11, 0)
+2022-12-20 22:55:55,446 [ 1] INFO  Unity: SetDirection:(100, -2, 0)
+2022-12-20 22:55:55,446 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
+2022-12-20 22:55:55,477 [ 1] INFO  Unity: SetDirection:(100, 6, 0)
+2022-12-20 22:55:55,508 [ 1] INFO  Unity: SetDirection:(99, 14, 0)
+2022-12-20 22:55:55,510 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
+2022-12-20 22:55:55,548 [ 1] INFO  Unity: SetDirection:(100, 4, 0)
+2022-12-20 22:55:55,589 [ 1] INFO  Unity: SetDirection:(100, -7, 0)
+2022-12-20 22:55:55,590 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
+2022-12-20 22:55:55,618 [ 1] INFO  Unity: SetDirection:(99, -16, 0)
+2022-12-20 22:55:55,649 [ 1] INFO  Unity: SetDirection:(97, -25, 0)
+2022-12-20 22:55:55,650 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
+2022-12-20 22:55:55,688 [ 1] INFO  Unity: SetDirection:(95, -32, 0)
+2022-12-20 22:55:56,154 [ 1] INFO  Unity: SetDirection:(95, -32, 0)
+2022-12-20 22:55:56,155 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
+2022-12-20 22:55:56,228 [ 1] INFO  Unity: SetDirection:(98, -20, 0)
+2022-12-20 22:55:56,230 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
+2022-12-20 22:55:56,262 [ 1] INFO  Unity: SetDirection:(100, -10, 0)
+2022-12-20 22:55:56,291 [ 1] INFO  Unity: SetDirection:(100, -2, 0)
+2022-12-20 22:55:56,294 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
+2022-12-20 22:55:56,325 [ 1] INFO  Unity: SetDirection:(100, 7, 0)
+2022-12-20 22:55:56,367 [ 1] INFO  Unity: SetDirection:(99, 17, 0)
+2022-12-20 22:55:56,369 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
+2022-12-20 22:55:56,406 [ 1] INFO  Unity: SetDirection:(100, 7, 0)
+2022-12-20 22:55:56,443 [ 1] INFO  Unity: SetDirection:(100, -3, 0)
+2022-12-20 22:55:56,445 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
+2022-12-20 22:55:56,487 [ 1] INFO  Unity: SetDirection:(99, -10, 0)
+2022-12-20 22:55:56,513 [ 1] INFO  Unity: SetDirection:(97, -22, 0)
+2022-12-20 22:55:56,514 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
+2022-12-20 22:55:56,549 [ 1] INFO  Unity: SetDirection:(95, -32, 0)
+2022-12-20 22:55:56,808 [ 1] INFO  Unity: SetDirection:(98, -21, 0)
+2022-12-20 22:55:56,810 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
+2022-12-20 22:55:56,848 [ 1] INFO  Unity: SetDirection:(100, -9, 0)
+2022-12-20 22:55:56,879 [ 1] INFO  Unity: SetDirection:(100, -1, 0)
+2022-12-20 22:55:56,880 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
+2022-12-20 22:55:56,909 [ 1] INFO  Unity: SetDirection:(100, 7, 0)
+2022-12-20 22:55:56,940 [ 1] INFO  Unity: SetDirection:(99, 15, 0)
+2022-12-20 22:55:56,941 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
+2022-12-20 22:55:56,976 [ 1] INFO  Unity: SetDirection:(97, 23, 0)
+2022-12-20 22:55:57,000 [ 1] INFO  Unity: SetDirection:(96, 28, 0)
+2022-12-20 22:55:57,002 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
+2022-12-20 22:55:57,032 [ 1] INFO  Unity: SetDirection:(94, 34, 0)
+2022-12-20 22:55:57,059 [ 1] INFO  Unity: SetDirection:(92, 38, 0)
+2022-12-20 22:55:57,061 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
+2022-12-20 22:55:57,089 [ 1] INFO  Unity: SetDirection:(90, 43, 0)
+2022-12-20 22:55:57,122 [ 1] INFO  Unity: SetDirection:(90, 44, 0)
+2022-12-20 22:55:57,124 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
+2022-12-20 22:55:57,247 [ 1] INFO  Unity: SetPosition:(6851, 2639, 800)
+2022-12-20 22:55:57,248 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
+2022-12-20 22:55:57,311 [ 1] INFO  Unity: SetDirection:(92, 40, 0)
+2022-12-20 22:55:57,312 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
+2022-12-20 22:55:57,361 [ 1] INFO  Unity: SetDirection:(95, 32, 0)
+2022-12-20 22:55:57,393 [ 1] INFO  Unity: SetDirection:(95, 31, 0)
+2022-12-20 22:55:57,395 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
+2022-12-20 22:55:57,429 [ 1] INFO  Unity: SetDirection:(97, 26, 0)
+2022-12-20 22:55:57,451 [ 1] INFO  Unity: SetDirection:(98, 20, 0)
+2022-12-20 22:55:57,453 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
+2022-12-20 22:55:57,483 [ 1] INFO  Unity: SetDirection:(99, 13, 0)
+2022-12-20 22:55:57,513 [ 1] INFO  Unity: SetDirection:(100, 4, 0)
+2022-12-20 22:55:57,514 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
+2022-12-20 22:55:57,546 [ 1] INFO  Unity: SetDirection:(100, -5, 0)
+2022-12-20 22:55:57,577 [ 1] INFO  Unity: SetDirection:(99, -14, 0)
+2022-12-20 22:55:57,578 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
+2022-12-20 22:55:57,613 [ 1] INFO  Unity: SetDirection:(97, -24, 0)
+2022-12-20 22:55:57,747 [ 1] INFO  Unity: TeleportObject :Character:12-3 Enter Teleporter1 
+2022-12-20 22:55:57,750 [ 1] INFO  Unity: Mapservice->SendMapTeleport TeleportID:1
+2022-12-20 22:55:57,809 [ 1] INFO  Unity: MapService->OnMapCharacterLeave :Map:1 CharacterId:1 CharacterName:12-3
+2022-12-20 22:55:57,813 [ 1] INFO  Unity: CharacterManager->RemoveCharacter:CharacterId:1 CharacterName:12-3 MapId:1 Entity:(1:pos:(7016,2647,800),dir:(97,-24,0),spd:300
+2022-12-20 22:55:57,816 [ 1] INFO  Unity: RemoveCharacter->RemoveCharacter:1
+2022-12-20 22:55:57,819 [ 1] INFO  Unity: EntityManager RemoveEntity EntityId :1 
+2022-12-20 22:55:57,824 [ 1] INFO  Unity: EntityController->OnEntityRemoved EntityId:1
+2022-12-20 22:55:57,827 [ 1] INFO  Unity: GameObjectManager->DestroyCharacterObject CharacterId:1 CharacterName:12-3 CharacterEntityId:1
+2022-12-20 22:55:57,830 [ 1] INFO  Unity: Entity Character_1_12-3 OnDestroy :ID:1 POS:(7016, 2647, 800) DIR:(97, -24, 0) SPD:300 
+2022-12-20 22:55:57,895 [ 1] INFO  Unity: MapService->OnMapCharacterEnter :Map:2 Count:1
+2022-12-20 22:55:57,897 [ 1] INFO  Unity: CharacterManager->AddCharacter:CharacterId:59 CharacterName:12-3 MapId:2 Entity:(1:pos:(2662,3949,43),dir:(100,0,0),spd:0
+2022-12-20 22:55:57,899 [ 1] INFO  Unity: EntityManager AddEntity EntityId :1 
+2022-12-20 22:56:01,808 [ 1] INFO  Unity: MinimapManager->UpdataMiniMap
+2022-12-20 22:56:01,810 [ 1] INFO  Unity: Load MiniMap Image :luorisenl
+2022-12-20 22:56:01,813 [ 1] INFO  Unity: Load MiniMap Image :luorisenl
+2022-12-20 22:56:01,815 [ 1] INFO  Unity: GameObjectManager->CreateCharacterObject CharacterId:1 CharacterName:12-3 CharacterEntityId:1
+2022-12-20 22:56:01,906 [ 1] INFO  Unity: GameObjectManager->InitGameObject Player_character:1
+2022-12-20 22:56:02,390 [ 1] INFO  Unity: SetPosition:(2662, 3949, 1)
+2022-12-20 22:56:02,391 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
+2022-12-20 22:56:07,208 [ 1] INFO  Unity: SetDirection:(-53, 85, 0)
+2022-12-20 22:56:07,209 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
+2022-12-20 22:56:07,210 [ 1] INFO  Unity: MoveForward
+2022-12-20 22:56:07,211 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
+2022-12-20 22:56:07,245 [ 1] INFO  Unity: SetDirection:(-54, 84, 0)
+2022-12-20 22:56:07,287 [ 1] INFO  Unity: SetDirection:(-65, 76, 0)
+2022-12-20 22:56:07,290 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
+2022-12-20 22:56:07,326 [ 1] INFO  Unity: SetDirection:(-77, 63, 0)
+2022-12-20 22:56:07,367 [ 1] INFO  Unity: SetDirection:(-84, 55, 0)
+2022-12-20 22:56:07,368 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
+2022-12-20 22:56:07,395 [ 1] INFO  Unity: SetDirection:(-86, 51, 0)
+2022-12-20 22:56:07,511 [ 1] INFO  Unity: SetDirection:(-87, 50, 0)
+2022-12-20 22:56:07,512 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
+2022-12-20 22:56:07,542 [ 1] INFO  Unity: SetDirection:(-87, 49, 0)
+2022-12-20 22:56:07,696 [ 1] INFO  Unity: SetDirection:(-91, 41, 0)
+2022-12-20 22:56:07,697 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
+2022-12-20 22:56:07,726 [ 1] INFO  Unity: SetDirection:(-94, 33, 0)
+2022-12-20 22:56:07,764 [ 1] INFO  Unity: SetDirection:(-97, 23, 0)
+2022-12-20 22:56:07,766 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
+2022-12-20 22:56:07,801 [ 1] INFO  Unity: SetDirection:(-99, 13, 0)
+2022-12-20 22:56:07,838 [ 1] INFO  Unity: SetDirection:(-100, 3, 0)
+2022-12-20 22:56:07,839 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
+2022-12-20 22:56:07,866 [ 1] INFO  Unity: SetDirection:(-100, -4, 0)
+2022-12-20 22:56:07,894 [ 1] INFO  Unity: SetDirection:(-100, -10, 0)
+2022-12-20 22:56:07,895 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
+2022-12-20 22:56:07,928 [ 1] INFO  Unity: SetDirection:(-99, -17, 0)
+2022-12-20 22:56:07,957 [ 1] INFO  Unity: SetDirection:(-98, -22, 0)
+2022-12-20 22:56:07,958 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
+2022-12-20 22:56:07,986 [ 1] INFO  Unity: SetDirection:(-96, -27, 0)
+2022-12-20 22:56:08,019 [ 1] INFO  Unity: SetDirection:(-95, -31, 0)
+2022-12-20 22:56:08,020 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
+2022-12-20 22:56:08,051 [ 1] INFO  Unity: SetDirection:(-95, -33, 0)
+2022-12-20 22:56:08,075 [ 1] INFO  Unity: SetDirection:(-94, -33, 0)
+2022-12-20 22:56:08,076 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
+2022-12-20 22:56:08,110 [ 1] INFO  Unity: SetDirection:(-96, -28, 0)
+2022-12-20 22:56:08,144 [ 1] INFO  Unity: SetDirection:(-98, -22, 0)
+2022-12-20 22:56:08,144 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
+2022-12-20 22:56:08,176 [ 1] INFO  Unity: SetDirection:(-99, -16, 0)
+2022-12-20 22:56:08,204 [ 1] INFO  Unity: SetDirection:(-99, -10, 0)
+2022-12-20 22:56:08,205 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
+2022-12-20 22:56:08,234 [ 1] INFO  Unity: SetDirection:(-100, -3, 0)
+2022-12-20 22:56:08,262 [ 1] INFO  Unity: SetDirection:(-100, 3, 0)
+2022-12-20 22:56:08,264 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
+2022-12-20 22:56:08,289 [ 1] INFO  Unity: SetDirection:(-99, 10, 0)
+2022-12-20 22:56:08,314 [ 1] INFO  Unity: SetDirection:(-99, 17, 0)
+2022-12-20 22:56:08,315 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
+2022-12-20 22:56:08,343 [ 1] INFO  Unity: SetDirection:(-97, 25, 0)
+2022-12-20 22:56:08,368 [ 1] INFO  Unity: SetDirection:(-95, 32, 0)
+2022-12-20 22:56:08,369 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
+2022-12-20 22:56:08,393 [ 1] INFO  Unity: SetDirection:(-92, 39, 0)
+2022-12-20 22:56:08,418 [ 1] INFO  Unity: SetDirection:(-90, 43, 0)
+2022-12-20 22:56:08,690 [ 1] INFO  Unity: SetDirection:(-90, 43, 0)
+2022-12-20 22:56:08,691 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
+2022-12-20 22:56:08,827 [ 1] INFO  Unity: TeleportObject :Character:12-3 Enter Teleporter5 
+2022-12-20 22:56:08,828 [ 1] INFO  Unity: Mapservice->SendMapTeleport TeleportID:5
+2022-12-20 22:56:08,892 [ 1] INFO  Unity: SetDirection:(-94, 34, 0)
+2022-12-20 22:56:08,893 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
+2022-12-20 22:56:08,897 [ 1] INFO  Unity: MapService->OnMapCharacterLeave :Map:2 CharacterId:1 CharacterName:12-3
+2022-12-20 22:56:08,899 [ 1] INFO  Unity: CharacterManager->RemoveCharacter:CharacterId:1 CharacterName:12-3 MapId:2 Entity:(1:pos:(2182,4090,1),dir:(-94,34,0),spd:300
+2022-12-20 22:56:08,900 [ 1] INFO  Unity: RemoveCharacter->RemoveCharacter:1
+2022-12-20 22:56:08,902 [ 1] INFO  Unity: EntityManager RemoveEntity EntityId :1 
+2022-12-20 22:56:08,904 [ 1] INFO  Unity: EntityController->OnEntityRemoved EntityId:1
+2022-12-20 22:56:08,907 [ 1] INFO  Unity: GameObjectManager->DestroyCharacterObject CharacterId:1 CharacterName:12-3 CharacterEntityId:1
+2022-12-20 22:56:08,908 [ 1] INFO  Unity: Entity Character_1_12-3 OnDestroy :ID:1 POS:(2182, 4090, 1) DIR:(-94, 34, 0) SPD:300 
+2022-12-20 22:56:08,938 [ 1] INFO  Unity: MapService->OnMapCharacterEnter :Map:1 Count:1
+2022-12-20 22:56:08,940 [ 1] INFO  Unity: CharacterManager->AddCharacter:CharacterId:59 CharacterName:12-3 MapId:1 Entity:(1:pos:(6546,2584,793),dir:(-100,0,0),spd:0
+2022-12-20 22:56:08,942 [ 1] INFO  Unity: EntityManager AddEntity EntityId :1 
+2022-12-20 22:56:12,861 [ 1] INFO  Unity: MinimapManager->UpdataMiniMap
+2022-12-20 22:56:12,863 [ 1] INFO  Unity: Load MiniMap Image :buluzheng
+2022-12-20 22:56:12,869 [ 1] INFO  Unity: Load MiniMap Image :buluzheng
+2022-12-20 22:56:12,874 [ 1] INFO  Unity: GameObjectManager->CreateCharacterObject CharacterId:1 CharacterName:12-3 CharacterEntityId:1
+2022-12-20 22:56:12,938 [ 1] INFO  Unity: GameObjectManager->InitGameObject Player_character:1
+2022-12-20 22:56:13,064 [ 1] INFO  Unity: TeleportObject :Character:12-3 Enter Teleporter3 
+2022-12-20 22:56:13,663 [ 1] INFO  Unity: SetDirection:(-92, -38, 0)
+2022-12-20 22:56:13,665 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
+2022-12-20 22:56:13,666 [ 1] INFO  Unity: MoveForward
+2022-12-20 22:56:13,667 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
+2022-12-20 22:56:13,750 [ 1] INFO  Unity: SetDirection:(-92, -38, 0)
+2022-12-20 22:56:13,752 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
+2022-12-20 22:56:13,794 [ 1] INFO  Unity: SetDirection:(-92, -39, 0)
+2022-12-20 22:56:13,839 [ 1] INFO  Unity: SetDirection:(-92, -40, 0)
+2022-12-20 22:56:13,841 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
+2022-12-20 22:56:13,909 [ 1] INFO  Unity: SetDirection:(-98, -22, 0)
+2022-12-20 22:56:13,959 [ 1] INFO  Unity: SetDirection:(-96, -27, 0)
+2022-12-20 22:56:13,960 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
+2022-12-20 22:56:14,008 [ 1] INFO  Unity: SetDirection:(-96, -28, 0)
+2022-12-20 22:56:14,058 [ 1] INFO  Unity: SetDirection:(-91, -41, 0)
+2022-12-20 22:56:14,059 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
+2022-12-20 22:56:14,106 [ 1] INFO  Unity: SetDirection:(-84, -54, 0)
+2022-12-20 22:56:14,107 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
+2022-12-20 22:56:14,144 [ 1] INFO  Unity: SetDirection:(-76, -66, 0)
+2022-12-20 22:56:14,182 [ 1] INFO  Unity: SetDirection:(-64, -77, 0)
+2022-12-20 22:56:14,183 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
+2022-12-20 22:56:14,222 [ 1] INFO  Unity: SetDirection:(-64, -77, 0)
+2022-12-20 22:56:14,367 [ 1] INFO  Unity: Stop
+2022-12-20 22:56:14,369 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
+2022-12-20 22:56:22,781 [ 1] INFO  Unity: Entity Character_1_12-3 OnDestroy :ID:1 POS:(6358, 2481, 793) DIR:(-64, -77, 0) SPD:0 
+2022-12-20 22:56:22,784 [ 1] INFO  Unity: OnDestroy NetworkManager.
+2022-12-20 22:56:22,787 [ 1] WARN  Unity: CloseConnection(), errorCode: 1007
 UnityEngine.Debug:LogWarning(Object)
 Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:180)
 Network.NetClient:OnDestroy() (at Assets/Scripts/Network/NetClient.cs:175)

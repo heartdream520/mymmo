@@ -1,6 +1,9 @@
-﻿using System.Collections;
+﻿using Models;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Managers;
+using Assets.Scripts.Managers;
 
 public class MainPlayerCamera : MonoSingleton<MainPlayerCamera>
 {
@@ -31,14 +34,18 @@ public class MainPlayerCamera : MonoSingleton<MainPlayerCamera>
     /// 上下移动角度
     /// </summary>
     public float y;
-	// Update is called once per frame
-	void Update () {
+
+    
+
+    // Update is called once per frame
+    void Update () {
 
         updata_Rotation();
         updata_camera_curve();
     }
     private void updata_Rotation()
     {
+        if (MouseManager.Instance.Mouse_Is_Display) return;
         x += Input.GetAxis("Mouse X")*rotate_v;
         //鼠标向上应该减少角度
         y -= Input.GetAxis("Mouse Y")*rotate_v;
@@ -56,7 +63,15 @@ public class MainPlayerCamera : MonoSingleton<MainPlayerCamera>
     private void LateUpdate()
     {
         if (player == null)
-            return;
+        {
+            if (User.Instance.CurrentCharacterObject)
+            {
+                player = User.Instance.CurrentCharacterObject;
+            }
+            else
+                return;
+        }
+            
 
         this.transform.position = player.transform.position;
         //this.transform.rotation = player.transform.rotation;

@@ -19,9 +19,11 @@ namespace GameServer.Services
             MessageDistributer<NetConnection<NetSession>>.Instance.Subscribe<MapCharacterEnterRequest>(this.OnMapCharacterEnter);
             MessageDistributer<NetConnection<NetSession>>.Instance.Subscribe<MapCharacterEnterRequest>(this.OnMapCharacterLeave);
             MessageDistributer<NetConnection<NetSession>>.Instance.Subscribe<MapEntitySyncRequest>(this.OnMapSyncRequest);
+            MessageDistributer<NetConnection<NetSession>>.Instance.Subscribe<MapTeleportRequest>(this.OnMapTeleport);
 
         }
 
+       
         public void Init()
         {
             MapManager.Instance.Init();
@@ -62,5 +64,36 @@ namespace GameServer.Services
             connection.SendData(data, 0, data.Length);
 
         }
+        private void OnMapTeleport(NetConnection<NetSession> sender, MapTeleportRequest request)
+        {
+            Character character = sender.Session.Character;
+            Log.InfoFormat("MapService->OnMapTeleport :CharacterEntityID:{0} CharacterID:{1} TeleportID:{2}",
+                character.entityId, character.Id, request.teleporterId);
+            //不存在的传送点ID
+            if(!DataManager.Instance.Teleporters.ContainsKey(request.teleporterId))
+            {
+                Log.ErrorFormat("MapService->OnMapTeleport TeleportID:{0} Not Exised", request.teleporterId);
+                return;
+            }
+            TeleporterDefine teleporterDefine = DataManager.Instance.Teleporters[request.teleporterId];
+            if(teleporterDefine.LinkTo==0||!DataManager.Instance.Teleporters.ContainsKey(teleporterDefine.LinkTo))
+            {
+                Log.ErrorFormat("MapService->OnMapTeleport TeleportID:{0} LinkTo:{1} Not Exised", 
+                    request.teleporterId,teleporterDefine.LinkTo);
+                return;
+            }
+            MapManager.Instance[character.Info.mapId].CharacterLevel(character);
+
+            int from_Map_Id = character.Info.mapId;
+            teleporterDefine = DataManager.Instance.Teleporters[teleporterDefine.LinkTo];
+            character.Position = teleporterDefine.Position;
+            character.Direction = teleporterDefine.Direction;
+            character.Speed = 0;
+            character.Info.mapId = teleporterDefine.MapID;
+
+            EntityManager.Instance.ChangeEntity_Map(character,from_Map_Id, teleporterDefine.MapID);
+            MapManager.Instance[teleporterDefine.MapID].CharacterEnter(sender, character);
+        }
+
     }
 }

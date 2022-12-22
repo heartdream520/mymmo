@@ -32,8 +32,38 @@ namespace GameServer.Managers
         public void RemoveEntity(int mapid,Entity entity)
         {
             Log.InfoFormat("EntityManager->RemoveEntity: MapId:{0} EntityId:{1} ", mapid, entity.entityId);
-            Allentities.Remove(entity);
-            MapEntities[mapid].Remove(entity);
+            if (!Allentities.Exists(t => t.entityId == entity.entityId))
+            {
+                Log.WarningFormat("EntityManager->RemoveEntity: Allentities not exited EntityId:{0} ",entity.entityId);
+            }
+            else
+                Allentities.Remove(entity);
+
+            if (!MapEntities[mapid].Exists(t => t.entityId == entity.entityId))
+            {
+                Log.WarningFormat("EntityManager->RemoveEntity: MapEntities[{0}] not exited EntityId:{1} ", mapid, entity.entityId);
+            }
+            else
+                MapEntities[mapid].Remove(entity);
+        }
+        public void ChangeEntity_Map(Entity entity,int from_Map,int to_Map)
+        {
+            Log.InfoFormat("EntityManager->ChangeEntity_Map: EntityId:{0},from_Map_ID:{1} to_Map_Id:{2} ",entity.entityId,from_Map,to_Map);
+
+            if (!MapEntities[from_Map].Exists(t => t.entityId == entity.entityId))
+            {
+                Log.WarningFormat("EntityManager->ChangeEntity_Map: MapEntities[{0}] not exited EntityId:{1} ",from_Map, entity.entityId);
+            }
+            else
+                MapEntities[from_Map].Remove(entity);
+
+            List<Entity> entities = null;
+            if (!MapEntities.TryGetValue(to_Map, out entities))
+            {
+                entities = new List<Entity>();
+                MapEntities[to_Map] = entities;
+            }
+            entities.Add(entity);
         }
     }
 }

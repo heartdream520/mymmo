@@ -30,8 +30,10 @@ public class DataManager : Singleton<DataManager>
     /// Ë¢¹Öµã×Öµä
     /// </summary>
     public Dictionary<int, Dictionary<int, SpawnPointDefine>> SpawnPoints = null;
-
-
+    /// <summary>
+    /// NPC×Öµä
+    /// </summary>
+    public Dictionary<int, NpcDefine> Npcs = null;
     public DataManager()
     {
         this.DataPath = "Data/";
@@ -53,6 +55,9 @@ public class DataManager : Singleton<DataManager>
 
         json = File.ReadAllText(this.DataPath + "SpawnPointDefine.txt");
         this.SpawnPoints = JsonConvert.DeserializeObject<Dictionary<int, Dictionary<int, SpawnPointDefine>>> (json);
+
+        json = File.ReadAllText(this.DataPath + "NpcDefine.txt");
+        this.Npcs = JsonConvert.DeserializeObject<Dictionary<int, NpcDefine>>(json);
     }
 
     /// <summary>
@@ -78,6 +83,9 @@ public class DataManager : Singleton<DataManager>
 
         json = File.ReadAllText(this.DataPath + "SpawnPointDefine.txt");
         this.SpawnPoints = JsonConvert.DeserializeObject<Dictionary<int, Dictionary<int, SpawnPointDefine>>>(json);
+
+        json = File.ReadAllText(this.DataPath + "NpcDefine.txt");
+        this.Npcs = JsonConvert.DeserializeObject<Dictionary<int, NpcDefine>>(json);
 
         yield return null;
     }

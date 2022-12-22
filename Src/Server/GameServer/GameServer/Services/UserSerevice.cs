@@ -189,16 +189,14 @@ namespace GameServer.Services
             Log.InfoFormat("UserSerevice->OnGameLeave : userId：{0} character_DId:{1} EntityId:{2} character_Name：{3} MapId：{4}",
                  sender.Session.User.ID, cha.Data.ID, cha.entityId, cha.Info.Name, cha.Info.mapId);
 
-            
-            if(!CharacterManager.Instance.Characters.ContainsKey(cha.entityId))
+
+            if (!CharacterManager.Instance.Characters.ContainsKey(cha.entityId))
             {
                 Log.InfoFormat("UserSerevice->OnGameLeave CharacterManager.Characters not hava key : character_EntityId:{0}",
                  cha.Data.ID);
                 return;
             }
-            CharacterManager.Instance.RemoveCharacter(cha.entityId);
-
-            MapManager.Instance[cha.Info.mapId].CharacterLevel(sender, cha);
+            CharacterLeave(cha);
 
             NetMessage message = new NetMessage();
             message.Response = new NetMessageResponse();
@@ -208,8 +206,14 @@ namespace GameServer.Services
 
             byte[] data = PackageHandler.PackMessage(message);
             sender.SendData(data, 0, data.Length);
-            
+
         }
 
+        public void CharacterLeave(Character cha)
+        {
+            CharacterManager.Instance.RemoveCharacter(cha.entityId);
+
+            MapManager.Instance[cha.Info.mapId].CharacterLevel(cha);
+        }
     }
 }

@@ -29,8 +29,8 @@ public class LoadManager :MonoSingleton<LoadManager>
     [Header("虚实化速度")]
     public float v;
 
-    
-    private void Awake()
+
+    public override void OnAwake()
     {
 
         Load_appear.start_move_r_action += Load_appear.appear_start;

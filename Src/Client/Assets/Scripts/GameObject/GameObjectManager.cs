@@ -77,7 +77,7 @@ public class GameObjectManager :MonoSingleton<GameObjectManager>
     
     IEnumerator InitGameObjects()
     {
-        Debug.LogError("初始化游戏对象！");
+        //Debug.LogError("初始化游戏对象！");
         //启动创建玩家
         foreach (var cha in CharacterManager.Instance.Characters.Values)
         {
@@ -92,6 +92,10 @@ public class GameObjectManager :MonoSingleton<GameObjectManager>
     IEnumerator CreateCharacterObject(Character character)
     {
         while (SceneManager.GetActiveScene().name == "Load_Scenes" || SceneManager.GetActiveScene().name == "CharSelect")
+        {
+            yield return null;
+        }
+        while (SceneManager.GetActiveScene().name != MapService.Instance.new_scene_name)
         {
             yield return null;
         }

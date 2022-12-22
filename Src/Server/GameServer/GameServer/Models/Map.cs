@@ -105,13 +105,13 @@ namespace GameServer.Models
             sendconn.SendData(data, 0, data.Length);
         }
 
-        public void CharacterLevel(NetConnection<NetSession> conn, Character cha)
+        public void CharacterLevel(Character cha)
         {
             Log.InfoFormat("Map->CharacterLevel : MapID :{0} CharacterDataId:{1} EntityID:{2} ",
                 cha.Info.mapId, cha.Data.ID,cha.entityId);
             if(!MapCharacters.ContainsKey(cha.entityId))
             {
-                Log.InfoFormat("Map->CharacterLevel : MapCharacters not have key EntityId :{0}",
+                Log.WarningFormat("Map->CharacterLevel : MapCharacters not have key EntityId :{0}",
                     cha.entityId);
                 return;
             }

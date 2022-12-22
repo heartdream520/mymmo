@@ -1,4 +1,5 @@
-﻿using SkillBridge.Message;
+﻿using Common.Data;
+using SkillBridge.Message;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,7 +9,7 @@ using UnityEngine;
 public class GameObjectTool
 {
     //移动是在X Y上移动 Z为上下方向，转化到世界坐标系，Y为 上下方向
-
+    
     public static Vector3 LogicToWorld(NVector3 vector)
     {
         return new Vector3(vector.X / 100f, vector.Z / 100f, vector.Y / 100f);

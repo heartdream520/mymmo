@@ -38,8 +38,19 @@ namespace Models
         /// <summary>
         /// 当前选择的角色信息
         /// </summary>
-        public SkillBridge.Message.NCharacterInfo CurrentCharacter { get; set; }
         
+        private SkillBridge.Message.NCharacterInfo currentcharacter;
+        public UnityAction CurrentCharacter_Set_Action;
+        public SkillBridge.Message.NCharacterInfo CurrentCharacter
+        {
+            get { return currentcharacter; }
+            set
+            {
+                currentcharacter = value;
+                if (CurrentCharacter_Set_Action != null)
+                    CurrentCharacter_Set_Action();
+            }
+        }
 
         /// <summary>
         /// 当前地图的数据
@@ -47,13 +58,15 @@ namespace Models
         public MapDefine CurrentMapData;
         private GameObject currentCharacterobject;
         public UnityAction<GameObject> CurrentCharacterObject_Set_Action;
+        
         public GameObject CurrentCharacterObject
         {
             get { return currentCharacterobject; }
             set
             {
                 currentCharacterobject = value;
-                CurrentCharacterObject_Set_Action(value);
+                if (CurrentCharacterObject_Set_Action != null)
+                    CurrentCharacterObject_Set_Action(value);
             }
         }
     }

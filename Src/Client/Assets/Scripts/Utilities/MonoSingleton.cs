@@ -18,7 +18,7 @@ public abstract class MonoSingleton<T> : MonoBehaviour where T : MonoBehaviour
 
     }
 
-    void Start()
+    void Awake()
     {
         if(global)
         {
@@ -31,10 +31,19 @@ public abstract class MonoSingleton<T> : MonoBehaviour where T : MonoBehaviour
             instance = this.GetComponent<T>();
             DontDestroyOnLoad(this.gameObject);
         }
+        this.OnAwake();
+        
+        
+    }
+    private void Start()
+    {
         this.OnStart();
     }
-
     public virtual void OnStart()
+    {
+
+    }
+    public virtual void OnAwake()
     {
 
     }

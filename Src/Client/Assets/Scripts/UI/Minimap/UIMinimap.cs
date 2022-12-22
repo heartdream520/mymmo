@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using Managers;
 
-public class UIMinimap : MonoBehaviour {
+public class UIMinimap : MonoSingleton<UIMinimap> {
 
     [Header("地图的碰撞盒")]
     public Collider minimapBoundingBox;
@@ -17,42 +17,45 @@ public class UIMinimap : MonoBehaviour {
     public Image minimap;
 
     private Transform playerTransform;
-    private void Awake()
+    public override void OnAwake()
     {
-        User.Instance.CurrentCharacterObject_Set_Action += delegate (GameObject game)
-         {
-             if (game == null)
-             {
-                 this.playerTransform = null;
-                 return;
-             }
-             this.playerTransform = game.transform;
-         };
+        MinimapManager.Instance.minimap = this;
+        
+         
     }
     // Use this for initialization
-    void Start () {
-        this.InitMap();
+    public override void OnStart()
+    {
+        this.UpdataMap();
     }
 
-    void InitMap()
+    public void UpdataMap()
     {
         this.mapName.text = User.Instance.CurrentMapData.Name;
-        //if (this.minimap.overrideSprite == null)
         //更新小地图图片
+        this.minimap.sprite = MinimapManager.Instance.LoadCurrentMinimap();
         this.minimap.overrideSprite = MinimapManager.Instance.LoadCurrentMinimap();
 
         //设置初始大小
         this.minimap.SetNativeSize();
         //设置本地位置
         this.minimap.transform.localPosition = Vector3.zero;
-        //设置玩家位置
-        if (User.Instance.CurrentCharacterObject != null)
-            this.playerTransform = User.Instance.CurrentCharacterObject.transform;
+        this.minimapBoundingBox =MinimapManager.Instance.MinimapBoundingBox;
+        playerTransform = null;
     }
 	
 	// Update is called once per frame
 	void Update () {
-        if (playerTransform == null) return;
+        if (playerTransform == null)
+            playerTransform = MinimapManager.Instance.PlayerTransform;
+        if (playerTransform == null)
+        {
+            return;
+        }
+        if (!minimapBoundingBox)
+        {
+            minimapBoundingBox = MinimapManager.Instance.MinimapBoundingBox;
+        }
         //地图实际大小
         float realWidth = minimapBoundingBox.bounds.size.x;
         float realHeight = minimapBoundingBox.bounds.size.z;
