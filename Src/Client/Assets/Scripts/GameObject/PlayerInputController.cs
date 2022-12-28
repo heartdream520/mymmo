@@ -28,7 +28,6 @@ public class PlayerInputController : MonoBehaviour {
         state = SkillBridge.Message.CharacterState.Idle;
         if(this.character == null)
         {
-            DataManager.Instance.Load();
             NCharacterInfo cinfo = new NCharacterInfo();
             cinfo.Id = 1;
             cinfo.Name = "Test";

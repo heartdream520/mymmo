@@ -45,6 +45,13 @@ enum ENTITY_EVENT
 	MOVE_BACK = 3;
 	JUMP = 4;
 }
+//道具类型枚举
+enum ITEM_TYPE
+{
+	NORMAL=0;
+	MATERIAL=1;
+	TASK=2;    //任务道具
+}
 
 message NUserInfo {
 	int32 id = 1;
@@ -65,8 +72,16 @@ message NCharacterInfo {
 	int32 level = 6;
 	int32 mapId = 7;
 	NEntity entity = 8;
+
+	//角色道具
+	repeated NItemInfo Items=10;
 }
 
+message NItemInfo
+{
+	int32 id=1;
+	int32 count=2;
+}
 message NVector3
 {
 	int32 x = 1;
@@ -187,6 +202,8 @@ message UserGameEnterRequest
 message UserGameEnterResponse {
 	RESULT result = 1;
 	string errormsg = 2;
+
+	NCharacterInfo Ncharacterinfo=3;
 }
 
 message UserGameLeaveRequest

@@ -8,6 +8,7 @@ using UnityEngine;
 
 using SkillBridge.Message;
 using Models;
+using Assets.Scripts.Managers;
 
 namespace Services
 {
@@ -306,7 +307,7 @@ namespace Services
 
             if (response.Result == Result.Success)
             {
-
+                ItemManager.Instance.Init(response.Ncharacterinfo.Items);
             }
             if (this.OnGameEnter != null)
             {

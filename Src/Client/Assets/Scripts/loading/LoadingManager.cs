@@ -49,6 +49,7 @@ public class LoadingManager : MonoBehaviour {
         */
 
         //加载游戏数据
+
         yield return DataManager.Instance.LoadData();
 
         //Init basic services

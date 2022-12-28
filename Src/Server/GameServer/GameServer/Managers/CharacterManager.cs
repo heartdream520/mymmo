@@ -35,9 +35,9 @@ namespace GameServer.Managers
             this.Characters.Clear();
         }
 
-        public Character AddCharacter(Character cha)
+        public Character AddCharacter(TCharacter Tcharacter)
         {
-            
+            Character cha = new Character(CharacterType.Player, Tcharacter);
             EntityManager.Instance.AddEntity(cha.Info.mapId, cha);
             Log.InfoFormat("CharacterManager->AddCharacter(): MapId:{0} CharacterId:{1} EntityId:{2} InfoId:{3} ",
                 cha.Data.MapID, cha.Id,cha.entityId, cha.Info.Id);

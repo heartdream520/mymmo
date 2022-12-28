@@ -9,7 +9,8 @@
     "UseCD": 1.0,
     "Price": 200,
     "SellPrice": 100,
-    "Function": "RecoverHP"
+    "Function": "RecoverHP",
+    "Param": 500
   },
   "2": {
     "ID": 2,
@@ -21,7 +22,8 @@
     "UseCD": 1.0,
     "Price": 200,
     "SellPrice": 100,
-    "Function": "RecoverMp"
+    "Function": "RecoverMP",
+    "Param": 500
   },
   "3": {
     "ID": 3,
@@ -33,7 +35,8 @@
     "UseCD": 5.0,
     "Price": 200,
     "SellPrice": 100,
-    "Function": "AddBuff"
+    "Function": "AddBuff",
+    "Param": 1
   },
   "4": {
     "ID": 4,
@@ -45,7 +48,8 @@
     "UseCD": 5.0,
     "Price": 200,
     "SellPrice": 100,
-    "Function": "AddBuff"
+    "Function": "AddBuff",
+    "Param": 2
   },
   "5": {
     "ID": 5,
@@ -77,7 +81,8 @@
     "CanUse": true,
     "UseCD": 0.0,
     "SellPrice": 1,
-    "Function": "AddMoney"
+    "Function": "AddMoney",
+    "Param": 1000
   },
   "8": {
     "ID": 8,
@@ -88,7 +93,8 @@
     "CanUse": true,
     "UseCD": 0.0,
     "SellPrice": 1,
-    "Function": "AddMoney"
+    "Function": "AddMoney",
+    "Param": 10000
   },
   "9": {
     "ID": 9,
@@ -99,7 +105,19 @@
     "CanUse": true,
     "UseCD": 0.0,
     "SellPrice": 1,
-    "Function": "AddItem"
+    "Function": "AddItem",
+    "Params": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ]
   },
   "10": {
     "ID": 10,
@@ -109,6 +127,7 @@
     "Category": "技能书",
     "CanUse": true,
     "UseCD": 0.0,
-    "Function": "AddSkillPoint"
+    "Function": "AddSkillPoint",
+    "Param": 1
   }
 }

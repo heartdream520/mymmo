@@ -56,6 +56,7 @@ public class UIMinimap : MonoSingleton<UIMinimap> {
         {
             minimapBoundingBox = MinimapManager.Instance.MinimapBoundingBox;
         }
+        if (!minimapBoundingBox) return;
         //地图实际大小
         float realWidth = minimapBoundingBox.bounds.size.x;
         float realHeight = minimapBoundingBox.bounds.size.z;

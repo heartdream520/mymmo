@@ -8,6 +8,7 @@ using Network;
 using SkillBridge.Message;
 using GameServer.Entities;
 using GameServer.Managers;
+using GameServer.Models;
 
 namespace GameServer.Services
 {
@@ -163,9 +164,9 @@ namespace GameServer.Services
             //通关下标确定进入游戏的玩家
             TCharacter db_character = sender.Session.User.Player.Characters.ElementAt(request.characterIdx);
 
-            Character character = new Character(CharacterType.Player,db_character);
+           
             //将此玩家加入当前在线玩家中
-            Character cha = CharacterManager.Instance.AddCharacter(character);
+            Character cha = CharacterManager.Instance.AddCharacter(db_character);
 
             Log.InfoFormat("UserSerevice->OnGameEnter : userId：{0} character_DId:{1} EntityId:{2} character_Name：{3} MapId：{4}",
                 sender.Session.User.ID, cha.Data.ID,cha.entityId, cha.Info.Name, cha.Info.mapId);
@@ -173,6 +174,28 @@ namespace GameServer.Services
             NetMessage message = new NetMessage();
             message.Response = new NetMessageResponse();
             message.Response.gameEnter = new UserGameEnterResponse();
+
+
+            int itemId = 2;
+            bool hasItem = cha.itemManager.HasItem(itemId);
+            Log.InfoFormat("Item Test: ItemID:{0}  HasItem:{1}", itemId, hasItem);
+            if(hasItem)
+            {
+                cha.itemManager.RemoveItem(itemId, 1);
+            }
+            else
+            {
+                cha.itemManager.AddItem(itemId, 2);
+            }
+            Item item = cha.itemManager.GetItem(itemId);
+            Log.InfoFormat("Item: {0}", item);
+            cha.itemManager.GetItemInfos(cha.Info.Items);
+
+
+
+            //添加角色信息
+            message.Response.gameEnter.Ncharacterinfo = cha.Info;
+
             message.Response.gameEnter.Result = Result.Success;
             message.Response.gameEnter.Errormsg = "None"; 
             

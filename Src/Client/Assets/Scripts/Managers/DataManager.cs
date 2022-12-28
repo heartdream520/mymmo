@@ -34,6 +34,10 @@ public class DataManager : Singleton<DataManager>
     /// NPC×Öµä
     /// </summary>
     public Dictionary<int, NpcDefine> Npcs = null;
+    /// <summary>
+    /// ÎïÆ·×Öµä
+    /// </summary>
+    public Dictionary<int, ItemDefine> Items = null;
     public DataManager()
     {
         this.DataPath = "Data/";
@@ -53,11 +57,17 @@ public class DataManager : Singleton<DataManager>
         json = File.ReadAllText(this.DataPath + "TeleporterDefine.txt");
         this.Teleporters = JsonConvert.DeserializeObject<Dictionary<int, TeleporterDefine>>(json);
 
+        /*
         json = File.ReadAllText(this.DataPath + "SpawnPointDefine.txt");
         this.SpawnPoints = JsonConvert.DeserializeObject<Dictionary<int, Dictionary<int, SpawnPointDefine>>> (json);
-
+        */
         json = File.ReadAllText(this.DataPath + "NpcDefine.txt");
         this.Npcs = JsonConvert.DeserializeObject<Dictionary<int, NpcDefine>>(json);
+
+        /*
+        json = File.ReadAllText(this.DataPath + "ItemDefine.txt");
+        this.Items = JsonConvert.DeserializeObject<Dictionary<int, ItemDefine>>(json);
+        */
     }
 
     /// <summary>
@@ -68,25 +78,34 @@ public class DataManager : Singleton<DataManager>
     {
         string json = File.ReadAllText(this.DataPath + "MapDefine.txt");
         this.Maps = JsonConvert.DeserializeObject<Dictionary<int, MapDefine>>(json);
+        Debug.LogFormat("MapDefine.txt");
 
         yield return null;
 
         json = File.ReadAllText(this.DataPath + "CharacterDefine.txt");
         this.Characters = JsonConvert.DeserializeObject<Dictionary<int, CharacterDefine>>(json);
-
+        Debug.LogFormat("CharacterDefine.txt");
         yield return null;
 
         json = File.ReadAllText(this.DataPath + "TeleporterDefine.txt");
         this.Teleporters = JsonConvert.DeserializeObject<Dictionary<int, TeleporterDefine>>(json);
-
+        Debug.LogFormat("TeleporterDefine.txt");
         yield return null;
 
+        /*
         json = File.ReadAllText(this.DataPath + "SpawnPointDefine.txt");
         this.SpawnPoints = JsonConvert.DeserializeObject<Dictionary<int, Dictionary<int, SpawnPointDefine>>>(json);
-
+        
+        yield return null;
+        */
+        Debug.LogFormat("SpawnPointDefine.txt");
         json = File.ReadAllText(this.DataPath + "NpcDefine.txt");
         this.Npcs = JsonConvert.DeserializeObject<Dictionary<int, NpcDefine>>(json);
-
+        Debug.LogFormat("NpcDefine.txt");
+        yield return null;
+        json = File.ReadAllText(this.DataPath + "ItemDefine.txt");
+        this.Items = JsonConvert.DeserializeObject<Dictionary<int, ItemDefine>>(json);
+        Debug.LogFormat("ItemDefine.txt");
         yield return null;
     }
 

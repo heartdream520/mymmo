@@ -7,6 +7,13 @@ json-excel\json-excel json Tables\ Data\
 @copy Data\NpcDefine.txt ..\Client\Data\
 @copy Data\ItemDefine.txt ..\Client\Data\
 
+@copy Data\CharacterDefine.txt ..\Client\Bin\1.0.0\Data
+@copy Data\MapDefine.txt ..\Client\Bin\1.0.0\Data
+@copy Data\LevelUpDefine.txt ..\Client\Bin\1.0.0\Data
+@copy Data\SpawnRuleDefine.txt ..\Client\Bin\1.0.0\Data
+@copy Data\NpcDefine.txt ..\Client\Bin\1.0.0\Data
+@copy Data\ItemDefine.txt ..\Client\Bin\1.0.0\Data
+
 
 
 @copy Data\CharacterDefine.txt ..\Server\GameServer\GameServer\bin\Debug\Data
