@@ -76,7 +76,7 @@ namespace GameServer.Managers
                 this.items.Add(itemID,ite);
 
             }
-            DBService.Instance.Save();
+            //DBService.Instance.Save();
             return true;
         }
         public bool RemoveItem(int itemID,int count)
@@ -87,7 +87,7 @@ namespace GameServer.Managers
             Item item = this.items[itemID];
             if (item.Count < count) return false;
             item.Remove(count);
-            DBService.Instance.Save();
+            //DBService.Instance.Save();
             return true;
         }
 

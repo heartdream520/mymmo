@@ -31,8 +31,11 @@ namespace GameServer.Entities
             this.Info.Entity = this.EntityData;
             this.Define = DataManager.Instance.Characters[this.Info.Tid];
 
+            //玩家道具初始化
             this.itemManager = new ItemManager(this);
             this.itemManager.GetItemInfos(this.Info.Items);
+            //玩家背包初始化
+
         }
     }
 }
