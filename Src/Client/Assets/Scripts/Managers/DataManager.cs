@@ -98,11 +98,15 @@ public class DataManager : Singleton<DataManager>
         
         yield return null;
         */
+
+
         Debug.LogFormat("SpawnPointDefine.txt");
         json = File.ReadAllText(this.DataPath + "NpcDefine.txt");
         this.Npcs = JsonConvert.DeserializeObject<Dictionary<int, NpcDefine>>(json);
         Debug.LogFormat("NpcDefine.txt");
         yield return null;
+
+
         json = File.ReadAllText(this.DataPath + "ItemDefine.txt");
         this.Items = JsonConvert.DeserializeObject<Dictionary<int, ItemDefine>>(json);
         Debug.LogFormat("ItemDefine.txt");

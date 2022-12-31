@@ -1,4 +1,5 @@
 ﻿using Assets.Scripts.Models;
+using Common.Data;
 using SkillBridge.Message;
 using System;
 using System.Collections.Generic;
@@ -23,7 +24,7 @@ namespace Assets.Scripts.Managers
         }
         public ItemDefine GetInfoDefine(int ItemId)
         {
-            return null;
+            return DataManager.Instance.Items[ItemId];
         }
         public bool UseItem(int itemID)
         {

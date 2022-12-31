@@ -21,7 +21,6 @@ namespace Services
         public string new_scene_name;
         /// <summary>
         /// 当前地图ID
-        /// </summary>
         public int CurrentMapId = 0;
         public MapService()
         {
@@ -34,6 +33,7 @@ namespace Services
       
 
         public void Dispose()
+        /// </summary>
         {
             MessageDistributer.Instance.Unsubscribe<MapCharacterEnterResponse>(this.OnMapCharacterEnter);
             MessageDistributer.Instance.Unsubscribe<MapCharacterLeaveResponse>(this.OnMapCharacterLeave);

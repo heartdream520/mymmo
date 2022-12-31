@@ -130,6 +130,16 @@ namespace GameServer.Services
                 MapPosY = 4000,
                 MapPosZ = 820
             };
+
+            //为角色添加背包
+            var bag = new TCharacterBag();
+            bag.Owner = Tcharacter;
+            bag.Items = new byte[0];
+            bag.Unlocked = 20;
+            Tcharacter.Bag = DBService.Instance.Entities.TCharacterBags.Add(bag); 
+
+
+
             DBService.Instance.Entities.Characters.Add(Tcharacter);
             sender.Session.User.Player.Characters.Add(Tcharacter);
             DBService.Instance.Entities.SaveChanges();
@@ -179,18 +189,23 @@ namespace GameServer.Services
             int itemId = 2;
             bool hasItem = cha.itemManager.HasItem(itemId);
             Log.InfoFormat("Item Test: ItemID:{0}  HasItem:{1}", itemId, hasItem);
-            if(hasItem)
+            if(false)
             {
-                cha.itemManager.RemoveItem(itemId, 1);
+                //cha.itemManager.RemoveItem(itemId, 1);
             }
             else
             {
-                cha.itemManager.AddItem(itemId, 2);
+                /*
+                cha.itemManager.AddItem(1, 109);
+                cha.itemManager.AddItem(2, 29);
+                cha.itemManager.AddItem(3, 200);
+                cha.itemManager.AddItem(4, 100);
+                */
             }
             Item item = cha.itemManager.GetItem(itemId);
             Log.InfoFormat("Item: {0}", item);
             cha.itemManager.GetItemInfos(cha.Info.Items);
-
+            DBService.Instance.Save();
 
 
             //添加角色信息

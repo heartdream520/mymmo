@@ -38,6 +38,14 @@ namespace Common.Data
         
         public int SellPrice { get; set; }
         /// <summary>
+        /// 堆叠限制
+        /// </summary>
+        public int StackLimit { get; set; }
+        /// <summary>
+        /// 图标路径
+        /// </summary>
+        public string Icon { get; set; }
+        /// <summary>
         /// 功能
         /// </summary>
         public ItemFunction Function { get; set; }

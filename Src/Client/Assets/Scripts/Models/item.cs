@@ -1,4 +1,6 @@
-﻿using SkillBridge.Message;
+﻿using Assets.Scripts.Managers;
+using Common.Data;
+using SkillBridge.Message;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,10 +12,12 @@ namespace Assets.Scripts.Models
     {
         public int id;
         public int count;
+        public ItemDefine define;
         public Item(NItemInfo info)
         {
             this.id = (short)info.Id;
             this.count = (short)info.Count;
+            this.define = DataManager.Instance.Items[info.Id];
         }
         public override string ToString()
         {

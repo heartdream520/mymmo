@@ -1,127 +1,61 @@
-2022-12-22 21:25:43,048 [ 1] INFO  Unity: LoadingManager start
-2022-12-22 21:25:47,709 [ 1] INFO  Unity: DataManager > DataManager()
-2022-12-22 21:25:51,882 [ 1] INFO  Unity: UserService->SendLoad: User:1 Password:1
-2022-12-22 21:25:51,886 [ 1] INFO  Unity: ConnectToServer() Start 
-2022-12-22 21:25:51,888 [ 1] INFO  Unity: DoConnect
-2022-12-22 21:25:51,891 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
-2022-12-22 21:25:51,897 [ 1] INFO  Unity: Connect[0] to server 127.0.0.1:8000
+2022-12-29 12:02:01,083 [ 1] INFO  Unity: LoadingManager start
+2022-12-29 12:02:05,728 [ 1] INFO  Unity: DataManager > DataManager()
+2022-12-29 12:02:06,111 [ 1] INFO  Unity: MapDefine.txt
+2022-12-29 12:02:06,138 [ 1] INFO  Unity: CharacterDefine.txt
+2022-12-29 12:02:06,164 [ 1] INFO  Unity: TeleporterDefine.txt
+2022-12-29 12:02:06,174 [ 1] INFO  Unity: SpawnPointDefine.txt
+2022-12-29 12:02:06,189 [ 1] INFO  Unity: NpcDefine.txt
+2022-12-29 12:02:06,222 [ 1] INFO  Unity: ItemDefine.txt
+2022-12-29 12:02:09,507 [ 1] INFO  Unity: UserService->SendLoad: User:2 Password:2
+2022-12-29 12:02:09,513 [ 1] INFO  Unity: ConnectToServer() Start 
+2022-12-29 12:02:09,515 [ 1] INFO  Unity: DoConnect
+2022-12-29 12:02:09,516 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
+2022-12-29 12:02:09,526 [ 1] INFO  Unity: Connect[0] to server 127.0.0.1:8000
 
-2022-12-22 21:25:51,903 [ 1] INFO  Unity: LoadingMesager::OnGameServerConnect :0 reason:Success
-2022-12-22 21:25:57,903 [ 1] INFO  Unity: UserService->OnUserLoad:Success [None]
-2022-12-22 21:26:06,141 [ 1] INFO  Unity: Select Character:[2]1-2[Wizard] 
-2022-12-22 21:26:06,800 [ 1] INFO  Unity: Select Character:[3]1-3[Archer] 
-2022-12-22 21:26:07,174 [ 1] INFO  Unity: Select Character:[1]1-1[Warrior] 
-2022-12-22 21:26:10,466 [ 1] INFO  Unity: UserService->SendCharacterEnter: EnterCharacterID :1 EnterCharacterName:1-1 EnterCharacter_Idx
-2022-12-22 21:26:11,239 [ 1] INFO  Unity: UserService->OnUserGameEnter:Success [None]
-2022-12-22 21:26:11,249 [ 1] INFO  Unity: ItemManager->InitItem :ItemID:2,Count:2
-2022-12-22 21:26:11,281 [ 1] INFO  Unity: MapService->OnMapCharacterEnter :Map:1 Count:1
-2022-12-22 21:26:11,288 [ 1] INFO  Unity: CharacterManager->AddCharacter:CharacterId:1 CharacterName:1-1 MapId:1 Entity:(1:pos:(5000,4000,820),dir:(100,0,0),spd:0
-2022-12-22 21:26:11,295 [ 1] INFO  Unity: EntityManager AddEntity EntityId :1 
-2022-12-22 21:26:16,089 [ 1] WARN  Unity: DontDestroyOnLoad only work for root GameObjects or components on root GameObjects.
-UnityEngine.Object:DontDestroyOnLoad(Object)
-MonoSingleton`1:Awake() (at Assets/Scripts/Utilities/MonoSingleton.cs:32)
+2022-12-29 12:02:09,532 [ 1] INFO  Unity: LoadingMesager::OnGameServerConnect :0 reason:Success
+2022-12-29 12:02:12,717 [ 1] INFO  Unity: UserService->OnUserLoad:Success [None]
+2022-12-29 12:02:22,806 [ 1] INFO  Unity: creat character: class:Archer  name:2-10
+2022-12-29 12:02:22,813 [ 1] INFO  Unity: UserService->SendCharacterCreate: CharacterName :2-10 Class:Archer
+2022-12-29 12:02:23,197 [ 1] INFO  Unity: UserService->OnUserCharacterCreate:Success [None]
+2022-12-29 12:02:24,836 [ 1] INFO  Unity: Select Character:[23]2-10[Archer] 
+2022-12-29 12:02:26,027 [ 1] INFO  Unity: UserService->SendCharacterEnter: EnterCharacterID :23 EnterCharacterName:2-10 EnterCharacter_Idx
+2022-12-29 12:02:26,148 [ 1] INFO  Unity: UserService->OnUserGameEnter:Success [None]
+2022-12-29 12:02:26,158 [ 1] INFO  Unity: ItemManager->InitItem :ItemID:1,Count:109
+2022-12-29 12:02:26,160 [ 1] INFO  Unity: ItemManager->InitItem :ItemID:2,Count:29
+2022-12-29 12:02:26,161 [ 1] INFO  Unity: ItemManager->InitItem :ItemID:3,Count:200
+2022-12-29 12:02:26,161 [ 1] INFO  Unity: ItemManager->InitItem :ItemID:4,Count:100
+2022-12-29 12:02:35,110 [ 1] ERROR Unity: BagManager->NBagInfo
+UnityEngine.Debug:LogError(Object)
+BagManager:GetBagInfo() (at Assets/Scripts/Managers/BagManager.cs:76)
+BagManager:Reset() (at Assets/Scripts/Managers/BagManager.cs:56)
+BagManager:Init(NBagInfo) (at Assets/Scripts/Managers/BagManager.cs:27)
+Services.UserService:OnUserGameEnter(Object, UserGameEnterResponse) (at Assets/Scripts/Services/UserService.cs:311)
+Network.MessageDistributer`1:RaiseEvent(Object, UserGameEnterResponse) (at E:/极世界MMORPG/mymmo/Src/Lib/Common/Network/MessageDistributer.cs:105)
+Network.MessageDispatch`1:Dispatch(Object, NetMessageResponse) (at E:/极世界MMORPG/mymmo/Src/Lib/Common/Network/MessageDispatch.cs:14)
+Network.MessageDistributer`1:Distribute() (at E:/极世界MMORPG/mymmo/Src/Lib/Common/Network/MessageDistributer.cs:148)
+Network.NetClient:ProceeMessage() (at Assets/Scripts/Network/NetClient.cs:427)
+Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:447)
 
-2022-12-22 21:26:16,092 [ 1] WARN  Unity: DontDestroyOnLoad only work for root GameObjects or components on root GameObjects.
-UnityEngine.Object:DontDestroyOnLoad(Object)
-MonoSingleton`1:Awake() (at Assets/Scripts/Utilities/MonoSingleton.cs:32)
-
-2022-12-22 21:26:16,094 [ 1] WARN  Unity: DontDestroyOnLoad only work for root GameObjects or components on root GameObjects.
-UnityEngine.Object:DontDestroyOnLoad(Object)
-MonoSingleton`1:Awake() (at Assets/Scripts/Utilities/MonoSingleton.cs:32)
-
-2022-12-22 21:26:16,095 [ 1] WARN  Unity: DontDestroyOnLoad only work for root GameObjects or components on root GameObjects.
-UnityEngine.Object:DontDestroyOnLoad(Object)
-MonoSingleton`1:Awake() (at Assets/Scripts/Utilities/MonoSingleton.cs:32)
-
-2022-12-22 21:26:16,172 [ 1] INFO  Unity: MinimapManager->UpdataMiniMap
-2022-12-22 21:26:16,175 [ 1] INFO  Unity: Load MiniMap Image :buluzheng
-2022-12-22 21:26:16,191 [ 1] INFO  Unity: Load MiniMap Image :buluzheng
-2022-12-22 21:26:16,197 [ 1] INFO  Unity: GameObjectManager->CreateCharacterObject CharacterId:1 CharacterName:1-1 CharacterEntityId:1
-2022-12-22 21:26:16,263 [ 1] INFO  Unity: GameObjectManager->InitGameObject Player_character:1
-2022-12-22 21:26:16,267 [ 1] INFO  Unity: Load MiniMap Image :buluzheng
-2022-12-22 21:26:16,268 [ 1] INFO  Unity: Load MiniMap Image :buluzheng
-2022-12-22 21:26:42,424 [ 1] INFO  Unity: ProcessReceive exception:System.Net.Sockets.SocketException: 远程主机强迫关闭了一个现有的连接。
+2022-12-29 12:02:42,305 [ 1] INFO  Unity: BagService->SendBagSave
+2022-12-29 12:05:45,538 [ 1] INFO  Unity: ProcessReceive exception:System.Net.Sockets.SocketException: 远程主机强迫关闭了一个现有的连接。
 
   at System.Net.Sockets.Socket.Receive (System.Byte[] buffer, Int32 offset, Int32 size, SocketFlags flags) [0x00000] in <filename unknown>:0 
   at Network.NetClient.ProcessRecv () [0x00084] in E:\极世界MMORPG\mymmo\Src\Client\Assets\Scripts\Network\NetClient.cs:346 
 
-2022-12-22 21:26:42,426 [ 1] WARN  Unity: CloseConnection(), errorCode: 1001
+2022-12-29 12:05:45,539 [ 1] WARN  Unity: CloseConnection(), errorCode: 1001
 UnityEngine.Debug:LogWarning(Object)
 Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:180)
 Network.NetClient:ProcessRecv() (at Assets/Scripts/Network/NetClient.cs:360)
 Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:440)
 
-2022-12-22 21:26:42,500 [ 1] INFO  Unity: DoConnect
-2022-12-22 21:26:42,502 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
-2022-12-22 21:26:42,509 [ 1] INFO  Unity: Connect[0] to server 127.0.0.1:8000
+2022-12-29 12:05:45,597 [ 1] INFO  Unity: DoConnect
+2022-12-29 12:05:45,598 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
+2022-12-29 12:05:45,600 [ 1] INFO  Unity: Connect[0] to server 127.0.0.1:8000
 
-2022-12-22 21:26:44,531 [ 1] WARN  Unity: CloseConnection(), errorCode: 1005
-UnityEngine.Debug:LogWarning(Object)
-Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:180)
-Network.NetClient:DoConnect() (at Assets/Scripts/Network/NetClient.cs:277)
-Network.NetClient:Connect(Int32) (at Assets/Scripts/Network/NetClient.cs:169)
-Network.NetClient:KeepConnect() (at Assets/Scripts/Network/NetClient.cs:321)
-Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:438)
-
-2022-12-22 21:26:44,534 [ 1] ERROR Unity: DoConnect SocketException:[10061,ConnectionRefused,10061]System.Net.Sockets.SocketException: 由于目标计算机积极拒绝，无法连接。
-
-  at System.Net.Sockets.Socket.Connect (System.Net.EndPoint remoteEP, Boolean requireSocketPolicy) [0x00000] in <filename unknown>:0 
-  at System.Net.Sockets.Socket+Worker.Connect () [0x00000] in <filename unknown>:0  
-UnityEngine.Debug:LogErrorFormat(String, Object[])
-Network.NetClient:DoConnect() (at Assets/Scripts/Network/NetClient.cs:279)
-Network.NetClient:Connect(Int32) (at Assets/Scripts/Network/NetClient.cs:169)
-Network.NetClient:KeepConnect() (at Assets/Scripts/Network/NetClient.cs:321)
-Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:438)
-
-2022-12-22 21:26:44,653 [ 1] INFO  Unity: DoConnect
-2022-12-22 21:26:44,654 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
-2022-12-22 21:26:44,657 [ 1] INFO  Unity: Connect[1] to server 127.0.0.1:8000
-
-2022-12-22 21:26:46,697 [ 1] WARN  Unity: CloseConnection(), errorCode: 1005
-UnityEngine.Debug:LogWarning(Object)
-Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:180)
-Network.NetClient:DoConnect() (at Assets/Scripts/Network/NetClient.cs:277)
-Network.NetClient:Connect(Int32) (at Assets/Scripts/Network/NetClient.cs:169)
-Network.NetClient:KeepConnect() (at Assets/Scripts/Network/NetClient.cs:321)
-Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:438)
-
-2022-12-22 21:26:46,699 [ 1] ERROR Unity: DoConnect SocketException:[10061,ConnectionRefused,10061]System.Net.Sockets.SocketException: 由于目标计算机积极拒绝，无法连接。
-
-  at System.Net.Sockets.Socket.Connect (System.Net.EndPoint remoteEP, Boolean requireSocketPolicy) [0x00000] in <filename unknown>:0 
-  at System.Net.Sockets.Socket+Worker.Connect () [0x00000] in <filename unknown>:0  
-UnityEngine.Debug:LogErrorFormat(String, Object[])
-Network.NetClient:DoConnect() (at Assets/Scripts/Network/NetClient.cs:279)
-Network.NetClient:Connect(Int32) (at Assets/Scripts/Network/NetClient.cs:169)
-Network.NetClient:KeepConnect() (at Assets/Scripts/Network/NetClient.cs:321)
-Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:438)
-
-2022-12-22 21:26:46,778 [ 1] INFO  Unity: DoConnect
-2022-12-22 21:26:46,780 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
-2022-12-22 21:26:46,785 [ 1] INFO  Unity: Connect[2] to server 127.0.0.1:8000
-
-2022-12-22 21:26:48,833 [ 1] WARN  Unity: CloseConnection(), errorCode: 1005
-UnityEngine.Debug:LogWarning(Object)
-Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:180)
-Network.NetClient:DoConnect() (at Assets/Scripts/Network/NetClient.cs:277)
-Network.NetClient:Connect(Int32) (at Assets/Scripts/Network/NetClient.cs:169)
-Network.NetClient:KeepConnect() (at Assets/Scripts/Network/NetClient.cs:321)
-Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:438)
-
-2022-12-22 21:26:48,835 [ 1] ERROR Unity: DoConnect SocketException:[10061,ConnectionRefused,10061]System.Net.Sockets.SocketException: 由于目标计算机积极拒绝，无法连接。
-
-  at System.Net.Sockets.Socket.Connect (System.Net.EndPoint remoteEP, Boolean requireSocketPolicy) [0x00000] in <filename unknown>:0 
-  at System.Net.Sockets.Socket+Worker.Connect () [0x00000] in <filename unknown>:0  
-UnityEngine.Debug:LogErrorFormat(String, Object[])
-Network.NetClient:DoConnect() (at Assets/Scripts/Network/NetClient.cs:279)
-Network.NetClient:Connect(Int32) (at Assets/Scripts/Network/NetClient.cs:169)
-Network.NetClient:KeepConnect() (at Assets/Scripts/Network/NetClient.cs:321)
-Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:438)
-
-2022-12-22 21:26:48,836 [ 1] INFO  Unity: LoadingMesager::OnGameServerConnect :1 reason:Cannot connect to server
-2022-12-22 21:26:53,745 [ 1] INFO  Unity: OnDestroy NetworkManager.
-2022-12-22 21:26:53,746 [ 1] WARN  Unity: CloseConnection(), errorCode: 1007
+2022-12-29 12:05:45,600 [ 1] INFO  Unity: LoadingMesager::OnGameServerConnect :0 reason:Success
+2022-12-29 12:05:47,675 [ 1] INFO  Unity: OnDestroy NetworkManager.
+2022-12-29 12:05:47,676 [ 1] WARN  Unity: CloseConnection(), errorCode: 1007
 UnityEngine.Debug:LogWarning(Object)
 Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:180)
 Network.NetClient:OnDestroy() (at Assets/Scripts/Network/NetClient.cs:175)
 
-2022-12-22 21:26:53,754 [ 1] INFO  Unity: Entity Character_1_1-1 OnDestroy :ID:1 POS:(5000, 4000, 820) DIR:(100, 0, 0) SPD:0 

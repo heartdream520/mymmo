@@ -16,6 +16,10 @@ namespace Network
             if (message.mapCharacterEnter != null) { MessageDistributer<T>.Instance.RaiseEvent(sender, message.mapCharacterEnter); }
             if (message.mapCharacterLeave != null) { MessageDistributer<T>.Instance.RaiseEvent(sender, message.mapCharacterLeave); }
             if (message.mapEntitySync != null) { MessageDistributer<T>.Instance.RaiseEvent(sender, message.mapEntitySync); }   
+
+            if (message.Bagsave != null) { MessageDistributer<T>.Instance.RaiseEvent(sender, message.Bagsave); }   
+
+
         }
 
         public void Dispatch(T sender, SkillBridge.Message.NetMessageRequest message)
@@ -31,7 +35,9 @@ namespace Network
 
             //消息分发
             if (message.firstRequest != null) { MessageDistributer<T>.Instance.RaiseEvent(sender, message.firstRequest); }
-            
+
+            if (message.Bagsave != null) { MessageDistributer<T>.Instance.RaiseEvent(sender, message.Bagsave); }
+
         }
     }
 }

@@ -56,9 +56,8 @@ public class UIMain : MonoSingleton<UIMain> {
     {
         MessageBox.Show("你点击了test的"+result.ToString());
     }
-
-    // Update is called once per frame
-    void Update () {
-		
-	}
+    public void OnchickBag()
+    {
+        UIManager.Instance.Show<UIBag>();
+    }
 }

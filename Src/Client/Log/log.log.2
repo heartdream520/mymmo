@@ -1,30 +1,72 @@
-2022-12-22 22:50:10,719 [ 1] INFO  Unity: LoadingManager start
-2022-12-22 22:50:15,469 [ 1] INFO  Unity: DataManager > DataManager()
-2022-12-22 22:51:09,116 [ 1] WARN  Unity: Assets/Scripts/GameObject/MainPlayerCamera.cs(10,19): warning CS0108: `MainPlayerCamera.camera' hides inherited member `UnityEngine.Component.camera'. Use the new keyword if hiding was intended
+2022-12-29 12:35:35,179 [ 1] INFO  Unity: LoadingManager start
+2022-12-29 12:35:39,862 [ 1] INFO  Unity: DataManager > DataManager()
+2022-12-29 12:35:40,247 [ 1] INFO  Unity: MapDefine.txt
+2022-12-29 12:35:40,274 [ 1] INFO  Unity: CharacterDefine.txt
+2022-12-29 12:35:40,301 [ 1] INFO  Unity: TeleporterDefine.txt
+2022-12-29 12:35:40,312 [ 1] INFO  Unity: SpawnPointDefine.txt
+2022-12-29 12:35:40,328 [ 1] INFO  Unity: NpcDefine.txt
+2022-12-29 12:35:40,364 [ 1] INFO  Unity: ItemDefine.txt
+2022-12-29 12:35:44,247 [ 1] INFO  Unity: UserService->SendLoad: User:1 Password:1
+2022-12-29 12:35:44,254 [ 1] INFO  Unity: ConnectToServer() Start 
+2022-12-29 12:35:44,257 [ 1] INFO  Unity: DoConnect
+2022-12-29 12:35:44,260 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
+2022-12-29 12:35:44,270 [ 1] INFO  Unity: Connect[0] to server 127.0.0.1:8000
 
-2022-12-22 22:51:09,121 [ 1] WARN  Unity: Assets/Scripts/GameObject/NpcController.cs(12,25): warning CS0108: `NpcController.renderer' hides inherited member `UnityEngine.Component.renderer'. Use the new keyword if hiding was intended
+2022-12-29 12:35:44,278 [ 1] INFO  Unity: LoadingMesager::OnGameServerConnect :0 reason:Success
+2022-12-29 12:35:47,767 [ 1] INFO  Unity: UserService->OnUserLoad:Success [None]
+2022-12-29 12:35:55,123 [ 1] INFO  Unity: creat character: class:Warrior  name:1-1
+2022-12-29 12:35:55,125 [ 1] INFO  Unity: UserService->SendCharacterCreate: CharacterName :1-1 Class:Warrior
+2022-12-29 12:35:55,598 [ 1] INFO  Unity: UserService->OnUserCharacterCreate:Success [None]
+2022-12-29 12:35:57,343 [ 1] INFO  Unity: Select Character:[26]1-1[Warrior] 
+2022-12-29 12:35:59,208 [ 1] INFO  Unity: UserService->SendCharacterEnter: EnterCharacterID :26 EnterCharacterName:1-1 EnterCharacter_Idx
+2022-12-29 12:35:59,392 [ 1] INFO  Unity: UserService->OnUserGameEnter:Success [None]
+2022-12-29 12:35:59,400 [ 1] INFO  Unity: ItemManager->InitItem :ItemID:1,Count:109
+2022-12-29 12:35:59,401 [ 1] INFO  Unity: ItemManager->InitItem :ItemID:2,Count:29
+2022-12-29 12:35:59,402 [ 1] INFO  Unity: ItemManager->InitItem :ItemID:3,Count:200
+2022-12-29 12:35:59,403 [ 1] INFO  Unity: ItemManager->InitItem :ItemID:4,Count:100
+2022-12-29 12:36:15,006 [ 1] ERROR Unity: BagManager->NBagInfo
+UnityEngine.Debug:LogError(Object)
+BagManager:GetBagInfo() (at Assets/Scripts/Managers/BagManager.cs:76)
+BagManager:Reset() (at Assets/Scripts/Managers/BagManager.cs:56)
+BagManager:Init(NBagInfo) (at Assets/Scripts/Managers/BagManager.cs:27)
+Services.UserService:OnUserGameEnter(Object, UserGameEnterResponse) (at Assets/Scripts/Services/UserService.cs:311)
+Network.MessageDistributer`1:RaiseEvent(Object, UserGameEnterResponse) (at E:/极世界MMORPG/mymmo/Src/Lib/Common/Network/MessageDistributer.cs:105)
+Network.MessageDispatch`1:Dispatch(Object, NetMessageResponse) (at E:/极世界MMORPG/mymmo/Src/Lib/Common/Network/MessageDispatch.cs:14)
+Network.MessageDistributer`1:Distribute() (at E:/极世界MMORPG/mymmo/Src/Lib/Common/Network/MessageDistributer.cs:148)
+Network.NetClient:ProceeMessage() (at Assets/Scripts/Network/NetClient.cs:427)
+Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:447)
 
-2022-12-22 22:51:09,121 [ 1] WARN  Unity: Assets/Scripts/GameObject/NpcController.cs(13,14): warning CS0108: `NpcController.animation' hides inherited member `UnityEngine.Component.animation'. Use the new keyword if hiding was intended
+2022-12-29 12:36:15,748 [ 1] INFO  Unity: BagService->SendBagSave
+2022-12-29 12:36:18,905 [ 1] INFO  Unity: MapService->OnMapCharacterEnter :Map:1 Count:1
+2022-12-29 12:36:18,915 [ 1] INFO  Unity: CharacterManager->AddCharacter:CharacterId:26 CharacterName:1-1 MapId:1 Entity:(1:pos:(5000,4000,820),dir:(100,0,0),spd:0
+2022-12-29 12:36:18,930 [ 1] INFO  Unity: EntityManager AddEntity EntityId :1 
+2022-12-29 12:36:21,778 [ 1] WARN  Unity: DontDestroyOnLoad only work for root GameObjects or components on root GameObjects.
+UnityEngine.Object:DontDestroyOnLoad(Object)
+MonoSingleton`1:Awake() (at Assets/Scripts/Utilities/MonoSingleton.cs:32)
 
-2022-12-22 22:51:09,124 [ 1] WARN  Unity: Assets/Scripts/UI/UICharInfo.cs(22,17): warning CS0108: `UICharInfo.name' hides inherited member `UnityEngine.Object.name'. Use the new keyword if hiding was intended
+2022-12-29 12:36:21,779 [ 1] WARN  Unity: DontDestroyOnLoad only work for root GameObjects or components on root GameObjects.
+UnityEngine.Object:DontDestroyOnLoad(Object)
+MonoSingleton`1:Awake() (at Assets/Scripts/Utilities/MonoSingleton.cs:32)
 
-2022-12-22 22:51:09,124 [ 1] WARN  Unity: Assets/Scripts/normal/GameDataManage.cs(31,26): warning CS0168: The variable `e' is declared but never used
+2022-12-29 12:36:21,780 [ 1] WARN  Unity: DontDestroyOnLoad only work for root GameObjects or components on root GameObjects.
+UnityEngine.Object:DontDestroyOnLoad(Object)
+MonoSingleton`1:Awake() (at Assets/Scripts/Utilities/MonoSingleton.cs:32)
 
-2022-12-22 22:51:09,124 [ 1] WARN  Unity: Assets/Scripts/GameObject/EntityController.cs(20,16): warning CS0649: Field `EntityController.rotation' is never assigned to, and will always have its default value
+2022-12-29 12:36:21,781 [ 1] WARN  Unity: DontDestroyOnLoad only work for root GameObjects or components on root GameObjects.
+UnityEngine.Object:DontDestroyOnLoad(Object)
+MonoSingleton`1:Awake() (at Assets/Scripts/Utilities/MonoSingleton.cs:32)
 
-2022-12-22 22:51:09,125 [ 1] WARN  Unity: Assets/Scripts/GameObject/EntityController.cs(23,16): warning CS0414: The private field `EntityController.lastRotation' is assigned but its value is never used
+2022-12-29 12:36:21,823 [ 1] INFO  Unity: MinimapManager->UpdataMiniMap
+2022-12-29 12:36:21,825 [ 1] INFO  Unity: Load MiniMap Image :buluzheng
+2022-12-29 12:36:21,831 [ 1] INFO  Unity: Load MiniMap Image :buluzheng
+2022-12-29 12:36:21,845 [ 1] INFO  Unity: GameObjectManager->CreateCharacterObject CharacterId:1 CharacterName:1-1 CharacterEntityId:1
+2022-12-29 12:36:21,880 [ 1] INFO  Unity: GameObjectManager->InitGameObject Player_character:1
+2022-12-29 12:36:21,882 [ 1] INFO  Unity: Load MiniMap Image :buluzheng
+2022-12-29 12:36:21,883 [ 1] INFO  Unity: Load MiniMap Image :buluzheng
+2022-12-29 12:36:48,326 [ 1] INFO  Unity: OnDestroy NetworkManager.
+2022-12-29 12:36:48,327 [ 1] WARN  Unity: CloseConnection(), errorCode: 1007
+UnityEngine.Debug:LogWarning(Object)
+Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:180)
+Network.NetClient:OnDestroy() (at Assets/Scripts/Network/NetClient.cs:175)
 
-2022-12-22 22:51:09,125 [ 1] WARN  Unity: Assets/Scripts/GameObject/NpcController.cs(17,15): warning CS0414: The private field `NpcController.npcDefine' is assigned but its value is never used
-
-2022-12-22 22:51:09,125 [ 1] WARN  Unity: Assets/Scripts/GameObject/PlayerInputController.cs(162,11): warning CS0414: The private field `PlayerInputController.lastSync' is assigned but its value is never used
-
-2022-12-22 22:51:09,125 [ 1] WARN  Unity: Assets/Scripts/Models/User.cs(60,40): warning CS0649: Field `Models.User.CurrentCharacterObject_Set_Action' is never assigned to, and will always have its default value `null'
-
-2022-12-22 22:51:09,126 [ 1] WARN  Unity: Assets/Scripts/Services/UserService.cs(20,63): warning CS0649: Field `Services.UserService.OnGameEnter' is never assigned to, and will always have its default value `null'
-
-2022-12-22 22:51:09,126 [ 1] WARN  Unity: Assets/Scripts/Services/UserService.cs(21,63): warning CS0649: Field `Services.UserService.OnGameLeave' is never assigned to, and will always have its default value `null'
-
-2022-12-22 22:51:09,126 [ 1] WARN  Unity: Assets/Scripts/UI/UICharacterSelect.cs(15,20): warning CS0414: The private field `UICharacterSelect.charClass' is assigned but its value is never used
-
-2022-12-22 22:51:09,126 [ 1] WARN  Unity: Assets/Editor/MapTools.cs(24,30): warning CS0219: The variable `allteleportObjects' is assigned but its value is never used
-
+2022-12-29 12:36:48,334 [ 1] INFO  Unity: Entity Character_1_1-1 OnDestroy :ID:1 POS:(5000, 4000, 820) DIR:(100, 0, 0) SPD:0 

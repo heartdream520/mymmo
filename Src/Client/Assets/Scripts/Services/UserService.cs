@@ -308,6 +308,7 @@ namespace Services
             if (response.Result == Result.Success)
             {
                 ItemManager.Instance.Init(response.Ncharacterinfo.Items);
+                BagManager.Instance.Init(response.Ncharacterinfo.Bag);
             }
             if (this.OnGameEnter != null)
             {

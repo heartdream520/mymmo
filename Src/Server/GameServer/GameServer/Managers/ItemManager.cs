@@ -20,7 +20,7 @@ namespace GameServer.Managers
             this.owner = owner;
             foreach(var item in owner.Data.Items)
             {
-                this.items.Add(item.Id, new Item(item));
+                this.items.Add(item.ItemID, new Item(item));
             }
         }
         public bool UseItem(int itemId,int count=1)
@@ -93,6 +93,7 @@ namespace GameServer.Managers
 
         public void GetItemInfos(List<NItemInfo>list)
         {
+            list.Clear();
             foreach(var item in this.items)
             {
                 list.Add(new NItemInfo()

@@ -35,7 +35,14 @@ namespace GameServer.Entities
             this.itemManager = new ItemManager(this);
             this.itemManager.GetItemInfos(this.Info.Items);
             //玩家背包初始化
+            this.Info.Bag = new NBagInfo();
+            this.Info.Bag.Items = this.Data.Bag.Items;
+            this.Info.Bag.Unlocked = this.Data.Bag.Unlocked;
 
+        }
+        public override string ToString()
+        {
+            return string.Format("ID:{0}  DID:{1} EID:{2}",Id,this.Data.ID,this.entityId);
         }
     }
 }

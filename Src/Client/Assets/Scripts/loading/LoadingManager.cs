@@ -1,12 +1,7 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
-using System.IO;
-
-using SkillBridge.Message;
-using ProtoBuf;
 using Services;
+using Assets.Scripts.Service;
 //using Managers;
 
 public class LoadingManager : MonoBehaviour {
@@ -58,6 +53,7 @@ public class LoadingManager : MonoBehaviour {
         UserService.Instance.Init();
 
         TestManager.Instance.Init();
+        BagService.Instance.Init();
 
         //StatusService.Instance.Init();
         //FriendService.Instance.Init();
