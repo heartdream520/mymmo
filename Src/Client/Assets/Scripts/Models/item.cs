@@ -19,6 +19,12 @@ namespace Assets.Scripts.Models
             this.count = (short)info.Count;
             this.define = DataManager.Instance.Items[info.Id];
         }
+        public Item(int id,int count)
+        {
+            this.id = id;
+            this.count = count;
+            this.define = DataManager.Instance.Items[this.id];
+        }
         public override string ToString()
         {
             return string.Format("ItemID:{0},Count:{1}",id,count);

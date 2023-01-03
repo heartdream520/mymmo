@@ -71,9 +71,12 @@ public class BagManager : Singleton<BagManager>
             }
         }
     }
+
+
+
     unsafe public NBagInfo GetBagInfo()
     {
-        Debug.LogError("BagManager->NBagInfo");
+        //Debug.LogError("BagManager->NBagInfo");
         fixed (byte* pt = info.Items)
         {
             for (int i = 0; i < this.Unlocked; i++)
@@ -84,6 +87,53 @@ public class BagManager : Singleton<BagManager>
         }
         return this.info;
     }
-    
+
+
+
+    internal void AddItem(int id, int count)
+    {
+        int limit = DataManager.Instance.Items[id].StackLimit;
+        for (int i = 0; i < Unlocked; i++)
+        {
+            BagItem bagItem = items[i];
+            if (bagItem.ItemId == id && bagItem.Count < limit)
+            {
+                int max = limit - bagItem.Count;
+                if (count <= max)
+                {
+                    items[i].Count += (ushort)count;
+                    return;
+                }
+                else
+                {
+                    items[i].Count = (ushort)limit;
+                    count -= max;
+                }
+            }
+            if (bagItem.ItemId == 0)
+            {
+                if (count <= limit)
+                {
+                    items[i].ItemId = (ushort)id;
+                    items[i].Count = (ushort)count;
+                    return;
+                }
+                else
+                {
+                    items[i].ItemId = (ushort)id;
+                    items[i].Count = (ushort)count;
+                    count -= limit;
+                }
+            }
+        }
+        MessageBox.Show("背包已满！");
+
+    }
+
+    internal void RemoveItem(int id, int value)
+    {
+        throw new NotImplementedException();
+    }
+
 }
 

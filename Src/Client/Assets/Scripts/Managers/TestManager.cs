@@ -7,8 +7,8 @@ public class TestManager :Singleton<TestManager> {
 
     public void Init()
     {
-        NpcManager.Instance.RegisterNpcEnvent(NpcFunction.InvokeShop, OnNpcInvokeShop);
-        NpcManager.Instance.RegisterNpcEnvent(NpcFunction.InvokeInsrance, OnNpcInvokeInsrance);
+        //NpcManager.Instance.RegisterNpcEnvent(NpcFunction.InvokeShop, OnNpcInvokeShop);
+        //NpcManager.Instance.RegisterNpcEnvent(NpcFunction.InvokeInsrance, OnNpcInvokeInsrance);
     }
     private bool OnNpcInvokeShop(NpcDefine npc)
     {

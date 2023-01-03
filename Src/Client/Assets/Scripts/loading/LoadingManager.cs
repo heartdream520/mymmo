@@ -2,6 +2,7 @@
 using UnityEngine;
 using Services;
 using Assets.Scripts.Service;
+using Assets.Scripts.Services;
 //using Managers;
 
 public class LoadingManager : MonoBehaviour {
@@ -54,8 +55,9 @@ public class LoadingManager : MonoBehaviour {
 
         TestManager.Instance.Init();
         BagService.Instance.Init();
-
-        //StatusService.Instance.Init();
+        ShopManager.Instance.init();
+        ItemServicer.Instance.Init();
+        StatusServicer.Instance.Init();
         //FriendService.Instance.Init();
         //TeamService.Instance.Init();
         //GuildService.Instance.Init();

@@ -85,6 +85,7 @@
     <Compile Include="Assets\Scripts\Managers\MinimapManager.cs" />
     <Compile Include="Assets\Scripts\Managers\MouseManager.cs" />
     <Compile Include="Assets\Scripts\Managers\NpcManager.cs" />
+    <Compile Include="Assets\Scripts\Managers\ShopManager.cs" />
     <Compile Include="Assets\Scripts\Managers\TestManager.cs" />
     <Compile Include="Assets\Scripts\Managers\UIManager.cs" />
     <Compile Include="Assets\Scripts\Models\BagItem.cs" />
@@ -99,7 +100,9 @@
     <Compile Include="Assets\Scripts\normal\UI_appear.cs" />
     <Compile Include="Assets\Scripts\Scene\MySceneManager.cs" />
     <Compile Include="Assets\Scripts\Services\BagService.cs" />
+    <Compile Include="Assets\Scripts\Services\ItemServicer.cs" />
     <Compile Include="Assets\Scripts\Services\MapService.cs" />
+    <Compile Include="Assets\Scripts\Services\StatusServicer.cs" />
     <Compile Include="Assets\Scripts\Services\UserService.cs" />
     <Compile Include="Assets\Scripts\UI\Bag\UIBag.cs" />
     <Compile Include="Assets\Scripts\UI\Bag\UIIconItem.cs" />
@@ -108,6 +111,8 @@
     <Compile Include="Assets\Scripts\UI\MessageBox.cs" />
     <Compile Include="Assets\Scripts\UI\Minimap\UIMinimap.cs" />
     <Compile Include="Assets\Scripts\UI\MyUICharacterSelect.cs" />
+    <Compile Include="Assets\Scripts\UI\Shop\UIShop.cs" />
+    <Compile Include="Assets\Scripts\UI\Shop\UIShopItem.cs" />
     <Compile Include="Assets\Scripts\UI\TabView\TabButton.cs" />
     <Compile Include="Assets\Scripts\UI\TabView\TabView.cs" />
     <Compile Include="Assets\Scripts\UI\UICharacterSelect.cs" />

@@ -5,7 +5,7 @@ namespace Network
 {
     public class MessageDispatch<T> : Singleton<MessageDispatch<T>>
     {
-        //判断消息类型并分发
+        //接受信息
         public void Dispatch(T sender, SkillBridge.Message.NetMessageResponse message)
         {
             if (message.userRegister != null) { MessageDistributer<T>.Instance.RaiseEvent(sender, message.userRegister); }
@@ -18,10 +18,13 @@ namespace Network
             if (message.mapEntitySync != null) { MessageDistributer<T>.Instance.RaiseEvent(sender, message.mapEntitySync); }   
 
             if (message.Bagsave != null) { MessageDistributer<T>.Instance.RaiseEvent(sender, message.Bagsave); }   
+            if (message.itemBuy != null) { MessageDistributer<T>.Instance.RaiseEvent(sender, message.itemBuy); }   
+
+            if (message.statusNotify != null) { MessageDistributer<T>.Instance.RaiseEvent(sender, message.statusNotify); }   
 
 
         }
-
+        //发送信息
         public void Dispatch(T sender, SkillBridge.Message.NetMessageRequest message)
         {
             if (message.userRegister != null) { MessageDistributer<T>.Instance.RaiseEvent(sender,message.userRegister); }
@@ -38,6 +41,9 @@ namespace Network
 
             if (message.Bagsave != null) { MessageDistributer<T>.Instance.RaiseEvent(sender, message.Bagsave); }
 
+            if (message.itemBuy != null) { MessageDistributer<T>.Instance.RaiseEvent(sender, message.itemBuy); }
+
+            //if (message.statusNotify != null) { MessageDistributer<T>.Instance.RaiseEvent(sender, message.statusNotify); }
         }
     }
 }

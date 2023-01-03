@@ -118,7 +118,7 @@ namespace GameServer.Services
         private void OnCreateCharacter(NetConnection<NetSession> sender, UserCreateCharacterRequest request)
         {
 
-            
+
             //将新建的角色加入数据库
             TCharacter Tcharacter = new TCharacter()
             {
@@ -128,16 +128,17 @@ namespace GameServer.Services
                 MapID = 1,
                 MapPosX = 5000,
                 MapPosY = 4000,
-                MapPosZ = 820
+                MapPosZ = 820,
+                Gold = 10000
             };
 
             //为角色添加背包
             var bag = new TCharacterBag();
             bag.Owner = Tcharacter;
             bag.Items = new byte[0];
-            bag.Unlocked = 20;
+            bag.Unlocked = 50;
             Tcharacter.Bag = DBService.Instance.Entities.TCharacterBags.Add(bag); 
-
+            
 
 
             DBService.Instance.Entities.Characters.Add(Tcharacter);

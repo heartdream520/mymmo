@@ -15,6 +15,14 @@ public class UIBag : UIWindow
     [Header("放在背包格子上")]
     public GameObject bagItem;
     List<Image> slots;
+    public void Awake()
+    {
+        User.Instance.Gold_Change_Action += this.Chanage_gold_Text;
+    }
+    private void OnDisable()
+    {
+        User.Instance.Gold_Change_Action -= this.Chanage_gold_Text;
+    }
     public void Start()
     {
         if (slots == null)
@@ -53,7 +61,7 @@ public class UIBag : UIWindow
         {
             slots[i].color = Color.gray;
         }
-
+        this.money.text = User.Instance.CurrentCharacter.Gold.ToString();
         yield return null;
     }
     public void setTitle(string title)
@@ -64,5 +72,10 @@ public class UIBag : UIWindow
     {
         BagManager.Instance.Reset();
         StartCoroutine(InitBags());
+    }
+    private void Chanage_gold_Text(long count)
+    {
+        if (!this.gameObject) return;
+        this.money.text = count.ToString();
     }
 }

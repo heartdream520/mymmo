@@ -1,214 +1,76 @@
-2022-12-29 12:22:45,300 [ 1] INFO  Unity: LoadingManager start
-2022-12-29 12:22:49,484 [ 1] INFO  Unity: DataManager > DataManager()
-2022-12-29 12:22:49,577 [ 1] INFO  Unity: MapDefine.txt
-2022-12-29 12:22:49,592 [ 1] INFO  Unity: CharacterDefine.txt
-2022-12-29 12:22:49,607 [ 1] INFO  Unity: TeleporterDefine.txt
-2022-12-29 12:22:49,614 [ 1] INFO  Unity: SpawnPointDefine.txt
-2022-12-29 12:22:49,620 [ 1] INFO  Unity: NpcDefine.txt
-2022-12-29 12:22:49,642 [ 1] INFO  Unity: ItemDefine.txt
-2022-12-29 12:22:58,672 [ 1] INFO  Unity: UserService->SendRegister: User:3 Password:3
-2022-12-29 12:22:58,673 [ 1] INFO  Unity: ConnectToServer() Start 
-2022-12-29 12:22:58,675 [ 1] INFO  Unity: DoConnect
-2022-12-29 12:22:58,677 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
-2022-12-29 12:22:58,679 [ 1] INFO  Unity: Connect[0] to server 127.0.0.1:8000
+2023-01-01 16:59:09,135 [ 1] INFO  Unity: LoadingManager start
+2023-01-01 16:59:13,520 [ 1] INFO  Unity: DataManager > DataManager()
+2023-01-01 16:59:13,768 [ 1] INFO  Unity: MapDefine.txt
+2023-01-01 16:59:13,798 [ 1] INFO  Unity: CharacterDefine.txt
+2023-01-01 16:59:13,862 [ 1] INFO  Unity: TeleporterDefine.txt
+2023-01-01 16:59:13,931 [ 1] INFO  Unity: SpawnPointDefine.txt
+2023-01-01 16:59:13,973 [ 1] INFO  Unity: NpcDefine.txt
+2023-01-01 16:59:14,040 [ 1] INFO  Unity: ItemDefine.txt
+2023-01-01 16:59:19,035 [ 1] INFO  Unity: UserService->SendLoad: User:1 Password:1
+2023-01-01 16:59:19,036 [ 1] INFO  Unity: ConnectToServer() Start 
+2023-01-01 16:59:19,038 [ 1] INFO  Unity: DoConnect
+2023-01-01 16:59:19,069 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
+2023-01-01 16:59:19,072 [ 1] INFO  Unity: Connect[0] to server 127.0.0.1:8000
 
-2022-12-29 12:22:58,682 [ 1] INFO  Unity: LoadingMesager::OnGameServerConnect :0 reason:Success
-2022-12-29 12:22:58,863 [ 1] INFO  Unity: UserService->OnUserRegister:Success [None]
-2022-12-29 12:23:04,803 [ 1] INFO  Unity: UserService->SendLoad: User:3 Password:3
-2022-12-29 12:23:04,835 [ 1] INFO  Unity: UserService->OnUserLoad:Success [None]
-2022-12-29 12:23:13,606 [ 1] INFO  Unity: creat character: class:Warrior  name:3-1
-2022-12-29 12:23:13,608 [ 1] INFO  Unity: UserService->SendCharacterCreate: CharacterName :3-1 Class:Warrior
-2022-12-29 12:23:13,687 [ 1] INFO  Unity: UserService->OnUserCharacterCreate:Success [None]
-2022-12-29 12:23:14,770 [ 1] INFO  Unity: Select Character:[25]3-1[Warrior] 
-2022-12-29 12:23:16,063 [ 1] INFO  Unity: UserService->SendCharacterEnter: EnterCharacterID :25 EnterCharacterName:3-1 EnterCharacter_Idx
-2022-12-29 12:23:16,113 [ 1] INFO  Unity: UserService->OnUserGameEnter:Success [None]
-2022-12-29 12:23:16,115 [ 1] INFO  Unity: ItemManager->InitItem :ItemID:1,Count:109
-2022-12-29 12:23:16,116 [ 1] INFO  Unity: ItemManager->InitItem :ItemID:2,Count:29
-2022-12-29 12:23:16,117 [ 1] INFO  Unity: ItemManager->InitItem :ItemID:3,Count:200
-2022-12-29 12:23:16,118 [ 1] INFO  Unity: ItemManager->InitItem :ItemID:4,Count:100
-2022-12-29 12:23:16,121 [ 1] ERROR Unity: BagManager->NBagInfo
-UnityEngine.Debug:LogError(Object)
-BagManager:GetBagInfo() (at Assets/Scripts/Managers/BagManager.cs:76)
-BagManager:Reset() (at Assets/Scripts/Managers/BagManager.cs:56)
-BagManager:Init(NBagInfo) (at Assets/Scripts/Managers/BagManager.cs:27)
-Services.UserService:OnUserGameEnter(Object, UserGameEnterResponse) (at Assets/Scripts/Services/UserService.cs:311)
-Network.MessageDistributer`1:RaiseEvent(Object, UserGameEnterResponse) (at E:/极世界MMORPG/mymmo/Src/Lib/Common/Network/MessageDistributer.cs:105)
-Network.MessageDispatch`1:Dispatch(Object, NetMessageResponse) (at E:/极世界MMORPG/mymmo/Src/Lib/Common/Network/MessageDispatch.cs:14)
-Network.MessageDistributer`1:Distribute() (at E:/极世界MMORPG/mymmo/Src/Lib/Common/Network/MessageDistributer.cs:148)
-Network.NetClient:ProceeMessage() (at Assets/Scripts/Network/NetClient.cs:427)
-Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:447)
-
-2022-12-29 12:23:16,124 [ 1] INFO  Unity: BagService->SendBagSave
-2022-12-29 12:23:16,126 [ 1] INFO  Unity: MapService->OnMapCharacterEnter :Map:1 Count:2
-2022-12-29 12:23:16,128 [ 1] INFO  Unity: CharacterManager->AddCharacter:CharacterId:25 CharacterName:3-1 MapId:1 Entity:(10:pos:(5000,4000,820),dir:(100,0,0),spd:0
-2022-12-29 12:23:16,130 [ 1] INFO  Unity: EntityManager AddEntity EntityId :10 
-2022-12-29 12:23:16,131 [ 1] INFO  Unity: CharacterManager->AddCharacter:CharacterId:18 CharacterName:2-4 MapId:1 Entity:(8:pos:(5000,4000,820),dir:(100,0,0),spd:0
-2022-12-29 12:23:16,132 [ 1] INFO  Unity: EntityManager AddEntity EntityId :8 
-2022-12-29 12:23:18,526 [ 1] WARN  Unity: DontDestroyOnLoad only work for root GameObjects or components on root GameObjects.
+2023-01-01 16:59:19,075 [ 1] INFO  Unity: LoadingMesager::OnGameServerConnect :0 reason:Success
+2023-01-01 16:59:22,905 [ 1] INFO  Unity: UserService->OnUserLoad:Success [None]
+2023-01-01 16:59:30,091 [ 1] INFO  Unity: Select Character:[1]1-1[Warrior] 
+2023-01-01 16:59:30,473 [ 1] INFO  Unity: Select Character:[2]1-2[Wizard] 
+2023-01-01 16:59:32,674 [ 1] INFO  Unity: UserService->SendCharacterEnter: EnterCharacterID :2 EnterCharacterName:1-2 EnterCharacter_Idx
+2023-01-01 16:59:32,775 [ 1] INFO  Unity: UserService->OnUserGameEnter:Success [None]
+2023-01-01 16:59:32,778 [ 1] INFO  Unity: ItemManager->InitItem :ItemID:2,Count:5
+2023-01-01 16:59:32,779 [ 1] INFO  Unity: ItemManager->InitItem :ItemID:8,Count:1
+2023-01-01 16:59:32,781 [ 1] INFO  Unity: ItemManager->InitItem :ItemID:5,Count:1
+2023-01-01 16:59:32,797 [ 1] INFO  Unity: MapService->OnMapCharacterEnter :Map:1 Count:1
+2023-01-01 16:59:32,799 [ 1] INFO  Unity: CharacterManager->AddCharacter:CharacterId:2 CharacterName:1-2 MapId:1 Entity:(1:pos:(5000,4000,820),dir:(100,0,0),spd:0
+2023-01-01 16:59:32,803 [ 1] INFO  Unity: EntityManager AddEntity EntityId :1 
+2023-01-01 16:59:35,419 [ 1] WARN  Unity: DontDestroyOnLoad only work for root GameObjects or components on root GameObjects.
 UnityEngine.Object:DontDestroyOnLoad(Object)
 MonoSingleton`1:Awake() (at Assets/Scripts/Utilities/MonoSingleton.cs:32)
 
-2022-12-29 12:23:18,527 [ 1] WARN  Unity: DontDestroyOnLoad only work for root GameObjects or components on root GameObjects.
+2023-01-01 16:59:35,420 [ 1] WARN  Unity: DontDestroyOnLoad only work for root GameObjects or components on root GameObjects.
 UnityEngine.Object:DontDestroyOnLoad(Object)
 MonoSingleton`1:Awake() (at Assets/Scripts/Utilities/MonoSingleton.cs:32)
 
-2022-12-29 12:23:18,527 [ 1] WARN  Unity: DontDestroyOnLoad only work for root GameObjects or components on root GameObjects.
+2023-01-01 16:59:35,421 [ 1] WARN  Unity: DontDestroyOnLoad only work for root GameObjects or components on root GameObjects.
 UnityEngine.Object:DontDestroyOnLoad(Object)
 MonoSingleton`1:Awake() (at Assets/Scripts/Utilities/MonoSingleton.cs:32)
 
-2022-12-29 12:23:18,528 [ 1] WARN  Unity: DontDestroyOnLoad only work for root GameObjects or components on root GameObjects.
+2023-01-01 16:59:35,422 [ 1] WARN  Unity: DontDestroyOnLoad only work for root GameObjects or components on root GameObjects.
 UnityEngine.Object:DontDestroyOnLoad(Object)
 MonoSingleton`1:Awake() (at Assets/Scripts/Utilities/MonoSingleton.cs:32)
 
-2022-12-29 12:23:18,566 [ 1] INFO  Unity: MinimapManager->UpdataMiniMap
-2022-12-29 12:23:18,567 [ 1] INFO  Unity: Load MiniMap Image :buluzheng
-2022-12-29 12:23:18,569 [ 1] INFO  Unity: Load MiniMap Image :buluzheng
-2022-12-29 12:23:18,572 [ 1] INFO  Unity: GameObjectManager->CreateCharacterObject CharacterId:10 CharacterName:3-1 CharacterEntityId:10
-2022-12-29 12:23:18,606 [ 1] INFO  Unity: GameObjectManager->InitGameObject Player_character:10
-2022-12-29 12:23:18,609 [ 1] INFO  Unity: Load MiniMap Image :buluzheng
-2022-12-29 12:23:18,609 [ 1] INFO  Unity: Load MiniMap Image :buluzheng
-2022-12-29 12:23:18,680 [ 1] INFO  Unity: GameObjectManager->CreateCharacterObject CharacterId:8 CharacterName:2-4 CharacterEntityId:8
-2022-12-29 12:23:27,511 [ 1] INFO  Unity: SetDirection:(43, 90, 0)
-2022-12-29 12:23:27,512 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:10 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-29 12:23:27,513 [ 1] INFO  Unity: MoveForward
-2022-12-29 12:23:27,514 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:10 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-29 12:23:27,538 [ 1] INFO  Unity: SetDirection:(45, 89, 0)
-2022-12-29 12:23:27,540 [ 1] INFO  Unity: SetPosition:(5029, 4062, 852)
-2022-12-29 12:23:27,542 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:10 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-29 12:23:27,561 [ 1] INFO  Unity: SetDirection:(47, 88, 0)
-2022-12-29 12:23:27,575 [ 1] INFO  Unity: SetDirection:(49, 87, 0)
-2022-12-29 12:23:27,576 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:10 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-29 12:23:27,596 [ 1] INFO  Unity: SetDirection:(50, 87, 0)
-2022-12-29 12:23:27,610 [ 1] INFO  Unity: SetDirection:(50, 86, 0)
-2022-12-29 12:23:27,629 [ 1] INFO  Unity: SetDirection:(50, 86, 0)
-2022-12-29 12:23:27,648 [ 1] INFO  Unity: SetDirection:(49, 87, 0)
-2022-12-29 12:23:27,648 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:10 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-29 12:23:27,842 [ 1] INFO  Unity: Stop
-2022-12-29 12:23:27,843 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:10 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-29 12:23:27,897 [ 1] INFO  Unity: SetPosition:(5079, 4151, 820)
-2022-12-29 12:23:27,898 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:10 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-29 12:23:28,708 [ 1] INFO  Unity: SetDirection:(30, 96, 0)
-2022-12-29 12:23:28,709 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:10 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-29 12:23:28,710 [ 1] INFO  Unity: MoveForward
-2022-12-29 12:23:28,710 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:10 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-29 12:23:28,732 [ 1] INFO  Unity: SetDirection:(31, 95, 0)
-2022-12-29 12:23:28,748 [ 1] INFO  Unity: SetDirection:(32, 95, 0)
-2022-12-29 12:23:28,768 [ 1] INFO  Unity: SetDirection:(33, 94, 0)
-2022-12-29 12:23:28,768 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:10 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-29 12:23:28,783 [ 1] INFO  Unity: SetDirection:(34, 94, 0)
-2022-12-29 12:23:28,803 [ 1] INFO  Unity: SetDirection:(34, 94, 0)
-2022-12-29 12:23:28,818 [ 1] INFO  Unity: SetDirection:(35, 94, 0)
-2022-12-29 12:23:28,819 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:10 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-29 12:23:28,838 [ 1] INFO  Unity: SetDirection:(36, 93, 0)
-2022-12-29 12:23:28,852 [ 1] INFO  Unity: SetDirection:(36, 93, 0)
-2022-12-29 12:23:28,873 [ 1] INFO  Unity: SetDirection:(36, 93, 0)
-2022-12-29 12:23:28,894 [ 1] INFO  Unity: SetDirection:(34, 94, 0)
-2022-12-29 12:23:28,895 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:10 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-29 12:23:29,068 [ 1] INFO  Unity: Stop
-2022-12-29 12:23:29,068 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:10 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-29 12:23:58,032 [ 1] INFO  Unity: UserService->SendCharacterLeave: LeaveCharacterID :10 LeaveCharacterName:3-1
-2022-12-29 12:23:58,530 [ 1] INFO  Unity: MapService->OnMapCharacterLeave :Map:0 CharacterId:10 CharacterName:3-1
-2022-12-29 12:23:58,534 [ 1] INFO  Unity: CharacterManager->RemoveCharacter:CharacterId:10 CharacterName:3-1 MapId:1 Entity:(10:pos:(5123,4261,820),dir:(34,94,0),spd:0
-2022-12-29 12:23:58,536 [ 1] INFO  Unity: RemoveCharacter->RemoveCharacter:10
-2022-12-29 12:23:58,537 [ 1] INFO  Unity: EntityManager RemoveEntity EntityId :10 
-2022-12-29 12:23:58,539 [ 1] INFO  Unity: EntityController->OnEntityRemoved EntityId:10
-2022-12-29 12:23:58,540 [ 1] INFO  Unity: GameObjectManager->DestroyCharacterObject CharacterId:10 CharacterName:3-1 CharacterEntityId:10
-2022-12-29 12:23:58,542 [ 1] INFO  Unity: CharacterManager->RemoveCharacter:CharacterId:8 CharacterName:2-4 MapId:1 Entity:(8:pos:(5000,4000,820),dir:(100,0,0),spd:0
-2022-12-29 12:23:58,542 [ 1] INFO  Unity: RemoveCharacter->RemoveCharacter:8
-2022-12-29 12:23:58,543 [ 1] INFO  Unity: EntityManager RemoveEntity EntityId :8 
-2022-12-29 12:23:58,544 [ 1] INFO  Unity: EntityController->OnEntityRemoved EntityId:8
-2022-12-29 12:23:58,546 [ 1] INFO  Unity: GameObjectManager->DestroyCharacterObject CharacterId:8 CharacterName:2-4 CharacterEntityId:8
-2022-12-29 12:23:58,547 [ 1] INFO  Unity: UserService->OnUserGameLeave:Success [None]
-2022-12-29 12:23:58,548 [ 1] INFO  Unity: Entity Character_10_3-1 OnDestroy :ID:10 POS:(5123, 4261, 820) DIR:(34, 94, 0) SPD:0 
-2022-12-29 12:23:58,549 [ 1] INFO  Unity: Entity Character_8_2-4 OnDestroy :ID:8 POS:(5000, 4000, 820) DIR:(100, 0, 0) SPD:0 
-2022-12-29 12:24:01,310 [ 1] INFO  Unity: Select Character:[25]3-1[Warrior] 
-2022-12-29 12:24:02,632 [ 1] INFO  Unity: UserService->SendCharacterEnter: EnterCharacterID :25 EnterCharacterName:3-1 EnterCharacter_Idx
-2022-12-29 12:24:02,661 [ 1] INFO  Unity: UserService->OnUserGameEnter:Success [None]
-2022-12-29 12:24:02,662 [ 1] INFO  Unity: ItemManager->InitItem :ItemID:1,Count:218
-2022-12-29 12:24:02,663 [ 1] INFO  Unity: ItemManager->InitItem :ItemID:2,Count:58
-2022-12-29 12:24:02,664 [ 1] INFO  Unity: ItemManager->InitItem :ItemID:3,Count:400
-2022-12-29 12:24:02,665 [ 1] INFO  Unity: ItemManager->InitItem :ItemID:4,Count:200
-2022-12-29 12:26:38,599 [ 1] INFO  Unity: MapService->OnMapCharacterEnter :Map:1 Count:2
-2022-12-29 12:26:39,208 [ 1] INFO  Unity: CharacterManager->AddCharacter:CharacterId:25 CharacterName:3-1 MapId:1 Entity:(11:pos:(5000,4000,820),dir:(100,0,0),spd:0
-2022-12-29 12:26:39,887 [ 1] INFO  Unity: EntityManager AddEntity EntityId :11 
-2022-12-29 12:26:40,499 [ 1] INFO  Unity: CharacterManager->AddCharacter:CharacterId:18 CharacterName:2-4 MapId:1 Entity:(8:pos:(5000,4000,820),dir:(100,0,0),spd:0
-2022-12-29 12:26:41,169 [ 1] INFO  Unity: EntityManager AddEntity EntityId :8 
-2022-12-29 12:26:50,478 [ 1] INFO  Unity: MinimapManager->UpdataMiniMap
-2022-12-29 12:26:50,479 [ 1] INFO  Unity: Load MiniMap Image :buluzheng
-2022-12-29 12:26:50,480 [ 1] INFO  Unity: Load MiniMap Image :buluzheng
-2022-12-29 12:26:50,481 [ 1] INFO  Unity: GameObjectManager->CreateCharacterObject CharacterId:11 CharacterName:3-1 CharacterEntityId:11
-2022-12-29 12:26:50,514 [ 1] INFO  Unity: GameObjectManager->InitGameObject Player_character:11
-2022-12-29 12:26:50,515 [ 1] INFO  Unity: GameObjectManager->CreateCharacterObject CharacterId:8 CharacterName:2-4 CharacterEntityId:8
-2022-12-29 12:26:57,984 [ 1] INFO  Unity: SetDirection:(58, -82, 0)
-2022-12-29 12:26:57,986 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:11 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-29 12:26:57,987 [ 1] INFO  Unity: MoveForward
-2022-12-29 12:26:57,988 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:11 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-29 12:26:58,007 [ 1] INFO  Unity: SetDirection:(57, -82, 0)
-2022-12-29 12:26:58,009 [ 1] INFO  Unity: SetPosition:(5039, 3944, 852)
-2022-12-29 12:26:58,010 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:11 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-29 12:26:58,030 [ 1] INFO  Unity: SetDirection:(56, -83, 0)
-2022-12-29 12:26:58,045 [ 1] INFO  Unity: SetDirection:(54, -84, 0)
-2022-12-29 12:26:58,046 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:11 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-29 12:26:58,067 [ 1] INFO  Unity: SetDirection:(54, -84, 0)
-2022-12-29 12:26:58,083 [ 1] INFO  Unity: SetDirection:(54, -84, 0)
-2022-12-29 12:26:58,120 [ 1] INFO  Unity: SetDirection:(53, -85, 0)
-2022-12-29 12:26:58,122 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:11 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-29 12:26:58,143 [ 1] INFO  Unity: SetDirection:(53, -85, 0)
-2022-12-29 12:26:58,164 [ 1] INFO  Unity: SetDirection:(53, -85, 0)
-2022-12-29 12:26:58,180 [ 1] INFO  Unity: SetDirection:(53, -85, 0)
-2022-12-29 12:26:58,181 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:11 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-29 12:26:58,202 [ 1] INFO  Unity: SetDirection:(53, -85, 0)
-2022-12-29 12:26:58,217 [ 1] INFO  Unity: SetDirection:(53, -85, 0)
-2022-12-29 12:26:58,239 [ 1] INFO  Unity: SetDirection:(53, -85, 0)
-2022-12-29 12:26:58,240 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:11 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2022-12-29 12:26:58,256 [ 1] INFO  Unity: SetDirection:(52, -85, 0)
-2022-12-29 12:26:58,275 [ 1] INFO  Unity: Stop
-2022-12-29 12:26:58,276 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:11 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-29 12:26:58,439 [ 1] INFO  Unity: SetPosition:(5089, 3867, 814)
-2022-12-29 12:26:58,440 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:11 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2022-12-29 12:35:04,429 [ 1] INFO  Unity: ProcessReceive exception:System.Net.Sockets.SocketException: 远程主机强迫关闭了一个现有的连接。
-
-  at System.Net.Sockets.Socket.Receive (System.Byte[] buffer, Int32 offset, Int32 size, SocketFlags flags) [0x00000] in <filename unknown>:0 
-  at Network.NetClient.ProcessRecv () [0x00084] in E:\极世界MMORPG\mymmo\Src\Client\Assets\Scripts\Network\NetClient.cs:346 
-
-2022-12-29 12:35:04,431 [ 1] WARN  Unity: CloseConnection(), errorCode: 1001
-UnityEngine.Debug:LogWarning(Object)
-Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:180)
-Network.NetClient:ProcessRecv() (at Assets/Scripts/Network/NetClient.cs:360)
-Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:440)
-
-2022-12-29 12:35:04,450 [ 1] INFO  Unity: DoConnect
-2022-12-29 12:35:04,450 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
-2022-12-29 12:35:04,452 [ 1] INFO  Unity: Connect[0] to server 127.0.0.1:8000
-
-2022-12-29 12:35:06,479 [ 1] WARN  Unity: CloseConnection(), errorCode: 1005
-UnityEngine.Debug:LogWarning(Object)
-Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:180)
-Network.NetClient:DoConnect() (at Assets/Scripts/Network/NetClient.cs:277)
-Network.NetClient:Connect(Int32) (at Assets/Scripts/Network/NetClient.cs:169)
-Network.NetClient:KeepConnect() (at Assets/Scripts/Network/NetClient.cs:321)
-Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:438)
-
-2022-12-29 12:35:06,480 [ 1] ERROR Unity: DoConnect SocketException:[10061,ConnectionRefused,10061]System.Net.Sockets.SocketException: 由于目标计算机积极拒绝，无法连接。
-
-  at System.Net.Sockets.Socket.Connect (System.Net.EndPoint remoteEP, Boolean requireSocketPolicy) [0x00000] in <filename unknown>:0 
-  at System.Net.Sockets.Socket+Worker.Connect () [0x00000] in <filename unknown>:0  
-UnityEngine.Debug:LogErrorFormat(String, Object[])
-Network.NetClient:DoConnect() (at Assets/Scripts/Network/NetClient.cs:279)
-Network.NetClient:Connect(Int32) (at Assets/Scripts/Network/NetClient.cs:169)
-Network.NetClient:KeepConnect() (at Assets/Scripts/Network/NetClient.cs:321)
-Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:438)
-
-2022-12-29 12:35:06,524 [ 1] INFO  Unity: DoConnect
-2022-12-29 12:35:06,525 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
-2022-12-29 12:35:06,527 [ 1] INFO  Unity: Connect[1] to server 127.0.0.1:8000
-
-2022-12-29 12:35:07,538 [ 1] INFO  Unity: LoadingMesager::OnGameServerConnect :0 reason:Success
-2022-12-29 12:35:18,640 [ 1] INFO  Unity: OnDestroy NetworkManager.
-2022-12-29 12:35:18,640 [ 1] WARN  Unity: CloseConnection(), errorCode: 1007
+2023-01-01 16:59:35,475 [ 1] INFO  Unity: MinimapManager->UpdataMiniMap
+2023-01-01 16:59:35,476 [ 1] INFO  Unity: Load MiniMap Image :buluzheng
+2023-01-01 16:59:35,487 [ 1] INFO  Unity: Load MiniMap Image :buluzheng
+2023-01-01 16:59:35,490 [ 1] INFO  Unity: GameObjectManager->CreateCharacterObject CharacterId:1 CharacterName:1-2 CharacterEntityId:1
+2023-01-01 16:59:35,570 [ 1] INFO  Unity: GameObjectManager->InitGameObject Player_character:1
+2023-01-01 16:59:35,572 [ 1] INFO  Unity: Load MiniMap Image :buluzheng
+2023-01-01 16:59:35,573 [ 1] INFO  Unity: Load MiniMap Image :buluzheng
+2023-01-01 16:59:42,297 [ 1] INFO  Unity: BagService->SendBagSave
+2023-01-01 16:59:42,674 [ 1] INFO  Unity: BagService->OnBagSave
+2023-01-01 16:59:52,303 [ 1] INFO  Unity: ItemServicer->SendBuyItem
+2023-01-01 16:59:52,400 [ 1] INFO  Unity: StatusServicer->OnStatusNotify
+2023-01-01 16:59:52,402 [ 1] INFO  Unity: StatusServicer->Notify Type:Item Action:Add Id:2 Value:1
+2023-01-01 16:59:52,404 [ 1] INFO  Unity: BagService->SendBagSave
+2023-01-01 16:59:52,405 [ 1] INFO  Unity: StatusServicer->Notify Type:Money Action:Delete Id:0 Value:200
+2023-01-01 16:59:52,468 [ 1] INFO  Unity: BagService->OnBagSave
+2023-01-01 16:59:55,384 [ 1] INFO  Unity: BagService->SendBagSave
+2023-01-01 16:59:55,428 [ 1] INFO  Unity: BagService->OnBagSave
+2023-01-01 17:00:01,129 [ 1] INFO  Unity: ItemServicer->SendBuyItem
+2023-01-01 17:00:01,205 [ 1] INFO  Unity: StatusServicer->OnStatusNotify
+2023-01-01 17:00:01,206 [ 1] INFO  Unity: StatusServicer->Notify Type:Item Action:Update Id:4 Value:1
+2023-01-01 17:00:01,207 [ 1] INFO  Unity: StatusServicer->Notify Type:Money Action:Delete Id:0 Value:200
+2023-01-01 17:00:04,192 [ 1] INFO  Unity: BagService->SendBagSave
+2023-01-01 17:00:04,249 [ 1] INFO  Unity: BagService->OnBagSave
+2023-01-01 17:00:39,164 [ 1] INFO  Unity: ItemServicer->SendBuyItem
+2023-01-01 17:00:39,205 [ 1] INFO  Unity: StatusServicer->OnStatusNotify
+2023-01-01 17:00:39,207 [ 1] INFO  Unity: StatusServicer->Notify Type:Item Action:Update Id:3 Value:1
+2023-01-01 17:00:39,207 [ 1] INFO  Unity: StatusServicer->Notify Type:Money Action:Delete Id:0 Value:200
+2023-01-01 17:03:43,774 [ 1] INFO  Unity: Entity Character_1_1-2 OnDestroy :ID:1 POS:(5000, 4000, 820) DIR:(100, 0, 0) SPD:0 
+2023-01-01 17:03:43,776 [ 1] INFO  Unity: OnDestroy NetworkManager.
+2023-01-01 17:03:43,776 [ 1] WARN  Unity: CloseConnection(), errorCode: 1007
 UnityEngine.Debug:LogWarning(Object)
 Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:180)
 Network.NetClient:OnDestroy() (at Assets/Scripts/Network/NetClient.cs:175)
 
-2022-12-29 12:35:18,642 [ 1] INFO  Unity: Entity Character_11_3-1 OnDestroy :ID:11 POS:(5089, 3867, 814) DIR:(52, -85, 0) SPD:0 
-2022-12-29 12:35:18,643 [ 1] INFO  Unity: Entity Character_8_2-4 OnDestroy :ID:8 POS:(5000, 4000, 820) DIR:(100, 0, 0) SPD:0 

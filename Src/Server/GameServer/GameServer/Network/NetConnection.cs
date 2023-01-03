@@ -37,7 +37,7 @@ namespace Network
     /// <summary>
     /// A connection to our server.
     /// </summary>
-    public class NetConnection<T>
+    public class NetConnection<T> where T:INetSession
     {
         /// <summary>
         /// Represents a callback used to inform a listener that a ServerConnection has received data.
@@ -128,13 +128,13 @@ namespace Network
                     socket.BeginSend(data, 0, count, SocketFlags.None, new AsyncCallback(SendCallback), socket);
             }
         }
-
+        
         public void SendResponse()
         {
             byte[] data = session.GetResponse();
             this.SendData(data, 0, data.Length);
         }
-
+        
         private void SendCallback(IAsyncResult ar)
         {
             try

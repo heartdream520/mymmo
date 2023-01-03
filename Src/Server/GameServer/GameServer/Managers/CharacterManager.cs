@@ -50,6 +50,11 @@ namespace GameServer.Managers
 
         public void RemoveCharacter(int characterId)
         {
+            if(!this.Characters.ContainsKey(characterId))
+            {
+                Log.ErrorFormat("CharacterManager->RemoveCharacter:  CharID:{0} not exist", characterId);
+                return;
+            }
             Character cha = this.Characters[characterId];
             Log.InfoFormat("CharacterManager->RemoveCharacter:  MapId:{0}  CharacterId:{1} EntityId:{2}", cha.Data.MapID,characterId,cha.entityId);
             if(!this.Characters.ContainsKey(characterId))

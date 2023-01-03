@@ -5,7 +5,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using Common;
+using Common.Data;
+using Common.Utils;
 namespace GameServer.Managers
 {
     class StatusManager
@@ -47,6 +49,7 @@ namespace GameServer.Managers
                 this.AddStatus(StatusType.Money, 0, -goldDelta, StatusAction.Delete);
             }
         }
+        
 
         public void AddItemChange(int id, int count, StatusAction action)
         {
@@ -55,10 +58,12 @@ namespace GameServer.Managers
 
         public void PostProcess(NetMessageResponse message)
         {
+            Log.InfoFormat("StatusManager->PostProcess");
             if (message.statusNotify == null)
                 message.statusNotify = new StatusNotify();
             foreach(var status in this.Status)
             {
+                Log.InfoFormat("StatusManager->PostProcess Type:{0}",status.Type);
                 message.statusNotify.Status.Add(status);
             }
             this.Status.Clear();

@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.Events;
 
 namespace Models
 {
@@ -68,6 +69,14 @@ namespace Models
                 if (CurrentCharacterObject_Set_Action != null)
                     CurrentCharacterObject_Set_Action(value);
             }
+        }
+        public UnityAction<long> Gold_Change_Action;
+        public void AddGold(long count)
+        {
+            this.currentcharacter.Gold += count;
+            if (this.Gold_Change_Action != null)
+                Gold_Change_Action(this.currentcharacter.Gold);
+
         }
     }
 }

@@ -62,6 +62,7 @@ namespace GameServer.Managers
             if(this.items.TryGetValue(itemID,out item))
             {
                 item.Add(count);
+                owner.StatusManager.AddItemChange(itemID, count, StatusAction.Add);
             }
             else
             {
@@ -74,9 +75,11 @@ namespace GameServer.Managers
                 owner.Data.Items.Add(dbitem);
                 Item ite = new Item(dbitem);
                 this.items.Add(itemID,ite);
+                owner.StatusManager.AddItemChange(itemID, count, StatusAction.Add);
 
             }
             //DBService.Instance.Save();
+            
             return true;
         }
         public bool RemoveItem(int itemID,int count)
@@ -87,6 +90,7 @@ namespace GameServer.Managers
             Item item = this.items[itemID];
             if (item.Count < count) return false;
             item.Remove(count);
+            owner.StatusManager.AddItemChange(itemID, count, StatusAction.Delete);
             //DBService.Instance.Save();
             return true;
         }
