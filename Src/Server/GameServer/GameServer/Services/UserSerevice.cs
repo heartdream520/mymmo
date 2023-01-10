@@ -129,7 +129,9 @@ namespace GameServer.Services
                 MapPosX = 5000,
                 MapPosY = 4000,
                 MapPosZ = 820,
-                Gold = 10000
+                Gold = 10000,
+                Equips = new byte[28]
+
             };
 
             //为角色添加背包
@@ -137,8 +139,20 @@ namespace GameServer.Services
             bag.Owner = Tcharacter;
             bag.Items = new byte[0];
             bag.Unlocked = 50;
-            Tcharacter.Bag = DBService.Instance.Entities.TCharacterBags.Add(bag); 
-            
+            Tcharacter.Bag = DBService.Instance.Entities.TCharacterBags.Add(bag);
+
+            Tcharacter.Items.Add(new TCharacterItem()
+            {
+                Owner = Tcharacter,
+                ItemID = 1,
+                ItemCount=20
+            });
+            Tcharacter.Items.Add(new TCharacterItem()
+            {
+                Owner = Tcharacter,
+                ItemID = 2,
+                ItemCount = 20
+            });
 
 
             DBService.Instance.Entities.Characters.Add(Tcharacter);
@@ -186,7 +200,7 @@ namespace GameServer.Services
             message.Response = new NetMessageResponse();
             message.Response.gameEnter = new UserGameEnterResponse();
 
-
+            /*
             int itemId = 2;
             bool hasItem = cha.itemManager.HasItem(itemId);
             Log.InfoFormat("Item Test: ItemID:{0}  HasItem:{1}", itemId, hasItem);
@@ -201,13 +215,12 @@ namespace GameServer.Services
                 cha.itemManager.AddItem(2, 29);
                 cha.itemManager.AddItem(3, 200);
                 cha.itemManager.AddItem(4, 100);
-                */
             }
             Item item = cha.itemManager.GetItem(itemId);
             Log.InfoFormat("Item: {0}", item);
             cha.itemManager.GetItemInfos(cha.Info.Items);
             DBService.Instance.Save();
-
+            */
 
             //添加角色信息
             message.Response.gameEnter.Ncharacterinfo = cha.Info;

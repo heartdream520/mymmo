@@ -81,6 +81,7 @@
     <Compile Include="Assets\Scripts\Managers\CharacterManager.cs" />
     <Compile Include="Assets\Scripts\Managers\DataManager.cs" />
     <Compile Include="Assets\Scripts\Managers\EntityManager.cs" />
+    <Compile Include="Assets\Scripts\Managers\EquipManager.cs" />
     <Compile Include="Assets\Scripts\Managers\ItemManager.cs" />
     <Compile Include="Assets\Scripts\Managers\MinimapManager.cs" />
     <Compile Include="Assets\Scripts\Managers\MouseManager.cs" />
@@ -107,6 +108,10 @@
     <Compile Include="Assets\Scripts\UI\Bag\UIBag.cs" />
     <Compile Include="Assets\Scripts\UI\Bag\UIIconItem.cs" />
     <Compile Include="Assets\Scripts\UI\character_scale.cs" />
+    <Compile Include="Assets\Scripts\UI\CharacterEquip\Character_attribute.cs" />
+    <Compile Include="Assets\Scripts\UI\CharacterEquip\Equip_attribute.cs" />
+    <Compile Include="Assets\Scripts\UI\CharacterEquip\UICharEquip.cs" />
+    <Compile Include="Assets\Scripts\UI\CharacterEquip\UIEquipItem.cs" />
     <Compile Include="Assets\Scripts\UI\ListView\ListView.cs" />
     <Compile Include="Assets\Scripts\UI\MessageBox.cs" />
     <Compile Include="Assets\Scripts\UI\Minimap\UIMinimap.cs" />

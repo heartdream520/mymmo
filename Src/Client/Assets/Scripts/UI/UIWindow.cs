@@ -1,9 +1,10 @@
-﻿using System.Collections;
+﻿using Assets.Scripts.Managers;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public abstract class UIWindow : MonoBehaviour {
-
+    
     public delegate void CloseHandler(UIWindow sender, WindowResult result);
     public event CloseHandler Onclose;
     public  virtual System.Type Type { get { return this.GetType(); } }
@@ -26,5 +27,14 @@ public abstract class UIWindow : MonoBehaviour {
     {
         this.Close(WindowResult.Yes);
     }
+    private void OnDisable()
+    {
+        InDisable();
+    }
+    public virtual void InDisable()
+    {
+
+    }
+
 
 }

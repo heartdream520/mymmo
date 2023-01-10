@@ -1,54 +1,61 @@
-2023-01-01 12:08:03,047 [ 1] INFO  Unity: LoadingManager start
-2023-01-01 12:08:07,642 [ 1] INFO  Unity: DataManager > DataManager()
-2023-01-01 12:08:07,732 [ 1] INFO  Unity: MapDefine.txt
-2023-01-01 12:08:07,748 [ 1] INFO  Unity: CharacterDefine.txt
-2023-01-01 12:08:07,773 [ 1] INFO  Unity: TeleporterDefine.txt
-2023-01-01 12:08:07,782 [ 1] INFO  Unity: SpawnPointDefine.txt
-2023-01-01 12:08:07,788 [ 1] INFO  Unity: NpcDefine.txt
-2023-01-01 12:08:07,811 [ 1] INFO  Unity: ItemDefine.txt
-2023-01-01 12:08:11,910 [ 1] INFO  Unity: UserService->SendLoad: User:1 Password:1
-2023-01-01 12:08:11,912 [ 1] INFO  Unity: ConnectToServer() Start 
-2023-01-01 12:08:11,913 [ 1] INFO  Unity: DoConnect
-2023-01-01 12:08:11,915 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
-2023-01-01 12:08:11,923 [ 1] INFO  Unity: Connect[0] to server 127.0.0.1:8000
+2023-01-05 20:43:29,509 [ 1] INFO  Unity: LoadingManager start
+2023-01-05 20:43:33,729 [ 1] INFO  Unity: DataManager > DataManager()
+2023-01-05 20:43:33,839 [ 1] INFO  Unity: MapDefine.txt
+2023-01-05 20:43:33,857 [ 1] INFO  Unity: CharacterDefine.txt
+2023-01-05 20:43:33,884 [ 1] INFO  Unity: TeleporterDefine.txt
+2023-01-05 20:43:33,897 [ 1] INFO  Unity: SpawnPointDefine.txt
+2023-01-05 20:43:33,903 [ 1] INFO  Unity: NpcDefine.txt
+2023-01-05 20:43:33,932 [ 1] INFO  Unity: ItemDefine.txt
+2023-01-05 20:43:38,635 [ 1] INFO  Unity: UserService->SendLoad: User:1 Password:1
+2023-01-05 20:43:38,636 [ 1] INFO  Unity: ConnectToServer() Start 
+2023-01-05 20:43:38,638 [ 1] INFO  Unity: DoConnect
+2023-01-05 20:43:38,640 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
+2023-01-05 20:43:38,643 [ 1] INFO  Unity: Connect[0] to server 127.0.0.1:8000
 
-2023-01-01 12:08:11,926 [ 1] INFO  Unity: LoadingMesager::OnGameServerConnect :0 reason:Success
-2023-01-01 12:08:15,203 [ 1] INFO  Unity: UserService->OnUserLoad:Success [None]
-2023-01-01 12:08:18,885 [ 1] INFO  Unity: Select Character:[2]1-2[Wizard] 
-2023-01-01 12:08:20,595 [ 1] INFO  Unity: UserService->SendCharacterEnter: EnterCharacterID :2 EnterCharacterName:1-2 EnterCharacter_Idx
-2023-01-01 12:08:20,668 [ 1] INFO  Unity: UserService->OnUserGameEnter:Success [None]
-2023-01-01 12:08:20,672 [ 1] INFO  Unity: MapService->OnMapCharacterEnter :Map:1 Count:1
-2023-01-01 12:08:20,674 [ 1] INFO  Unity: CharacterManager->AddCharacter:CharacterId:2 CharacterName:1-2 MapId:1 Entity:(1:pos:(5000,4000,820),dir:(100,0,0),spd:0
-2023-01-01 12:08:20,677 [ 1] INFO  Unity: EntityManager AddEntity EntityId :1 
-2023-01-01 12:08:23,044 [ 1] WARN  Unity: DontDestroyOnLoad only work for root GameObjects or components on root GameObjects.
+2023-01-05 20:43:38,647 [ 1] INFO  Unity: LoadingMesager::OnGameServerConnect :0 reason:Success
+2023-01-05 20:43:38,752 [ 1] INFO  Unity: UserService->OnUserLoad:Success [None]
+2023-01-05 20:43:42,371 [ 1] INFO  Unity: Select Character:[4]1-4[Warrior] 
+2023-01-05 20:43:43,428 [ 1] INFO  Unity: UserService->SendCharacterEnter: EnterCharacterID :4 EnterCharacterName:1-4 EnterCharacter_Idx
+2023-01-05 20:43:43,454 [ 1] INFO  Unity: UserService->OnUserGameEnter:Success [None]
+2023-01-05 20:43:43,459 [ 1] INFO  Unity: ItemManager->InitItem :ItemID:1,Count:20
+2023-01-05 20:43:43,460 [ 1] INFO  Unity: ItemManager->InitItem :ItemID:2,Count:20
+2023-01-05 20:43:43,461 [ 1] INFO  Unity: ItemManager->InitItem :ItemID:1001,Count:3
+2023-01-05 20:43:43,462 [ 1] INFO  Unity: ItemManager->InitItem :ItemID:1002,Count:2
+2023-01-05 20:43:43,463 [ 1] INFO  Unity: ItemManager->InitItem :ItemID:1004,Count:2
+2023-01-05 20:43:43,464 [ 1] INFO  Unity: ItemManager->InitItem :ItemID:1006,Count:1
+2023-01-05 20:43:43,465 [ 1] INFO  Unity: ItemManager->InitItem :ItemID:1005,Count:1
+2023-01-05 20:43:43,466 [ 1] INFO  Unity: ItemManager->InitItem :ItemID:1003,Count:1
+2023-01-05 20:43:43,466 [ 1] INFO  Unity: ItemManager->InitItem :ItemID:3,Count:10
+2023-01-05 20:43:43,469 [ 1] INFO  Unity: MapService->OnMapCharacterEnter :Map:1 Count:1
+2023-01-05 20:43:43,471 [ 1] INFO  Unity: CharacterManager->AddCharacter:CharacterId:4 CharacterName:1-4 MapId:1 Entity:(30:pos:(5000,4000,820),dir:(100,0,0),spd:0
+2023-01-05 20:43:43,474 [ 1] INFO  Unity: EntityManager AddEntity EntityId :30 
+2023-01-05 20:43:45,741 [ 1] WARN  Unity: DontDestroyOnLoad only work for root GameObjects or components on root GameObjects.
 UnityEngine.Object:DontDestroyOnLoad(Object)
 MonoSingleton`1:Awake() (at Assets/Scripts/Utilities/MonoSingleton.cs:32)
 
-2023-01-01 12:08:23,045 [ 1] WARN  Unity: DontDestroyOnLoad only work for root GameObjects or components on root GameObjects.
+2023-01-05 20:43:45,742 [ 1] WARN  Unity: DontDestroyOnLoad only work for root GameObjects or components on root GameObjects.
 UnityEngine.Object:DontDestroyOnLoad(Object)
 MonoSingleton`1:Awake() (at Assets/Scripts/Utilities/MonoSingleton.cs:32)
 
-2023-01-01 12:08:23,046 [ 1] WARN  Unity: DontDestroyOnLoad only work for root GameObjects or components on root GameObjects.
+2023-01-05 20:43:45,742 [ 1] WARN  Unity: DontDestroyOnLoad only work for root GameObjects or components on root GameObjects.
 UnityEngine.Object:DontDestroyOnLoad(Object)
 MonoSingleton`1:Awake() (at Assets/Scripts/Utilities/MonoSingleton.cs:32)
 
-2023-01-01 12:08:23,047 [ 1] WARN  Unity: DontDestroyOnLoad only work for root GameObjects or components on root GameObjects.
+2023-01-05 20:43:45,743 [ 1] WARN  Unity: DontDestroyOnLoad only work for root GameObjects or components on root GameObjects.
 UnityEngine.Object:DontDestroyOnLoad(Object)
 MonoSingleton`1:Awake() (at Assets/Scripts/Utilities/MonoSingleton.cs:32)
 
-2023-01-01 12:08:23,089 [ 1] INFO  Unity: MinimapManager->UpdataMiniMap
-2023-01-01 12:08:23,090 [ 1] INFO  Unity: Load MiniMap Image :buluzheng
-2023-01-01 12:08:23,092 [ 1] INFO  Unity: Load MiniMap Image :buluzheng
-2023-01-01 12:08:23,095 [ 1] INFO  Unity: GameObjectManager->CreateCharacterObject CharacterId:1 CharacterName:1-2 CharacterEntityId:1
-2023-01-01 12:08:23,152 [ 1] INFO  Unity: GameObjectManager->InitGameObject Player_character:1
-2023-01-01 12:08:23,154 [ 1] INFO  Unity: Load MiniMap Image :buluzheng
-2023-01-01 12:08:23,155 [ 1] INFO  Unity: Load MiniMap Image :buluzheng
-2023-01-01 12:08:30,616 [ 1] INFO  Unity: ItemServicer->SendBuyItem
-2023-01-01 12:09:07,154 [ 1] INFO  Unity: ItemServicer->SendBuyItem
-2023-01-01 12:09:17,317 [ 1] INFO  Unity: OnDestroy NetworkManager.
-2023-01-01 12:09:17,318 [ 1] WARN  Unity: CloseConnection(), errorCode: 1007
+2023-01-05 20:43:45,782 [ 1] INFO  Unity: MinimapManager->UpdataMiniMap
+2023-01-05 20:43:45,783 [ 1] INFO  Unity: Load MiniMap Image :buluzheng
+2023-01-05 20:43:45,796 [ 1] INFO  Unity: Load MiniMap Image :buluzheng
+2023-01-05 20:43:45,799 [ 1] INFO  Unity: GameObjectManager->CreateCharacterObject CharacterId:30 CharacterName:1-4 CharacterEntityId:30
+2023-01-05 20:43:45,833 [ 1] INFO  Unity: GameObjectManager->InitGameObject Player_character:30
+2023-01-05 20:43:45,835 [ 1] INFO  Unity: Load MiniMap Image :buluzheng
+2023-01-05 20:43:45,836 [ 1] INFO  Unity: Load MiniMap Image :buluzheng
+2023-01-05 20:45:03,401 [ 1] INFO  Unity: Entity Character_30_1-4 OnDestroy :ID:30 POS:(5000, 4000, 820) DIR:(100, 0, 0) SPD:0 
+2023-01-05 20:45:03,403 [ 1] INFO  Unity: OnDestroy NetworkManager.
+2023-01-05 20:45:03,404 [ 1] WARN  Unity: CloseConnection(), errorCode: 1007
 UnityEngine.Debug:LogWarning(Object)
 Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:180)
 Network.NetClient:OnDestroy() (at Assets/Scripts/Network/NetClient.cs:175)
 
-2023-01-01 12:09:17,325 [ 1] INFO  Unity: Entity Character_1_1-2 OnDestroy :ID:1 POS:(5000, 4000, 820) DIR:(100, 0, 0) SPD:0 

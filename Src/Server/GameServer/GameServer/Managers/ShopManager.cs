@@ -28,11 +28,11 @@ namespace GameServer.Managers
                 Log.InfoFormat("ShopManager->BuyItem BuyCharacter:{0} ShopId:{1} ShopItemId:{2} ",
                     sender.Session.Character.ToString(), shopId, shopItemId);
                 Log.InfoFormat("ShopManager->BuyItem CharacterGold:{0},Price:{1}", sender.Session.Character.Gold, shopItem.Price * shopItem.Count);
-                if (sender.Session.Character.Gold>=shopItem.Price*shopItem.Count)
+                if (sender.Session.Character.Gold>=shopItem.Price)
                 {
                    
                     sender.Session.Character.itemManager.AddItem(shopItem.ItemID, shopItem.Count);
-                    sender.Session.Character.Gold -= shopItem.Price * shopItem.Count;
+                    sender.Session.Character.Gold -= shopItem.Price;
                     DBService.Instance.Save();
                     return Result.Success;
 

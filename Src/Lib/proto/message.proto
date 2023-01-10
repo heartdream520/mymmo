@@ -49,8 +49,22 @@ enum ENTITY_EVENT
 enum ITEM_TYPE
 {
 	NORMAL=0;
-	MATERIAL=1;
+	MATERIAL=1; // 消耗品
 	TASK=2;    //任务道具
+	EQUIP=3;  //装备
+	RIDE = 4;  //坐骑
+}
+enum EQUIP_SLOT
+{
+	WEAPON =0;    //武器  weapon
+	ACCESSORY =1; //副手  accessory
+	HELMET =2;    //头部  helmet
+	CHEST=3;      //胸甲  chest
+	SHOULDER =4;  //护肩  shoulder
+	PANTS=5;      //裤子  pants
+	BOOTS=6;      //靴子  boots
+	SLOT_MAX=7;   //最大值
+
 }
 
 message NUserInfo {
@@ -78,6 +92,8 @@ message NCharacterInfo {
 	repeated NItemInfo Items=10;
 	//角色背包
 	NBagInfo Bag=11;
+	bytes Equips = 12;
+
 }
 
 message NItemInfo
@@ -176,6 +192,7 @@ message NetMessageRequest{
 	BagSaveRequest bagsave=11;
 
 	ItemBuyRequest itemBuy=12;
+	ItemEquipRequest itemEquip=13;
 	StatusNotify statusNotify =100;
 
 }
@@ -194,7 +211,7 @@ message NetMessageResponse{
 	BagSaveRespose bagsave=9;
 	
 	ItemBuyResponse itemBuy=10;
-
+	ItemEquipRespose itemEquip=13;
 	StatusNotify statusNotify =100;
 	
 }
@@ -309,6 +326,18 @@ message ItemBuyRequest
 	int32 shopItemId=2;
 }
 message ItemBuyResponse
+{
+	RESULT result = 1;
+	string errormsg = 2;
+}
+message ItemEquipRequest
+{
+	int32 slot = 1; //格子
+	int32 itemId = 2;
+	bool isEquip = 3;  //装备还是脱下
+	
+}
+message ItemEquipRespose
 {
 	RESULT result = 1;
 	string errormsg = 2;

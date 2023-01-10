@@ -309,6 +309,7 @@ namespace Services
             {
                 ItemManager.Instance.Init(response.Ncharacterinfo.Items);
                 BagManager.Instance.Init(response.Ncharacterinfo.Bag);
+                EquipManager.Instance.Init(response.Ncharacterinfo.Equips);
             }
             if (this.OnGameEnter != null)
             {

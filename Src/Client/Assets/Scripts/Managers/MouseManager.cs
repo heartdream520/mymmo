@@ -15,10 +15,28 @@ namespace Assets.Scripts.Managers
         public bool Mouse_Is_Display
         {
             get { return mouse_is_diplay; }
+            set
+            {
+                mouse_is_diplay = value;
+                if(value)
+                {
+                    ToShowCursor();
+                }
+                else
+                {
+                    ToHideCursor();
+                }
+            }
         }
         private void Update()
         {
             if (MapService.Instance.CurrentMapId == 0) return;
+            if(UIManager.Instance.UIcnt>0)
+            {
+                if (mouse_is_diplay) return;
+                ToShowCursor();
+                return;
+            }
             if (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift))
             {
                 ToShowCursor();

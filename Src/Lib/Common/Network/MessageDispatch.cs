@@ -21,7 +21,8 @@ namespace Network
             if (message.itemBuy != null) { MessageDistributer<T>.Instance.RaiseEvent(sender, message.itemBuy); }   
 
             if (message.statusNotify != null) { MessageDistributer<T>.Instance.RaiseEvent(sender, message.statusNotify); }   
-
+            if (message.itemEquip != null) { MessageDistributer<T>.Instance.RaiseEvent(sender, message.itemEquip); }   
+            
 
         }
         //·¢ËÍĞÅÏ¢
@@ -42,7 +43,7 @@ namespace Network
             if (message.Bagsave != null) { MessageDistributer<T>.Instance.RaiseEvent(sender, message.Bagsave); }
 
             if (message.itemBuy != null) { MessageDistributer<T>.Instance.RaiseEvent(sender, message.itemBuy); }
-
+            if (message.itemEquip != null) { MessageDistributer<T>.Instance.RaiseEvent(sender, message.itemEquip); }
             //if (message.statusNotify != null) { MessageDistributer<T>.Instance.RaiseEvent(sender, message.statusNotify); }
         }
     }

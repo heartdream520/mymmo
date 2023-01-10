@@ -28,12 +28,18 @@ namespace Assets.Scripts.Services
 
         public delegate bool StatusNotifyHandler(NStatus status);
         Dictionary<StatusType, StatusNotifyHandler> eventMap = new Dictionary<StatusType, StatusNotifyHandler>();
+        HashSet<StatusNotifyHandler> handlers = new HashSet<StatusNotifyHandler>();
 
         public void RegisterStatusNofity(StatusType type, StatusNotifyHandler action)
         {
+            if (handlers.Contains(action)) return;
             if (!eventMap.ContainsKey(type))
                 eventMap[type] = action;
             else eventMap[type] += action;
+
+
+            handlers.Add(action);
+
         }
         private void OnStatusNotify(object sender, StatusNotify notify)
         {

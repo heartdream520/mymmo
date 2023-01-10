@@ -32,6 +32,12 @@ namespace Common.Data
         /// 类别
         /// </summary>
         public string Category { get; set; }
+        public int Level { get; set; }
+        /// <summary>
+        /// 限制角色类别使用
+        /// </summary>
+        public CharacterClass LimitClass { get; set; }
+
         public bool CanUse { get; set; }
         public int Price { get; set; }
         public float UseCD { get; set; }

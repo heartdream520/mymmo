@@ -31,6 +31,14 @@ public class UIShop : UIWindow
         {
             if(kv.Value.Status>0)
             {
+
+                //让商店不出售非此角色能够使用的物品
+                ShopItemDefine define = kv.Value;
+                ItemDefine item = DataManager.Instance.Items[define.ItemID];
+                if ((int)item.LimitClass != 0 && (int)item.LimitClass != User.Instance.CurrentCharacter.Tid)
+                    continue;
+
+
                 GameObject go = Instantiate(shopItem, itemRoot);
                 UIShopItem ui = go.GetComponent<UIShopItem>();
                 ui.SetShopItem(kv.Key, kv.Value, this);

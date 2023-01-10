@@ -1,75 +1,92 @@
-2023-01-01 16:59:09,135 [ 1] INFO  Unity: LoadingManager start
-2023-01-01 16:59:13,520 [ 1] INFO  Unity: DataManager > DataManager()
-2023-01-01 16:59:13,768 [ 1] INFO  Unity: MapDefine.txt
-2023-01-01 16:59:13,798 [ 1] INFO  Unity: CharacterDefine.txt
-2023-01-01 16:59:13,862 [ 1] INFO  Unity: TeleporterDefine.txt
-2023-01-01 16:59:13,931 [ 1] INFO  Unity: SpawnPointDefine.txt
-2023-01-01 16:59:13,973 [ 1] INFO  Unity: NpcDefine.txt
-2023-01-01 16:59:14,040 [ 1] INFO  Unity: ItemDefine.txt
-2023-01-01 16:59:19,035 [ 1] INFO  Unity: UserService->SendLoad: User:1 Password:1
-2023-01-01 16:59:19,036 [ 1] INFO  Unity: ConnectToServer() Start 
-2023-01-01 16:59:19,038 [ 1] INFO  Unity: DoConnect
-2023-01-01 16:59:19,069 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
-2023-01-01 16:59:19,072 [ 1] INFO  Unity: Connect[0] to server 127.0.0.1:8000
+2023-01-07 15:06:27,578 [ 1] INFO  Unity: LoadingManager start
+2023-01-07 15:06:31,789 [ 1] INFO  Unity: DataManager > DataManager()
+2023-01-07 15:06:31,875 [ 1] INFO  Unity: MapDefine.txt
+2023-01-07 15:06:31,887 [ 1] INFO  Unity: CharacterDefine.txt
+2023-01-07 15:06:31,913 [ 1] INFO  Unity: TeleporterDefine.txt
+2023-01-07 15:06:31,921 [ 1] INFO  Unity: SpawnPointDefine.txt
+2023-01-07 15:06:31,926 [ 1] INFO  Unity: NpcDefine.txt
+2023-01-07 15:06:31,943 [ 1] INFO  Unity: ItemDefine.txt
+2023-01-07 15:06:38,543 [ 1] INFO  Unity: UserService->SendLoad: User:1 Password:1
+2023-01-07 15:06:38,545 [ 1] INFO  Unity: ConnectToServer() Start 
+2023-01-07 15:06:38,546 [ 1] INFO  Unity: DoConnect
+2023-01-07 15:06:38,548 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
+2023-01-07 15:06:38,551 [ 1] INFO  Unity: Connect[0] to server 127.0.0.1:8000
 
-2023-01-01 16:59:19,075 [ 1] INFO  Unity: LoadingMesager::OnGameServerConnect :0 reason:Success
-2023-01-01 16:59:22,905 [ 1] INFO  Unity: UserService->OnUserLoad:Success [None]
-2023-01-01 16:59:30,091 [ 1] INFO  Unity: Select Character:[1]1-1[Warrior] 
-2023-01-01 16:59:30,473 [ 1] INFO  Unity: Select Character:[2]1-2[Wizard] 
-2023-01-01 16:59:32,674 [ 1] INFO  Unity: UserService->SendCharacterEnter: EnterCharacterID :2 EnterCharacterName:1-2 EnterCharacter_Idx
-2023-01-01 16:59:32,775 [ 1] INFO  Unity: UserService->OnUserGameEnter:Success [None]
-2023-01-01 16:59:32,778 [ 1] INFO  Unity: ItemManager->InitItem :ItemID:2,Count:5
-2023-01-01 16:59:32,779 [ 1] INFO  Unity: ItemManager->InitItem :ItemID:8,Count:1
-2023-01-01 16:59:32,781 [ 1] INFO  Unity: ItemManager->InitItem :ItemID:5,Count:1
-2023-01-01 16:59:32,797 [ 1] INFO  Unity: MapService->OnMapCharacterEnter :Map:1 Count:1
-2023-01-01 16:59:32,799 [ 1] INFO  Unity: CharacterManager->AddCharacter:CharacterId:2 CharacterName:1-2 MapId:1 Entity:(1:pos:(5000,4000,820),dir:(100,0,0),spd:0
-2023-01-01 16:59:32,803 [ 1] INFO  Unity: EntityManager AddEntity EntityId :1 
-2023-01-01 16:59:35,419 [ 1] WARN  Unity: DontDestroyOnLoad only work for root GameObjects or components on root GameObjects.
+2023-01-07 15:06:38,554 [ 1] INFO  Unity: LoadingMesager::OnGameServerConnect :0 reason:Success
+2023-01-07 15:06:41,345 [ 1] INFO  Unity: UserService->OnUserLoad:Success [None]
+2023-01-07 15:06:45,263 [ 1] INFO  Unity: Select Character:[4]1-4[Warrior] 
+2023-01-07 15:06:52,104 [ 1] INFO  Unity: creat character: class:Wizard  name:1-5
+2023-01-07 15:06:52,106 [ 1] INFO  Unity: UserService->SendCharacterCreate: CharacterName :1-5 Class:Wizard
+2023-01-07 15:06:52,511 [ 1] INFO  Unity: UserService->OnUserCharacterCreate:Success [None]
+2023-01-07 15:06:54,035 [ 1] INFO  Unity: Select Character:[5]1-5[Wizard] 
+2023-01-07 15:06:55,086 [ 1] INFO  Unity: UserService->SendCharacterEnter: EnterCharacterID :5 EnterCharacterName:1-5 EnterCharacter_Idx
+2023-01-07 15:06:55,107 [ 1] INFO  Unity: UserService->OnUserGameEnter:Success [None]
+2023-01-07 15:06:55,109 [ 1] INFO  Unity: ItemManager->InitItem :ItemID:1,Count:20
+2023-01-07 15:06:55,110 [ 1] INFO  Unity: ItemManager->InitItem :ItemID:2,Count:20
+2023-01-07 15:06:55,113 [ 1] INFO  Unity: BagService->SendBagSave
+2023-01-07 15:06:55,114 [ 1] INFO  Unity: MapService->OnMapCharacterEnter :Map:1 Count:1
+2023-01-07 15:06:55,116 [ 1] INFO  Unity: CharacterManager->AddCharacter:CharacterId:5 CharacterName:1-5 MapId:1 Entity:(1:pos:(5000,4000,820),dir:(100,0,0),spd:0
+2023-01-07 15:06:55,119 [ 1] INFO  Unity: EntityManager AddEntity EntityId :1 
+2023-01-07 15:06:55,888 [ 1] INFO  Unity: BagService->OnBagSave
+2023-01-07 15:06:57,361 [ 1] WARN  Unity: DontDestroyOnLoad only work for root GameObjects or components on root GameObjects.
 UnityEngine.Object:DontDestroyOnLoad(Object)
 MonoSingleton`1:Awake() (at Assets/Scripts/Utilities/MonoSingleton.cs:32)
 
-2023-01-01 16:59:35,420 [ 1] WARN  Unity: DontDestroyOnLoad only work for root GameObjects or components on root GameObjects.
+2023-01-07 15:06:57,362 [ 1] WARN  Unity: DontDestroyOnLoad only work for root GameObjects or components on root GameObjects.
 UnityEngine.Object:DontDestroyOnLoad(Object)
 MonoSingleton`1:Awake() (at Assets/Scripts/Utilities/MonoSingleton.cs:32)
 
-2023-01-01 16:59:35,421 [ 1] WARN  Unity: DontDestroyOnLoad only work for root GameObjects or components on root GameObjects.
+2023-01-07 15:06:57,363 [ 1] WARN  Unity: DontDestroyOnLoad only work for root GameObjects or components on root GameObjects.
 UnityEngine.Object:DontDestroyOnLoad(Object)
 MonoSingleton`1:Awake() (at Assets/Scripts/Utilities/MonoSingleton.cs:32)
 
-2023-01-01 16:59:35,422 [ 1] WARN  Unity: DontDestroyOnLoad only work for root GameObjects or components on root GameObjects.
+2023-01-07 15:06:57,364 [ 1] WARN  Unity: DontDestroyOnLoad only work for root GameObjects or components on root GameObjects.
 UnityEngine.Object:DontDestroyOnLoad(Object)
 MonoSingleton`1:Awake() (at Assets/Scripts/Utilities/MonoSingleton.cs:32)
 
-2023-01-01 16:59:35,475 [ 1] INFO  Unity: MinimapManager->UpdataMiniMap
-2023-01-01 16:59:35,476 [ 1] INFO  Unity: Load MiniMap Image :buluzheng
-2023-01-01 16:59:35,487 [ 1] INFO  Unity: Load MiniMap Image :buluzheng
-2023-01-01 16:59:35,490 [ 1] INFO  Unity: GameObjectManager->CreateCharacterObject CharacterId:1 CharacterName:1-2 CharacterEntityId:1
-2023-01-01 16:59:35,570 [ 1] INFO  Unity: GameObjectManager->InitGameObject Player_character:1
-2023-01-01 16:59:35,572 [ 1] INFO  Unity: Load MiniMap Image :buluzheng
-2023-01-01 16:59:35,573 [ 1] INFO  Unity: Load MiniMap Image :buluzheng
-2023-01-01 16:59:42,297 [ 1] INFO  Unity: BagService->SendBagSave
-2023-01-01 16:59:42,674 [ 1] INFO  Unity: BagService->OnBagSave
-2023-01-01 16:59:52,303 [ 1] INFO  Unity: ItemServicer->SendBuyItem
-2023-01-01 16:59:52,400 [ 1] INFO  Unity: StatusServicer->OnStatusNotify
-2023-01-01 16:59:52,402 [ 1] INFO  Unity: StatusServicer->Notify Type:Item Action:Add Id:2 Value:1
-2023-01-01 16:59:52,404 [ 1] INFO  Unity: BagService->SendBagSave
-2023-01-01 16:59:52,405 [ 1] INFO  Unity: StatusServicer->Notify Type:Money Action:Delete Id:0 Value:200
-2023-01-01 16:59:52,468 [ 1] INFO  Unity: BagService->OnBagSave
-2023-01-01 16:59:55,384 [ 1] INFO  Unity: BagService->SendBagSave
-2023-01-01 16:59:55,428 [ 1] INFO  Unity: BagService->OnBagSave
-2023-01-01 17:00:01,129 [ 1] INFO  Unity: ItemServicer->SendBuyItem
-2023-01-01 17:00:01,205 [ 1] INFO  Unity: StatusServicer->OnStatusNotify
-2023-01-01 17:00:01,206 [ 1] INFO  Unity: StatusServicer->Notify Type:Item Action:Update Id:4 Value:1
-2023-01-01 17:00:01,207 [ 1] INFO  Unity: StatusServicer->Notify Type:Money Action:Delete Id:0 Value:200
-2023-01-01 17:00:04,192 [ 1] INFO  Unity: BagService->SendBagSave
-2023-01-01 17:00:04,249 [ 1] INFO  Unity: BagService->OnBagSave
-2023-01-01 17:00:39,164 [ 1] INFO  Unity: ItemServicer->SendBuyItem
-2023-01-01 17:00:39,205 [ 1] INFO  Unity: StatusServicer->OnStatusNotify
-2023-01-01 17:00:39,207 [ 1] INFO  Unity: StatusServicer->Notify Type:Item Action:Update Id:3 Value:1
-2023-01-01 17:00:39,207 [ 1] INFO  Unity: StatusServicer->Notify Type:Money Action:Delete Id:0 Value:200
-2023-01-01 17:03:43,774 [ 1] INFO  Unity: Entity Character_1_1-2 OnDestroy :ID:1 POS:(5000, 4000, 820) DIR:(100, 0, 0) SPD:0 
-2023-01-01 17:03:43,776 [ 1] INFO  Unity: OnDestroy NetworkManager.
-2023-01-01 17:03:43,776 [ 1] WARN  Unity: CloseConnection(), errorCode: 1007
+2023-01-07 15:06:57,396 [ 1] INFO  Unity: MinimapManager->UpdataMiniMap
+2023-01-07 15:06:57,397 [ 1] INFO  Unity: Load MiniMap Image :buluzheng
+2023-01-07 15:06:57,404 [ 1] INFO  Unity: Load MiniMap Image :buluzheng
+2023-01-07 15:06:57,407 [ 1] INFO  Unity: GameObjectManager->CreateCharacterObject CharacterId:1 CharacterName:1-5 CharacterEntityId:1
+2023-01-07 15:06:57,450 [ 1] INFO  Unity: GameObjectManager->InitGameObject Player_character:1
+2023-01-07 15:06:57,452 [ 1] INFO  Unity: Load MiniMap Image :buluzheng
+2023-01-07 15:06:57,453 [ 1] INFO  Unity: Load MiniMap Image :buluzheng
+2023-01-07 15:07:05,810 [ 1] INFO  Unity: ItemServicer->SendBuyItem
+2023-01-07 15:07:05,847 [ 1] INFO  Unity: StatusServicer->OnStatusNotify
+2023-01-07 15:07:05,848 [ 1] INFO  Unity: StatusServicer->Notify Type:Item Action:Add Id:2001 Value:1
+2023-01-07 15:07:05,850 [ 1] INFO  Unity: BagService->SendBagSave
+2023-01-07 15:07:05,851 [ 1] INFO  Unity: StatusServicer->Notify Type:Money Action:Delete Id:0 Value:300
+2023-01-07 15:07:05,889 [ 1] INFO  Unity: BagService->OnBagSave
+2023-01-07 15:07:07,779 [ 1] INFO  Unity: ItemServicer->SendBuyItem
+2023-01-07 15:07:07,804 [ 1] INFO  Unity: StatusServicer->OnStatusNotify
+2023-01-07 15:07:07,805 [ 1] INFO  Unity: StatusServicer->Notify Type:Item Action:Add Id:2002 Value:1
+2023-01-07 15:07:07,806 [ 1] INFO  Unity: BagService->SendBagSave
+2023-01-07 15:07:07,807 [ 1] INFO  Unity: StatusServicer->Notify Type:Money Action:Delete Id:0 Value:200
+2023-01-07 15:07:07,848 [ 1] INFO  Unity: BagService->OnBagSave
+2023-01-07 15:07:09,859 [ 1] INFO  Unity: ItemServicer->SendBuyItem
+2023-01-07 15:07:09,883 [ 1] INFO  Unity: StatusServicer->OnStatusNotify
+2023-01-07 15:07:09,883 [ 1] INFO  Unity: StatusServicer->Notify Type:Item Action:Add Id:2003 Value:1
+2023-01-07 15:07:09,884 [ 1] INFO  Unity: BagService->SendBagSave
+2023-01-07 15:07:09,885 [ 1] INFO  Unity: StatusServicer->Notify Type:Money Action:Delete Id:0 Value:400
+2023-01-07 15:07:09,926 [ 1] INFO  Unity: BagService->OnBagSave
+2023-01-07 15:07:12,369 [ 1] INFO  Unity: ItemServicer->SendBuyItem
+2023-01-07 15:07:12,404 [ 1] INFO  Unity: StatusServicer->OnStatusNotify
+2023-01-07 15:07:12,405 [ 1] INFO  Unity: StatusServicer->Notify Type:Item Action:Add Id:2004 Value:1
+2023-01-07 15:07:12,405 [ 1] INFO  Unity: BagService->SendBagSave
+2023-01-07 15:07:12,406 [ 1] INFO  Unity: StatusServicer->Notify Type:Money Action:Delete Id:0 Value:500
+2023-01-07 15:07:12,447 [ 1] INFO  Unity: BagService->OnBagSave
+2023-01-07 15:07:13,967 [ 1] INFO  Unity: ItemServicer->SendBuyItem
+2023-01-07 15:07:13,990 [ 1] INFO  Unity: StatusServicer->OnStatusNotify
+2023-01-07 15:07:13,991 [ 1] INFO  Unity: StatusServicer->Notify Type:Item Action:Add Id:2005 Value:1
+2023-01-07 15:07:13,992 [ 1] INFO  Unity: BagService->SendBagSave
+2023-01-07 15:07:13,993 [ 1] INFO  Unity: StatusServicer->Notify Type:Money Action:Delete Id:0 Value:600
+2023-01-07 15:07:14,032 [ 1] INFO  Unity: BagService->OnBagSave
+2023-01-07 15:07:52,331 [ 1] INFO  Unity: ItemServicer->send_equip_Item Item:ItemID:2002,Count:1 is_equip:True
+2023-01-07 15:07:54,490 [ 1] INFO  Unity: ItemServicer->send_equip_Item Item:ItemID:2003,Count:1 is_equip:True
+2023-01-07 15:07:56,462 [ 1] INFO  Unity: ItemServicer->send_equip_Item Item:ItemID:2005,Count:1 is_equip:True
+2023-01-07 15:08:00,640 [ 1] INFO  Unity: Entity Character_1_1-5 OnDestroy :ID:1 POS:(5000, 4000, 820) DIR:(100, 0, 0) SPD:0 
+2023-01-07 15:08:00,641 [ 1] INFO  Unity: OnDestroy NetworkManager.
+2023-01-07 15:08:00,642 [ 1] WARN  Unity: CloseConnection(), errorCode: 1007
 UnityEngine.Debug:LogWarning(Object)
 Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:180)
 Network.NetClient:OnDestroy() (at Assets/Scripts/Network/NetClient.cs:175)

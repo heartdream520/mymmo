@@ -8,22 +8,25 @@ using System.Text;
 
 namespace Assets.Scripts.Models
 {
-    class Item
+    public class Item
     {
         public int id;
         public int count;
-        public ItemDefine define;
+        public ItemDefine itemDefine;
+        public EquipDefine equipDefine;
         public Item(NItemInfo info)
         {
             this.id = (short)info.Id;
             this.count = (short)info.Count;
-            this.define = DataManager.Instance.Items[info.Id];
+            DataManager.Instance.Items.TryGetValue(info.Id, out this.itemDefine);
+            DataManager.Instance.Equips.TryGetValue(this.id, out this.equipDefine);
         }
-        public Item(int id,int count)
+        public Item(int id, int count)
         {
             this.id = id;
             this.count = count;
-            this.define = DataManager.Instance.Items[this.id];
+            DataManager.Instance.Items.TryGetValue(this.id, out this.itemDefine);
+            DataManager.Instance.Equips.TryGetValue(this.id, out this.equipDefine);
         }
         public override string ToString()
         {

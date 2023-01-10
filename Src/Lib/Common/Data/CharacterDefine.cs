@@ -16,5 +16,22 @@ namespace Common.Data
 
         //基本属性
         public int Speed { get; set; }
+
+        private static Dictionary<CharacterClass, string> characterClass_dic;
+        public static Dictionary<CharacterClass, string> CharacterClass_Dic
+        {
+            get
+            {
+                if (characterClass_dic == null)
+                {
+                    characterClass_dic = new Dictionary<CharacterClass, string>();
+                    characterClass_dic[(CharacterClass)0] = "无";
+                    characterClass_dic[(CharacterClass)1] = "战士";
+                    characterClass_dic[(CharacterClass)2] = "法师";
+                    characterClass_dic[(CharacterClass)3] = "射手";
+                }
+                return characterClass_dic;
+            }
+        }
     }
 }

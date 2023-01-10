@@ -33,7 +33,7 @@ public class BagManager : Singleton<BagManager>
         int i = 0;
         foreach(var kv in ItemManager.Instance.Items)
         {
-            if(kv.Value.count<kv.Value.define.StackLimit)
+            if(kv.Value.count<kv.Value.itemDefine.StackLimit)
             {
                 this.items[i].ItemId = (ushort)kv.Key;
                 this.items[i].Count = (ushort)kv.Value.count;
@@ -41,12 +41,12 @@ public class BagManager : Singleton<BagManager>
             else
             {
                 int count = kv.Value.count;
-                while(count>kv.Value.define.StackLimit)
+                while(count>kv.Value.itemDefine.StackLimit)
                 {
                     this.items[i].ItemId = (ushort)kv.Key;
-                    this.items[i].Count = (ushort)kv.Value.define.StackLimit;
+                    this.items[i].Count = (ushort)kv.Value.itemDefine.StackLimit;
                     i++;
-                    count -= kv.Value.define.StackLimit;
+                    count -= kv.Value.itemDefine.StackLimit;
                 }
                 this.items[i].ItemId = (ushort)kv.Key;
                 this.items[i].Count = (ushort)count;
@@ -102,6 +102,7 @@ public class BagManager : Singleton<BagManager>
                 if (count <= max)
                 {
                     items[i].Count += (ushort)count;
+                    BagService.Instance.SendBagSave(this.GetBagInfo());
                     return;
                 }
                 else
@@ -116,6 +117,7 @@ public class BagManager : Singleton<BagManager>
                 {
                     items[i].ItemId = (ushort)id;
                     items[i].Count = (ushort)count;
+                    BagService.Instance.SendBagSave(this.GetBagInfo());
                     return;
                 }
                 else
@@ -127,6 +129,7 @@ public class BagManager : Singleton<BagManager>
             }
         }
         MessageBox.Show("背包已满！");
+        BagService.Instance.SendBagSave(this.GetBagInfo());
 
     }
 
