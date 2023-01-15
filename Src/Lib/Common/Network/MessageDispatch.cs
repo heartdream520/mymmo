@@ -22,6 +22,11 @@ namespace Network
 
             if (message.statusNotify != null) { MessageDistributer<T>.Instance.RaiseEvent(sender, message.statusNotify); }   
             if (message.itemEquip != null) { MessageDistributer<T>.Instance.RaiseEvent(sender, message.itemEquip); }   
+
+            if (message.questList!= null) { MessageDistributer<T>.Instance.RaiseEvent(sender, message.questList); }   
+            if (message.questAccept!= null) { MessageDistributer<T>.Instance.RaiseEvent(sender, message.questAccept); }   
+            if (message.questSubmit != null) { MessageDistributer<T>.Instance.RaiseEvent(sender, message.questSubmit); }   
+            if (message.questAbandon != null) { MessageDistributer<T>.Instance.RaiseEvent(sender, message.questAbandon); }   
             
 
         }
@@ -44,6 +49,11 @@ namespace Network
 
             if (message.itemBuy != null) { MessageDistributer<T>.Instance.RaiseEvent(sender, message.itemBuy); }
             if (message.itemEquip != null) { MessageDistributer<T>.Instance.RaiseEvent(sender, message.itemEquip); }
+
+            if (message.questList != null) { MessageDistributer<T>.Instance.RaiseEvent(sender, message.questList); }
+            if (message.questAccept != null) { MessageDistributer<T>.Instance.RaiseEvent(sender, message.questAccept); }
+            if (message.questSubmit != null) { MessageDistributer<T>.Instance.RaiseEvent(sender, message.questSubmit); }
+            if (message.questAbandon != null) { MessageDistributer<T>.Instance.RaiseEvent(sender, message.questAbandon); }
             //if (message.statusNotify != null) { MessageDistributer<T>.Instance.RaiseEvent(sender, message.statusNotify); }
         }
     }

@@ -72,6 +72,7 @@
     <Compile Include="Assets\Scripts\GameObject\MapController.cs" />
     <Compile Include="Assets\Scripts\GameObject\NpcController.cs" />
     <Compile Include="Assets\Scripts\GameObject\PlayerInputController.cs" />
+    <Compile Include="Assets\Scripts\GameObject\SpawnPoint.cs" />
     <Compile Include="Assets\Scripts\GameObject\TeleportObject.cs" />
     <Compile Include="Assets\Scripts\loading\loading_bar.cs" />
     <Compile Include="Assets\Scripts\loading\LoadingManager.cs" />
@@ -86,11 +87,13 @@
     <Compile Include="Assets\Scripts\Managers\MinimapManager.cs" />
     <Compile Include="Assets\Scripts\Managers\MouseManager.cs" />
     <Compile Include="Assets\Scripts\Managers\NpcManager.cs" />
+    <Compile Include="Assets\Scripts\Managers\QuestManager.cs" />
     <Compile Include="Assets\Scripts\Managers\ShopManager.cs" />
     <Compile Include="Assets\Scripts\Managers\TestManager.cs" />
     <Compile Include="Assets\Scripts\Managers\UIManager.cs" />
     <Compile Include="Assets\Scripts\Models\BagItem.cs" />
     <Compile Include="Assets\Scripts\Models\item.cs" />
+    <Compile Include="Assets\Scripts\Models\Quest.cs" />
     <Compile Include="Assets\Scripts\Models\User.cs" />
     <Compile Include="Assets\Scripts\Network\NetClient.cs" />
     <Compile Include="Assets\Scripts\normal\dis_itself.cs" />
@@ -103,6 +106,7 @@
     <Compile Include="Assets\Scripts\Services\BagService.cs" />
     <Compile Include="Assets\Scripts\Services\ItemServicer.cs" />
     <Compile Include="Assets\Scripts\Services\MapService.cs" />
+    <Compile Include="Assets\Scripts\Services\QuestService.cs" />
     <Compile Include="Assets\Scripts\Services\StatusServicer.cs" />
     <Compile Include="Assets\Scripts\Services\UserService.cs" />
     <Compile Include="Assets\Scripts\UI\Bag\UIBag.cs" />
@@ -127,6 +131,12 @@
     <Compile Include="Assets\Scripts\UI\UIMain.cs" />
     <Compile Include="Assets\Scripts\UI\UIMessageBox.cs" />
     <Compile Include="Assets\Scripts\UI\UINameBar.cs" />
+    <Compile Include="Assets\Scripts\UI\UIQuest\UINpcNameBar.cs" />
+    <Compile Include="Assets\Scripts\UI\UIQuest\UIQuestAttribute.cs" />
+    <Compile Include="Assets\Scripts\UI\UIQuest\UIQuestDialog.cs" />
+    <Compile Include="Assets\Scripts\UI\UIQuest\UIQuestItem.cs" />
+    <Compile Include="Assets\Scripts\UI\UIQuest\UIQuestStatus.cs" />
+    <Compile Include="Assets\Scripts\UI\UIQuest\UIQuestSystem.cs" />
     <Compile Include="Assets\Scripts\UI\UIRegister.cs" />
     <Compile Include="Assets\Scripts\UI\UITest.cs" />
     <Compile Include="Assets\Scripts\UI\UIWindow.cs" />

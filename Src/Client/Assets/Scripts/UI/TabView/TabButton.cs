@@ -8,9 +8,12 @@ public class TabButton : MonoBehaviour {
     public Sprite activeImage;
     private Sprite normalImage;
 
+    [HideInInspector]
     public TabView tabView;
 
+    [HideInInspector]
     public int tabIndex = 0;
+    [HideInInspector]
     public bool selected = false;
 
     private Image tabImage;

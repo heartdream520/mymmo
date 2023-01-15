@@ -64,4 +64,8 @@ public class UIMain : MonoSingleton<UIMain> {
     {
         UIManager.Instance.Show<UICharEquip>();
     }
+    public void OnchickQuest()
+    {
+        UIManager.Instance.Show<UIQuestSystem>();
+    }
 }

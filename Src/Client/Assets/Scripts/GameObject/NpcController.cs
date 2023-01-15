@@ -1,4 +1,6 @@
-﻿using Common.Data;
+﻿using Assets.Scripts.Managers;
+using Assets.Scripts.Models;
+using Common.Data;
 using Models;
 using System;
 using System.Collections;
@@ -15,14 +17,52 @@ public class NpcController : MonoBehaviour {
 
     private bool inInteractive = false;
     NpcDefine npcDefine;
-
+    private void Awake()
+    {
+        MouseManager.Instance.Mouse_DisPlay_Action += (bool is_display) =>
+        {
+            if (is_display) return;
+            this.Highlight(false);
+        };
+    }
+    NpcQuestStatus questStatus;
     private void Start()
     {
         renderer = this.transform.GetChild(1).GetComponent<SkinnedMeshRenderer>();
         animation = this.gameObject.GetComponent<Animator>();
         origonColor = renderer.sharedMaterial.color;
         npcDefine = NpcManager.Instance.GetNpcDefine(npcId);
+
+        SetNpcNameBar();
         this.StartCoroutine(Actions());
+        RefreshNpcStatus();
+
+        QuestManager.Instance.OnQuestStatusChangeAction += this.OnquestStatusChange;
+    }
+
+    private void SetNpcNameBar()
+    {
+        UIWorldElementManager.Instance.AddNpcNameBar(this.transform, this.npcDefine);
+    }
+
+    private void OnquestStatusChange(Quest arg0)
+    {
+        this.RefreshNpcStatus();
+    }
+
+    private void RefreshNpcStatus()
+    {
+        this.questStatus = QuestManager.Instance.GetQuestStatusByNpc(this.npcId);
+        UIWorldElementManager.Instance.AddNpcQuestStatus(this.transform, questStatus);
+    }
+    private void OnDestroy()
+    {
+        QuestManager.Instance.OnQuestStatusChangeAction -= this.OnquestStatusChange;
+        if(UIWorldElementManager.Instance!=null)
+        {
+            UIWorldElementManager.Instance.RemoveNpcQuestStatus(this.transform);
+            UIWorldElementManager.Instance.RemoveNpcNameBar(this.transform);
+        }
     }
 
     IEnumerator Actions()
@@ -71,6 +111,7 @@ public class NpcController : MonoBehaviour {
     }
     private void OnMouseDown()
     {
+        if (!MouseManager.Instance.Mouse_Is_Display) return;
         Interactive();
     }
     private void OnMouseOver()
@@ -87,9 +128,11 @@ public class NpcController : MonoBehaviour {
     }
     private void Highlight(bool highlight)
     {
+        
         if(highlight)
         {
-            if(renderer.sharedMaterial.color!=Color.red)
+            if (!MouseManager.Instance.Mouse_Is_Display) return;
+            if (renderer.sharedMaterial.color!=Color.red)
             {
                 renderer.sharedMaterial.color = Color.red;
             }

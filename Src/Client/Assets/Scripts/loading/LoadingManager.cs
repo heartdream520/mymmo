@@ -58,6 +58,7 @@ public class LoadingManager : MonoBehaviour {
         ShopManager.Instance.init();
         ItemServicer.Instance.Init();
         StatusServicer.Instance.Init();
+        QuestService.Instance.Init();
         //FriendService.Instance.Init();
         //TeamService.Instance.Init();
         //GuildService.Instance.Init();

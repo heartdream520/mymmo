@@ -25,7 +25,7 @@ public class UINameBar : MonoBehaviour {
 	void Update () {
         this.UpdateInfo();
 
-        this.transform.forward = MainPlayerCamera.Instance.camera.transform.forward;
+        //this.transform.forward = MainPlayerCamera.Instance.camera.transform.forward;
 	}
 
     void UpdateInfo()

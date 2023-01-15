@@ -40,14 +40,11 @@ namespace GameServer.Services
                 Log.ErrorFormat("BagService->OnBagSave  Request BagInfo is null");
 
             }
-            
-            NetMessage message = new NetMessage();
-            message.Response = new NetMessageResponse();
-            message.Response.Bagsave = new BagSaveRespose();
-            message.Response.Bagsave.Result = Result.Success;
-            message.Response.Bagsave.Errormsg = "None";
-            byte[] data = PackageHandler.PackMessage(message);
-            sender.SendData(data, 0, data.Length);
+
+            sender.Session.Response.Bagsave = new BagSaveRespose();
+            sender.Session.Response.Bagsave.Result = Result.Success;
+            sender.Session.Response.Bagsave.Errormsg = "None";
+            sender.SendResponse();
         }
     }
 }

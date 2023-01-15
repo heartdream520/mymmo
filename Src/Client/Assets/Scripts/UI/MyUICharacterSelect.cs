@@ -63,7 +63,10 @@ public class MyUICharacterSelect : MonoBehaviour {
     {
         Services.UserService.Instance.OnCharacterCreate += OnCharacterCreate;
     }
-
+    private void OnDestroy()
+    {
+        Services.UserService.Instance.OnCharacterCreate -= OnCharacterCreate;
+    }
     private void OnCharacterCreate(Result result, string msg)
     {
         
@@ -71,6 +74,8 @@ public class MyUICharacterSelect : MonoBehaviour {
         if(result==Result.Success)
         {
             MessageBox.Show("角色创建成功");
+            if (this.character_Select_panel == null) this.character_Select_panel = transform.parent.GetChild(2).gameObject;
+            if (this.character_Creat_panel == null) this.character_Creat_panel = transform.parent.GetChild(3).gameObject;
             character_Select_panel.SetActive(true);
             character_Creat_panel.SetActive(false);
         }

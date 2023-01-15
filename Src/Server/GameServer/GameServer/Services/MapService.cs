@@ -56,12 +56,9 @@ namespace GameServer.Services
 
             Log.InfoFormat("MapService->SendEntityUpdata SendCharacter: Infoid:{0} InfoName:{1} SyncCharacterID:{2}",
                connection.Session.Character.Info.Id, connection.Session.Character.Info.Name,entitySync.Id);
-            NetMessage message = new NetMessage();
-            message.Response = new NetMessageResponse();
-            message.Response.mapEntitySync = new MapEntitySyncResponse();
-            message.Response.mapEntitySync.entitySyncs.Add(entitySync);
-            byte[] data = PackageHandler.PackMessage(message);
-            connection.SendData(data, 0, data.Length);
+            connection.Session.Response.mapEntitySync = new MapEntitySyncResponse();
+            connection.Session.Response.mapEntitySync.entitySyncs.Add(entitySync);
+            connection.SendResponse();
 
         }
         private void OnMapTeleport(NetConnection<NetSession> sender, MapTeleportRequest request)

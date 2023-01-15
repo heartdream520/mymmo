@@ -16,14 +16,12 @@ namespace Assets.Scripts.Service
         public BagService()
         {
             MessageDistributer.Instance.Subscribe<BagSaveRespose>(this.OnBagSave);
-
         }
 
         
         public void Dispose()
         {
             MessageDistributer.Instance.Unsubscribe<BagSaveRespose>(this.OnBagSave);
-
         }
         public void Init()
         {
@@ -42,7 +40,6 @@ namespace Assets.Scripts.Service
         private void OnBagSave(object sender, BagSaveRespose message)
         {
             Debug.Log("BagService->OnBagSave");
-
         }
 
     }

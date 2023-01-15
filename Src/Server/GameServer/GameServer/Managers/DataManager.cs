@@ -16,13 +16,16 @@ namespace GameServer.Managers
         internal Dictionary<int, MapDefine> Maps = null;
         internal Dictionary<int, CharacterDefine> Characters = null;
         internal Dictionary<int, TeleporterDefine> Teleporters = null;
-        public Dictionary<int, Dictionary<int, SpawnPointDefine>> SpawnPoints = null;
-        public Dictionary<int, Dictionary<int,SpawnRuleDefine>> SpawnRules = null;
         internal Dictionary<int, NpcDefine> Npcs = null;
         internal Dictionary<int, ItemDefine> Items = null;
         internal Dictionary<int, ShopDefine> Shops = null;
         public Dictionary<int, Dictionary<int, ShopItemDefine>> ShopItems = null;
         public Dictionary<int, EquipDefine> Equips = null;
+        public Dictionary<int, QuestDefine> Quests = null;
+
+
+        public Dictionary<int, Dictionary<int, SpawnPointDefine>> SpawnPoints = null;
+        public Dictionary<int, Dictionary<int, SpawnRuleDefine>> SpawnRules = null;
 
         public DataManager()
         {
@@ -54,6 +57,15 @@ namespace GameServer.Managers
             this.ShopItems = JsonConvert.DeserializeObject<Dictionary<int, Dictionary<int, ShopItemDefine>>>(json);
             json = File.ReadAllText(this.DataPath + "EquipDefine.txt");
             this.Equips = JsonConvert.DeserializeObject<Dictionary<int, EquipDefine>>(json);
+
+            json = File.ReadAllText(this.DataPath + "QuestDefine.txt");
+            this.Quests = JsonConvert.DeserializeObject<Dictionary<int, QuestDefine>>(json);
+
+            json = File.ReadAllText(this.DataPath + "SpawnPointDefine.txt");
+            this.SpawnPoints = JsonConvert.DeserializeObject<Dictionary<int, Dictionary<int, SpawnPointDefine>>>(json);
+
+            json = File.ReadAllText(this.DataPath + "SpawnRuleDefine.txt");
+            this.SpawnRules = JsonConvert.DeserializeObject<Dictionary<int, Dictionary<int, SpawnRuleDefine>>>(json);
         }
     }
 }

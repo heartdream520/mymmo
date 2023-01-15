@@ -24,7 +24,7 @@ namespace Network
             UserService.Instance.CharacterLeave(Character);
         }
         NetMessage response;
-        public NetMessageResponse Respose
+        public NetMessageResponse Response
         {
             get
             {
@@ -44,7 +44,7 @@ namespace Network
             {
                 if(this.Character!=null&&this.Character.StatusManager.HasStatus)
                 {
-                    this.Character.StatusManager.PostProcess(Respose);
+                    this.Character.StatusManager.PostProcess(Response);
                 }
                 byte[] data = PackageHandler.PackMessage(response);
                 response = null;

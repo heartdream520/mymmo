@@ -307,9 +307,13 @@ namespace Services
 
             if (response.Result == Result.Success)
             {
+                User.Instance.CurrentCharacter = response.Ncharacterinfo;
+
                 ItemManager.Instance.Init(response.Ncharacterinfo.Items);
                 BagManager.Instance.Init(response.Ncharacterinfo.Bag);
                 EquipManager.Instance.Init(response.Ncharacterinfo.Equips);
+
+                QuestManager.Instance.Init(response.Ncharacterinfo.Quests);
             }
             if (this.OnGameEnter != null)
             {

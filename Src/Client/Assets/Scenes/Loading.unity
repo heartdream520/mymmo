@@ -4470,11 +4470,6 @@ Prefab:
     m_Modifications:
     - target: {fileID: 224984633075004074, guid: 80b5cbd39a2225445a26f9956701bffa,
         type: 2}
-      propertyPath: m_RootOrder
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 224984633075004074, guid: 80b5cbd39a2225445a26f9956701bffa,
-        type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}

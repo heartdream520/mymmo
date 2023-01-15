@@ -13,7 +13,7 @@ using UnityEngine.UI;
 public class UIEquipItem : MonoBehaviour, IPointerClickHandler
 {
     public Image icon;
-    public Text name;
+    public Text EquipName;
     public Text level;
     public Text limitClass;
     public Text limitCategory;
@@ -50,7 +50,7 @@ public class UIEquipItem : MonoBehaviour, IPointerClickHandler
         this.Item = equip;
         this.isEquiped = is_equip;
 
-        if (name != null) this.name.text = this.Item.itemDefine.Name;
+        if (EquipName != null) this.EquipName.text = this.Item.itemDefine.Name;
         if (level != null) this.level.text = this.Item.itemDefine.Level.ToString();
         if (limitClass != null) this.limitClass.text = this.Item.itemDefine.LimitClass.ToString();
         if (this.limitCategory != null) this.limitCategory.text = this.Item.equipDefine.Category.ToString();

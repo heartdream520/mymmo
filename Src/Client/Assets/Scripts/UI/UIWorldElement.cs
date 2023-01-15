@@ -20,5 +20,6 @@ public class UIWorldElement : MonoBehaviour {
         {
             this.transform.position = owner.position + Vector3.up * height;
         }
+        this.transform.forward = MainPlayerCamera.Instance.camera.transform.forward;
     }
 }

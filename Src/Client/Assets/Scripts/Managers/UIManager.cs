@@ -1,4 +1,6 @@
-﻿using Models;
+﻿
+using Assets.Scripts.UI.UIQuest;
+using Models;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -20,10 +22,13 @@ public class UIManager : Singleton<UIManager>{
     public UIManager()
     {
         this.UIResources.Add(typeof(UITest), new UIElement() { Resources = "UI/UITest", Cache = true });
-        this.UIResources.Add(typeof(UIBag), new UIElement() { Resources = "UI/UIBag", Cache = false });
-        this.UIResources.Add(typeof(UIShop), new UIElement() { Resources = "UI/UIShop", Cache = false });
+        this.UIResources.Add(typeof(UIBag), new UIElement() { Resources = "UI/Bag/UIBag", Cache = false });
+        this.UIResources.Add(typeof(UIShop), new UIElement() { Resources = "UI/Shop/UIShop", Cache = false });
 
-        this.UIResources.Add(typeof(UICharEquip), new UIElement() { Resources = "UI/UIEquip", Cache = false });
+        this.UIResources.Add(typeof(UICharEquip), new UIElement() { Resources = "UI/Equip/UIEquip", Cache = false });
+
+        this.UIResources.Add(typeof(UIQuestDialog), new UIElement() { Resources = "UI/Quest/UIQuestDialog", Cache = false });
+        this.UIResources.Add(typeof(UIQuestSystem), new UIElement() { Resources = "UI/Quest/UIQuestSystem", Cache = false });
         User.Instance.CurrentCharacter_Set_Action += () =>
           {
               this.UIcnt = 0;
@@ -79,4 +84,5 @@ public class UIManager : Singleton<UIManager>{
 
         }
     }
+    
 }

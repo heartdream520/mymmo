@@ -10,39 +10,7 @@ using UnityEngine.EventSystems;
 public class ListView : MonoBehaviour
 {
     public UnityAction<ListViewItem> onItemSelected;
-    public class ListViewItem : MonoBehaviour, IPointerClickHandler
-    {
-        private bool selected;
-        public bool Selected
-        {
-            get { return selected; }
-            set
-            {
-                selected = value;
-                onSelected(selected);
-            }
-        }
-        public virtual void onSelected(bool selected)
-        {
-        }
-
-        public ListView owner;
-
-        public void OnPointerClick(PointerEventData eventData)
-        {
-            if (!this.selected)
-            {
-                this.Selected = true;
-            }
-            if (owner != null && owner.SelectedItem != this)
-            {
-                owner.SelectedItem = this;
-            }
-        }
-    }
-
     List<ListViewItem> items = new List<ListViewItem>();
-
     private ListViewItem selectedItem = null;
     public ListViewItem SelectedItem
     {
@@ -58,7 +26,6 @@ public class ListView : MonoBehaviour
                 onItemSelected.Invoke((ListViewItem)value);
         }
     }
-
     public void AddItem(ListViewItem item)
     {
         item.owner = this;
@@ -72,5 +39,41 @@ public class ListView : MonoBehaviour
             Destroy(it.gameObject);
         }
         items.Clear();
+    }
+    private void OnDisable()
+    {
+        this.selectedItem = null;
+    }
+
+    public class ListViewItem : MonoBehaviour, IPointerClickHandler
+    {
+        private bool selected;
+        public bool Selected
+        {
+            get { return selected; }
+            set
+            {
+                selected = value;
+                onSelected(selected);
+            }
+        }
+        public virtual void onSelected(bool selected)
+        {
+
+        }
+        [HideInInspector]
+        public ListView owner;
+
+        public void OnPointerClick(PointerEventData eventData)
+        {
+            if (!this.selected)
+            {
+                this.Selected = true;
+            }
+            if (owner != null && owner.SelectedItem != this)
+            {
+                owner.SelectedItem = this;
+            }
+        }
     }
 }

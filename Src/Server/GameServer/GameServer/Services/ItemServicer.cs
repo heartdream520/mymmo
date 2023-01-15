@@ -32,8 +32,8 @@ namespace GameServer.Services
             Log.InfoFormat("ItemServicer->OnItemBuy Character:{0} ShopID:{1} ShopItemID:{2}",
                 character.ToString(),message.shopId,message.shopItemId);
             var result = ShopManager.Instance.BuyItem(sender, message.shopId, message.shopItemId);
-            sender.Session.Respose.itemBuy = new ItemBuyResponse();
-            sender.Session.Respose.itemBuy.Result = result;
+            sender.Session.Response.itemBuy = new ItemBuyResponse();
+            sender.Session.Response.itemBuy.Result = result;
             sender.SendResponse();
 
         }
@@ -43,8 +43,8 @@ namespace GameServer.Services
             Log.InfoFormat("ItemServicer->OnItemEquip Character:{0} slot:{1} ItemId:{2} isEquip:{3}",
                 character.ToString(), message.Slot, message.itemId,message.isEquip);
             var result = EquipManager.Instance.EquipItem(sender, message.Slot, message.itemId,message.isEquip);
-            sender.Session.Respose.itemEquip = new ItemEquipRespose();
-            sender.Session.Respose.itemEquip.Result = result;
+            sender.Session.Response.itemEquip = new ItemEquipRespose();
+            sender.Session.Response.itemEquip.Result = result;
             sender.SendResponse();
         }
     }

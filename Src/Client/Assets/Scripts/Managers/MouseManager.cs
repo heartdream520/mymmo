@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace Assets.Scripts.Managers
 {
@@ -11,6 +12,7 @@ namespace Assets.Scripts.Managers
     public class MouseManager : MonoSingleton<MouseManager>
     {
 
+        public UnityAction<bool> Mouse_DisPlay_Action;
         private bool mouse_is_diplay;
         public bool Mouse_Is_Display
         {
@@ -18,6 +20,8 @@ namespace Assets.Scripts.Managers
             set
             {
                 mouse_is_diplay = value;
+                if (Mouse_DisPlay_Action != null)
+                    Mouse_DisPlay_Action(value);
                 if(value)
                 {
                     ToShowCursor();

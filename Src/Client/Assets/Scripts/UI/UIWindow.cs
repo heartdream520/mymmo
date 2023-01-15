@@ -27,6 +27,10 @@ public abstract class UIWindow : MonoBehaviour {
     {
         this.Close(WindowResult.Yes);
     }
+    public virtual void OnClick_No()
+    {
+        this.Close(WindowResult.No);
+    }
     private void OnDisable()
     {
         InDisable();

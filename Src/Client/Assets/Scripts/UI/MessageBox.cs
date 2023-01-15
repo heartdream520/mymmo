@@ -15,6 +15,7 @@ class MessageBox
     /// <returns></returns>
     public static UIMessageBox Show(string message, string title="", MessageBoxType type = MessageBoxType.Information, string btnOK = "", string btnCancel = "")
     {
+        Debug.Log(message);
         if(cacheObject==null)
         {
             //加载消息提示面板
