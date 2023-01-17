@@ -1,72 +1,13 @@
-2023-01-15 15:44:39,621 [ 1] INFO  Unity: LoadingManager start
-2023-01-15 15:44:44,043 [ 1] INFO  Unity: DataManager > DataManager()
-2023-01-15 15:44:44,139 [ 1] INFO  Unity: MapDefine.txt
-2023-01-15 15:44:44,156 [ 1] INFO  Unity: CharacterDefine.txt
-2023-01-15 15:44:44,171 [ 1] INFO  Unity: TeleporterDefine.txt
-2023-01-15 15:44:44,185 [ 1] INFO  Unity: SpawnPointDefine.txt
-2023-01-15 15:44:44,201 [ 1] INFO  Unity: NpcDefine.txt
-2023-01-15 15:44:44,225 [ 1] INFO  Unity: ItemDefine.txt
-2023-01-15 15:44:51,741 [ 1] INFO  Unity: UserService->SendLoad: User:1 Password:1
-2023-01-15 15:44:51,743 [ 1] INFO  Unity: ConnectToServer() Start 
-2023-01-15 15:44:51,746 [ 1] INFO  Unity: DoConnect
-2023-01-15 15:44:51,750 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
-2023-01-15 15:44:51,759 [ 1] INFO  Unity: Connect[0] to server 127.0.0.1:8000
-
-2023-01-15 15:44:51,763 [ 1] INFO  Unity: LoadingMesager::OnGameServerConnect :0 reason:Success
-2023-01-15 15:44:51,884 [ 1] INFO  Unity: UserService->OnUserLoad:Success [None]
-2023-01-15 15:45:04,551 [ 1] INFO  Unity: Select Character:[5]发誓[Wizard] 
-2023-01-15 15:45:04,971 [ 1] INFO  Unity: 进入游戏
-2023-01-15 15:45:05,828 [ 1] INFO  Unity: UserService->SendCharacterEnter: EnterCharacterID :5 EnterCharacterName:发誓 EnterCharacter_Idx
-2023-01-15 15:45:05,867 [ 1] INFO  Unity: UserService->OnUserGameEnter:Success [None]
-2023-01-15 15:45:05,869 [ 1] INFO  Unity: ItemManager->InitItem :ItemID:1,Count:25
-2023-01-15 15:45:05,870 [ 1] INFO  Unity: ItemManager->InitItem :ItemID:2,Count:25
-2023-01-15 15:45:05,871 [ 1] INFO  Unity: ItemManager->InitItem :ItemID:3,Count:15
-2023-01-15 15:45:05,872 [ 1] INFO  Unity: ItemManager->InitItem :ItemID:4,Count:20
-2023-01-15 15:45:05,872 [ 1] INFO  Unity: ItemManager->InitItem :ItemID:2001,Count:1
-2023-01-15 15:45:05,873 [ 1] INFO  Unity: ItemManager->InitItem :ItemID:2002,Count:1
-2023-01-15 15:45:05,881 [ 1] ERROR Unity: Message handler exception:, The given key was not present in the dictionary., mscorlib,   at System.Collections.Generic.Dictionary`2[System.Int32,Common.Data.QuestDefine].get_Item (Int32 key) [0x000a2] in /Users/builduser/buildslave/mono/build/mcs/class/corlib/System.Collections.Generic/Dictionary.cs:150 
-  at Assets.Scripts.Models.Quest..ctor (SkillBridge.Message.NQuestInfo info) [0x0001f] in E:\极世界MMORPG\mymmo\Src\Client\Assets\Scripts\Models\Quest.cs:21 
-  at Assets.Scripts.Managers.QuestManager.InitQuests () [0x0001d] in E:\极世界MMORPG\mymmo\Src\Client\Assets\Scripts\Managers\QuestManager.cs:57 
-  at Assets.Scripts.Managers.QuestManager.Init (System.Collections.Generic.List`1 quests) [0x00041] in E:\极世界MMORPG\mymmo\Src\Client\Assets\Scripts\Managers\QuestManager.cs:47 
-  at Services.UserService.OnUserGameEnter (System.Object sender, SkillBridge.Message.UserGameEnterResponse response) [0x00093] in E:\极世界MMORPG\mymmo\Src\Client\Assets\Scripts\Services\UserService.cs:316 
-  at Network.MessageDistributer`1[System.Object].RaiseEvent[UserGameEnterResponse] (System.Object sender, SkillBridge.Message.UserGameEnterResponse msg) [0x00044] in E:\极世界MMORPG\mymmo\Src\Lib\Common\Network\MessageDistributer.cs:105 
-2023-01-15 15:45:05,891 [ 1] FATAL Unity: <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>{0
-{1}</format><args>{KeyNotFoundException: The given key was not present in the dictionary., System.Collections.Generic.Dictionary`2[System.Int32,Common.Data.QuestDefine].get_Item (Int32 key) (at /Users/builduser/buildslave/mono/build/mcs/class/corlib/System.Collections.Generic/Dictionary.cs:150)
-Assets.Scripts.Models.Quest..ctor (SkillBridge.Message.NQuestInfo info) (at Assets/Scripts/Models/Quest.cs:21)
-Assets.Scripts.Managers.QuestManager.InitQuests () (at Assets/Scripts/Managers/QuestManager.cs:57)
-Assets.Scripts.Managers.QuestManager.Init (System.Collections.Generic.List`1 quests) (at Assets/Scripts/Managers/QuestManager.cs:47)
-Services.UserService.OnUserGameEnter (System.Object sender, SkillBridge.Message.UserGameEnterResponse response) (at Assets/Scripts/Services/UserService.cs:316)
-Network.MessageDistributer`1[System.Object].RaiseEvent[UserGameEnterResponse] (System.Object sender, SkillBridge.Message.UserGameEnterResponse msg) (at E:/极世界MMORPG/mymmo/Src/Lib/Common/Network/MessageDistributer.cs:105)
-}</args></log4net.Error>
-2023-01-15 15:45:05,905 [ 1] INFO  Unity: MapService->OnMapCharacterEnter :Map:1 Count:1
-2023-01-15 15:45:05,909 [ 1] INFO  Unity: CharacterManager->AddCharacter:CharacterId:5 CharacterName:发誓 MapId:1 Entity:(5:pos:(5000,4000,820),dir:(100,0,0),spd:0
-2023-01-15 15:45:05,912 [ 1] INFO  Unity: EntityManager AddEntity EntityId :5 
-2023-01-15 15:45:08,381 [ 1] WARN  Unity: DontDestroyOnLoad only work for root GameObjects or components on root GameObjects.
-UnityEngine.Object:DontDestroyOnLoad(Object)
-MonoSingleton`1:Awake() (at Assets/Scripts/Utilities/MonoSingleton.cs:32)
-
-2023-01-15 15:45:08,383 [ 1] WARN  Unity: DontDestroyOnLoad only work for root GameObjects or components on root GameObjects.
-UnityEngine.Object:DontDestroyOnLoad(Object)
-MonoSingleton`1:Awake() (at Assets/Scripts/Utilities/MonoSingleton.cs:32)
-
-2023-01-15 15:45:08,383 [ 1] WARN  Unity: DontDestroyOnLoad only work for root GameObjects or components on root GameObjects.
-UnityEngine.Object:DontDestroyOnLoad(Object)
-MonoSingleton`1:Awake() (at Assets/Scripts/Utilities/MonoSingleton.cs:32)
-
-2023-01-15 15:45:08,384 [ 1] WARN  Unity: DontDestroyOnLoad only work for root GameObjects or components on root GameObjects.
-UnityEngine.Object:DontDestroyOnLoad(Object)
-MonoSingleton`1:Awake() (at Assets/Scripts/Utilities/MonoSingleton.cs:32)
-
-2023-01-15 15:45:08,425 [ 1] INFO  Unity: MinimapManager->UpdataMiniMap
-2023-01-15 15:45:08,426 [ 1] INFO  Unity: Load MiniMap Image :buluzheng
-2023-01-15 15:45:08,428 [ 1] INFO  Unity: Load MiniMap Image :buluzheng
-2023-01-15 15:45:08,431 [ 1] INFO  Unity: GameObjectManager->CreateCharacterObject CharacterId:5 CharacterName:发誓 CharacterEntityId:5
-2023-01-15 15:45:08,482 [ 1] INFO  Unity: GameObjectManager->InitGameObject Player_character:5
-2023-01-15 15:45:08,483 [ 1] INFO  Unity: Load MiniMap Image :buluzheng
-2023-01-15 15:45:08,484 [ 1] INFO  Unity: Load MiniMap Image :buluzheng
-2023-01-15 15:47:58,041 [ 1] INFO  Unity: Entity Character_5_发誓 OnDestroy :ID:5 POS:(5000, 4000, 820) DIR:(100, 0, 0) SPD:0 
-2023-01-15 15:47:58,049 [ 1] INFO  Unity: OnDestroy NetworkManager.
-2023-01-15 15:47:58,049 [ 1] WARN  Unity: CloseConnection(), errorCode: 1007
+2023-01-15 16:13:18,284 [ 1] INFO  Unity: LoadingManager start
+2023-01-15 16:13:22,545 [ 1] INFO  Unity: DataManager > DataManager()
+2023-01-15 16:13:22,652 [ 1] INFO  Unity: MapDefine.txt
+2023-01-15 16:13:22,670 [ 1] INFO  Unity: CharacterDefine.txt
+2023-01-15 16:13:22,693 [ 1] INFO  Unity: TeleporterDefine.txt
+2023-01-15 16:13:22,704 [ 1] INFO  Unity: SpawnPointDefine.txt
+2023-01-15 16:13:22,726 [ 1] INFO  Unity: NpcDefine.txt
+2023-01-15 16:13:22,749 [ 1] INFO  Unity: ItemDefine.txt
+2023-01-15 16:13:24,282 [ 1] INFO  Unity: OnDestroy NetworkManager.
+2023-01-15 16:13:24,284 [ 1] WARN  Unity: CloseConnection(), errorCode: 1007
 UnityEngine.Debug:LogWarning(Object)
 Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:180)
 Network.NetClient:OnDestroy() (at Assets/Scripts/Network/NetClient.cs:175)

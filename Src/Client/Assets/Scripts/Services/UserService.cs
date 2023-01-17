@@ -291,7 +291,12 @@ namespace Services
                 //接受返回的新建角色
                 User.Instance.Info.Player.Characters.Clear();
                 foreach (var x in response.Characters)
+                {
                     User.Instance.Info.Player.Characters.Add(x);
+                    
+                }
+                    
+               
             }
             if (this.OnCharacterCreate != null)
             {

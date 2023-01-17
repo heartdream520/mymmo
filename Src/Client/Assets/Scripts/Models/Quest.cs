@@ -18,7 +18,7 @@ namespace Assets.Scripts.Models
         }
         public Quest(NQuestInfo info)
         {
-            Debug.LogError(info.QuestId);
+            //Debug.LogError(info.QuestId);
             this.Info = info;
             this.Define = DataManager.Instance.Quests[info.QuestId];
         }
