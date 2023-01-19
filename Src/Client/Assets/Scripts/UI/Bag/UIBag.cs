@@ -71,7 +71,7 @@ public class UIBag : UIWindow
     }
     public void setTitle(string title)
     {
-        this.money.text = User.Instance.CurrentCharacter.Id.ToString();
+        this.money.text = User.Instance.CurrentCharacter.EnityId.ToString();
     }
     private void clear_Bag()
     {

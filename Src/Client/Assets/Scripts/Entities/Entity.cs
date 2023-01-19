@@ -16,6 +16,7 @@ namespace Entities
         public Vector3Int direction;
         public int speed;
 
+
         /// <summary>
         /// 服务器同步中的信息，用于通信
         /// </summary>

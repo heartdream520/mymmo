@@ -55,7 +55,7 @@ namespace Services
             foreach (var cha in response.Characters)
             {
                 //刷新本地数据确保安全
-                if (User.Instance.CurrentCharacter == null || User.Instance.CurrentCharacter.Id == cha.Id)
+                if (User.Instance.CurrentCharacter == null || (cha.Type==CharacterType.Player&&User.Instance.CurrentCharacter.EnityId==cha.EnityId))
                 {
                     //当前角色切换地图
                     User.Instance.CurrentCharacter = cha;
@@ -76,9 +76,9 @@ namespace Services
         {
             Character cha = CharacterManager.Instance.Characters[response.characterId];
             Debug.LogFormat("MapService->OnMapCharacterLeave :Map:{0} CharacterId:{1} CharacterName:{2}",
-                CurrentMapId, cha.Info.Id,cha.Info.Name);
+                CurrentMapId, cha.Info.EnityId,cha.Info.Name);
 
-            if (response.characterId == User.Instance.CurrentCharacter.Id)
+            if (response.characterId == User.Instance.CurrentCharacter.EnityId)
             {
                 CharacterManager.Instance.Clear();
             }

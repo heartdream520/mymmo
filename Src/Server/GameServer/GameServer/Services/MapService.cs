@@ -55,7 +55,7 @@ namespace GameServer.Services
         {
 
             Log.InfoFormat("MapService->SendEntityUpdata SendCharacter: Infoid:{0} InfoName:{1} SyncCharacterID:{2}",
-               connection.Session.Character.Info.Id, connection.Session.Character.Info.Name,entitySync.Id);
+               connection.Session.Character.Info.EnityId, connection.Session.Character.Info.Name,entitySync.Id);
             connection.Session.Response.mapEntitySync = new MapEntitySyncResponse();
             connection.Session.Response.mapEntitySync.entitySyncs.Add(entitySync);
             connection.SendResponse();

@@ -83,6 +83,7 @@
     <Compile Include="Assets\Scripts\Managers\DataManager.cs" />
     <Compile Include="Assets\Scripts\Managers\EntityManager.cs" />
     <Compile Include="Assets\Scripts\Managers\EquipManager.cs" />
+    <Compile Include="Assets\Scripts\Managers\FriendManager.cs" />
     <Compile Include="Assets\Scripts\Managers\ItemManager.cs" />
     <Compile Include="Assets\Scripts\Managers\MinimapManager.cs" />
     <Compile Include="Assets\Scripts\Managers\MouseManager.cs" />
@@ -104,6 +105,7 @@
     <Compile Include="Assets\Scripts\normal\UI_appear.cs" />
     <Compile Include="Assets\Scripts\Scene\MySceneManager.cs" />
     <Compile Include="Assets\Scripts\Services\BagService.cs" />
+    <Compile Include="Assets\Scripts\Services\FriendService.cs" />
     <Compile Include="Assets\Scripts\Services\ItemServicer.cs" />
     <Compile Include="Assets\Scripts\Services\MapService.cs" />
     <Compile Include="Assets\Scripts\Services\QuestService.cs" />
@@ -116,6 +118,10 @@
     <Compile Include="Assets\Scripts\UI\CharacterEquip\Equip_attribute.cs" />
     <Compile Include="Assets\Scripts\UI\CharacterEquip\UICharEquip.cs" />
     <Compile Include="Assets\Scripts\UI\CharacterEquip\UIEquipItem.cs" />
+    <Compile Include="Assets\Scripts\UI\Friend\UIFriend.cs" />
+    <Compile Include="Assets\Scripts\UI\Friend\UIFriendItem.cs" />
+    <Compile Include="Assets\Scripts\UI\InputBox\InputBox.cs" />
+    <Compile Include="Assets\Scripts\UI\InputBox\UIInputBox.cs" />
     <Compile Include="Assets\Scripts\UI\ListView\ListView.cs" />
     <Compile Include="Assets\Scripts\UI\MessageBox.cs" />
     <Compile Include="Assets\Scripts\UI\Minimap\UIMinimap.cs" />

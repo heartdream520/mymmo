@@ -67,15 +67,16 @@ namespace GameServer.Services
                 //更新玩家角色
                 foreach(var c in user.Player.Characters)
                 {
-                    /*
+                    
                     NCharacterInfo info = new NCharacterInfo();
                     info.Id = c.ID;
                     info.Name = c.Name;
+                    info.Level = c.Level;
                     info.Class = (CharacterClass)c.Class;
-                    */
-                    Character cha = new Character(CharacterType.Player, c);
+                    
+                    //Character cha = new Character(CharacterType.Player, c);
 
-                    sender.Session.Response.userLogin.Userinfo.Player.Characters.Add(cha.Info);
+                    sender.Session.Response.userLogin.Userinfo.Player.Characters.Add(info);
                 }
                
             }
@@ -126,6 +127,7 @@ namespace GameServer.Services
                 MapPosY = 4000,
                 MapPosZ = 820,
                 Gold = 10000,
+                Level=10,
                 Equips = new byte[28]
 
             };
@@ -189,6 +191,10 @@ namespace GameServer.Services
             Log.InfoFormat("UserSerevice->OnGameEnter : userId：{0} character_DId:{1} EntityId:{2} character_Name：{3} MapId：{4}",
                 sender.Session.User.ID, cha.Data.ID,cha.entityId, cha.Info.Name, cha.Info.mapId);
 
+            SessionManager.Instance.AddSession(cha.Info.Id, sender);
+
+            sender.Session.PostResponser = cha;
+
             sender.Session.Response.gameEnter = new UserGameEnterResponse();
             
             //添加角色信息
@@ -200,8 +206,11 @@ namespace GameServer.Services
             sender.SendResponse();
             //设置当前的玩家
             sender.Session.Character = cha;
+            cha.Onlive();
             //地图管理器，将进入游戏的角色加入相应地图中
             MapManager.Instance[db_character.MapID].CharacterEnter(sender, cha);
+
+            
         }
         private void OnGameLeave(NetConnection<NetSession> sender, UserGameLeaveRequest request)
         {
@@ -216,6 +225,9 @@ namespace GameServer.Services
                  cha.Data.ID);
                 return;
             }
+
+            //SessionManager.Instance.RemoveSession(cha.Info.Id);
+
             CharacterLeave(cha);
 
             sender.Session.Response.gameLeave = new UserGameLeaveResponse();
@@ -229,9 +241,11 @@ namespace GameServer.Services
         public void CharacterLeave(Character cha)
         {
             if (cha == null) return;
+            SessionManager.Instance.RemoveSession(cha.Info.Id);
             CharacterManager.Instance.RemoveCharacter(cha.entityId);
 
             MapManager.Instance[cha.Info.mapId].CharacterLevel(cha);
+            cha.Clear();
         }
     }
 }

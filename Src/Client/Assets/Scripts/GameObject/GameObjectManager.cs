@@ -58,15 +58,15 @@ public class GameObjectManager :MonoSingleton<GameObjectManager>
     private void DestroyCharacterObject(Character cha)
     {
         Debug.LogFormat("GameObjectManager->DestroyCharacterObject CharacterId:{0} CharacterName:{1} CharacterEntityId:{2}",
-            cha.Info.Id,cha.Info.Name,cha.entityId);
-        if(this.Characters.ContainsKey(cha.Info.Id))
+            cha.Info.EnityId,cha.Info.Name,cha.entityId);
+        if(this.Characters.ContainsKey(cha.Info.EnityId))
         {
-            GameObject cha_game = Characters[cha.Info.Id];
+            GameObject cha_game = Characters[cha.Info.EnityId];
             /*
             UIWorldElementManager.Instance.RemoveCharacterNameBar(cha_game.transform);
             Destroy(cha_game);
             */
-            this.Characters.Remove(cha.Info.Id);
+            this.Characters.Remove(cha.Info.EnityId);
         }
     }
 
@@ -99,10 +99,10 @@ public class GameObjectManager :MonoSingleton<GameObjectManager>
         {
             yield return null;
         }
-        if (!Characters.ContainsKey(character.Info.Id) || Characters[character.Info.Id] == null)
+        if (!Characters.ContainsKey(character.Info.EnityId) || Characters[character.Info.EnityId] == null)
         {
             Debug.LogFormat("GameObjectManager->CreateCharacterObject CharacterId:{0} CharacterName:{1} CharacterEntityId:{2}",
-            character.Info.Id, character.Info.Name, character.entityId);
+            character.Info.EnityId, character.Info.Name, character.entityId);
             //根据角色资源位置获取游戏对象资源实体
             UnityEngine.Object obj = Resloader.Load<UnityEngine.Object>(character.Define.Resource);
             if(obj == null)
@@ -114,10 +114,10 @@ public class GameObjectManager :MonoSingleton<GameObjectManager>
             GameObject go = (GameObject)Instantiate(obj);
             
             //为新创建游戏对象命名
-            go.name = "Character_" + character.Info.Id + "_" + character.Info.Name;
+            go.name = "Character_" + character.Info.EnityId + "_" + character.Info.Name;
             go.transform.SetParent(transform, false);
             //将角色加入字典
-            Characters[character.Info.Id] = go;
+            Characters[character.Info.EnityId] = go;
             this.InitGameObject(Characters[character.entityId],character);
             
             UIWorldElementManager.Instance.AddCharacterNameBar(go.transform, character);
@@ -134,19 +134,19 @@ public class GameObjectManager :MonoSingleton<GameObjectManager>
         if (ec != null)
         {
             ec.entity = character;
-            ec.isPlayer = character.IsPlayer;
+            ec.isPlayer = character.IsCurrentPlayerPlayer;
         }
         //获取玩家控制器
         PlayerInputController pc = go.GetComponent<PlayerInputController>();
         if (pc != null)
         {
             //当前角色为 本机进游戏的角色 将玩家控制器设为可用，否则设为不可用
-            if (character.Info.Id == Models.User.Instance.CurrentCharacter.Id)
+            if (character.IsCurrentPlayerPlayer)
             {
 
                 //设置当前控制角色的游戏对象
                 User.Instance.CurrentCharacterObject = go;
-                Debug.LogFormat("GameObjectManager->InitGameObject Player_character:{0}", Models.User.Instance.CurrentCharacter.Id);
+                Debug.LogFormat("GameObjectManager->InitGameObject Player_character:{0}", Models.User.Instance.CurrentCharacter.EnityId);
                 MainPlayerCamera.Instance.player = go;
                 pc.enabled = true;
                 pc.character = character;

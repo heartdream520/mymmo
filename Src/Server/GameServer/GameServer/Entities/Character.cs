@@ -1,6 +1,7 @@
 ﻿using Common.Data;
 using GameServer.Core;
 using GameServer.Managers;
+using Network;
 using SkillBridge.Message;
 using System;
 using System.Collections.Generic;
@@ -10,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace GameServer.Entities
 {
-    class Character : CharacterBase
+    class Character : CharacterBase ,IPostResponser
     {
        
         public TCharacter Data;
@@ -18,6 +19,7 @@ namespace GameServer.Entities
         public StatusManager StatusManager;
 
         public QuestManager QuestManager;
+        public FriendManager FriendManager;
 
         public Character(CharacterType type,TCharacter cha):
             base(new Core.Vector3Int(cha.MapPosX, cha.MapPosY, cha.MapPosZ),new Core.Vector3Int(100,0,0))
@@ -27,8 +29,8 @@ namespace GameServer.Entities
             this.Info.Type = type;
             this.Info.Id = cha.ID;
             this.Info.Name = cha.Name;
-            this.Info.Level = 10;//cha.Level;
-            this.Info.Tid = cha.TID;
+            this.Info.Level = cha.Level;
+            this.Info.ConfigId = cha.TID;
             this.Info.Class = (CharacterClass)cha.Class;
             this.Info.mapId = cha.MapID;
             this.Info.Entity = this.EntityData;
@@ -36,7 +38,7 @@ namespace GameServer.Entities
             this.Info.Equips = this.Data.Equips;
 
             this.Info.Gold = cha.Gold;
-            this.Define = DataManager.Instance.Characters[this.Info.Tid];
+            this.Define = DataManager.Instance.Characters[this.Info.ConfigId];
 
 
             //玩家道具初始化
@@ -52,6 +54,10 @@ namespace GameServer.Entities
             //玩家任务初始化
             this.QuestManager = new QuestManager(this);
             this.QuestManager.GetQuestInfos(this.Info.Quests);
+
+            //玩家好友初始化
+            this.FriendManager = new FriendManager(this);
+            this.FriendManager.GetQuestInfos(this.Info.Friends);
         }
         public override string ToString()
         {
@@ -66,6 +72,25 @@ namespace GameServer.Entities
 
                 this.StatusManager.AddGoldChange((int)(value - this.Data.Gold));
                 this.Data.Gold = value;
+            }
+        }
+
+        public void Onlive()
+        {
+
+            this.FriendManager.UpdateFriendSelfInfo(this.Info, 1);
+        }
+        internal void Clear()
+        {
+            this.FriendManager.UpdateFriendSelfInfo(this.Info, 0);
+        }
+
+        public void PostProcess(NetMessageResponse message)
+        {
+            this.FriendManager.PostProcess(message);
+            if (this.StatusManager.HasStatus)
+            {
+                this.StatusManager.PostProcess(message);
             }
         }
     }

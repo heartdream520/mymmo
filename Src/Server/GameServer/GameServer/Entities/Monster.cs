@@ -14,7 +14,9 @@ namespace GameServer.Entities
         public Monster(int tid, int level, Vector3Int pos, Vector3Int dir) : base(CharacterType.Monster, tid, level, pos, dir)
         {
             this.Info.Type = CharacterType.Monster;
-            this.Info.Tid = tid;
+            this.Info.Id = entityId;
+            this.Info.EnityId = entityId;
+            this.Info.ConfigId = tid;
             this.Info.Level = level;
             this.Define = DataManager.Instance.Characters[tid];
         }

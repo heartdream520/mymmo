@@ -102,7 +102,7 @@ public class UICharacterSelect : MonoBehaviour {
     {
         this.selectCharacterIdx = idx;
         var cha = User.Instance.Info.Player.Characters[idx];
-        Debug.LogFormat("Select Char:[{0}]{1}[{2}]", cha.Id, cha.Name, cha.Class);
+        Debug.LogFormat("Select Char:[{0}]{1}[{2}]", cha.EnityId, cha.Name, cha.Class);
         characterView.CurrectCharacter = idx;
     }
     public void OnClickPlay()

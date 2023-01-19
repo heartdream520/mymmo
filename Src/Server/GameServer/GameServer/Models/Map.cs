@@ -60,8 +60,8 @@ namespace GameServer.Models
         /// <param name="cha"></param>
         internal void CharacterEnter(NetConnection<NetSession> conn, Character cha)
         {
-            Log.InfoFormat("Map->CharacterEnter : MapID :{0} CharacterInfoId:{1} CharacterDataId:{2} EntityID:{3} ",
-               cha.Info.mapId, cha.Info.Id, cha.Data.ID, cha.entityId);
+            Log.InfoFormat("Map->CharacterEnter : MapID :{0} CharacterEnityId:{1} CharacterDataId:{2} EntityID:{3} ",
+               cha.Info.mapId, cha.Info.EnityId, cha.Data.ID, cha.entityId);
 
             cha.Info.mapId = this.ID;
             conn.Session.Response.mapCharacterEnter = new MapCharacterEnterResponse();
@@ -74,7 +74,7 @@ namespace GameServer.Models
             foreach (var kv in this.MapCharacters)
             {
                 Log.ErrorFormat("InMapCharacters: CharacterInfoId:{0} CharacterId:{1}  EntityID:{2}",
-                    kv.Value.character.Info.Id, kv.Value.character.Id, kv.Value.character.EntityData.Id);
+                    kv.Value.character.Info.EnityId, kv.Value.character.Id, kv.Value.character.EntityData.Id);
                 conn.Session.Response.mapCharacterEnter.Characters.Add(kv.Value.character.Info);
                 this.SendCharacterEnterMap(kv.Value.connection, cha.Info);
             }
@@ -149,7 +149,7 @@ namespace GameServer.Models
             {
                 MapCharacter cha = this.MapCharacters[k.Key];
                 Log.InfoFormat("Map UpdateEntity SendMapCharacter : Id:{0} InfoId:{1} Name:{2} ",
-                cha.character.Id,cha.character.Info.Id,cha.character.Info.Name);
+                cha.character.Id,cha.character.Info.EnityId,cha.character.Info.Name);
                 if (k.Value.character.entityId==entitySync.Id)
                 {
                     k.Value.character.Position = entitySync.Entity.Position;

@@ -208,7 +208,7 @@ namespace Services
 
             var cha = User.Instance.Info.Player.Characters[idx];
             Debug.LogFormat("UserService->SendCharacterEnter: EnterCharacterID :{0} EnterCharacterName:{1} EnterCharacter_Idx",
-                cha.Id, cha.Name,idx);
+                cha.EnityId, cha.Name,idx);
             
             //发送消息到服务器
             NetMessage message = new NetMessage();
@@ -231,7 +231,7 @@ namespace Services
         {
             NCharacterInfo cha = User.Instance.CurrentCharacter;
             Debug.LogFormat("UserService->SendCharacterLeave: LeaveCharacterID :{0} LeaveCharacterName:{1}", 
-                cha.Id,cha.Name);
+                cha.EnityId,cha.Name);
 
             
             //发送消息到服务器
@@ -319,6 +319,7 @@ namespace Services
                 EquipManager.Instance.Init(response.Ncharacterinfo.Equips);
 
                 QuestManager.Instance.Init(response.Ncharacterinfo.Quests);
+                FriendManager.Instance.Init(response.Ncharacterinfo.Friends);
             }
             if (this.OnGameEnter != null)
             {

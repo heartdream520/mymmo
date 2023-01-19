@@ -29,6 +29,8 @@ public class UIManager : Singleton<UIManager>{
 
         this.UIResources.Add(typeof(UIQuestDialog), new UIElement() { Resources = "UI/Quest/UIQuestDialog", Cache = false });
         this.UIResources.Add(typeof(UIQuestSystem), new UIElement() { Resources = "UI/Quest/UIQuestSystem", Cache = false });
+
+        this.UIResources.Add(typeof(UIFriend), new UIElement() { Resources = "UI/Friend/UIFriend", Cache = false });
         User.Instance.CurrentCharacter_Set_Action += () =>
           {
               this.UIcnt = 0;

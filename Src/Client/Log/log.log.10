@@ -1,13 +1,521 @@
-2023-01-15 16:13:18,284 [ 1] INFO  Unity: LoadingManager start
-2023-01-15 16:13:22,545 [ 1] INFO  Unity: DataManager > DataManager()
-2023-01-15 16:13:22,652 [ 1] INFO  Unity: MapDefine.txt
-2023-01-15 16:13:22,670 [ 1] INFO  Unity: CharacterDefine.txt
-2023-01-15 16:13:22,693 [ 1] INFO  Unity: TeleporterDefine.txt
-2023-01-15 16:13:22,704 [ 1] INFO  Unity: SpawnPointDefine.txt
-2023-01-15 16:13:22,726 [ 1] INFO  Unity: NpcDefine.txt
-2023-01-15 16:13:22,749 [ 1] INFO  Unity: ItemDefine.txt
-2023-01-15 16:13:24,282 [ 1] INFO  Unity: OnDestroy NetworkManager.
-2023-01-15 16:13:24,284 [ 1] WARN  Unity: CloseConnection(), errorCode: 1007
+2023-01-19 10:15:29,983 [ 1] INFO  Unity: LoadingManager start
+2023-01-19 10:15:34,203 [ 1] INFO  Unity: DataManager > DataManager()
+2023-01-19 10:15:34,293 [ 1] INFO  Unity: MapDefine.txt
+2023-01-19 10:15:34,314 [ 1] INFO  Unity: CharacterDefine.txt
+2023-01-19 10:15:34,330 [ 1] INFO  Unity: TeleporterDefine.txt
+2023-01-19 10:15:34,345 [ 1] INFO  Unity: SpawnPointDefine.txt
+2023-01-19 10:15:34,360 [ 1] INFO  Unity: NpcDefine.txt
+2023-01-19 10:15:34,379 [ 1] INFO  Unity: ItemDefine.txt
+2023-01-19 10:16:27,155 [ 1] INFO  Unity: UserService->SendLoad: User:1 Password:1
+2023-01-19 10:16:27,156 [ 1] INFO  Unity: ConnectToServer() Start 
+2023-01-19 10:16:27,158 [ 1] INFO  Unity: DoConnect
+2023-01-19 10:16:27,162 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
+2023-01-19 10:16:27,165 [ 1] INFO  Unity: Connect[0] to server 127.0.0.1:8000
+
+2023-01-19 10:16:27,170 [ 1] INFO  Unity: LoadingMesager::OnGameServerConnect :0 reason:Success
+2023-01-19 10:16:31,002 [ 1] INFO  Unity: UserService->OnUserLoad:Success [None]
+2023-01-19 10:16:38,119 [ 1] INFO  Unity: Select Character:[1]1[Warrior] 
+2023-01-19 10:16:38,770 [ 1] INFO  Unity: 进入游戏
+2023-01-19 10:16:39,781 [ 1] INFO  Unity: UserService->SendCharacterEnter: EnterCharacterID :0 EnterCharacterName:1 EnterCharacter_Idx
+2023-01-19 10:16:39,990 [ 1] INFO  Unity: UserService->OnUserGameEnter:Success [None]
+2023-01-19 10:16:39,993 [ 1] INFO  Unity: ItemManager->InitItem :ItemID:1,Count:20
+2023-01-19 10:16:39,995 [ 1] INFO  Unity: ItemManager->InitItem :ItemID:2,Count:20
+2023-01-19 10:16:40,001 [ 1] INFO  Unity: MapService->OnMapCharacterEnter :Map:1 Count:1
+2023-01-19 10:16:40,005 [ 1] INFO  Unity: CharacterManager->AddCharacter:CharacterId:0 CharacterName:1 MapId:1 Entity:(1:pos:(5000,4000,820),dir:(100,0,0),spd:0
+2023-01-19 10:16:40,010 [ 1] INFO  Unity: EntityManager AddEntity EntityId :1 
+2023-01-19 10:16:43,177 [ 1] WARN  Unity: DontDestroyOnLoad only work for root GameObjects or components on root GameObjects.
+UnityEngine.Object:DontDestroyOnLoad(Object)
+MonoSingleton`1:Awake() (at Assets/Scripts/Utilities/MonoSingleton.cs:32)
+
+2023-01-19 10:16:43,180 [ 1] WARN  Unity: DontDestroyOnLoad only work for root GameObjects or components on root GameObjects.
+UnityEngine.Object:DontDestroyOnLoad(Object)
+MonoSingleton`1:Awake() (at Assets/Scripts/Utilities/MonoSingleton.cs:32)
+
+2023-01-19 10:16:43,180 [ 1] WARN  Unity: DontDestroyOnLoad only work for root GameObjects or components on root GameObjects.
+UnityEngine.Object:DontDestroyOnLoad(Object)
+MonoSingleton`1:Awake() (at Assets/Scripts/Utilities/MonoSingleton.cs:32)
+
+2023-01-19 10:16:43,181 [ 1] WARN  Unity: DontDestroyOnLoad only work for root GameObjects or components on root GameObjects.
+UnityEngine.Object:DontDestroyOnLoad(Object)
+MonoSingleton`1:Awake() (at Assets/Scripts/Utilities/MonoSingleton.cs:32)
+
+2023-01-19 10:16:43,244 [ 1] INFO  Unity: MinimapManager->UpdataMiniMap
+2023-01-19 10:16:43,246 [ 1] INFO  Unity: Load MiniMap Image :buluzheng
+2023-01-19 10:16:43,256 [ 1] INFO  Unity: Load MiniMap Image :buluzheng
+2023-01-19 10:16:43,260 [ 1] INFO  Unity: GameObjectManager->CreateCharacterObject CharacterId:1 CharacterName:1 CharacterEntityId:1
+2023-01-19 10:16:43,306 [ 1] INFO  Unity: GameObjectManager->InitGameObject Player_character:1
+2023-01-19 10:16:43,313 [ 1] INFO  Unity: Load MiniMap Image :buluzheng
+2023-01-19 10:16:43,314 [ 1] INFO  Unity: Load MiniMap Image :buluzheng
+2023-01-19 10:16:44,336 [ 1] INFO  Unity: MapService->OnMapCharacterEnter :Map:1 Count:1
+2023-01-19 10:16:44,338 [ 1] INFO  Unity: CharacterManager->AddCharacter:CharacterId:0 CharacterName:2 MapId:1 Entity:(2:pos:(5000,4000,820),dir:(100,0,0),spd:0
+2023-01-19 10:16:44,342 [ 1] INFO  Unity: EntityManager AddEntity EntityId :2 
+2023-01-19 10:16:44,345 [ 1] INFO  Unity: GameObjectManager->CreateCharacterObject CharacterId:2 CharacterName:2 CharacterEntityId:2
+2023-01-19 10:16:45,807 [ 1] INFO  Unity: SetDirection:(-100, 0, 0)
+2023-01-19 10:16:45,811 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
+2023-01-19 10:16:45,813 [ 1] INFO  Unity: MoveForward
+2023-01-19 10:16:45,815 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
+2023-01-19 10:16:45,846 [ 1] INFO  Unity: SetPosition:(4932, 4000, 839)
+2023-01-19 10:16:45,847 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
+2023-01-19 10:16:45,982 [ 1] INFO  Unity: Stop
+2023-01-19 10:16:45,983 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
+2023-01-19 10:16:46,255 [ 1] INFO  Unity: SetPosition:(4881, 4000, 800)
+2023-01-19 10:16:46,256 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
+2023-01-19 10:16:58,668 [ 1] INFO  Unity: FriendService->OnFriendAddRequest FromId:2 FromName:2
+2023-01-19 10:16:58,670 [ 1] INFO  Unity: 2 请求添加好友
+2023-01-19 10:17:06,502 [ 1] INFO  Unity: FriendService->SendFriendAddResponse Accept:True
+2023-01-19 10:17:06,547 [ 1] INFO  Unity: FriendService->OnFriendAddResponse
+2023-01-19 10:17:06,548 [ 1] INFO  Unity: FriendService->SendFriendListRequest
+2023-01-19 10:17:06,550 [ 1] INFO  Unity: 添加成功
+2023-01-19 10:17:06,631 [ 1] INFO  Unity: FriendService->OnFriendList
+2023-01-19 10:17:18,921 [ 1] INFO  Unity: EntityController->OnEntityChanaged Id:2 POS:(5000, 4005, 820) Dir:(-7, 100, 0),Speed:300
+2023-01-19 10:17:18,924 [ 1] INFO  Unity: MapService->OnMapEntitySync :Entitys:1
+EntityID:2  Enent:None Entity:None
+2023-01-19 10:17:18,925 [ 1] INFO  Unity: FriendService->OnFriendList
+2023-01-19 10:17:18,948 [ 1] INFO  Unity: EntityController->OnEntityChanaged Id:2 POS:(5000, 4010, 820) Dir:(-7, 100, 0),Speed:300
+2023-01-19 10:17:18,949 [ 1] INFO  Unity: MapService->OnMapEntitySync :Entitys:1
+EntityID:2  Enent:MoveFwd Entity:MoveFwd
+2023-01-19 10:17:19,100 [ 1] INFO  Unity: EntityController->OnEntityChanaged Id:2 POS:(5000, 4055, 820) Dir:(-7, 100, 0),Speed:0
+2023-01-19 10:17:19,101 [ 1] INFO  Unity: MapService->OnMapEntitySync :Entitys:1
+EntityID:2  Enent:Idle Entity:Idle
+2023-01-19 10:17:20,459 [ 1] INFO  Unity: SetDirection:(97, 26, 0)
+2023-01-19 10:17:20,460 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
+2023-01-19 10:17:20,461 [ 1] INFO  Unity: MoveForward
+2023-01-19 10:17:20,461 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
+2023-01-19 10:17:20,638 [ 1] INFO  Unity: SetPosition:(4924, 4008, 839)
+2023-01-19 10:17:20,640 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
+2023-01-19 10:17:20,658 [ 1] INFO  Unity: Stop
+2023-01-19 10:17:20,658 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
+2023-01-19 10:17:20,940 [ 1] INFO  Unity: SetPosition:(4920, 4005, 798)
+2023-01-19 10:17:20,942 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
+2023-01-19 10:17:21,097 [ 1] INFO  Unity: MoveForward
+2023-01-19 10:17:21,098 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
+2023-01-19 10:17:21,202 [ 1] INFO  Unity: SetPosition:(4933, 3998, 832)
+2023-01-19 10:17:21,203 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
+2023-01-19 10:17:21,269 [ 1] INFO  Unity: EntityController->OnEntityChanaged Id:2 POS:(5030, 4081, 805) Dir:(-7, 100, 0),Speed:0
+2023-01-19 10:17:21,270 [ 1] INFO  Unity: MapService->OnMapEntitySync :Entitys:1
+EntityID:2  Enent:None Entity:None
+2023-01-19 10:17:21,380 [ 1] INFO  Unity: Stop
+2023-01-19 10:17:21,382 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
+2023-01-19 10:17:21,480 [ 1] INFO  Unity: SetDirection:(-97, -26, 0)
+2023-01-19 10:17:21,481 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
+2023-01-19 10:17:21,481 [ 1] INFO  Unity: MoveForward
+2023-01-19 10:17:21,482 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
+2023-01-19 10:17:22,034 [ 1] INFO  Unity: Stop
+2023-01-19 10:17:22,036 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
+2023-01-19 10:17:22,058 [ 1] INFO  Unity: SetDirection:(97, 26, 0)
+2023-01-19 10:17:22,058 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
+2023-01-19 10:17:22,059 [ 1] INFO  Unity: MoveForward
+2023-01-19 10:17:22,060 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
+2023-01-19 10:17:22,253 [ 1] INFO  Unity: Stop
+2023-01-19 10:17:22,255 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
+2023-01-19 10:17:22,561 [ 1] INFO  Unity: MoveForward
+2023-01-19 10:17:22,562 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
+2023-01-19 10:17:22,798 [ 1] INFO  Unity: Stop
+2023-01-19 10:17:22,800 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
+2023-01-19 10:17:22,951 [ 1] INFO  Unity: SetDirection:(-97, -26, 0)
+2023-01-19 10:17:22,952 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
+2023-01-19 10:17:22,953 [ 1] INFO  Unity: MoveForward
+2023-01-19 10:17:22,953 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
+2023-01-19 10:17:23,334 [ 1] INFO  Unity: Stop
+2023-01-19 10:17:23,335 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
+2023-01-19 10:17:23,357 [ 1] INFO  Unity: SetDirection:(97, 26, 0)
+2023-01-19 10:17:23,358 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
+2023-01-19 10:17:23,358 [ 1] INFO  Unity: MoveForward
+2023-01-19 10:17:23,359 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
+2023-01-19 10:17:23,595 [ 1] INFO  Unity: Stop
+2023-01-19 10:17:23,596 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
+2023-01-19 10:17:34,067 [ 1] INFO  Unity: EntityController->OnEntityChanaged Id:2 POS:(5035, 4080, 805) Dir:(97, -22, 0),Speed:300
+2023-01-19 10:17:34,069 [ 1] INFO  Unity: MapService->OnMapEntitySync :Entitys:1
+EntityID:2  Enent:None Entity:None
+2023-01-19 10:17:34,098 [ 1] INFO  Unity: EntityController->OnEntityChanaged Id:2 POS:(5040, 4079, 805) Dir:(98, -22, 0),Speed:300
+2023-01-19 10:17:34,099 [ 1] INFO  Unity: MapService->OnMapEntitySync :Entitys:1
+EntityID:2  Enent:MoveFwd Entity:MoveFwd
+2023-01-19 10:17:34,137 [ 1] INFO  Unity: EntityController->OnEntityChanaged Id:2 POS:(5050, 4077, 805) Dir:(98, -21, 0),Speed:300
+2023-01-19 10:17:34,138 [ 1] INFO  Unity: MapService->OnMapEntitySync :Entitys:1
+EntityID:2  Enent:None Entity:None
+2023-01-19 10:17:34,187 [ 1] INFO  Unity: EntityController->OnEntityChanaged Id:2 POS:(5070, 4073, 805) Dir:(98, -20, 0),Speed:300
+2023-01-19 10:17:34,188 [ 1] INFO  Unity: MapService->OnMapEntitySync :Entitys:1
+EntityID:2  Enent:None Entity:None
+2023-01-19 10:17:34,265 [ 1] INFO  Unity: EntityController->OnEntityChanaged Id:2 POS:(5090, 4069, 805) Dir:(98, -19, 0),Speed:300
+2023-01-19 10:17:34,266 [ 1] INFO  Unity: MapService->OnMapEntitySync :Entitys:1
+EntityID:2  Enent:None Entity:None
+2023-01-19 10:17:34,291 [ 1] INFO  Unity: EntityController->OnEntityChanaged Id:2 POS:(5095, 4068, 805) Dir:(98, -19, 0),Speed:0
+2023-01-19 10:17:34,293 [ 1] INFO  Unity: MapService->OnMapEntitySync :Entitys:1
+EntityID:2  Enent:Idle Entity:Idle
+2023-01-19 10:17:34,475 [ 1] INFO  Unity: EntityController->OnEntityChanaged Id:2 POS:(5094, 4063, 805) Dir:(-22, -98, 0),Speed:300
+2023-01-19 10:17:34,478 [ 1] INFO  Unity: MapService->OnMapEntitySync :Entitys:1
+EntityID:2  Enent:None Entity:None
+2023-01-19 10:17:34,480 [ 1] INFO  Unity: EntityController->OnEntityChanaged Id:2 POS:(5093, 4058, 805) Dir:(-23, -97, 0),Speed:300
+2023-01-19 10:17:34,482 [ 1] INFO  Unity: MapService->OnMapEntitySync :Entitys:1
+EntityID:2  Enent:MoveFwd Entity:MoveFwd
+2023-01-19 10:17:34,796 [ 1] INFO  Unity: EntityController->OnEntityChanaged Id:2 POS:(5076, 3973, 805) Dir:(-23, -97, 0),Speed:0
+2023-01-19 10:17:34,797 [ 1] INFO  Unity: MapService->OnMapEntitySync :Entitys:1
+EntityID:2  Enent:Idle Entity:Idle
+2023-01-19 10:17:34,927 [ 1] INFO  Unity: EntityController->OnEntityChanaged Id:2 POS:(5077, 3978, 805) Dir:(21, 98, 0),Speed:300
+2023-01-19 10:17:34,928 [ 1] INFO  Unity: MapService->OnMapEntitySync :Entitys:1
+EntityID:2  Enent:None Entity:None
+2023-01-19 10:17:34,953 [ 1] INFO  Unity: EntityController->OnEntityChanaged Id:2 POS:(5079, 3988, 805) Dir:(21, 98, 0),Speed:300
+2023-01-19 10:17:34,954 [ 1] INFO  Unity: MapService->OnMapEntitySync :Entitys:1
+EntityID:2  Enent:MoveFwd Entity:MoveFwd
+2023-01-19 10:17:34,995 [ 1] INFO  Unity: EntityController->OnEntityChanaged Id:2 POS:(5081, 3998, 805) Dir:(20, 98, 0),Speed:300
+2023-01-19 10:17:34,996 [ 1] INFO  Unity: MapService->OnMapEntitySync :Entitys:1
+EntityID:2  Enent:None Entity:None
+2023-01-19 10:17:35,041 [ 1] INFO  Unity: EntityController->OnEntityChanaged Id:2 POS:(5084, 4013, 805) Dir:(19, 98, 0),Speed:300
+2023-01-19 10:17:35,042 [ 1] INFO  Unity: MapService->OnMapEntitySync :Entitys:1
+EntityID:2  Enent:None Entity:None
+2023-01-19 10:17:35,174 [ 1] INFO  Unity: EntityController->OnEntityChanaged Id:2 POS:(5091, 4048, 805) Dir:(19, 98, 0),Speed:0
+2023-01-19 10:17:35,176 [ 1] INFO  Unity: MapService->OnMapEntitySync :Entitys:1
+EntityID:2  Enent:Idle Entity:Idle
+2023-01-19 10:17:35,999 [ 1] INFO  Unity: EntityController->OnEntityChanaged Id:2 POS:(5096, 4047, 805) Dir:(98, -21, 0),Speed:300
+2023-01-19 10:17:36,001 [ 1] INFO  Unity: MapService->OnMapEntitySync :Entitys:1
+EntityID:2  Enent:None Entity:None
+2023-01-19 10:17:36,023 [ 1] INFO  Unity: EntityController->OnEntityChanaged Id:2 POS:(5101, 4046, 805) Dir:(98, -20, 0),Speed:300
+2023-01-19 10:17:36,024 [ 1] INFO  Unity: MapService->OnMapEntitySync :Entitys:1
+EntityID:2  Enent:MoveFwd Entity:MoveFwd
+2023-01-19 10:17:36,044 [ 1] INFO  Unity: EntityController->OnEntityChanaged Id:2 POS:(5111, 4044, 805) Dir:(98, -20, 0),Speed:300
+2023-01-19 10:17:36,047 [ 1] INFO  Unity: MapService->OnMapEntitySync :Entitys:1
+EntityID:2  Enent:None Entity:None
+2023-01-19 10:17:36,156 [ 1] INFO  Unity: EntityController->OnEntityChanaged Id:2 POS:(5141, 4038, 805) Dir:(98, -20, 0),Speed:0
+2023-01-19 10:17:36,157 [ 1] INFO  Unity: MapService->OnMapEntitySync :Entitys:1
+EntityID:2  Enent:Idle Entity:Idle
+2023-01-19 10:17:40,562 [ 1] INFO  Unity: 要添加的好友Id
+2023-01-19 10:17:42,809 [ 1] INFO  Unity: FriendService->SendFriendAddRequest FriendId:2 FriendName:
+2023-01-19 10:17:46,432 [ 1] INFO  Unity: FriendService->OnFriendAddResponse
+2023-01-19 10:17:46,434 [ 1] INFO  Unity: FriendService->SendFriendListRequest
+2023-01-19 10:17:46,435 [ 1] INFO  Unity: 对方同意了您的请求
+2023-01-19 10:17:46,437 [ 1] INFO  Unity: FriendService->OnFriendList
+2023-01-19 10:17:46,516 [ 1] INFO  Unity: FriendService->OnFriendList
+2023-01-19 10:17:53,723 [ 1] INFO  Unity: 请选择要删除的好友
+2023-01-19 10:17:57,633 [ 1] INFO  Unity: 确定要删除好友 2 吗？
+2023-01-19 10:17:58,573 [ 1] INFO  Unity: FriendService->SendFriendRemoveRequest Id:0 FriendId:2
+2023-01-19 10:17:58,617 [ 1] INFO  Unity: FriendService->OnFriendRemove RemoveCharId:2 Resule:Success Errmsg:删除成功
+2023-01-19 10:17:58,618 [ 1] INFO  Unity: 删除成功
+2023-01-19 10:18:05,264 [ 1] INFO  Unity: EntityController->OnEntityChanaged Id:2 POS:(5142, 4043, 805) Dir:(17, 99, 0),Speed:300
+2023-01-19 10:18:05,266 [ 1] INFO  Unity: MapService->OnMapEntitySync :Entitys:1
+EntityID:2  Enent:None Entity:None
+2023-01-19 10:18:05,297 [ 1] INFO  Unity: EntityController->OnEntityChanaged Id:2 POS:(5143, 4048, 805) Dir:(17, 99, 0),Speed:300
+2023-01-19 10:18:05,298 [ 1] INFO  Unity: MapService->OnMapEntitySync :Entitys:1
+EntityID:2  Enent:MoveFwd Entity:MoveFwd
+2023-01-19 10:18:05,535 [ 1] INFO  Unity: EntityController->OnEntityChanaged Id:2 POS:(5157, 4118, 805) Dir:(17, 99, 0),Speed:0
+2023-01-19 10:18:05,536 [ 1] INFO  Unity: MapService->OnMapEntitySync :Entitys:1
+EntityID:2  Enent:Idle Entity:Idle
+2023-01-19 10:18:05,879 [ 1] INFO  Unity: EntityController->OnEntityChanaged Id:2 POS:(5156, 4113, 805) Dir:(-17, -99, 0),Speed:300
+2023-01-19 10:18:05,881 [ 1] INFO  Unity: MapService->OnMapEntitySync :Entitys:1
+EntityID:2  Enent:None Entity:None
+2023-01-19 10:18:05,884 [ 1] INFO  Unity: EntityController->OnEntityChanaged Id:2 POS:(5155, 4108, 805) Dir:(-17, -99, 0),Speed:300
+2023-01-19 10:18:05,885 [ 1] INFO  Unity: MapService->OnMapEntitySync :Entitys:1
+EntityID:2  Enent:MoveFwd Entity:MoveFwd
+2023-01-19 10:18:06,236 [ 1] INFO  Unity: EntityController->OnEntityChanaged Id:2 POS:(5135, 4008, 805) Dir:(-17, -99, 0),Speed:0
+2023-01-19 10:18:06,239 [ 1] INFO  Unity: MapService->OnMapEntitySync :Entitys:1
+EntityID:2  Enent:Idle Entity:Idle
+2023-01-19 10:18:07,133 [ 1] INFO  Unity: EntityController->OnEntityChanaged Id:2 POS:(5130, 4009, 805) Dir:(-99, 17, 0),Speed:300
+2023-01-19 10:18:07,134 [ 1] INFO  Unity: MapService->OnMapEntitySync :Entitys:1
+EntityID:2  Enent:None Entity:None
+2023-01-19 10:18:07,135 [ 1] INFO  Unity: EntityController->OnEntityChanaged Id:2 POS:(5125, 4010, 805) Dir:(-99, 17, 0),Speed:300
+2023-01-19 10:18:07,137 [ 1] INFO  Unity: MapService->OnMapEntitySync :Entitys:1
+EntityID:2  Enent:MoveFwd Entity:MoveFwd
+2023-01-19 10:18:07,324 [ 1] INFO  Unity: EntityController->OnEntityChanaged Id:2 POS:(5070, 4021, 805) Dir:(-99, 17, 0),Speed:0
+2023-01-19 10:18:07,326 [ 1] INFO  Unity: MapService->OnMapEntitySync :Entitys:1
+EntityID:2  Enent:Idle Entity:Idle
+2023-01-19 10:18:07,437 [ 1] INFO  Unity: EntityController->OnEntityChanaged Id:2 POS:(5075, 4020, 805) Dir:(99, -17, 0),Speed:300
+2023-01-19 10:18:07,441 [ 1] INFO  Unity: MapService->OnMapEntitySync :Entitys:1
+EntityID:2  Enent:None Entity:None
+2023-01-19 10:18:07,461 [ 1] INFO  Unity: EntityController->OnEntityChanaged Id:2 POS:(5080, 4019, 805) Dir:(99, -17, 0),Speed:300
+2023-01-19 10:18:07,462 [ 1] INFO  Unity: MapService->OnMapEntitySync :Entitys:1
+EntityID:2  Enent:MoveFwd Entity:MoveFwd
+2023-01-19 10:18:07,721 [ 1] INFO  Unity: EntityController->OnEntityChanaged Id:2 POS:(5155, 4004, 805) Dir:(99, -17, 0),Speed:0
+2023-01-19 10:18:07,722 [ 1] INFO  Unity: MapService->OnMapEntitySync :Entitys:1
+EntityID:2  Enent:Idle Entity:Idle
+2023-01-19 10:18:07,934 [ 1] INFO  Unity: EntityController->OnEntityChanaged Id:2 POS:(5154, 3999, 805) Dir:(-17, -99, 0),Speed:300
+2023-01-19 10:18:07,935 [ 1] INFO  Unity: MapService->OnMapEntitySync :Entitys:1
+EntityID:2  Enent:None Entity:None
+2023-01-19 10:18:07,958 [ 1] INFO  Unity: EntityController->OnEntityChanaged Id:2 POS:(5153, 3994, 805) Dir:(-17, -99, 0),Speed:300
+2023-01-19 10:18:07,959 [ 1] INFO  Unity: MapService->OnMapEntitySync :Entitys:1
+EntityID:2  Enent:MoveFwd Entity:MoveFwd
+2023-01-19 10:18:08,202 [ 1] INFO  Unity: EntityController->OnEntityChanaged Id:2 POS:(5139, 3924, 805) Dir:(-17, -99, 0),Speed:0
+2023-01-19 10:18:08,203 [ 1] INFO  Unity: MapService->OnMapEntitySync :Entitys:1
+EntityID:2  Enent:Idle Entity:Idle
+2023-01-19 10:18:26,052 [ 1] INFO  Unity: 请选择要删除的好友
+2023-01-19 10:18:27,889 [ 1] INFO  Unity: 确定要删除好友 2 吗？
+2023-01-19 10:18:28,660 [ 1] INFO  Unity: FriendService->SendFriendRemoveRequest Id:0 FriendId:2
+2023-01-19 10:18:28,699 [ 1] INFO  Unity: FriendService->OnFriendRemove RemoveCharId:2 Resule:Success Errmsg:删除成功
+2023-01-19 10:18:28,701 [ 1] INFO  Unity: 删除成功
+2023-01-19 10:18:31,261 [ 1] INFO  Unity: SetDirection:(99, 16, 0)
+2023-01-19 10:18:31,262 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
+2023-01-19 10:18:31,263 [ 1] INFO  Unity: MoveForward
+2023-01-19 10:18:31,263 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
+2023-01-19 10:18:31,551 [ 1] INFO  Unity: Stop
+2023-01-19 10:18:31,552 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
+2023-01-19 10:18:32,002 [ 1] INFO  Unity: SetDirection:(-99, -16, 0)
+2023-01-19 10:18:32,003 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
+2023-01-19 10:18:32,004 [ 1] INFO  Unity: MoveForward
+2023-01-19 10:18:32,005 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
+2023-01-19 10:18:32,258 [ 1] INFO  Unity: Stop
+2023-01-19 10:18:32,259 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
+2023-01-19 10:18:34,791 [ 1] INFO  Unity: MoveForward
+2023-01-19 10:18:34,793 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
+2023-01-19 10:18:34,980 [ 1] INFO  Unity: Stop
+2023-01-19 10:18:34,981 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
+2023-01-19 10:18:36,521 [ 1] INFO  Unity: 确定要删除好友 2 吗？
+2023-01-19 10:18:37,675 [ 1] INFO  Unity: FriendService->SendFriendRemoveRequest Id:0 FriendId:2
+2023-01-19 10:18:37,717 [ 1] INFO  Unity: FriendService->OnFriendRemove RemoveCharId:2 Resule:Success Errmsg:删除成功
+2023-01-19 10:18:37,717 [ 1] INFO  Unity: 删除成功
+2023-01-19 10:18:42,323 [ 1] INFO  Unity: SetDirection:(99, 13, 0)
+2023-01-19 10:18:42,324 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
+2023-01-19 10:18:42,325 [ 1] INFO  Unity: MoveForward
+2023-01-19 10:18:42,325 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
+2023-01-19 10:18:42,638 [ 1] INFO  Unity: Stop
+2023-01-19 10:18:42,640 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
+2023-01-19 10:18:42,812 [ 1] INFO  Unity: SetDirection:(-99, -13, 0)
+2023-01-19 10:18:42,813 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
+2023-01-19 10:18:42,814 [ 1] INFO  Unity: MoveForward
+2023-01-19 10:18:42,815 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
+2023-01-19 10:18:43,123 [ 1] INFO  Unity: Stop
+2023-01-19 10:18:43,125 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
+2023-01-19 10:18:43,650 [ 1] INFO  Unity: EntityController->OnEntityChanaged Id:2 POS:(5140, 3929, 805) Dir:(17, 99, 0),Speed:300
+2023-01-19 10:18:43,652 [ 1] INFO  Unity: MapService->OnMapEntitySync :Entitys:1
+EntityID:2  Enent:None Entity:None
+2023-01-19 10:18:43,670 [ 1] INFO  Unity: EntityController->OnEntityChanaged Id:2 POS:(5142, 3939, 805) Dir:(17, 99, 0),Speed:300
+2023-01-19 10:18:43,672 [ 1] INFO  Unity: MapService->OnMapEntitySync :Entitys:1
+EntityID:2  Enent:MoveFwd Entity:MoveFwd
+2023-01-19 10:18:43,914 [ 1] INFO  Unity: EntityController->OnEntityChanaged Id:2 POS:(5155, 4004, 805) Dir:(17, 99, 0),Speed:0
+2023-01-19 10:18:43,916 [ 1] INFO  Unity: MapService->OnMapEntitySync :Entitys:1
+EntityID:2  Enent:Idle Entity:Idle
+2023-01-19 10:18:44,101 [ 1] INFO  Unity: EntityController->OnEntityChanaged Id:2 POS:(5154, 3999, 805) Dir:(-17, -99, 0),Speed:300
+2023-01-19 10:18:44,102 [ 1] INFO  Unity: MapService->OnMapEntitySync :Entitys:1
+EntityID:2  Enent:None Entity:None
+2023-01-19 10:18:44,125 [ 1] INFO  Unity: EntityController->OnEntityChanaged Id:2 POS:(5153, 3994, 805) Dir:(-17, -99, 0),Speed:300
+2023-01-19 10:18:44,126 [ 1] INFO  Unity: MapService->OnMapEntitySync :Entitys:1
+EntityID:2  Enent:MoveFwd Entity:MoveFwd
+2023-01-19 10:18:44,455 [ 1] INFO  Unity: EntityController->OnEntityChanaged Id:2 POS:(5134, 3899, 805) Dir:(-17, -99, 0),Speed:0
+2023-01-19 10:18:44,456 [ 1] INFO  Unity: MapService->OnMapEntitySync :Entitys:1
+EntityID:2  Enent:Idle Entity:Idle
+2023-01-19 10:20:20,479 [ 1] INFO  Unity: 确定要删除好友 2 吗？
+2023-01-19 10:20:21,082 [ 1] INFO  Unity: FriendService->SendFriendRemoveRequest Id:0 FriendId:2
+2023-01-19 10:20:41,746 [ 1] INFO  Unity: FriendService->OnFriendRemove RemoveCharId:2 Resule:Success Errmsg:删除成功
+2023-01-19 10:20:41,747 [ 1] INFO  Unity: 删除成功
+2023-01-19 10:20:46,194 [ 1] INFO  Unity: UserService->SendCharacterLeave: LeaveCharacterID :1 LeaveCharacterName:1
+2023-01-19 10:20:46,767 [ 1] INFO  Unity: MapService->OnMapCharacterLeave :Map:0 CharacterId:1 CharacterName:1
+2023-01-19 10:20:46,770 [ 1] INFO  Unity: CharacterManager->RemoveCharacter:CharacterId:1 CharacterName:1 MapId:1 Entity:(1:pos:(4858,3983,832),dir:(-99,-13,0),spd:0
+2023-01-19 10:20:46,773 [ 1] INFO  Unity: RemoveCharacter->RemoveCharacter:1
+2023-01-19 10:20:46,776 [ 1] INFO  Unity: EntityManager RemoveEntity EntityId :1 
+2023-01-19 10:20:46,778 [ 1] INFO  Unity: EntityController->OnEntityRemoved EntityId:1
+2023-01-19 10:20:46,780 [ 1] INFO  Unity: GameObjectManager->DestroyCharacterObject CharacterId:1 CharacterName:1 CharacterEntityId:1
+2023-01-19 10:20:46,783 [ 1] INFO  Unity: CharacterManager->RemoveCharacter:CharacterId:2 CharacterName:2 MapId:1 Entity:(2:pos:(5134,3899,805),dir:(-17,-99,0),spd:0
+2023-01-19 10:20:46,785 [ 1] INFO  Unity: RemoveCharacter->RemoveCharacter:2
+2023-01-19 10:20:46,786 [ 1] INFO  Unity: EntityManager RemoveEntity EntityId :2 
+2023-01-19 10:20:46,788 [ 1] INFO  Unity: EntityController->OnEntityRemoved EntityId:2
+2023-01-19 10:20:46,789 [ 1] INFO  Unity: GameObjectManager->DestroyCharacterObject CharacterId:2 CharacterName:2 CharacterEntityId:2
+2023-01-19 10:20:46,791 [ 1] INFO  Unity: UserService->OnUserGameLeave:Success [None]
+2023-01-19 10:20:46,794 [ 1] INFO  Unity: Entity Character_1_1 OnDestroy :ID:1 POS:(4858, 3983, 832) DIR:(-99, -13, 0) SPD:0 
+2023-01-19 10:20:46,795 [ 1] INFO  Unity: Entity Character_2_2 OnDestroy :ID:2 POS:(5134, 3899, 805) DIR:(-17, -99, 0) SPD:0 
+2023-01-19 10:20:49,904 [ 1] INFO  Unity: Select Character:[1]1[Warrior] 
+2023-01-19 10:20:50,445 [ 1] INFO  Unity: 进入游戏
+2023-01-19 10:20:50,994 [ 1] INFO  Unity: UserService->SendCharacterEnter: EnterCharacterID :0 EnterCharacterName:1 EnterCharacter_Idx
+2023-01-19 10:20:51,034 [ 1] INFO  Unity: UserService->OnUserGameEnter:Success [None]
+2023-01-19 10:20:51,035 [ 1] INFO  Unity: ItemManager->InitItem :ItemID:1,Count:20
+2023-01-19 10:20:51,037 [ 1] INFO  Unity: ItemManager->InitItem :ItemID:2,Count:20
+2023-01-19 10:20:51,039 [ 1] INFO  Unity: MapService->OnMapCharacterEnter :Map:1 Count:2
+2023-01-19 10:20:51,041 [ 1] INFO  Unity: CharacterManager->AddCharacter:CharacterId:0 CharacterName:1 MapId:1 Entity:(11:pos:(5000,4000,820),dir:(100,0,0),spd:0
+2023-01-19 10:20:51,043 [ 1] INFO  Unity: EntityManager AddEntity EntityId :11 
+2023-01-19 10:20:51,045 [ 1] INFO  Unity: CharacterManager->AddCharacter:CharacterId:0 CharacterName:2 MapId:1 Entity:(2:pos:(5134,3899,805),dir:(-17,-99,0),spd:0
+2023-01-19 10:20:51,047 [ 1] INFO  Unity: EntityManager AddEntity EntityId :2 
+2023-01-19 10:20:53,928 [ 1] INFO  Unity: MinimapManager->UpdataMiniMap
+2023-01-19 10:20:53,929 [ 1] INFO  Unity: Load MiniMap Image :buluzheng
+2023-01-19 10:20:53,930 [ 1] INFO  Unity: Load MiniMap Image :buluzheng
+2023-01-19 10:20:53,932 [ 1] INFO  Unity: GameObjectManager->CreateCharacterObject CharacterId:11 CharacterName:1 CharacterEntityId:11
+2023-01-19 10:20:53,973 [ 1] INFO  Unity: GameObjectManager->InitGameObject Player_character:11
+2023-01-19 10:20:53,976 [ 1] INFO  Unity: GameObjectManager->CreateCharacterObject CharacterId:2 CharacterName:2 CharacterEntityId:2
+2023-01-19 10:20:58,022 [ 1] INFO  Unity: UserService->SendCharacterLeave: LeaveCharacterID :11 LeaveCharacterName:1
+2023-01-19 10:20:58,566 [ 1] INFO  Unity: MapService->OnMapCharacterLeave :Map:0 CharacterId:11 CharacterName:1
+2023-01-19 10:20:58,567 [ 1] INFO  Unity: CharacterManager->RemoveCharacter:CharacterId:11 CharacterName:1 MapId:1 Entity:(11:pos:(5000,4000,820),dir:(100,0,0),spd:0
+2023-01-19 10:20:58,569 [ 1] INFO  Unity: RemoveCharacter->RemoveCharacter:11
+2023-01-19 10:20:58,570 [ 1] INFO  Unity: EntityManager RemoveEntity EntityId :11 
+2023-01-19 10:20:58,572 [ 1] INFO  Unity: EntityController->OnEntityRemoved EntityId:11
+2023-01-19 10:20:58,575 [ 1] INFO  Unity: GameObjectManager->DestroyCharacterObject CharacterId:11 CharacterName:1 CharacterEntityId:11
+2023-01-19 10:20:58,578 [ 1] INFO  Unity: CharacterManager->RemoveCharacter:CharacterId:2 CharacterName:2 MapId:1 Entity:(2:pos:(5134,3899,805),dir:(-17,-99,0),spd:0
+2023-01-19 10:20:58,579 [ 1] INFO  Unity: RemoveCharacter->RemoveCharacter:2
+2023-01-19 10:20:58,581 [ 1] INFO  Unity: EntityManager RemoveEntity EntityId :2 
+2023-01-19 10:20:58,582 [ 1] INFO  Unity: EntityController->OnEntityRemoved EntityId:2
+2023-01-19 10:20:58,584 [ 1] INFO  Unity: GameObjectManager->DestroyCharacterObject CharacterId:2 CharacterName:2 CharacterEntityId:2
+2023-01-19 10:20:58,585 [ 1] INFO  Unity: UserService->OnUserGameLeave:Success [None]
+2023-01-19 10:20:58,587 [ 1] INFO  Unity: Entity Character_11_1 OnDestroy :ID:11 POS:(5000, 4000, 820) DIR:(100, 0, 0) SPD:0 
+2023-01-19 10:20:58,588 [ 1] INFO  Unity: Entity Character_2_2 OnDestroy :ID:2 POS:(5134, 3899, 805) DIR:(-17, -99, 0) SPD:0 
+2023-01-19 10:21:01,766 [ 1] INFO  Unity: Select Character:[1]1[Warrior] 
+2023-01-19 10:21:02,265 [ 1] INFO  Unity: 进入游戏
+2023-01-19 10:21:03,320 [ 1] INFO  Unity: UserService->SendCharacterEnter: EnterCharacterID :0 EnterCharacterName:1 EnterCharacter_Idx
+2023-01-19 10:21:03,354 [ 1] INFO  Unity: UserService->OnUserGameEnter:Success [None]
+2023-01-19 10:21:03,355 [ 1] INFO  Unity: ItemManager->InitItem :ItemID:1,Count:20
+2023-01-19 10:21:03,356 [ 1] INFO  Unity: ItemManager->InitItem :ItemID:2,Count:20
+2023-01-19 10:21:03,358 [ 1] INFO  Unity: MapService->OnMapCharacterEnter :Map:1 Count:2
+2023-01-19 10:21:03,360 [ 1] INFO  Unity: CharacterManager->AddCharacter:CharacterId:0 CharacterName:1 MapId:1 Entity:(12:pos:(5000,4000,820),dir:(100,0,0),spd:0
+2023-01-19 10:21:03,361 [ 1] INFO  Unity: EntityManager AddEntity EntityId :12 
+2023-01-19 10:21:03,362 [ 1] INFO  Unity: CharacterManager->AddCharacter:CharacterId:0 CharacterName:2 MapId:1 Entity:(2:pos:(5134,3899,805),dir:(-17,-99,0),spd:0
+2023-01-19 10:21:03,364 [ 1] INFO  Unity: EntityManager AddEntity EntityId :2 
+2023-01-19 10:21:06,279 [ 1] INFO  Unity: MinimapManager->UpdataMiniMap
+2023-01-19 10:21:06,281 [ 1] INFO  Unity: Load MiniMap Image :buluzheng
+2023-01-19 10:21:06,282 [ 1] INFO  Unity: Load MiniMap Image :buluzheng
+2023-01-19 10:21:06,283 [ 1] INFO  Unity: GameObjectManager->CreateCharacterObject CharacterId:12 CharacterName:1 CharacterEntityId:12
+2023-01-19 10:21:06,321 [ 1] INFO  Unity: GameObjectManager->InitGameObject Player_character:12
+2023-01-19 10:21:06,322 [ 1] INFO  Unity: GameObjectManager->CreateCharacterObject CharacterId:2 CharacterName:2 CharacterEntityId:2
+2023-01-19 10:21:10,712 [ 1] INFO  Unity: 确定要删除好友 2 吗？
+2023-01-19 10:21:11,488 [ 1] INFO  Unity: FriendService->SendFriendRemoveRequest Id:7 FriendId:2
+2023-01-19 10:21:17,784 [ 1] INFO  Unity: FriendService->OnFriendList
+2023-01-19 10:21:17,786 [ 1] INFO  Unity: FriendService->OnFriendRemove RemoveCharId:2 Resule:Success Errmsg:删除成功
+2023-01-19 10:21:17,787 [ 1] INFO  Unity: 删除成功
+2023-01-19 10:21:27,742 [ 1] INFO  Unity: UserService->SendCharacterLeave: LeaveCharacterID :12 LeaveCharacterName:1
+2023-01-19 10:21:28,296 [ 1] INFO  Unity: MapService->OnMapCharacterLeave :Map:0 CharacterId:12 CharacterName:1
+2023-01-19 10:21:28,298 [ 1] INFO  Unity: CharacterManager->RemoveCharacter:CharacterId:12 CharacterName:1 MapId:1 Entity:(12:pos:(5000,4000,820),dir:(100,0,0),spd:0
+2023-01-19 10:21:28,299 [ 1] INFO  Unity: RemoveCharacter->RemoveCharacter:12
+2023-01-19 10:21:28,300 [ 1] INFO  Unity: EntityManager RemoveEntity EntityId :12 
+2023-01-19 10:21:28,301 [ 1] INFO  Unity: EntityController->OnEntityRemoved EntityId:12
+2023-01-19 10:21:28,302 [ 1] INFO  Unity: GameObjectManager->DestroyCharacterObject CharacterId:12 CharacterName:1 CharacterEntityId:12
+2023-01-19 10:21:28,304 [ 1] INFO  Unity: CharacterManager->RemoveCharacter:CharacterId:2 CharacterName:2 MapId:1 Entity:(2:pos:(5134,3899,805),dir:(-17,-99,0),spd:0
+2023-01-19 10:21:28,306 [ 1] INFO  Unity: RemoveCharacter->RemoveCharacter:2
+2023-01-19 10:21:28,308 [ 1] INFO  Unity: EntityManager RemoveEntity EntityId :2 
+2023-01-19 10:21:28,310 [ 1] INFO  Unity: EntityController->OnEntityRemoved EntityId:2
+2023-01-19 10:21:28,311 [ 1] INFO  Unity: GameObjectManager->DestroyCharacterObject CharacterId:2 CharacterName:2 CharacterEntityId:2
+2023-01-19 10:21:28,312 [ 1] INFO  Unity: UserService->OnUserGameLeave:Success [None]
+2023-01-19 10:21:28,313 [ 1] INFO  Unity: Entity Character_12_1 OnDestroy :ID:12 POS:(5000, 4000, 820) DIR:(100, 0, 0) SPD:0 
+2023-01-19 10:21:28,314 [ 1] INFO  Unity: Entity Character_2_2 OnDestroy :ID:2 POS:(5134, 3899, 805) DIR:(-17, -99, 0) SPD:0 
+2023-01-19 10:21:36,887 [ 1] INFO  Unity: Select Character:[1]1[Warrior] 
+2023-01-19 10:21:37,451 [ 1] INFO  Unity: 进入游戏
+2023-01-19 10:21:38,417 [ 1] INFO  Unity: UserService->SendCharacterEnter: EnterCharacterID :0 EnterCharacterName:1 EnterCharacter_Idx
+2023-01-19 10:21:38,457 [ 1] INFO  Unity: UserService->OnUserGameEnter:Success [None]
+2023-01-19 10:21:38,459 [ 1] INFO  Unity: ItemManager->InitItem :ItemID:1,Count:20
+2023-01-19 10:21:38,460 [ 1] INFO  Unity: ItemManager->InitItem :ItemID:2,Count:20
+2023-01-19 10:21:38,462 [ 1] INFO  Unity: MapService->OnMapCharacterEnter :Map:1 Count:2
+2023-01-19 10:21:38,464 [ 1] INFO  Unity: CharacterManager->AddCharacter:CharacterId:0 CharacterName:1 MapId:1 Entity:(13:pos:(5000,4000,820),dir:(100,0,0),spd:0
+2023-01-19 10:21:38,465 [ 1] INFO  Unity: EntityManager AddEntity EntityId :13 
+2023-01-19 10:21:38,466 [ 1] INFO  Unity: CharacterManager->AddCharacter:CharacterId:0 CharacterName:2 MapId:1 Entity:(2:pos:(5098,4031,805),dir:(-99,17,0),spd:0
+2023-01-19 10:21:38,467 [ 1] INFO  Unity: EntityManager AddEntity EntityId :2 
+2023-01-19 10:21:41,513 [ 1] INFO  Unity: MinimapManager->UpdataMiniMap
+2023-01-19 10:21:41,514 [ 1] INFO  Unity: Load MiniMap Image :buluzheng
+2023-01-19 10:21:41,514 [ 1] INFO  Unity: Load MiniMap Image :buluzheng
+2023-01-19 10:21:41,516 [ 1] INFO  Unity: GameObjectManager->CreateCharacterObject CharacterId:13 CharacterName:1 CharacterEntityId:13
+2023-01-19 10:21:41,551 [ 1] INFO  Unity: GameObjectManager->InitGameObject Player_character:13
+2023-01-19 10:21:41,553 [ 1] INFO  Unity: GameObjectManager->CreateCharacterObject CharacterId:2 CharacterName:2 CharacterEntityId:2
+2023-01-19 10:21:45,240 [ 1] INFO  Unity: 要添加的好友Id
+2023-01-19 10:21:50,054 [ 1] INFO  Unity: FriendService->SendFriendAddRequest FriendId:2 FriendName:
+2023-01-19 10:21:51,375 [ 1] INFO  Unity: FriendService->OnFriendAddResponse
+2023-01-19 10:21:51,376 [ 1] INFO  Unity: FriendService->SendFriendListRequest
+2023-01-19 10:21:51,379 [ 1] INFO  Unity: 对方同意了您的请求
+2023-01-19 10:21:51,383 [ 1] INFO  Unity: FriendService->OnFriendList
+2023-01-19 10:21:51,447 [ 1] INFO  Unity: FriendService->OnFriendList
+2023-01-19 10:21:54,126 [ 1] INFO  Unity: 确定要删除好友 2 吗？
+2023-01-19 10:21:55,141 [ 1] INFO  Unity: FriendService->SendFriendRemoveRequest Id:0 FriendId:2
+2023-01-19 10:22:14,749 [ 1] INFO  Unity: 确定要删除好友 2 吗？
+2023-01-19 10:22:15,530 [ 1] INFO  Unity: FriendService->SendFriendRemoveRequest Id:0 FriendId:2
+2023-01-19 10:22:25,477 [ 1] INFO  Unity: FriendService->OnFriendRemove RemoveCharId:2 Resule:Success Errmsg:删除成功
+2023-01-19 10:22:25,478 [ 1] INFO  Unity: 删除成功
+2023-01-19 10:22:52,884 [ 1] INFO  Unity: SetDirection:(95, -31, 0)
+2023-01-19 10:22:52,884 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:13 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
+2023-01-19 10:22:52,885 [ 1] INFO  Unity: MoveForward
+2023-01-19 10:22:52,886 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:13 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
+2023-01-19 10:22:53,084 [ 1] INFO  Unity: SetPosition:(5031, 3967, 800)
+2023-01-19 10:22:53,086 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:13 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
+2023-01-19 10:22:53,124 [ 1] INFO  Unity: Stop
+2023-01-19 10:22:53,125 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:13 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
+2023-01-19 10:22:54,362 [ 1] INFO  Unity: EntityController->OnEntityChanaged Id:2 POS:(5099, 4036, 805) Dir:(17, 99, 0),Speed:300
+2023-01-19 10:22:54,364 [ 1] INFO  Unity: MapService->OnMapEntitySync :Entitys:1
+EntityID:2  Enent:None Entity:None
+2023-01-19 10:22:54,365 [ 1] INFO  Unity: FriendService->OnFriendList
+2023-01-19 10:22:54,367 [ 1] INFO  Unity: EntityController->OnEntityChanaged Id:2 POS:(5100, 4041, 805) Dir:(17, 99, 0),Speed:300
+2023-01-19 10:22:54,368 [ 1] INFO  Unity: MapService->OnMapEntitySync :Entitys:1
+EntityID:2  Enent:MoveFwd Entity:MoveFwd
+2023-01-19 10:22:54,562 [ 1] INFO  Unity: EntityController->OnEntityChanaged Id:2 POS:(5111, 4096, 805) Dir:(17, 99, 0),Speed:0
+2023-01-19 10:22:54,563 [ 1] INFO  Unity: MapService->OnMapEntitySync :Entitys:1
+EntityID:2  Enent:Idle Entity:Idle
+2023-01-19 10:22:54,898 [ 1] INFO  Unity: EntityController->OnEntityChanaged Id:2 POS:(5112, 4101, 805) Dir:(17, 99, 0),Speed:300
+2023-01-19 10:22:54,899 [ 1] INFO  Unity: MapService->OnMapEntitySync :Entitys:1
+EntityID:2  Enent:MoveFwd Entity:MoveFwd
+2023-01-19 10:22:55,126 [ 1] INFO  Unity: EntityController->OnEntityChanaged Id:2 POS:(5125, 4166, 805) Dir:(17, 99, 0),Speed:0
+2023-01-19 10:22:55,127 [ 1] INFO  Unity: MapService->OnMapEntitySync :Entitys:1
+EntityID:2  Enent:Idle Entity:Idle
+2023-01-19 10:25:07,161 [ 1] INFO  Unity: ProcessReceive exception:System.Net.Sockets.SocketException: 远程主机强迫关闭了一个现有的连接。
+
+  at System.Net.Sockets.Socket.Receive (System.Byte[] buffer, Int32 offset, Int32 size, SocketFlags flags) [0x00000] in <filename unknown>:0 
+  at Network.NetClient.ProcessRecv () [0x00084] in E:\极世界MMORPG\mymmo\Src\Client\Assets\Scripts\Network\NetClient.cs:346 
+
+2023-01-19 10:25:07,163 [ 1] WARN  Unity: CloseConnection(), errorCode: 1001
+UnityEngine.Debug:LogWarning(Object)
+Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:180)
+Network.NetClient:ProcessRecv() (at Assets/Scripts/Network/NetClient.cs:360)
+Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:440)
+
+2023-01-19 10:25:07,187 [ 1] INFO  Unity: DoConnect
+2023-01-19 10:25:07,187 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
+2023-01-19 10:25:07,189 [ 1] INFO  Unity: Connect[0] to server 127.0.0.1:8000
+
+2023-01-19 10:25:09,231 [ 1] WARN  Unity: CloseConnection(), errorCode: 1005
+UnityEngine.Debug:LogWarning(Object)
+Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:180)
+Network.NetClient:DoConnect() (at Assets/Scripts/Network/NetClient.cs:277)
+Network.NetClient:Connect(Int32) (at Assets/Scripts/Network/NetClient.cs:169)
+Network.NetClient:KeepConnect() (at Assets/Scripts/Network/NetClient.cs:321)
+Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:438)
+
+2023-01-19 10:25:09,233 [ 1] ERROR Unity: DoConnect SocketException:[10061,ConnectionRefused,10061]System.Net.Sockets.SocketException: 由于目标计算机积极拒绝，无法连接。
+
+  at System.Net.Sockets.Socket.Connect (System.Net.EndPoint remoteEP, Boolean requireSocketPolicy) [0x00000] in <filename unknown>:0 
+  at System.Net.Sockets.Socket+Worker.Connect () [0x00000] in <filename unknown>:0  
+UnityEngine.Debug:LogErrorFormat(String, Object[])
+Network.NetClient:DoConnect() (at Assets/Scripts/Network/NetClient.cs:279)
+Network.NetClient:Connect(Int32) (at Assets/Scripts/Network/NetClient.cs:169)
+Network.NetClient:KeepConnect() (at Assets/Scripts/Network/NetClient.cs:321)
+Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:438)
+
+2023-01-19 10:25:09,282 [ 1] INFO  Unity: DoConnect
+2023-01-19 10:25:09,282 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
+2023-01-19 10:25:09,284 [ 1] INFO  Unity: Connect[1] to server 127.0.0.1:8000
+
+2023-01-19 10:25:11,321 [ 1] WARN  Unity: CloseConnection(), errorCode: 1005
+UnityEngine.Debug:LogWarning(Object)
+Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:180)
+Network.NetClient:DoConnect() (at Assets/Scripts/Network/NetClient.cs:277)
+Network.NetClient:Connect(Int32) (at Assets/Scripts/Network/NetClient.cs:169)
+Network.NetClient:KeepConnect() (at Assets/Scripts/Network/NetClient.cs:321)
+Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:438)
+
+2023-01-19 10:25:11,322 [ 1] ERROR Unity: DoConnect SocketException:[10061,ConnectionRefused,10061]System.Net.Sockets.SocketException: 由于目标计算机积极拒绝，无法连接。
+
+  at System.Net.Sockets.Socket.Connect (System.Net.EndPoint remoteEP, Boolean requireSocketPolicy) [0x00000] in <filename unknown>:0 
+  at System.Net.Sockets.Socket+Worker.Connect () [0x00000] in <filename unknown>:0  
+UnityEngine.Debug:LogErrorFormat(String, Object[])
+Network.NetClient:DoConnect() (at Assets/Scripts/Network/NetClient.cs:279)
+Network.NetClient:Connect(Int32) (at Assets/Scripts/Network/NetClient.cs:169)
+Network.NetClient:KeepConnect() (at Assets/Scripts/Network/NetClient.cs:321)
+Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:438)
+
+2023-01-19 10:25:11,371 [ 1] INFO  Unity: DoConnect
+2023-01-19 10:25:11,374 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
+2023-01-19 10:25:11,377 [ 1] INFO  Unity: Connect[2] to server 127.0.0.1:8000
+
+2023-01-19 10:25:13,425 [ 1] WARN  Unity: CloseConnection(), errorCode: 1005
+UnityEngine.Debug:LogWarning(Object)
+Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:180)
+Network.NetClient:DoConnect() (at Assets/Scripts/Network/NetClient.cs:277)
+Network.NetClient:Connect(Int32) (at Assets/Scripts/Network/NetClient.cs:169)
+Network.NetClient:KeepConnect() (at Assets/Scripts/Network/NetClient.cs:321)
+Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:438)
+
+2023-01-19 10:25:13,426 [ 1] ERROR Unity: DoConnect SocketException:[10061,ConnectionRefused,10061]System.Net.Sockets.SocketException: 由于目标计算机积极拒绝，无法连接。
+
+  at System.Net.Sockets.Socket.Connect (System.Net.EndPoint remoteEP, Boolean requireSocketPolicy) [0x00000] in <filename unknown>:0 
+  at System.Net.Sockets.Socket+Worker.Connect () [0x00000] in <filename unknown>:0  
+UnityEngine.Debug:LogErrorFormat(String, Object[])
+Network.NetClient:DoConnect() (at Assets/Scripts/Network/NetClient.cs:279)
+Network.NetClient:Connect(Int32) (at Assets/Scripts/Network/NetClient.cs:169)
+Network.NetClient:KeepConnect() (at Assets/Scripts/Network/NetClient.cs:321)
+Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:438)
+
+2023-01-19 10:25:13,426 [ 1] INFO  Unity: LoadingMesager::OnGameServerConnect :1 reason:Cannot connect to server
+2023-01-19 10:25:13,428 [ 1] INFO  Unity: 网络错误，无法连接到服务器！
+ RESULT:1 ERROR:Cannot connect to server
+2023-01-19 10:26:44,324 [ 1] INFO  Unity: Entity Character_13_1 OnDestroy :ID:13 POS:(5036, 3965, 800) DIR:(95, -31, 0) SPD:0 
+2023-01-19 10:26:44,325 [ 1] INFO  Unity: Entity Character_2_2 OnDestroy :ID:2 POS:(5125, 4166, 805) DIR:(17, 99, 0) SPD:0 
+2023-01-19 10:26:44,326 [ 1] INFO  Unity: OnDestroy NetworkManager.
+2023-01-19 10:26:44,326 [ 1] WARN  Unity: CloseConnection(), errorCode: 1007
 UnityEngine.Debug:LogWarning(Object)
 Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:180)
 Network.NetClient:OnDestroy() (at Assets/Scripts/Network/NetClient.cs:175)

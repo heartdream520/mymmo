@@ -32,7 +32,7 @@ public class UIMain : MonoSingleton<UIMain> {
         if (this.avatarLevel != null)
             this.avatarLevel.text = User.Instance.CurrentCharacter.Level.ToString();
         if (this.avatar_image != null)
-            this.avatar_image.sprite = avatars[User.Instance.CurrentCharacter.Tid - 1];
+            this.avatar_image.sprite = avatars[User.Instance.CurrentCharacter.ConfigId - 1];
 
     }
     public void onchick_back_character_select()
@@ -67,5 +67,9 @@ public class UIMain : MonoSingleton<UIMain> {
     public void OnchickQuest()
     {
         UIManager.Instance.Show<UIQuestSystem>();
+    }
+    public void OnchickFriend()
+    {
+        UIManager.Instance.Show<UIFriend>();
     }
 }

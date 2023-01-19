@@ -16,11 +16,12 @@ namespace Network
         public TUser User { get; set; }
         public Character Character { get; set; }
         public NEntity Entity { get; set; }
-
+        public IPostResponser PostResponser { get; set; }
         
 
         internal void Disconnected()
         {
+            this.PostResponser = null;
             UserService.Instance.CharacterLeave(Character);
         }
         NetMessage response;
@@ -37,15 +38,16 @@ namespace Network
                 return response.Response;
             }
         }
+        
+
         public byte[] GetResponse()
         {
             Log.InfoFormat("NetSession->GetResponse");
-            if(response!=null)
+            if(Response!=null)
             {
-                if(this.Character!=null&&this.Character.StatusManager.HasStatus)
-                {
-                    this.Character.StatusManager.PostProcess(Response);
-                }
+                if (PostResponser != null)
+                    this.PostResponser.PostProcess(Response);
+                
                 byte[] data = PackageHandler.PackMessage(response);
                 response = null;
                 return data;

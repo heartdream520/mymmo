@@ -35,7 +35,7 @@ public class UIShop : UIWindow
                 //让商店不出售非此角色能够使用的物品
                 ShopItemDefine define = kv.Value;
                 ItemDefine item = DataManager.Instance.Items[define.ItemID];
-                if ((int)item.LimitClass != 0 && (int)item.LimitClass != User.Instance.CurrentCharacter.Tid)
+                if ((int)item.LimitClass != 0 && (int)item.LimitClass != User.Instance.CurrentCharacter.ConfigId)
                     continue;
 
 

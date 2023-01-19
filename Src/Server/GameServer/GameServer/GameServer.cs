@@ -37,6 +37,9 @@ namespace GameServer
 
             ItemServicer.Instance.Init();
             QuestService.Instance.Init();
+            FriendService.Instance.Init();
+
+
             thread = new Thread(new ThreadStart(this.Update));
             //StatusManager.thread = new Thread(new ThreadStart(this.Update));
             return true;

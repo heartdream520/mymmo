@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Common;
 using GameServer.Models;
+using GameServer.Services;
 
 namespace GameServer.Managers
 {
@@ -39,6 +40,7 @@ namespace GameServer.Managers
             {
                 map.Update();
             }
+            DBService.Instance.Update();
         }
     }
 }

@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using SkillBridge.Message;
 using GameServer.Entities;
+using GameServer.Services;
 
 namespace GameServer.Managers
 {
@@ -40,34 +41,53 @@ namespace GameServer.Managers
             Character cha = new Character(CharacterType.Player, Tcharacter);
             EntityManager.Instance.AddEntity(cha.Info.mapId, cha);
             Log.InfoFormat("CharacterManager->AddCharacter(): MapId:{0} CharacterId:{1} EntityId:{2} InfoId:{3} ",
-                cha.Data.MapID, cha.Id,cha.entityId, cha.Info.Id);
+                cha.Data.MapID, cha.Id, cha.entityId, cha.Info.EnityId);
             //cha.Info.Id = cha.Id;
             this.Characters[cha.entityId] = cha;
-            
+
             return cha;
         }
 
 
+
         public void RemoveCharacter(int characterId)
         {
-            if(!this.Characters.ContainsKey(characterId))
+            if (!this.Characters.ContainsKey(characterId))
             {
                 Log.ErrorFormat("CharacterManager->RemoveCharacter:  CharID:{0} not exist", characterId);
                 return;
             }
             Character cha = this.Characters[characterId];
-            Log.InfoFormat("CharacterManager->RemoveCharacter:  MapId:{0}  CharacterId:{1} EntityId:{2}", cha.Data.MapID,characterId,cha.entityId);
-            if(!this.Characters.ContainsKey(characterId))
+            Log.InfoFormat("CharacterManager->RemoveCharacter:  MapId:{0}  CharacterId:{1} EntityId:{2}", cha.Data.MapID, characterId, cha.entityId);
+            if (!this.Characters.ContainsKey(characterId))
             {
-                Log.WarningFormat("CharacterManager->RemoveCharacter:  MapId:{0} not Exist CharacterId:{1} EntityId:{2}", 
+                Log.WarningFormat("CharacterManager->RemoveCharacter:  MapId:{0} not Exist CharacterId:{1} EntityId:{2}",
                     cha.Data.MapID, characterId, cha.entityId);
                 return;
 
             }
-            EntityManager.Instance.RemoveEntity(cha.Info.mapId,cha);
+            EntityManager.Instance.RemoveEntity(cha.Info.mapId, cha);
             this.Characters.Remove(characterId);
 
         }
-        
+        internal NCharacterInfo GetCharacterInfo(int id)
+        {
+            var character = DBService.Instance.Entities.Characters.FirstOrDefault(v => v.ID == id);
+            var cha = new Character(CharacterType.Player, character).Info;
+            return cha;
+        }
+        internal NCharacterInfo GetBaseCharacterInfo(int id)
+        {
+            var cha = DBService.Instance.Entities.Characters.FirstOrDefault(v => v.ID == id);
+            NCharacterInfo Info = new NCharacterInfo();
+            Info.Type = CharacterType.Player;
+            Info.Id = cha.ID;
+            Info.Name = cha.Name;
+            Info.Level = 10;//cha.Level;
+            Info.ConfigId = cha.TID;
+            Info.Class = (CharacterClass)cha.Class;
+            return Info;
+        }
+
     }
 }

@@ -78,22 +78,26 @@ message NPlayerInfo {
 }
 
 message NCharacterInfo {
-	int32 id = 1;
-	int32 tid = 2;
-	string name = 3;
-	CHARACTER_TYPE type = 4;
-	CHARACTER_CLASS class = 5;
-	int32 level = 6;
-	int32 mapId = 7;
-	NEntity entity = 8;
 
-	int64 gold=9;
+	int32 id = 1;
+	int32 config_id = 2;    //配置表中的ID
+	int32 enity_id = 3;    //配置表中的ID
+
+	string name = 4;
+	CHARACTER_TYPE type = 5;
+	CHARACTER_CLASS class = 6;
+	int32 level = 7;
+	int32 mapId = 8;
+	NEntity entity = 9; 
+
+	int64 gold = 10;
 	//角色道具
-	repeated NItemInfo Items=10;
+	repeated NItemInfo Items=11;
 	//角色背包
-	NBagInfo Bag=11;
-	bytes Equips = 12;
-	repeated NQuestInfo quests=13;
+	NBagInfo Bag=12;
+	bytes Equips = 13;
+	repeated NQuestInfo quests=14;
+	repeated NFriendInfo friends=15;
 
 }
 
@@ -201,7 +205,10 @@ message NetMessageRequest{
 	QuestSubmitRequest questSubmit = 16;
 	QuestAbandonRequest questAbandon = 17;
 
-
+	FriendAddRequest friendAddRequest = 18;
+	FriendAddResponse friendAddResponset = 19;
+	FriendListRequest friendList = 20;
+	FriendRemoveRequest friendRemove = 21;
 
 
 	StatusNotify statusNotify =100;
@@ -228,6 +235,11 @@ message NetMessageResponse{
 	QuestAcceptRespose questAccept = 15;
 	QuestSubmitRespose questSubmit = 16;
 	QuestAbandonRespose questAbandon = 17;
+
+    FriendAddRequest friendAddRequest = 18;
+	FriendAddResponse friendAddResponset = 19;
+	FriendListResponse friendList = 20;
+	FriendRemoveResponse friendRemove = 21;
 
 	StatusNotify statusNotify =100;
 	
@@ -421,4 +433,44 @@ message QuestAbandonRespose
 {
 	RESULT result = 1;
 	string errormsg = 2;
+}
+message NFriendInfo 
+{
+	int32 id=1;
+	NCharacterInfo friendInfo = 2;
+	int32 status = 3;
+}
+message FriendAddRequest
+{
+	int32 from_Id = 1;
+	string from_name = 2;
+	int32 to_Id = 3;
+	string to_name = 4;
+}
+message FriendAddResponse
+{
+	RESULT result = 1;
+	string errormsg = 2;
+	FriendAddRequest request = 3;
+}
+message FriendListRequest
+{
+
+}
+message FriendListResponse
+{
+	RESULT result = 1;
+	string errormsg = 2;
+	repeated NFriendInfo friends = 3;
+}
+message FriendRemoveRequest
+{
+	int32 id=1;
+	int32 friend_Id=2;
+}
+message FriendRemoveResponse
+{
+	RESULT result = 1;
+	string errormsg = 2;
+	int32 friend_Id=3;
 }
