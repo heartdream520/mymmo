@@ -37,7 +37,11 @@ namespace GameServer.Services
                 entities.SaveChangesAsync();
             }
             else
-                this.is_save = true;
+            {
+                //this.is_save = true;
+                entities.SaveChanges();
+            }
+               
             
         }
         public void Update()

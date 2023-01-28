@@ -83,7 +83,7 @@ namespace GameServer.Managers
             Info.Type = CharacterType.Player;
             Info.Id = cha.ID;
             Info.Name = cha.Name;
-            Info.Level = 10;//cha.Level;
+            Info.Level = cha.Level;
             Info.ConfigId = cha.TID;
             Info.Class = (CharacterClass)cha.Class;
             return Info;

@@ -8,7 +8,7 @@ using UnityEngine;
 
 public class UIManager : Singleton<UIManager>{
 
-	class UIElement
+	public class UIElement
     {
         //资源所在地
         public string Resources;
@@ -16,21 +16,23 @@ public class UIManager : Singleton<UIManager>{
         public bool Cache;
         //对象实例
         public GameObject Instance;
+        public bool is_shop;
     }
     public int UIcnt;
-    private Dictionary<Type, UIElement> UIResources = new Dictionary<Type, UIElement>();
+    public Dictionary<Type, UIElement> UIResources = new Dictionary<Type, UIElement>();
     public UIManager()
     {
-        this.UIResources.Add(typeof(UITest), new UIElement() { Resources = "UI/UITest", Cache = true });
-        this.UIResources.Add(typeof(UIBag), new UIElement() { Resources = "UI/Bag/UIBag", Cache = false });
-        this.UIResources.Add(typeof(UIShop), new UIElement() { Resources = "UI/Shop/UIShop", Cache = false });
+        this.UIResources.Add(typeof(UITest), new UIElement() { Resources = "UI/UITest", Cache = true, is_shop=true});
+        this.UIResources.Add(typeof(UIBag), new UIElement() { Resources = "UI/Bag/UIBag", Cache = false, is_shop = true });
+        this.UIResources.Add(typeof(UIShop), new UIElement() { Resources = "UI/Shop/UIShop", Cache = false, is_shop = true });
 
-        this.UIResources.Add(typeof(UICharEquip), new UIElement() { Resources = "UI/Equip/UIEquip", Cache = false });
+        this.UIResources.Add(typeof(UICharEquip), new UIElement() { Resources = "UI/Equip/UIEquip", Cache = false, is_shop = true });
 
-        this.UIResources.Add(typeof(UIQuestDialog), new UIElement() { Resources = "UI/Quest/UIQuestDialog", Cache = false });
-        this.UIResources.Add(typeof(UIQuestSystem), new UIElement() { Resources = "UI/Quest/UIQuestSystem", Cache = false });
+        this.UIResources.Add(typeof(UIQuestDialog), new UIElement() { Resources = "UI/Quest/UIQuestDialog", Cache = false, is_shop = true });
+        this.UIResources.Add(typeof(UIQuestSystem), new UIElement() { Resources = "UI/Quest/UIQuestSystem", Cache = false, is_shop = true });
 
-        this.UIResources.Add(typeof(UIFriend), new UIElement() { Resources = "UI/Friend/UIFriend", Cache = false });
+        this.UIResources.Add(typeof(UIFriend), new UIElement() { Resources = "UI/Friend/UIFriend", Cache = false, is_shop = true });
+        this.UIResources.Add(typeof(UITeam), new UIElement() { Resources = "UI/Team/UITeam", Cache = false, is_shop = false });
         User.Instance.CurrentCharacter_Set_Action += () =>
           {
               this.UIcnt = 0;
@@ -43,10 +45,13 @@ public class UIManager : Singleton<UIManager>{
     public T Show<T>()
     {
         //SoundManager.Instance.PlaySound("ui_open");
-        UIcnt++;
         Type type = typeof(T);
+
+        
         if(this.UIResources.ContainsKey(type))
         {
+            if (UIResources[type].is_shop)
+                UIcnt++;
             UIElement info = this.UIResources[type];
             if(info.Instance!=null)
             {
@@ -69,7 +74,8 @@ public class UIManager : Singleton<UIManager>{
     }
     public void Close(Type type)
     {
-        UIcnt--;
+        if (UIResources[type].is_shop)
+            UIcnt--;
         //SoundManager.Instance.PlaySound("ui_close");
         if (this.UIResources.ContainsKey(type))
         {

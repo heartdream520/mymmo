@@ -63,8 +63,8 @@ public class UIInputBox : MonoBehaviour
         this.tips.text = tips;
         this.emptyTips = tips;
 
-        this.buttonYes.onClick.AddListener(OnClickYes);
-        this.buttonNo.onClick.AddListener(OnClickNo);
+        //this.buttonYes.onClick.AddListener(OnClickYes);
+        //this.buttonNo.onClick.AddListener(OnClickNo);
         
     }
 

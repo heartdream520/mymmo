@@ -1,6 +1,8 @@
-﻿using Common.Data;
+﻿using Common;
+using Common.Data;
 using GameServer.Core;
 using GameServer.Managers;
+using GameServer.Models;
 using Network;
 using SkillBridge.Message;
 using System;
@@ -20,6 +22,10 @@ namespace GameServer.Entities
 
         public QuestManager QuestManager;
         public FriendManager FriendManager;
+
+        public Team team;
+        //队伍更新时间戳
+        public int TeamUpdateTS;
 
         public Character(CharacterType type,TCharacter cha):
             base(new Core.Vector3Int(cha.MapPosX, cha.MapPosY, cha.MapPosZ),new Core.Vector3Int(100,0,0))
@@ -59,9 +65,23 @@ namespace GameServer.Entities
             this.FriendManager = new FriendManager(this);
             this.FriendManager.GetQuestInfos(this.Info.Friends);
         }
+
+        internal NCharacterInfo GetBasicInfo()
+        {
+            var info = new NCharacterInfo();
+            info.Type = this.Info.Type;
+            info.Id = this.Info.Id;
+            info.Name = this.Info.Name;
+            info.Level = this.Info.Level;
+            info.ConfigId = this.Info.ConfigId;
+            info.Class = this.Info.Class;
+            return info;
+
+        }
+
         public override string ToString()
         {
-            return string.Format("ID:{0}  DID:{1} EID:{2}",Id,this.Data.ID,this.entityId);
+            return string.Format("ID:{0} EID:{1}",Id,this.entityId);
         }
         public long Gold
         {
@@ -83,11 +103,24 @@ namespace GameServer.Entities
         internal void Clear()
         {
             this.FriendManager.UpdateFriendSelfInfo(this.Info, 0);
+            if (this.team != null)
+                this.team.Leave(this);
         }
 
         public void PostProcess(NetMessageResponse message)
         {
             this.FriendManager.PostProcess(message);
+            if(this.team!=null)
+            {
+                if(this.TeamUpdateTS<this.team.timeTS)
+                {
+                    Log.InfoFormat("Character->PostProcess  character:{0} UpdateTeam", this.ToString());
+                    this.TeamUpdateTS = this.team.timeTS;
+                    this.team.PostProcess(message);
+                }
+                
+            }
+
             if (this.StatusManager.HasStatus)
             {
                 this.StatusManager.PostProcess(message);

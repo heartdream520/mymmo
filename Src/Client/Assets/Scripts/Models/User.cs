@@ -1,4 +1,5 @@
 ﻿using Common.Data;
+using SkillBridge.Message;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -70,6 +71,9 @@ namespace Models
                     CurrentCharacterObject_Set_Action(value);
             }
         }
+
+        public NteamInfo TeamInfo { get; internal set; }
+
         public UnityAction<long> Gold_Change_Action;
         public void AddGold(long count)
         {

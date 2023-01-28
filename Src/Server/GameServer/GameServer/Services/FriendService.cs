@@ -94,8 +94,9 @@ namespace GameServer.Services
                     //互相添加好友
                     character.FriendManager.AddFriend(request_con.Session.Character);
                     request_con.Session.Character.FriendManager.AddFriend(character);
-                    sender.SendResponse();
                     DBService.Instance.Save();
+                    sender.SendResponse();
+                    
                 }
 
             }
@@ -158,7 +159,7 @@ namespace GameServer.Services
             }
 
         }
-        private void OnFriendList(NetConnection<NetSession> sender, FriendListRequest message)
+        public void OnFriendList(NetConnection<NetSession> sender, FriendListRequest message)
         {
             Log.InfoFormat("FriendService->OnFriendList");
             var cha= sender.Session.Character;

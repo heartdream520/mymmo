@@ -35,6 +35,8 @@ public class UIMain : MonoSingleton<UIMain> {
             this.avatar_image.sprite = avatars[User.Instance.CurrentCharacter.ConfigId - 1];
 
     }
+
+
     public void onchick_back_character_select()
     {
         MapService.Instance.CurrentMapId = 0;
@@ -72,4 +74,23 @@ public class UIMain : MonoSingleton<UIMain> {
     {
         UIManager.Instance.Show<UIFriend>();
     }
+    internal void ShowTeamUI(bool show)
+    {
+        var go = UIManager.Instance.UIResources[typeof(UITeam)].Instance;
+        if (show)
+        {
+            if (go != null)
+                go.GetComponent<UITeam>().UpdateTeamUI();
+            else UIManager.Instance.Show<UITeam>();
+        }
+        else
+        {
+            
+            if (go != null)
+                go.GetComponent<UITeam>().OnClick_Close();
+        }
+
+
+    }
+
 }

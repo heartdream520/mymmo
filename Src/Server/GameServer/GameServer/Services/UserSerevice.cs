@@ -37,10 +37,17 @@ namespace GameServer.Services
 
 
             sender.Session.Response.userLogin = new UserLoginResponse();
-
+            if (UserManager.Instance.TryGetUser(request.User) != null)
+            {
+                sender.Session.Response.userLogin.Result = Result.Failed;
+                sender.Session.Response.userLogin.Errormsg = "用户已登录";
+                sender.SendResponse();
+                return;
+            }
 
             TUser user = DBService.Instance.Entities.Users.Where(u => u.Username == request.User).FirstOrDefault();
-            if(user==null)
+            UserManager.Instance.AddUser(request.User,user);
+            if (user==null)
             {
                 sender.Session.Response.userLogin.Result = Result.Failed;
                 sender.Session.Response.userLogin.Errormsg = "用户不存在";

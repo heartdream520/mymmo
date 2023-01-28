@@ -320,6 +320,7 @@ namespace Services
 
                 QuestManager.Instance.Init(response.Ncharacterinfo.Quests);
                 FriendManager.Instance.Init(response.Ncharacterinfo.Friends);
+                TeamManager.Instance.Init();
             }
             if (this.OnGameEnter != null)
             {

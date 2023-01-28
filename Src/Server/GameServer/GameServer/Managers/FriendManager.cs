@@ -91,6 +91,7 @@ namespace GameServer.Managers
                 if(f_con!=null)
                 {
                     f_con.Session.Character.FriendManager.UpdateFriendInfo(info, status);
+                    FriendService.Instance.OnFriendList(f_con, new FriendListRequest());
                 }
 
             }

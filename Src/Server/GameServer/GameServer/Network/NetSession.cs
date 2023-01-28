@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Common;
 using GameServer;
 using GameServer.Entities;
+using GameServer.Managers;
 using GameServer.Services;
 using SkillBridge.Message;
 
@@ -22,7 +23,10 @@ namespace Network
         internal void Disconnected()
         {
             this.PostResponser = null;
+            if(this.User!=null)
+            UserManager.Instance.RemoveUser(this.User.Username);
             UserService.Instance.CharacterLeave(Character);
+
         }
         NetMessage response;
         public NetMessageResponse Response

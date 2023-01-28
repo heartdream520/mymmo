@@ -1,148 +1,39 @@
-2023-01-19 10:36:01,131 [ 1] INFO  Unity: LoadingManager start
-2023-01-19 10:36:05,492 [ 1] INFO  Unity: DataManager > DataManager()
-2023-01-19 10:36:05,601 [ 1] INFO  Unity: MapDefine.txt
-2023-01-19 10:36:05,625 [ 1] INFO  Unity: CharacterDefine.txt
-2023-01-19 10:36:05,670 [ 1] INFO  Unity: TeleporterDefine.txt
-2023-01-19 10:36:05,691 [ 1] INFO  Unity: SpawnPointDefine.txt
-2023-01-19 10:36:05,713 [ 1] INFO  Unity: NpcDefine.txt
-2023-01-19 10:36:05,749 [ 1] INFO  Unity: ItemDefine.txt
-2023-01-19 10:36:14,319 [ 1] INFO  Unity: UserService->SendLoad: User:1 Password:1
-2023-01-19 10:36:14,320 [ 1] INFO  Unity: ConnectToServer() Start 
-2023-01-19 10:36:14,323 [ 1] INFO  Unity: DoConnect
-2023-01-19 10:36:14,326 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
-2023-01-19 10:36:14,329 [ 1] INFO  Unity: Connect[0] to server 127.0.0.1:8000
+2023-01-28 18:51:11,106 [ 1] INFO  Unity: LoadingManager start
+2023-01-28 18:51:20,778 [ 1] WARN  Unity: Assets/Scripts/Models/User.cs(9,1): warning CS0105: The using directive for `UnityEngine.Events' appeared previously in this namespace
 
-2023-01-19 10:36:14,350 [ 1] INFO  Unity: LoadingMesager::OnGameServerConnect :0 reason:Success
-2023-01-19 10:36:14,505 [ 1] INFO  Unity: UserService->OnUserLoad:Success [None]
-2023-01-19 10:36:24,850 [ 1] INFO  Unity: Select Character:[1]1[Warrior] 
-2023-01-19 10:36:25,394 [ 1] INFO  Unity: 进入游戏
-2023-01-19 10:36:26,063 [ 1] INFO  Unity: UserService->SendCharacterEnter: EnterCharacterID :0 EnterCharacterName:1 EnterCharacter_Idx
-2023-01-19 10:36:26,289 [ 1] INFO  Unity: UserService->OnUserGameEnter:Success [None]
-2023-01-19 10:36:26,291 [ 1] INFO  Unity: ItemManager->InitItem :ItemID:1,Count:20
-2023-01-19 10:36:26,292 [ 1] INFO  Unity: ItemManager->InitItem :ItemID:2,Count:20
-2023-01-19 10:36:26,299 [ 1] INFO  Unity: MapService->OnMapCharacterEnter :Map:1 Count:1
-2023-01-19 10:36:26,302 [ 1] INFO  Unity: CharacterManager->AddCharacter:CharacterId:0 CharacterName:1 MapId:1 Entity:(1:pos:(5000,4000,820),dir:(100,0,0),spd:0
-2023-01-19 10:36:26,304 [ 1] INFO  Unity: EntityManager AddEntity EntityId :1 
-2023-01-19 10:36:28,491 [ 1] INFO  Unity: MapService->OnMapCharacterEnter :Map:1 Count:1
-2023-01-19 10:36:28,492 [ 1] INFO  Unity: CharacterManager->AddCharacter:CharacterId:0 CharacterName:2 MapId:1 Entity:(2:pos:(5000,4000,820),dir:(100,0,0),spd:0
-2023-01-19 10:36:28,493 [ 1] INFO  Unity: EntityManager AddEntity EntityId :2 
-2023-01-19 10:36:29,488 [ 1] WARN  Unity: DontDestroyOnLoad only work for root GameObjects or components on root GameObjects.
-UnityEngine.Object:DontDestroyOnLoad(Object)
-MonoSingleton`1:Awake() (at Assets/Scripts/Utilities/MonoSingleton.cs:32)
+2023-01-28 18:51:20,782 [ 1] WARN  Unity: Assets/Scripts/GameObject/MainPlayerCamera.cs(10,19): warning CS0108: `MainPlayerCamera.camera' hides inherited member `UnityEngine.Component.camera'. Use the new keyword if hiding was intended
 
-2023-01-19 10:36:29,489 [ 1] WARN  Unity: DontDestroyOnLoad only work for root GameObjects or components on root GameObjects.
-UnityEngine.Object:DontDestroyOnLoad(Object)
-MonoSingleton`1:Awake() (at Assets/Scripts/Utilities/MonoSingleton.cs:32)
+2023-01-28 18:51:20,783 [ 1] WARN  Unity: Assets/Scripts/GameObject/NpcController.cs(14,25): warning CS0108: `NpcController.renderer' hides inherited member `UnityEngine.Component.renderer'. Use the new keyword if hiding was intended
 
-2023-01-19 10:36:29,490 [ 1] WARN  Unity: DontDestroyOnLoad only work for root GameObjects or components on root GameObjects.
-UnityEngine.Object:DontDestroyOnLoad(Object)
-MonoSingleton`1:Awake() (at Assets/Scripts/Utilities/MonoSingleton.cs:32)
+2023-01-28 18:51:20,784 [ 1] WARN  Unity: Assets/Scripts/GameObject/NpcController.cs(15,14): warning CS0108: `NpcController.animation' hides inherited member `UnityEngine.Component.animation'. Use the new keyword if hiding was intended
 
-2023-01-19 10:36:29,492 [ 1] WARN  Unity: DontDestroyOnLoad only work for root GameObjects or components on root GameObjects.
-UnityEngine.Object:DontDestroyOnLoad(Object)
-MonoSingleton`1:Awake() (at Assets/Scripts/Utilities/MonoSingleton.cs:32)
+2023-01-28 18:51:20,788 [ 1] WARN  Unity: Assets/Scripts/UI/CharacterEquip/Equip_attribute.cs(13,17): warning CS0108: `Equip_attribute.name' hides inherited member `UnityEngine.Object.name'. Use the new keyword if hiding was intended
 
-2023-01-19 10:36:29,550 [ 1] INFO  Unity: MinimapManager->UpdataMiniMap
-2023-01-19 10:36:29,552 [ 1] INFO  Unity: Load MiniMap Image :buluzheng
-2023-01-19 10:36:29,558 [ 1] INFO  Unity: Load MiniMap Image :buluzheng
-2023-01-19 10:36:29,562 [ 1] INFO  Unity: GameObjectManager->CreateCharacterObject CharacterId:1 CharacterName:1 CharacterEntityId:1
-2023-01-19 10:36:29,601 [ 1] INFO  Unity: GameObjectManager->InitGameObject Player_character:1
-2023-01-19 10:36:29,603 [ 1] INFO  Unity: Load MiniMap Image :buluzheng
-2023-01-19 10:36:29,604 [ 1] INFO  Unity: Load MiniMap Image :buluzheng
-2023-01-19 10:36:29,707 [ 1] INFO  Unity: GameObjectManager->CreateCharacterObject CharacterId:2 CharacterName:2 CharacterEntityId:2
-2023-01-19 10:36:30,062 [ 1] INFO  Unity: SetDirection:(0, 100, 0)
-2023-01-19 10:36:30,063 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2023-01-19 10:36:30,064 [ 1] INFO  Unity: MoveForward
-2023-01-19 10:36:30,065 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2023-01-19 10:36:30,094 [ 1] INFO  Unity: SetPosition:(5000, 4068, 852)
-2023-01-19 10:36:30,095 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2023-01-19 10:36:30,345 [ 1] INFO  Unity: Stop
-2023-01-19 10:36:30,347 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2023-01-19 10:36:30,522 [ 1] INFO  Unity: SetPosition:(5000, 4155, 815)
-2023-01-19 10:36:30,523 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2023-01-19 10:36:39,714 [ 1] INFO  Unity: FriendService->OnFriendAddRequest FromId:2 FromName:2
-2023-01-19 10:36:39,715 [ 1] INFO  Unity: 2 请求添加好友
-2023-01-19 10:36:42,137 [ 1] INFO  Unity: FriendService->SendFriendAddResponse Accept:False
-2023-01-19 10:36:44,818 [ 1] INFO  Unity: FriendService->OnFriendAddRequest FromId:2 FromName:2
-2023-01-19 10:36:44,820 [ 1] INFO  Unity: 2 请求添加好友
-2023-01-19 10:36:45,848 [ 1] INFO  Unity: FriendService->SendFriendAddResponse Accept:True
-2023-01-19 10:36:45,891 [ 1] INFO  Unity: FriendService->OnFriendAddResponse
-2023-01-19 10:36:45,893 [ 1] INFO  Unity: FriendService->SendFriendListRequest
-2023-01-19 10:36:45,895 [ 1] INFO  Unity: 添加成功
-2023-01-19 10:36:45,974 [ 1] INFO  Unity: FriendService->OnFriendList
-2023-01-19 10:36:53,100 [ 1] INFO  Unity: EntityController->OnEntityChanaged Id:2 POS:(5000, 4005, 820) Dir:(0, 100, 0),Speed:300
-2023-01-19 10:36:53,102 [ 1] INFO  Unity: MapService->OnMapEntitySync :Entitys:1
-EntityID:2  Enent:None Entity:None
-2023-01-19 10:36:53,102 [ 1] INFO  Unity: FriendService->OnFriendList
-2023-01-19 10:36:53,128 [ 1] INFO  Unity: EntityController->OnEntityChanaged Id:2 POS:(5000, 4010, 820) Dir:(0, 100, 0),Speed:300
-2023-01-19 10:36:53,129 [ 1] INFO  Unity: MapService->OnMapEntitySync :Entitys:1
-EntityID:2  Enent:MoveFwd Entity:MoveFwd
-2023-01-19 10:36:53,320 [ 1] INFO  Unity: EntityController->OnEntityChanaged Id:2 POS:(5000, 4065, 820) Dir:(0, 100, 0),Speed:0
-2023-01-19 10:36:53,321 [ 1] INFO  Unity: MapService->OnMapEntitySync :Entitys:1
-EntityID:2  Enent:Idle Entity:Idle
-2023-01-19 10:37:00,835 [ 1] INFO  Unity: EntityController->OnEntityChanaged Id:2 POS:(5000, 4060, 820) Dir:(0, -100, 0),Speed:300
-2023-01-19 10:37:00,836 [ 1] INFO  Unity: MapService->OnMapEntitySync :Entitys:1
-EntityID:2  Enent:None Entity:None
-2023-01-19 10:37:00,861 [ 1] INFO  Unity: EntityController->OnEntityChanaged Id:2 POS:(5000, 4060, 820) Dir:(0, -100, 0),Speed:300
-2023-01-19 10:37:00,862 [ 1] INFO  Unity: MapService->OnMapEntitySync :Entitys:1
-EntityID:2  Enent:MoveFwd Entity:MoveFwd
-2023-01-19 10:37:01,117 [ 1] INFO  Unity: EntityController->OnEntityChanaged Id:2 POS:(5000, 3985, 820) Dir:(0, -100, 0),Speed:0
-2023-01-19 10:37:01,120 [ 1] INFO  Unity: MapService->OnMapEntitySync :Entitys:1
-EntityID:2  Enent:Idle Entity:Idle
-2023-01-19 10:37:02,716 [ 1] INFO  Unity: 要添加的好友Id
-2023-01-19 10:37:04,764 [ 1] INFO  Unity: FriendService->SendFriendAddRequest FriendId:2 FriendName:
-2023-01-19 10:37:05,919 [ 1] INFO  Unity: FriendService->OnFriendAddResponse
-2023-01-19 10:37:05,920 [ 1] INFO  Unity: FriendService->SendFriendListRequest
-2023-01-19 10:37:05,921 [ 1] INFO  Unity: 对方同意了您的请求
-2023-01-19 10:37:05,924 [ 1] INFO  Unity: FriendService->OnFriendList
-2023-01-19 10:37:05,993 [ 1] INFO  Unity: FriendService->OnFriendList
-2023-01-19 10:37:08,743 [ 1] INFO  Unity: 确定要删除好友 2 吗？
-2023-01-19 10:37:09,664 [ 1] INFO  Unity: FriendService->SendFriendRemoveRequest Id:0 FriendId:2
-2023-01-19 10:37:09,707 [ 1] INFO  Unity: FriendService->OnFriendList
-2023-01-19 10:37:09,711 [ 1] INFO  Unity: FriendService->OnFriendRemove RemoveCharId:2 Resule:Success Errmsg:删除成功
-2023-01-19 10:37:09,713 [ 1] INFO  Unity: FriendService->SendFriendListRequest
-2023-01-19 10:37:09,714 [ 1] INFO  Unity: 删除成功
-2023-01-19 10:37:09,779 [ 1] INFO  Unity: FriendService->OnFriendList
-2023-01-19 10:37:12,106 [ 1] INFO  Unity: EntityController->OnEntityChanaged Id:2 POS:(5000, 3990, 820) Dir:(0, 100, 0),Speed:300
-2023-01-19 10:37:12,108 [ 1] INFO  Unity: MapService->OnMapEntitySync :Entitys:1
-EntityID:2  Enent:None Entity:None
-2023-01-19 10:37:12,127 [ 1] INFO  Unity: EntityController->OnEntityChanaged Id:2 POS:(5000, 4000, 820) Dir:(0, 100, 0),Speed:300
-2023-01-19 10:37:12,129 [ 1] INFO  Unity: MapService->OnMapEntitySync :Entitys:1
-EntityID:2  Enent:MoveFwd Entity:MoveFwd
-2023-01-19 10:37:12,308 [ 1] INFO  Unity: EntityController->OnEntityChanaged Id:2 POS:(5000, 4050, 820) Dir:(0, 100, 0),Speed:0
-2023-01-19 10:37:12,310 [ 1] INFO  Unity: MapService->OnMapEntitySync :Entitys:1
-EntityID:2  Enent:Idle Entity:Idle
-2023-01-19 10:37:13,419 [ 1] INFO  Unity: SetDirection:(96, 27, 0)
-2023-01-19 10:37:13,419 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2023-01-19 10:37:13,420 [ 1] INFO  Unity: MoveForward
-2023-01-19 10:37:13,421 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2023-01-19 10:37:13,616 [ 1] INFO  Unity: Stop
-2023-01-19 10:37:13,617 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:1 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2023-01-19 10:37:37,602 [ 1] INFO  Unity: FriendService->OnFriendAddRequest FromId:2 FromName:2
-2023-01-19 10:37:37,605 [ 1] INFO  Unity: 2 请求添加好友
-2023-01-19 10:37:38,785 [ 1] INFO  Unity: FriendService->SendFriendAddResponse Accept:True
-2023-01-19 10:37:38,826 [ 1] INFO  Unity: FriendService->OnFriendAddResponse
-2023-01-19 10:37:38,828 [ 1] INFO  Unity: FriendService->SendFriendListRequest
-2023-01-19 10:37:38,829 [ 1] INFO  Unity: 添加成功
-2023-01-19 10:37:38,895 [ 1] INFO  Unity: FriendService->OnFriendList
-2023-01-19 10:37:44,419 [ 1] INFO  Unity: EntityController->OnEntityChanaged Id:2 POS:(5000, 4055, 820) Dir:(0, 100, 0),Speed:300
-2023-01-19 10:37:44,420 [ 1] INFO  Unity: MapService->OnMapEntitySync :Entitys:1
-EntityID:2  Enent:MoveFwd Entity:MoveFwd
-2023-01-19 10:37:44,421 [ 1] INFO  Unity: FriendService->OnFriendList
-2023-01-19 10:37:44,662 [ 1] INFO  Unity: EntityController->OnEntityChanaged Id:2 POS:(5000, 4120, 820) Dir:(0, 100, 0),Speed:0
-2023-01-19 10:37:44,664 [ 1] INFO  Unity: MapService->OnMapEntitySync :Entitys:1
-EntityID:2  Enent:Idle Entity:Idle
-2023-01-19 10:38:51,242 [ 1] INFO  Unity: MapService->OnMapCharacterLeave :Map:1 CharacterId:2 CharacterName:2
-2023-01-19 10:38:51,244 [ 1] INFO  Unity: CharacterManager->RemoveCharacter:CharacterId:2 CharacterName:2 MapId:1 Entity:(2:pos:(5000,4120,820),dir:(0,100,0),spd:0
-2023-01-19 10:38:51,246 [ 1] INFO  Unity: RemoveCharacter->RemoveCharacter:2
-2023-01-19 10:38:51,247 [ 1] INFO  Unity: EntityManager RemoveEntity EntityId :2 
-2023-01-19 10:38:51,249 [ 1] INFO  Unity: EntityController->OnEntityRemoved EntityId:2
-2023-01-19 10:38:51,251 [ 1] INFO  Unity: GameObjectManager->DestroyCharacterObject CharacterId:2 CharacterName:2 CharacterEntityId:2
-2023-01-19 10:38:51,253 [ 1] INFO  Unity: Entity Character_2_2 OnDestroy :ID:2 POS:(5000, 4120, 820) DIR:(0, 100, 0) SPD:0 
-2023-01-19 10:38:52,818 [ 1] INFO  Unity: Entity Character_1_1 OnDestroy :ID:1 POS:(5060, 4167, 815) DIR:(96, 27, 0) SPD:0 
-2023-01-19 10:38:52,819 [ 1] INFO  Unity: OnDestroy NetworkManager.
-2023-01-19 10:38:52,820 [ 1] WARN  Unity: CloseConnection(), errorCode: 1007
-UnityEngine.Debug:LogWarning(Object)
-Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:180)
-Network.NetClient:OnDestroy() (at Assets/Scripts/Network/NetClient.cs:175)
+2023-01-28 18:51:20,791 [ 1] WARN  Unity: Assets/Scripts/UI/Friend/UIFriendItem.cs(10,17): warning CS0108: `UIFriendItem.name' hides inherited member `UnityEngine.Object.name'. Use the new keyword if hiding was intended
+
+2023-01-28 18:51:20,794 [ 1] WARN  Unity: Assets/Scripts/UI/Team/UITeamItem.cs(12,17): warning CS0108: `UITeamItem.name' hides inherited member `UnityEngine.Object.name'. Use the new keyword if hiding was intended
+
+2023-01-28 18:51:20,795 [ 1] WARN  Unity: Assets/Scripts/UI/UICharInfo.cs(22,17): warning CS0108: `UICharInfo.name' hides inherited member `UnityEngine.Object.name'. Use the new keyword if hiding was intended
+
+2023-01-28 18:51:20,796 [ 1] WARN  Unity: Assets/Scripts/normal/GameDataManage.cs(31,26): warning CS0168: The variable `e' is declared but never used
+
+2023-01-28 18:51:20,798 [ 1] WARN  Unity: Assets/Scripts/GameObject/EntityController.cs(20,16): warning CS0649: Field `EntityController.rotation' is never assigned to, and will always have its default value
+
+2023-01-28 18:51:20,798 [ 1] WARN  Unity: Assets/Scripts/GameObject/EntityController.cs(23,16): warning CS0414: The private field `EntityController.lastRotation' is assigned but its value is never used
+
+2023-01-28 18:51:20,801 [ 1] WARN  Unity: Assets/Scripts/GameObject/PlayerInputController.cs(161,11): warning CS0414: The private field `PlayerInputController.lastSync' is assigned but its value is never used
+
+2023-01-28 18:51:20,801 [ 1] WARN  Unity: Assets/Scripts/Models/User.cs(62,40): warning CS0649: Field `Models.User.CurrentCharacterObject_Set_Action' is never assigned to, and will always have its default value `null'
+
+2023-01-28 18:51:20,802 [ 1] WARN  Unity: Assets/Scripts/Services/UserService.cs(20,63): warning CS0649: Field `Services.UserService.OnGameEnter' is never assigned to, and will always have its default value `null'
+
+2023-01-28 18:51:20,802 [ 1] WARN  Unity: Assets/Scripts/Services/UserService.cs(21,63): warning CS0649: Field `Services.UserService.OnGameLeave' is never assigned to, and will always have its default value `null'
+
+2023-01-28 18:51:20,803 [ 1] WARN  Unity: Assets/Scripts/UI/UICharacterSelect.cs(15,20): warning CS0414: The private field `UICharacterSelect.charClass' is assigned but its value is never used
+
+2023-01-28 18:51:20,806 [ 1] WARN  Unity: Assets/Scripts/UI/UIQuest/UIQuestDialog.cs(15,21): warning CS0649: Field `Assets.Scripts.UI.UIQuest.UIQuestDialog.questName' is never assigned to, and will always have its default value `null'
+
+2023-01-28 18:51:20,806 [ 1] WARN  Unity: Assets/Scripts/UI/UIQuest/UIQuestStatus.cs(11,28): warning CS0414: The private field `UIQuestStatus.questStatus' is assigned but its value is never used
+
+2023-01-28 18:51:20,808 [ 1] WARN  Unity: Assets/Editor/MapTools.cs(24,30): warning CS0219: The variable `allteleportObjects' is assigned but its value is never used
 

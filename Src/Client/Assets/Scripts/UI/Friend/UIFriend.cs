@@ -16,6 +16,7 @@ public class UIFriend : UIWindow
     private UIFriendItem selectedItem;
     private void Start()
     {
+        FriendService.Instance.SendFriendListRequest();
         this.ListView.onItemSelected += this.OnFriendListViewSelected;
         FriendService.Instance.OnFriendUpdate += this.RefreshUI;
         RefreshUI();
@@ -71,6 +72,24 @@ public class UIFriend : UIWindow
     public void OnchickFriendChatButton()
     {
         MessageBox.Show("功能暂未开放");
+    }
+    public void OnchickFriendTeamInviteButton()
+    {
+        if(this.selectedItem==null)
+        {
+            MessageBox.Show("请选择要邀请组队的好友");
+            return;
+        }
+        if(selectedItem.friendInfo.Status==0)
+        {
+            MessageBox.Show("请选择在线的好友");
+            return;
+        }
+        var box = MessageBox.Show(string.Format("确定要邀请[{0}]加入队伍吗？", selectedItem.friendInfo.friendInfo.Name), "组队邀请", MessageBoxType.Confirm);
+        box.OnYes = () =>
+          {
+              TeamService.Instance.SendTeamInviteRequest(selectedItem.friendInfo.friendInfo.Id, selectedItem.friendInfo.friendInfo.Name);
+          };
     }
 
     private bool OnFriendInputSumbit(string inputText, out string tips)
