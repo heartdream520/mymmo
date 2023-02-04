@@ -40,6 +40,7 @@ namespace GameServer
             FriendService.Instance.Init();
 
             TeamService.Instance.Init();
+            GulidService.Instance.Init();
 
             thread = new Thread(new ThreadStart(this.Update));
             //StatusManager.thread = new Thread(new ThreadStart(this.Update));

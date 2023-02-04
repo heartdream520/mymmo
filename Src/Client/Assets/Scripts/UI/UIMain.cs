@@ -74,6 +74,10 @@ public class UIMain : MonoSingleton<UIMain> {
     {
         UIManager.Instance.Show<UIFriend>();
     }
+    public void OnchickGulid()
+    {
+        GulidManager.Instance.ShowGulid();
+    }
     internal void ShowTeamUI(bool show)
     {
         var go = UIManager.Instance.UIResources[typeof(UITeam)].Instance;

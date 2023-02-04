@@ -89,6 +89,9 @@ namespace SkillBridge.Message
         [global::ProtoBuf.ProtoMember(15, Name = @"friends")]
         public global::System.Collections.Generic.List<NFriendInfo> Friends { get; } = new global::System.Collections.Generic.List<NFriendInfo>();
 
+        [global::ProtoBuf.ProtoMember(16, Name = @"gulid")]
+        public NGulidInfo Gulid { get; set; }
+
     }
 
     [global::ProtoBuf.ProtoContract()]
@@ -305,6 +308,27 @@ namespace SkillBridge.Message
         [global::ProtoBuf.ProtoMember(25)]
         public TeamLeaveRequest teamLeave { get; set; }
 
+        [global::ProtoBuf.ProtoMember(26)]
+        public GulidCreatRequest gulidCreat { get; set; }
+
+        [global::ProtoBuf.ProtoMember(27)]
+        public GulidJoinRequest gulidJoinRequest { get; set; }
+
+        [global::ProtoBuf.ProtoMember(28)]
+        public GulidJoinResponse gulidJoinResponse { get; set; }
+
+        [global::ProtoBuf.ProtoMember(29)]
+        public GulidInfoRequest gulidInfo { get; set; }
+
+        [global::ProtoBuf.ProtoMember(30)]
+        public GulidListRequest gulidList { get; set; }
+
+        [global::ProtoBuf.ProtoMember(31)]
+        public GulidLeaveRequest gulidLeave { get; set; }
+
+        [global::ProtoBuf.ProtoMember(32)]
+        public GulidAdminRequest gulidAdmin { get; set; }
+
         [global::ProtoBuf.ProtoMember(100)]
         public StatusNotify statusNotify { get; set; }
 
@@ -385,6 +409,27 @@ namespace SkillBridge.Message
 
         [global::ProtoBuf.ProtoMember(25)]
         public TeamLeaveResponse teamLeave { get; set; }
+
+        [global::ProtoBuf.ProtoMember(26)]
+        public GulidCreatResponse gulidCreat { get; set; }
+
+        [global::ProtoBuf.ProtoMember(27)]
+        public GulidJoinRequest gulidJoinRequest { get; set; }
+
+        [global::ProtoBuf.ProtoMember(28)]
+        public GulidJoinResponse gulidJoinResponse { get; set; }
+
+        [global::ProtoBuf.ProtoMember(29)]
+        public GulidInfoResponse gulidInfo { get; set; }
+
+        [global::ProtoBuf.ProtoMember(30)]
+        public GulidListResponse gulidList { get; set; }
+
+        [global::ProtoBuf.ProtoMember(31)]
+        public GulidLeaveResponse gulidLeave { get; set; }
+
+        [global::ProtoBuf.ProtoMember(32)]
+        public GulidAdminResponse gulidAdmin { get; set; }
 
         [global::ProtoBuf.ProtoMember(100)]
         public StatusNotify statusNotify { get; set; }
@@ -1121,6 +1166,288 @@ namespace SkillBridge.Message
 
     }
 
+    [global::ProtoBuf.ProtoContract()]
+    public partial class NGulidInfo : global::ProtoBuf.IExtensible
+    {
+        private global::ProtoBuf.IExtension __pbn__extensionData;
+        global::ProtoBuf.IExtension global::ProtoBuf.IExtensible.GetExtensionObject(bool createIfMissing)
+            => global::ProtoBuf.Extensible.GetExtensionObject(ref __pbn__extensionData, createIfMissing);
+
+        [global::ProtoBuf.ProtoMember(1, Name = @"id")]
+        public int Id { get; set; }
+
+        [global::ProtoBuf.ProtoMember(2, Name = @"gulid_name")]
+        [global::System.ComponentModel.DefaultValue("")]
+        public string GulidName { get; set; } = "";
+
+        [global::ProtoBuf.ProtoMember(3, Name = @"leader_id")]
+        public int LeaderId { get; set; }
+
+        [global::ProtoBuf.ProtoMember(4, Name = @"leader_name")]
+        [global::System.ComponentModel.DefaultValue("")]
+        public string LeaderName { get; set; } = "";
+
+        [global::ProtoBuf.ProtoMember(5, Name = @"notice")]
+        [global::System.ComponentModel.DefaultValue("")]
+        public string Notice { get; set; } = "";
+
+        [global::ProtoBuf.ProtoMember(6)]
+        public int memberCount { get; set; }
+
+        [global::ProtoBuf.ProtoMember(7, Name = @"members")]
+        public global::System.Collections.Generic.List<NGulidMemberInfo> Members { get; } = new global::System.Collections.Generic.List<NGulidMemberInfo>();
+
+        [global::ProtoBuf.ProtoMember(8, Name = @"applies")]
+        public global::System.Collections.Generic.List<NGulidApplyInfo> Applies { get; } = new global::System.Collections.Generic.List<NGulidApplyInfo>();
+
+        [global::ProtoBuf.ProtoMember(9)]
+        public long creatTime { get; set; }
+
+        [global::ProtoBuf.ProtoMember(10)]
+        public int loadmemberCount { get; set; }
+
+    }
+
+    [global::ProtoBuf.ProtoContract()]
+    public partial class NGulidMemberInfo : global::ProtoBuf.IExtensible
+    {
+        private global::ProtoBuf.IExtension __pbn__extensionData;
+        global::ProtoBuf.IExtension global::ProtoBuf.IExtensible.GetExtensionObject(bool createIfMissing)
+            => global::ProtoBuf.Extensible.GetExtensionObject(ref __pbn__extensionData, createIfMissing);
+
+        [global::ProtoBuf.ProtoMember(1, Name = @"id")]
+        public int Id { get; set; }
+
+        [global::ProtoBuf.ProtoMember(2, Name = @"character_Id")]
+        public int characterId { get; set; }
+
+        [global::ProtoBuf.ProtoMember(3, Name = @"title")]
+        public GulidTitle Title { get; set; }
+
+        [global::ProtoBuf.ProtoMember(4, Name = @"characterinfo")]
+        public NCharacterInfo Characterinfo { get; set; }
+
+        [global::ProtoBuf.ProtoMember(5, Name = @"join_Time")]
+        public long joinTime { get; set; }
+
+        [global::ProtoBuf.ProtoMember(6, Name = @"last_Load_Time")]
+        public long lastLoadTime { get; set; }
+
+        [global::ProtoBuf.ProtoMember(7, Name = @"status")]
+        public int Status { get; set; }
+
+    }
+
+    [global::ProtoBuf.ProtoContract()]
+    public partial class NGulidApplyInfo : global::ProtoBuf.IExtensible
+    {
+        private global::ProtoBuf.IExtension __pbn__extensionData;
+        global::ProtoBuf.IExtension global::ProtoBuf.IExtensible.GetExtensionObject(bool createIfMissing)
+            => global::ProtoBuf.Extensible.GetExtensionObject(ref __pbn__extensionData, createIfMissing);
+
+        [global::ProtoBuf.ProtoMember(1, Name = @"gulid_id")]
+        public int GulidId { get; set; }
+
+        [global::ProtoBuf.ProtoMember(2, Name = @"character_Id")]
+        public int characterId { get; set; }
+
+        [global::ProtoBuf.ProtoMember(3, Name = @"name")]
+        [global::System.ComponentModel.DefaultValue("")]
+        public string Name { get; set; } = "";
+
+        [global::ProtoBuf.ProtoMember(4, Name = @"class")]
+        public int Class { get; set; }
+
+        [global::ProtoBuf.ProtoMember(5, Name = @"level")]
+        public int Level { get; set; }
+
+        [global::ProtoBuf.ProtoMember(6, Name = @"apply_result")]
+        public ApplyResult ApplyResult { get; set; }
+
+    }
+
+    [global::ProtoBuf.ProtoContract()]
+    public partial class GulidCreatRequest : global::ProtoBuf.IExtensible
+    {
+        private global::ProtoBuf.IExtension __pbn__extensionData;
+        global::ProtoBuf.IExtension global::ProtoBuf.IExtensible.GetExtensionObject(bool createIfMissing)
+            => global::ProtoBuf.Extensible.GetExtensionObject(ref __pbn__extensionData, createIfMissing);
+
+        [global::ProtoBuf.ProtoMember(1, Name = @"gulid_name")]
+        [global::System.ComponentModel.DefaultValue("")]
+        public string GulidName { get; set; } = "";
+
+        [global::ProtoBuf.ProtoMember(2, Name = @"gulid_notice")]
+        [global::System.ComponentModel.DefaultValue("")]
+        public string GulidNotice { get; set; } = "";
+
+    }
+
+    [global::ProtoBuf.ProtoContract()]
+    public partial class GulidCreatResponse : global::ProtoBuf.IExtensible
+    {
+        private global::ProtoBuf.IExtension __pbn__extensionData;
+        global::ProtoBuf.IExtension global::ProtoBuf.IExtensible.GetExtensionObject(bool createIfMissing)
+            => global::ProtoBuf.Extensible.GetExtensionObject(ref __pbn__extensionData, createIfMissing);
+
+        [global::ProtoBuf.ProtoMember(1, Name = @"result")]
+        public Result Result { get; set; }
+
+        [global::ProtoBuf.ProtoMember(2, Name = @"errormsg")]
+        [global::System.ComponentModel.DefaultValue("")]
+        public string Errormsg { get; set; } = "";
+
+        [global::ProtoBuf.ProtoMember(3, Name = @"gulid_Info")]
+        public NGulidInfo gulidInfo { get; set; }
+
+    }
+
+    [global::ProtoBuf.ProtoContract()]
+    public partial class GulidJoinRequest : global::ProtoBuf.IExtensible
+    {
+        private global::ProtoBuf.IExtension __pbn__extensionData;
+        global::ProtoBuf.IExtension global::ProtoBuf.IExtensible.GetExtensionObject(bool createIfMissing)
+            => global::ProtoBuf.Extensible.GetExtensionObject(ref __pbn__extensionData, createIfMissing);
+
+        [global::ProtoBuf.ProtoMember(1, Name = @"apply")]
+        public NGulidApplyInfo Apply { get; set; }
+
+    }
+
+    [global::ProtoBuf.ProtoContract()]
+    public partial class GulidJoinResponse : global::ProtoBuf.IExtensible
+    {
+        private global::ProtoBuf.IExtension __pbn__extensionData;
+        global::ProtoBuf.IExtension global::ProtoBuf.IExtensible.GetExtensionObject(bool createIfMissing)
+            => global::ProtoBuf.Extensible.GetExtensionObject(ref __pbn__extensionData, createIfMissing);
+
+        [global::ProtoBuf.ProtoMember(1, Name = @"result")]
+        public Result Result { get; set; }
+
+        [global::ProtoBuf.ProtoMember(2, Name = @"errormsg")]
+        [global::System.ComponentModel.DefaultValue("")]
+        public string Errormsg { get; set; } = "";
+
+        [global::ProtoBuf.ProtoMember(3, Name = @"apply")]
+        public NGulidApplyInfo Apply { get; set; }
+
+    }
+
+    [global::ProtoBuf.ProtoContract()]
+    public partial class GulidInfoRequest : global::ProtoBuf.IExtensible
+    {
+        private global::ProtoBuf.IExtension __pbn__extensionData;
+        global::ProtoBuf.IExtension global::ProtoBuf.IExtensible.GetExtensionObject(bool createIfMissing)
+            => global::ProtoBuf.Extensible.GetExtensionObject(ref __pbn__extensionData, createIfMissing);
+
+    }
+
+    [global::ProtoBuf.ProtoContract()]
+    public partial class GulidInfoResponse : global::ProtoBuf.IExtensible
+    {
+        private global::ProtoBuf.IExtension __pbn__extensionData;
+        global::ProtoBuf.IExtension global::ProtoBuf.IExtensible.GetExtensionObject(bool createIfMissing)
+            => global::ProtoBuf.Extensible.GetExtensionObject(ref __pbn__extensionData, createIfMissing);
+
+        [global::ProtoBuf.ProtoMember(1, Name = @"result")]
+        public Result Result { get; set; }
+
+        [global::ProtoBuf.ProtoMember(2, Name = @"errormsg")]
+        [global::System.ComponentModel.DefaultValue("")]
+        public string Errormsg { get; set; } = "";
+
+        [global::ProtoBuf.ProtoMember(3, Name = @"gulid_info")]
+        public NGulidInfo GulidInfo { get; set; }
+
+    }
+
+    [global::ProtoBuf.ProtoContract()]
+    public partial class GulidListRequest : global::ProtoBuf.IExtensible
+    {
+        private global::ProtoBuf.IExtension __pbn__extensionData;
+        global::ProtoBuf.IExtension global::ProtoBuf.IExtensible.GetExtensionObject(bool createIfMissing)
+            => global::ProtoBuf.Extensible.GetExtensionObject(ref __pbn__extensionData, createIfMissing);
+
+    }
+
+    [global::ProtoBuf.ProtoContract()]
+    public partial class GulidListResponse : global::ProtoBuf.IExtensible
+    {
+        private global::ProtoBuf.IExtension __pbn__extensionData;
+        global::ProtoBuf.IExtension global::ProtoBuf.IExtensible.GetExtensionObject(bool createIfMissing)
+            => global::ProtoBuf.Extensible.GetExtensionObject(ref __pbn__extensionData, createIfMissing);
+
+        [global::ProtoBuf.ProtoMember(1, Name = @"result")]
+        public Result Result { get; set; }
+
+        [global::ProtoBuf.ProtoMember(2, Name = @"errormsg")]
+        [global::System.ComponentModel.DefaultValue("")]
+        public string Errormsg { get; set; } = "";
+
+        [global::ProtoBuf.ProtoMember(3, Name = @"gulid_infos")]
+        public global::System.Collections.Generic.List<NGulidInfo> GulidInfos { get; } = new global::System.Collections.Generic.List<NGulidInfo>();
+
+    }
+
+    [global::ProtoBuf.ProtoContract()]
+    public partial class GulidLeaveRequest : global::ProtoBuf.IExtensible
+    {
+        private global::ProtoBuf.IExtension __pbn__extensionData;
+        global::ProtoBuf.IExtension global::ProtoBuf.IExtensible.GetExtensionObject(bool createIfMissing)
+            => global::ProtoBuf.Extensible.GetExtensionObject(ref __pbn__extensionData, createIfMissing);
+
+    }
+
+    [global::ProtoBuf.ProtoContract()]
+    public partial class GulidLeaveResponse : global::ProtoBuf.IExtensible
+    {
+        private global::ProtoBuf.IExtension __pbn__extensionData;
+        global::ProtoBuf.IExtension global::ProtoBuf.IExtensible.GetExtensionObject(bool createIfMissing)
+            => global::ProtoBuf.Extensible.GetExtensionObject(ref __pbn__extensionData, createIfMissing);
+
+        [global::ProtoBuf.ProtoMember(1, Name = @"result")]
+        public Result Result { get; set; }
+
+        [global::ProtoBuf.ProtoMember(2, Name = @"errormsg")]
+        [global::System.ComponentModel.DefaultValue("")]
+        public string Errormsg { get; set; } = "";
+
+    }
+
+    [global::ProtoBuf.ProtoContract()]
+    public partial class GulidAdminRequest : global::ProtoBuf.IExtensible
+    {
+        private global::ProtoBuf.IExtension __pbn__extensionData;
+        global::ProtoBuf.IExtension global::ProtoBuf.IExtensible.GetExtensionObject(bool createIfMissing)
+            => global::ProtoBuf.Extensible.GetExtensionObject(ref __pbn__extensionData, createIfMissing);
+
+        [global::ProtoBuf.ProtoMember(1, Name = @"command")]
+        public GulidAdminCommand Command { get; set; }
+
+        [global::ProtoBuf.ProtoMember(2, Name = @"target")]
+        public int Target { get; set; }
+
+    }
+
+    [global::ProtoBuf.ProtoContract()]
+    public partial class GulidAdminResponse : global::ProtoBuf.IExtensible
+    {
+        private global::ProtoBuf.IExtension __pbn__extensionData;
+        global::ProtoBuf.IExtension global::ProtoBuf.IExtensible.GetExtensionObject(bool createIfMissing)
+            => global::ProtoBuf.Extensible.GetExtensionObject(ref __pbn__extensionData, createIfMissing);
+
+        [global::ProtoBuf.ProtoMember(1, Name = @"result")]
+        public Result Result { get; set; }
+
+        [global::ProtoBuf.ProtoMember(2, Name = @"errormsg")]
+        [global::System.ComponentModel.DefaultValue("")]
+        public string Errormsg { get; set; } = "";
+
+        [global::ProtoBuf.ProtoMember(3, Name = @"command")]
+        public GulidAdminCommand Command { get; set; }
+
+    }
+
     [global::ProtoBuf.ProtoContract(Name = @"RESULT")]
     public enum Result
     {
@@ -1263,6 +1590,54 @@ namespace SkillBridge.Message
         InProgress = 1,
         [global::ProtoBuf.ProtoEnum(Name = @"FINISHED")]
         Finished = 2,
+    }
+
+    [global::ProtoBuf.ProtoContract(Name = @"GULID_TITLE")]
+    public enum GulidTitle
+    {
+        [global::ProtoBuf.ProtoEnum(Name = @"NONE")]
+        None = 0,
+        [global::ProtoBuf.ProtoEnum(Name = @"PRESIDENT")]
+        President = 1,
+        [global::ProtoBuf.ProtoEnum(Name = @"VICE_PRESIDENT")]
+        VicePresident = 2,
+    }
+
+    [global::ProtoBuf.ProtoContract(Name = @"APPLY_RESULT")]
+    public enum ApplyResult
+    {
+        [global::ProtoBuf.ProtoEnum(Name = @"NONE")]
+        None = 0,
+        [global::ProtoBuf.ProtoEnum(Name = @"ACCEPT")]
+        Accept = 1,
+        [global::ProtoBuf.ProtoEnum(Name = @"REJECT")]
+        Reject = 2,
+    }
+
+    [global::ProtoBuf.ProtoContract(Name = @"GULID_ADMIN_COMMAND")]
+    public enum GulidAdminCommand
+    {
+        [global::ProtoBuf.ProtoEnum(Name = @"KICKOUT")]
+        Kickout = 1,
+        [global::ProtoBuf.ProtoEnum(Name = @"PROMOTE")]
+        Promote = 2,
+        [global::ProtoBuf.ProtoEnum(Name = @"DISPAND")]
+        Dispand = 3,
+        [global::ProtoBuf.ProtoEnum(Name = @"TRANSFER")]
+        Transfer = 4,
+    }
+
+    [global::ProtoBuf.ProtoContract(Name = @"GULID_LEAVE_WAY")]
+    public enum GulidLeaveWay
+    {
+        [global::ProtoBuf.ProtoEnum(Name = @"NONE")]
+        None = 0,
+        [global::ProtoBuf.ProtoEnum(Name = @"SELF")]
+        Self = 1,
+        [global::ProtoBuf.ProtoEnum(Name = @"KICKOUT")]
+        Kickout = 2,
+        [global::ProtoBuf.ProtoEnum(Name = @"DISPAND")]
+        Dispand = 3,
     }
 
 }

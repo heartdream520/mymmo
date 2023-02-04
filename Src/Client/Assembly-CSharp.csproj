@@ -84,6 +84,7 @@
     <Compile Include="Assets\Scripts\Managers\EntityManager.cs" />
     <Compile Include="Assets\Scripts\Managers\EquipManager.cs" />
     <Compile Include="Assets\Scripts\Managers\FriendManager.cs" />
+    <Compile Include="Assets\Scripts\Managers\GulidManager.cs" />
     <Compile Include="Assets\Scripts\Managers\ItemManager.cs" />
     <Compile Include="Assets\Scripts\Managers\MinimapManager.cs" />
     <Compile Include="Assets\Scripts\Managers\MouseManager.cs" />
@@ -108,6 +109,7 @@
     <Compile Include="Assets\Scripts\Scene\MySceneManager.cs" />
     <Compile Include="Assets\Scripts\Services\BagService.cs" />
     <Compile Include="Assets\Scripts\Services\FriendService.cs" />
+    <Compile Include="Assets\Scripts\Services\GulidService.cs" />
     <Compile Include="Assets\Scripts\Services\ItemServicer.cs" />
     <Compile Include="Assets\Scripts\Services\MapService.cs" />
     <Compile Include="Assets\Scripts\Services\QuestService.cs" />
@@ -123,6 +125,15 @@
     <Compile Include="Assets\Scripts\UI\CharacterEquip\UIEquipItem.cs" />
     <Compile Include="Assets\Scripts\UI\Friend\UIFriend.cs" />
     <Compile Include="Assets\Scripts\UI\Friend\UIFriendItem.cs" />
+    <Compile Include="Assets\Scripts\UI\Gulid\UICreatGulid.cs" />
+    <Compile Include="Assets\Scripts\UI\Gulid\UIGulid.cs" />
+    <Compile Include="Assets\Scripts\UI\Gulid\UIGulidApplies.cs" />
+    <Compile Include="Assets\Scripts\UI\Gulid\UIGulidApplyItem.cs" />
+    <Compile Include="Assets\Scripts\UI\Gulid\UIGulidCItem.cs" />
+    <Compile Include="Assets\Scripts\UI\Gulid\UIGulidInfo.cs" />
+    <Compile Include="Assets\Scripts\UI\Gulid\UIGulidList.cs" />
+    <Compile Include="Assets\Scripts\UI\Gulid\UIGulidListItem.cs" />
+    <Compile Include="Assets\Scripts\UI\Gulid\UINoGulid.cs" />
     <Compile Include="Assets\Scripts\UI\InputBox\InputBox.cs" />
     <Compile Include="Assets\Scripts\UI\InputBox\UIInputBox.cs" />
     <Compile Include="Assets\Scripts\UI\ListView\ListView.cs" />
@@ -167,13 +178,11 @@
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
     <None Include="Assets\Resources\Shader\DepthBloom.shader" />
     <None Include="Assets\Resources\Sweet Land GUI\READ ME.txt" />
-    <None Include="Assets\Resources\天空盒\ReleaseNotes.txt" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
     <None Include="Assets\Resources\Shader\MyMobile Particles AddNoMask Diff.shader" />
     <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Masking.shader" />
     <None Include="Assets\JsonDotNet\link.xml" />
-    <None Include="Assets\Resources\天空盒\Readme.txt" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF Overlay.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Surface.cginc" />

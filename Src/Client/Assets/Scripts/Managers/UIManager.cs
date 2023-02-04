@@ -33,6 +33,12 @@ public class UIManager : Singleton<UIManager>{
 
         this.UIResources.Add(typeof(UIFriend), new UIElement() { Resources = "UI/Friend/UIFriend", Cache = false, is_shop = true });
         this.UIResources.Add(typeof(UITeam), new UIElement() { Resources = "UI/Team/UITeam", Cache = false, is_shop = false });
+
+        this.UIResources.Add(typeof(UIGulid), new UIElement() { Resources = "UI/Gulid/UIGulid", Cache = false, is_shop = true });
+        this.UIResources.Add(typeof(UICreatGulid), new UIElement() { Resources = "UI/Gulid/UICreatGulid", Cache = false, is_shop = true });
+        this.UIResources.Add(typeof(UIGulidList), new UIElement() { Resources = "UI/Gulid/UIGulidList", Cache = false, is_shop = true });
+        this.UIResources.Add(typeof(UINoGulid), new UIElement() { Resources = "UI/Gulid/UINoGulid", Cache = false, is_shop = true });
+        this.UIResources.Add(typeof(UIGulidApplies), new UIElement() { Resources = "UI/Gulid/UIGulidApplies", Cache = false, is_shop = true });
         User.Instance.CurrentCharacter_Set_Action += () =>
           {
               this.UIcnt = 0;

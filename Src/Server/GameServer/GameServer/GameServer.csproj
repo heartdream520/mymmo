@@ -118,6 +118,7 @@
     <Compile Include="Managers\EntityManager.cs" />
     <Compile Include="Managers\EquipManager.cs" />
     <Compile Include="Managers\FriendManager.cs" />
+    <Compile Include="Managers\GulidManager.cs" />
     <Compile Include="Managers\ItemManager.cs" />
     <Compile Include="Managers\MapManager.cs" />
     <Compile Include="Managers\MousterManager.cs" />
@@ -129,6 +130,7 @@
     <Compile Include="Managers\StatusManager.cs" />
     <Compile Include="Managers\TeamManager.cs" />
     <Compile Include="Managers\UserManager.cs" />
+    <Compile Include="Models\Gulid.cs" />
     <Compile Include="Models\Item.cs" />
     <Compile Include="Models\Map.cs" />
     <Compile Include="Models\Team.cs" />
@@ -149,6 +151,7 @@
     </Compile>
     <Compile Include="Services\BagService.cs" />
     <Compile Include="Services\FriendService.cs" />
+    <Compile Include="Services\GulidService.cs" />
     <Compile Include="Services\HelloWorldService.cs" />
     <Compile Include="Services\DBService.cs" />
     <Compile Include="Services\ItemServicer.cs" />
@@ -171,6 +174,15 @@
       <DependentUpon>Entities.tt</DependentUpon>
     </Compile>
     <Compile Include="TCharacterQueat.cs">
+      <DependentUpon>Entities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TGulid.cs">
+      <DependentUpon>Entities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TGulidApply.cs">
+      <DependentUpon>Entities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TGulidMember.cs">
       <DependentUpon>Entities.tt</DependentUpon>
     </Compile>
     <Compile Include="TPlayer.cs">

@@ -37,6 +37,14 @@ namespace Network
             if (message.teamInviteResponse != null) { MessageDistributer<T>.Instance.RaiseEvent(sender, message.teamInviteResponse); }   
             if (message.teamLeave != null) { MessageDistributer<T>.Instance.RaiseEvent(sender, message.teamLeave); }   
             if (message.teamInfo != null) { MessageDistributer<T>.Instance.RaiseEvent(sender, message.teamInfo); }   
+
+            if (message.gulidCreat != null) { MessageDistributer<T>.Instance.RaiseEvent(sender, message.gulidCreat); }   
+            if (message.gulidInfo != null) { MessageDistributer<T>.Instance.RaiseEvent(sender, message.gulidInfo); }   
+            if (message.gulidJoinRequest != null) { MessageDistributer<T>.Instance.RaiseEvent(sender, message.gulidJoinRequest); }   
+            if (message.gulidJoinResponse != null) { MessageDistributer<T>.Instance.RaiseEvent(sender, message.gulidJoinResponse); }   
+            if (message.gulidLeave != null) { MessageDistributer<T>.Instance.RaiseEvent(sender, message.gulidLeave); }   
+            if (message.gulidList != null) { MessageDistributer<T>.Instance.RaiseEvent(sender, message.gulidList); }   
+            if (message.gulidAdmin != null) { MessageDistributer<T>.Instance.RaiseEvent(sender, message.gulidAdmin); }   
             
 
         }
@@ -75,6 +83,14 @@ namespace Network
             if (message.teamInviteResponse != null) { MessageDistributer<T>.Instance.RaiseEvent(sender, message.teamInviteResponse); }
             if (message.teamLeave != null) { MessageDistributer<T>.Instance.RaiseEvent(sender, message.teamLeave); }
             if (message.teamInfo != null) { MessageDistributer<T>.Instance.RaiseEvent(sender, message.teamInfo); }
+
+            if (message.gulidCreat != null) { MessageDistributer<T>.Instance.RaiseEvent(sender, message.gulidCreat); }
+            if (message.gulidInfo != null) { MessageDistributer<T>.Instance.RaiseEvent(sender, message.gulidInfo); }
+            if (message.gulidJoinRequest != null) { MessageDistributer<T>.Instance.RaiseEvent(sender, message.gulidJoinRequest); }
+            if (message.gulidJoinResponse != null) { MessageDistributer<T>.Instance.RaiseEvent(sender, message.gulidJoinResponse); }
+            if (message.gulidLeave != null) { MessageDistributer<T>.Instance.RaiseEvent(sender, message.gulidLeave); }
+            if (message.gulidList != null) { MessageDistributer<T>.Instance.RaiseEvent(sender, message.gulidList); }
+            if (message.gulidAdmin != null) { MessageDistributer<T>.Instance.RaiseEvent(sender, message.gulidAdmin); }
         }
     }
 }

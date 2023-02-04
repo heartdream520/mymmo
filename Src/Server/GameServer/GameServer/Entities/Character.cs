@@ -1,8 +1,10 @@
 ﻿using Common;
 using Common.Data;
+using Common.Utils;
 using GameServer.Core;
 using GameServer.Managers;
 using GameServer.Models;
+using GameServer.Services;
 using Network;
 using SkillBridge.Message;
 using System;
@@ -26,6 +28,11 @@ namespace GameServer.Entities
         public Team team;
         //队伍更新时间戳
         public int TeamUpdateTS;
+
+        public Gulid Gulid;
+        public double GulidUpdateTS;
+        public int Class { get { return this.Data.Class; } }
+        public GulidLeaveWay GulidLeaveWay=GulidLeaveWay.None;
 
         public Character(CharacterType type,TCharacter cha):
             base(new Core.Vector3Int(cha.MapPosX, cha.MapPosY, cha.MapPosZ),new Core.Vector3Int(100,0,0))
@@ -63,7 +70,14 @@ namespace GameServer.Entities
 
             //玩家好友初始化
             this.FriendManager = new FriendManager(this);
+
             this.FriendManager.GetQuestInfos(this.Info.Friends);
+            this.Gulid = GulidManager.Instance.GetGulidById(this.Data.GulidId);
+            if (this.Gulid != null)
+            {
+                this.Info.Gulid = this.Gulid.GetGulidInfo(this);
+            }
+                
         }
 
         internal NCharacterInfo GetBasicInfo()
@@ -99,12 +113,23 @@ namespace GameServer.Entities
         {
 
             this.FriendManager.UpdateFriendSelfInfo(this.Info, 1);
+            if(this.Gulid!=null)
+            {
+                this.Gulid.timestamp = TimeUtil.timestamp;
+            }
         }
         internal void Clear()
         {
             this.FriendManager.UpdateFriendSelfInfo(this.Info, 0);
             if (this.team != null)
                 this.team.Leave(this);
+            if (this.Gulid != null)
+            {
+                this.Gulid.timestamp = TimeUtil.timestamp;
+                var dbGulidMember = DBService.Instance.Entities.TGulidMembers.FirstOrDefault(v => v.CharacterId == this.Id);
+                dbGulidMember.LastLoadTime = DateTime.Now;
+                this.Gulid.SendMessageToLoadMember();
+            }
         }
 
         public void PostProcess(NetMessageResponse message)
@@ -117,6 +142,35 @@ namespace GameServer.Entities
                     Log.InfoFormat("Character->PostProcess  character:{0} UpdateTeam", this.ToString());
                     this.TeamUpdateTS = this.team.timeTS;
                     this.team.PostProcess(message);
+                }
+                
+            }
+            if (this.Gulid != null)
+            {
+                if (this.GulidUpdateTS < this.Gulid.timestamp)
+                {
+                    this.GulidUpdateTS = this.Gulid.timestamp;
+                    this.Gulid.PostProcess(this, message);
+                }
+            }
+            else if (this.Gulid == null && this.GulidLeaveWay != GulidLeaveWay.None)
+            {
+                
+                if (message.gulidInfo==null)
+                {
+                    
+                    if(this.GulidLeaveWay==GulidLeaveWay.Kickout)
+                    {
+                        message.gulidInfo = new GulidInfoResponse();
+                        message.gulidInfo.Errormsg = "你已被踢出公会";
+                    }
+                    else if(this.GulidLeaveWay==GulidLeaveWay.Dispand)
+                    {
+                        message.gulidInfo = new GulidInfoResponse();
+                        message.gulidInfo.Errormsg = "您所在公会已解散";
+                    }
+                    
+                    this.GulidLeaveWay = GulidLeaveWay.None;
                 }
                 
             }

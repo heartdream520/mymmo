@@ -98,6 +98,7 @@ message NCharacterInfo {
 	bytes Equips = 13;
 	repeated NQuestInfo quests=14;
 	repeated NFriendInfo friends=15;
+	NGulidInfo gulid = 16;          //公会
 
 }
 
@@ -216,6 +217,15 @@ message NetMessageRequest{
 	TeamLeaveRequest teamLeave = 25;
 
 
+	//公会
+	GulidCreatRequest gulidCreat = 26;
+	GulidJoinRequest gulidJoinRequest = 27;
+	GulidJoinResponse gulidJoinResponse = 28;
+	GulidInfoRequest gulidInfo = 29;
+	GulidListRequest gulidList = 30;
+	GulidLeaveRequest gulidLeave = 31;
+	GulidAdminRequest gulidAdmin = 32;
+
 	StatusNotify statusNotify =100;
 
 }
@@ -250,6 +260,15 @@ message NetMessageResponse{
 	TeamInviteResponse teamInviteResponse = 23;
 	TeamInfoResponse teamInfo = 24;
 	TeamLeaveResponse teamLeave = 25;
+
+	//公会
+    GulidCreatResponse gulidCreat = 26;
+	GulidJoinRequest gulidJoinRequest = 27;
+	GulidJoinResponse gulidJoinResponse = 28;
+	GulidInfoResponse gulidInfo = 29;
+	GulidListResponse gulidList = 30;
+	GulidLeaveResponse gulidLeave = 31;
+	GulidAdminResponse gulidAdmin = 32;
 
 	StatusNotify statusNotify =100;
 	
@@ -528,3 +547,130 @@ message TeamLeaveResponse
 	RESULT result = 1;
 	string errormsg = 2;
 }
+//Guid System
+ enum GULID_TITLE
+ {
+	  NONE = 0 ;
+	  PRESIDENT = 1;
+	  VICE_PRESIDENT = 2;
+ }
+ enum APPLY_RESULT
+ {
+	  NONE = 0;
+	  ACCEPT = 1;
+	  REJECT = 2;
+ }
+ message NGulidInfo
+ {
+      int32 id = 1;
+	  string gulid_name = 2;
+	  int32 leader_id = 3;
+	  string leader_name = 4;
+	  string notice = 5;
+	  int32 memberCount = 6;
+	  repeated NGulidMemberInfo members = 7;
+	  repeated NGulidApplyInfo applies = 8;
+	  int64 creatTime = 9;
+	  int32 loadmemberCount = 10;
+
+ }
+ message NGulidMemberInfo
+ {
+	int32 id = 1;
+	int32 character_Id = 2; //角色id
+	GULID_TITLE title = 3;//职位
+	NCharacterInfo characterinfo = 4;
+	int64 join_Time = 5; //加入时间
+	int64 last_Load_Time = 6; //加入时间
+	int32 status = 7;  //当前状态
+
+ }
+ message NGulidApplyInfo
+ {
+	int32 gulid_id = 1;
+	int32 character_Id = 2;
+	string name = 3;
+	int32 class = 4;
+	int32 level = 5;
+	APPLY_RESULT apply_result = 6; //申请结果
+
+ }
+ //创建工会
+ message GulidCreatRequest
+ {
+	string gulid_name = 1;
+	string gulid_notice = 2;
+ }
+ message GulidCreatResponse
+ {
+	RESULT result = 1;
+	string errormsg = 2;
+	NGulidInfo gulid_Info = 3;
+ }
+ message GulidJoinRequest
+ {
+	NGulidApplyInfo apply = 1;
+ }
+ message GulidJoinResponse
+ {
+ 	RESULT result = 1;
+	string errormsg = 2;
+	NGulidApplyInfo apply = 3;
+ }
+ message GulidInfoRequest
+ {
+
+ }
+ message GulidInfoResponse
+ {
+ 	RESULT result = 1;
+	string errormsg = 2;
+	NGulidInfo gulid_info = 3;
+ }
+ message GulidListRequest
+ {
+
+ }
+ message GulidListResponse
+ {
+ 	RESULT result = 1;
+	string errormsg = 2;
+	repeated NGulidInfo gulid_infos = 3;
+ }
+ message GulidLeaveRequest
+ {
+
+ }
+ message GulidLeaveResponse
+ {
+ 	RESULT result = 1;
+	string errormsg = 2;
+ }
+
+ enum GULID_ADMIN_COMMAND
+ {
+	  KICKOUT = 1;   //踢出
+	  PROMOTE = 2;   //晋升
+	  DISPAND = 3;    //解散公会
+	  TRANSFER = 4;  //转让公会
+
+ }
+  enum GULID_LEAVE_WAY
+ {
+	  NONE = 0;
+	  SELF = 1;      //自主离开
+	  KICKOUT = 2;   //踢出
+	  DISPAND = 3;    //解散公会
+
+ }
+  message GulidAdminRequest
+ {
+	GULID_ADMIN_COMMAND command = 1;
+	int32 target = 2;
+ }
+ message GulidAdminResponse 
+ {
+	RESULT result = 1;
+	string errormsg = 2;
+	GULID_ADMIN_COMMAND command = 3;
+ }

@@ -61,7 +61,7 @@ public class LoadingManager : MonoBehaviour {
         QuestService.Instance.Init();
         FriendService.Instance.Init();
         TeamService.Instance.Init();
-        //GuildService.Instance.Init();
+        GulidService.Instance.Init();
         //ShopManager.Instance.Init();
         //ChatService.Instance.Init();
         //SoundManager.Instance.PlayMusic(SoundDefine.Music_Login);
