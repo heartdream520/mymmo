@@ -26,6 +26,7 @@ namespace GameServer.Entities
         public FriendManager FriendManager;
 
         public Team team;
+        public Chat chat;
         //队伍更新时间戳
         public int TeamUpdateTS;
 
@@ -77,7 +78,8 @@ namespace GameServer.Entities
             {
                 this.Info.Gulid = this.Gulid.GetGulidInfo(this);
             }
-                
+
+            this.chat = new Chat(this);
         }
 
         internal NCharacterInfo GetBasicInfo()
@@ -174,6 +176,7 @@ namespace GameServer.Entities
                 }
                 
             }
+            this.chat.PostProcess(message);
 
             if (this.StatusManager.HasStatus)
             {

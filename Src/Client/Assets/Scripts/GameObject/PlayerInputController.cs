@@ -53,7 +53,7 @@ public class PlayerInputController : MonoBehaviour {
     {
         time_space -= Time.deltaTime;
         jump_cd -= Time.deltaTime;
-        if (character == null)
+        if (character == null||InputManager.Instance.IsInInputing)
             return;
         
 

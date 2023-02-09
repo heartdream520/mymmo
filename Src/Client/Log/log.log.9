@@ -1,127 +1,90 @@
-2023-02-04 17:02:59,903 [ 1] INFO  Unity: LoadingManager start
-2023-02-04 17:03:04,168 [ 1] INFO  Unity: DataManager > DataManager()
-2023-02-04 17:03:04,269 [ 1] INFO  Unity: MapDefine.txt
-2023-02-04 17:03:04,319 [ 1] INFO  Unity: CharacterDefine.txt
-2023-02-04 17:03:04,364 [ 1] INFO  Unity: TeleporterDefine.txt
-2023-02-04 17:03:04,379 [ 1] INFO  Unity: SpawnPointDefine.txt
-2023-02-04 17:03:04,398 [ 1] INFO  Unity: NpcDefine.txt
-2023-02-04 17:03:04,422 [ 1] INFO  Unity: ItemDefine.txt
-2023-02-04 17:03:12,648 [ 1] INFO  Unity: UserService->SendLoad: User:3 Password:3
-2023-02-04 17:03:12,650 [ 1] INFO  Unity: ConnectToServer() Start 
-2023-02-04 17:03:12,652 [ 1] INFO  Unity: DoConnect
-2023-02-04 17:03:12,655 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
-2023-02-04 17:03:12,659 [ 1] INFO  Unity: Connect[0] to server 127.0.0.1:8000
+2023-02-08 19:33:28,683 [ 1] INFO  Unity: LoadingManager start
+2023-02-08 19:33:33,039 [ 1] INFO  Unity: DataManager > DataManager()
+2023-02-08 19:33:33,183 [ 1] INFO  Unity: MapDefine.txt
+2023-02-08 19:33:33,207 [ 1] INFO  Unity: CharacterDefine.txt
+2023-02-08 19:33:33,240 [ 1] INFO  Unity: TeleporterDefine.txt
+2023-02-08 19:33:33,253 [ 1] INFO  Unity: SpawnPointDefine.txt
+2023-02-08 19:33:33,277 [ 1] INFO  Unity: NpcDefine.txt
+2023-02-08 19:33:33,302 [ 1] INFO  Unity: ItemDefine.txt
+2023-02-08 19:33:37,937 [ 1] INFO  Unity: UserService->SendLoad: User:5 Password:5
+2023-02-08 19:33:37,940 [ 1] INFO  Unity: ConnectToServer() Start 
+2023-02-08 19:33:37,942 [ 1] INFO  Unity: DoConnect
+2023-02-08 19:33:37,944 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
+2023-02-08 19:33:37,947 [ 1] INFO  Unity: Connect[0] to server 127.0.0.1:8000
 
-2023-02-04 17:03:14,710 [ 1] WARN  Unity: CloseConnection(), errorCode: 1005
-UnityEngine.Debug:LogWarning(Object)
-Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:180)
-Network.NetClient:DoConnect() (at Assets/Scripts/Network/NetClient.cs:277)
-Network.NetClient:Connect(Int32) (at Assets/Scripts/Network/NetClient.cs:169)
-Services.UserService:ConnectToServer() (at Assets/Scripts/Services/UserService.cs:65)
-Services.UserService:SendLoad(String, String) (at Assets/Scripts/Services/UserService.cs:175)
-UILoad:OnClickLoad() (at Assets/Scripts/UI/UILoad.cs:71)
+2023-02-08 19:33:37,951 [ 1] INFO  Unity: LoadingMesager::OnGameServerConnect :0 reason:Success
+2023-02-08 19:33:38,143 [ 1] INFO  Unity: UserService->OnUserLoad:Success [None]
+2023-02-08 19:33:41,987 [ 1] INFO  Unity: Select Character:[33]来聊天[Wizard] 
+2023-02-08 19:33:42,949 [ 1] INFO  Unity: 进入游戏
+2023-02-08 19:33:44,242 [ 1] INFO  Unity: UserService->SendCharacterEnter: EnterCharacterID :0 EnterCharacterName:来聊天 EnterCharacter_Idx
+2023-02-08 19:33:44,315 [ 1] INFO  Unity: UserService->OnUserGameEnter:Success [None]
+2023-02-08 19:33:44,318 [ 1] INFO  Unity: ItemManager->InitItem :ItemID:1,Count:20
+2023-02-08 19:33:44,319 [ 1] INFO  Unity: ItemManager->InitItem :ItemID:2,Count:20
+2023-02-08 19:33:44,333 [ 1] INFO  Unity: GulidService->SendGulidList
+2023-02-08 19:33:44,335 [ 1] INFO  Unity: GulidService->OnGulidInfo
+2023-02-08 19:33:44,356 [ 1] INFO  Unity: MapService->OnMapCharacterEnter :Map:1 Count:2
+2023-02-08 19:33:44,359 [ 1] INFO  Unity: CharacterManager->AddCharacter:CharacterId:0 CharacterName:来聊天 MapId:1 Entity:(17:pos:(5000,4000,820),dir:(100,0,0),spd:0
+2023-02-08 19:33:44,364 [ 1] INFO  Unity: EntityManager AddEntity EntityId :17 
+2023-02-08 19:33:44,366 [ 1] INFO  Unity: CharacterManager->AddCharacter:CharacterId:0 CharacterName:天天太难 MapId:1 Entity:(13:pos:(4938,3944,799),dir:(-100,7,0),spd:0
+2023-02-08 19:33:44,368 [ 1] INFO  Unity: EntityManager AddEntity EntityId :13 
+2023-02-08 19:33:44,371 [ 1] INFO  Unity: FriendService->OnFriendList
+2023-02-08 19:33:44,373 [ 1] INFO  Unity: GulidService->OnGulidInfo
+2023-02-08 19:33:45,235 [ 1] INFO  Unity: GulidService->OnGulidList
+2023-02-08 19:33:47,466 [ 1] WARN  Unity: DontDestroyOnLoad only work for root GameObjects or components on root GameObjects.
+UnityEngine.Object:DontDestroyOnLoad(Object)
+MonoSingleton`1:Awake() (at Assets/Scripts/Utilities/MonoSingleton.cs:32)
+
+2023-02-08 19:33:47,468 [ 1] WARN  Unity: DontDestroyOnLoad only work for root GameObjects or components on root GameObjects.
+UnityEngine.Object:DontDestroyOnLoad(Object)
+MonoSingleton`1:Awake() (at Assets/Scripts/Utilities/MonoSingleton.cs:32)
+
+2023-02-08 19:33:47,469 [ 1] WARN  Unity: DontDestroyOnLoad only work for root GameObjects or components on root GameObjects.
+UnityEngine.Object:DontDestroyOnLoad(Object)
+MonoSingleton`1:Awake() (at Assets/Scripts/Utilities/MonoSingleton.cs:32)
+
+2023-02-08 19:33:47,472 [ 1] WARN  Unity: DontDestroyOnLoad only work for root GameObjects or components on root GameObjects.
+UnityEngine.Object:DontDestroyOnLoad(Object)
+MonoSingleton`1:Awake() (at Assets/Scripts/Utilities/MonoSingleton.cs:32)
+
+2023-02-08 19:33:47,549 [ 1] INFO  Unity: MinimapManager->UpdataMiniMap
+2023-02-08 19:33:47,551 [ 1] INFO  Unity: Load MiniMap Image :buluzheng
+2023-02-08 19:33:47,554 [ 1] INFO  Unity: Load MiniMap Image :buluzheng
+2023-02-08 19:33:47,561 [ 1] INFO  Unity: GameObjectManager->CreateCharacterObject CharacterId:17 CharacterName:来聊天 CharacterEntityId:17
+2023-02-08 19:33:47,624 [ 1] INFO  Unity: GameObjectManager->InitGameObject Player_character:17
+2023-02-08 19:33:47,628 [ 1] INFO  Unity: Load MiniMap Image :buluzheng
+2023-02-08 19:33:47,630 [ 1] INFO  Unity: Load MiniMap Image :buluzheng
+2023-02-08 19:33:47,826 [ 1] INFO  Unity: GameObjectManager->CreateCharacterObject CharacterId:13 CharacterName:天天太难 CharacterEntityId:13
+2023-02-08 19:33:56,576 [ 1] ERROR Unity: c:34:天天太难
+UnityEngine.Debug:LogError(Object)
+UIChat:OnchickChatLink(HyperText, LinkInfo) (at Assets/Scripts/UI/Chat/UIChat.cs:65)
+UnityEngine.Events.UnityEvent`2:Invoke(HyperText, LinkInfo)
+Candlelight.UI.HyperText:OnClickLink(Link) (at Assets/ThirdParty/Candlelight/Library/GUI/HyperText.cs:1383)
+Candlelight.UI.HyperText:OnPointerClick(PointerEventData) (at Assets/ThirdParty/Candlelight/Library/GUI/HyperText.cs:1916)
 UnityEngine.EventSystems.EventSystem:Update()
 
-2023-02-04 17:03:14,716 [ 1] ERROR Unity: DoConnect SocketException:[10061,ConnectionRefused,10061]System.Net.Sockets.SocketException: 由于目标计算机积极拒绝，无法连接。
-
-  at System.Net.Sockets.Socket.Connect (System.Net.EndPoint remoteEP, Boolean requireSocketPolicy) [0x00000] in <filename unknown>:0 
-  at System.Net.Sockets.Socket+Worker.Connect () [0x00000] in <filename unknown>:0  
-UnityEngine.Debug:LogErrorFormat(String, Object[])
-Network.NetClient:DoConnect() (at Assets/Scripts/Network/NetClient.cs:279)
-Network.NetClient:Connect(Int32) (at Assets/Scripts/Network/NetClient.cs:169)
-Services.UserService:ConnectToServer() (at Assets/Scripts/Services/UserService.cs:65)
-Services.UserService:SendLoad(String, String) (at Assets/Scripts/Services/UserService.cs:175)
-UILoad:OnClickLoad() (at Assets/Scripts/UI/UILoad.cs:71)
-UnityEngine.EventSystems.EventSystem:Update()
-
-2023-02-04 17:03:14,717 [ 1] INFO  Unity: DoConnect
-2023-02-04 17:03:14,718 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
-2023-02-04 17:03:14,719 [ 1] INFO  Unity: Connect[1] to server 127.0.0.1:8000
-
-2023-02-04 17:03:16,758 [ 1] WARN  Unity: CloseConnection(), errorCode: 1005
+2023-02-08 19:33:57,310 [ 1] INFO  Unity: 是否向[天天太难]发送组队申请
+2023-02-08 19:33:58,101 [ 1] INFO  Unity: TeamService->SendTeamInviteRequest Id:34 Name:天天太难
+2023-02-08 19:34:00,314 [ 1] INFO  Unity: FriendService->OnFriendList
+2023-02-08 19:34:00,315 [ 1] INFO  Unity: TeamService->OnTeamInfo
+2023-02-08 19:34:00,341 [ 1] INFO  Unity: FriendService->OnFriendList
+2023-02-08 19:34:00,343 [ 1] INFO  Unity: TeamService->OnTeamInviteResponse
+2023-02-08 19:34:00,344 [ 1] INFO  Unity: 组队成功
+2023-02-08 19:34:00,348 [ 1] INFO  Unity: TeamService->SendTeamInfo
+2023-02-08 19:34:00,354 [ 1] FATAL Unity: <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>{0
+{1}</format><args>{NullReferenceException: Object reference not set to an instance of an object, TabView+<Start>c__Iterator0.MoveNext () (at Assets/Scripts/UI/TabView/TabView.cs:18)
+UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) (at D:/unity/Runtime/Export/Coroutines.cs:17)
+}</args></log4net.Error>
+2023-02-08 19:34:00,455 [ 1] INFO  Unity: FriendService->OnFriendList
+2023-02-08 19:34:00,457 [ 1] INFO  Unity: TeamService->OnTeamInfo
+2023-02-08 19:34:07,861 [ 1] INFO  Unity: ChatService->SendChat Channel:Team Message:sdf
+2023-02-08 19:34:20,640 [ 1] INFO  Unity: OnDestroy NetworkManager.
+2023-02-08 19:34:20,643 [ 1] WARN  Unity: CloseConnection(), errorCode: 1007
 UnityEngine.Debug:LogWarning(Object)
 Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:180)
-Network.NetClient:DoConnect() (at Assets/Scripts/Network/NetClient.cs:277)
-Network.NetClient:Connect(Int32) (at Assets/Scripts/Network/NetClient.cs:169)
-Network.NetClient:KeepConnect() (at Assets/Scripts/Network/NetClient.cs:321)
-Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:438)
+Network.NetClient:OnDestroy() (at Assets/Scripts/Network/NetClient.cs:175)
 
-2023-02-04 17:03:16,759 [ 1] ERROR Unity: DoConnect SocketException:[10061,ConnectionRefused,10061]System.Net.Sockets.SocketException: 由于目标计算机积极拒绝，无法连接。
-
-  at System.Net.Sockets.Socket.Connect (System.Net.EndPoint remoteEP, Boolean requireSocketPolicy) [0x00000] in <filename unknown>:0 
-  at System.Net.Sockets.Socket+Worker.Connect () [0x00000] in <filename unknown>:0  
-UnityEngine.Debug:LogErrorFormat(String, Object[])
-Network.NetClient:DoConnect() (at Assets/Scripts/Network/NetClient.cs:279)
-Network.NetClient:Connect(Int32) (at Assets/Scripts/Network/NetClient.cs:169)
-Network.NetClient:KeepConnect() (at Assets/Scripts/Network/NetClient.cs:321)
-Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:438)
-
-2023-02-04 17:03:16,807 [ 1] INFO  Unity: DoConnect
-2023-02-04 17:03:16,808 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
-2023-02-04 17:03:16,809 [ 1] INFO  Unity: Connect[2] to server 127.0.0.1:8000
-
-2023-02-04 17:03:18,856 [ 1] WARN  Unity: CloseConnection(), errorCode: 1005
-UnityEngine.Debug:LogWarning(Object)
-Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:180)
-Network.NetClient:DoConnect() (at Assets/Scripts/Network/NetClient.cs:277)
-Network.NetClient:Connect(Int32) (at Assets/Scripts/Network/NetClient.cs:169)
-Network.NetClient:KeepConnect() (at Assets/Scripts/Network/NetClient.cs:321)
-Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:438)
-
-2023-02-04 17:03:18,860 [ 1] ERROR Unity: DoConnect SocketException:[10061,ConnectionRefused,10061]System.Net.Sockets.SocketException: 由于目标计算机积极拒绝，无法连接。
-
-  at System.Net.Sockets.Socket.Connect (System.Net.EndPoint remoteEP, Boolean requireSocketPolicy) [0x00000] in <filename unknown>:0 
-  at System.Net.Sockets.Socket+Worker.Connect () [0x00000] in <filename unknown>:0  
-UnityEngine.Debug:LogErrorFormat(String, Object[])
-Network.NetClient:DoConnect() (at Assets/Scripts/Network/NetClient.cs:279)
-Network.NetClient:Connect(Int32) (at Assets/Scripts/Network/NetClient.cs:169)
-Network.NetClient:KeepConnect() (at Assets/Scripts/Network/NetClient.cs:321)
-Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:438)
-
-2023-02-04 17:03:18,864 [ 1] INFO  Unity: LoadingMesager::OnGameServerConnect :1 reason:Cannot connect to server
-2023-02-04 17:03:18,869 [ 1] INFO  Unity: 结果：Failed msg:服务器断开！
- RESULT:1 ERROR:Cannot connect to server
-2023-02-04 17:03:31,639 [ 1] WARN  Unity: Assets/Scripts/Models/User.cs(9,1): warning CS0105: The using directive for `UnityEngine.Events' appeared previously in this namespace
-
-2023-02-04 17:03:31,639 [ 1] WARN  Unity: Assets/Scripts/GameObject/MainPlayerCamera.cs(10,19): warning CS0108: `MainPlayerCamera.camera' hides inherited member `UnityEngine.Component.camera'. Use the new keyword if hiding was intended
-
-2023-02-04 17:03:31,639 [ 1] WARN  Unity: Assets/Scripts/GameObject/NpcController.cs(14,25): warning CS0108: `NpcController.renderer' hides inherited member `UnityEngine.Component.renderer'. Use the new keyword if hiding was intended
-
-2023-02-04 17:03:31,640 [ 1] WARN  Unity: Assets/Scripts/GameObject/NpcController.cs(15,14): warning CS0108: `NpcController.animation' hides inherited member `UnityEngine.Component.animation'. Use the new keyword if hiding was intended
-
-2023-02-04 17:03:31,640 [ 1] WARN  Unity: Assets/Scripts/UI/CharacterEquip/Equip_attribute.cs(13,17): warning CS0108: `Equip_attribute.name' hides inherited member `UnityEngine.Object.name'. Use the new keyword if hiding was intended
-
-2023-02-04 17:03:31,640 [ 1] WARN  Unity: Assets/Scripts/UI/Friend/UIFriendItem.cs(10,17): warning CS0108: `UIFriendItem.name' hides inherited member `UnityEngine.Object.name'. Use the new keyword if hiding was intended
-
-2023-02-04 17:03:31,640 [ 1] WARN  Unity: Assets/Scripts/UI/Gulid/UICreatGulid.cs(19,23): warning CS0108: `UICreatGulid.name' hides inherited member `UnityEngine.Object.name'. Use the new keyword if hiding was intended
-
-2023-02-04 17:03:31,640 [ 1] WARN  Unity: Assets/Scripts/UI/Gulid/UIGulidApplyItem.cs(13,17): warning CS0108: `UIGulidApplyItem.name' hides inherited member `UnityEngine.Object.name'. Use the new keyword if hiding was intended
-
-2023-02-04 17:03:31,640 [ 1] WARN  Unity: Assets/Scripts/UI/Gulid/UIGulidCItem.cs(16,17): warning CS0108: `UIGulidCItem.name' hides inherited member `UnityEngine.Object.name'. Use the new keyword if hiding was intended
-
-2023-02-04 17:03:31,641 [ 1] WARN  Unity: Assets/Scripts/UI/Team/UITeamItem.cs(12,17): warning CS0108: `UITeamItem.name' hides inherited member `UnityEngine.Object.name'. Use the new keyword if hiding was intended
-
-2023-02-04 17:03:31,641 [ 1] WARN  Unity: Assets/Scripts/UI/UICharInfo.cs(22,17): warning CS0108: `UICharInfo.name' hides inherited member `UnityEngine.Object.name'. Use the new keyword if hiding was intended
-
-2023-02-04 17:03:31,641 [ 1] WARN  Unity: Assets/Scripts/normal/GameDataManage.cs(31,26): warning CS0168: The variable `e' is declared but never used
-
-2023-02-04 17:03:31,642 [ 1] WARN  Unity: Assets/Scripts/GameObject/EntityController.cs(20,16): warning CS0649: Field `EntityController.rotation' is never assigned to, and will always have its default value
-
-2023-02-04 17:03:31,642 [ 1] WARN  Unity: Assets/Scripts/GameObject/EntityController.cs(23,16): warning CS0414: The private field `EntityController.lastRotation' is assigned but its value is never used
-
-2023-02-04 17:03:31,642 [ 1] WARN  Unity: Assets/Scripts/GameObject/PlayerInputController.cs(161,11): warning CS0414: The private field `PlayerInputController.lastSync' is assigned but its value is never used
-
-2023-02-04 17:03:31,642 [ 1] WARN  Unity: Assets/Scripts/Models/User.cs(62,40): warning CS0649: Field `Models.User.CurrentCharacterObject_Set_Action' is never assigned to, and will always have its default value `null'
-
-2023-02-04 17:03:31,642 [ 1] WARN  Unity: Assets/Scripts/Services/UserService.cs(20,63): warning CS0649: Field `Services.UserService.OnGameEnter' is never assigned to, and will always have its default value `null'
-
-2023-02-04 17:03:31,642 [ 1] WARN  Unity: Assets/Scripts/Services/UserService.cs(21,63): warning CS0649: Field `Services.UserService.OnGameLeave' is never assigned to, and will always have its default value `null'
-
-2023-02-04 17:03:31,643 [ 1] WARN  Unity: Assets/Scripts/UI/UICharacterSelect.cs(15,20): warning CS0414: The private field `UICharacterSelect.charClass' is assigned but its value is never used
-
-2023-02-04 17:03:31,643 [ 1] WARN  Unity: Assets/Scripts/UI/UIQuest/UIQuestDialog.cs(15,21): warning CS0649: Field `Assets.Scripts.UI.UIQuest.UIQuestDialog.questName' is never assigned to, and will always have its default value `null'
-
-2023-02-04 17:03:31,643 [ 1] WARN  Unity: Assets/Scripts/UI/UIQuest/UIQuestStatus.cs(11,28): warning CS0414: The private field `UIQuestStatus.questStatus' is assigned but its value is never used
-
-2023-02-04 17:03:31,643 [ 1] WARN  Unity: Assets/Editor/MapTools.cs(24,30): warning CS0219: The variable `allteleportObjects' is assigned but its value is never used
-
+2023-02-08 19:34:20,657 [ 1] FATAL Unity: <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>{0
+{1}</format><args>{NullReferenceException: Object reference not set to an instance of an object, UIChat.OnDestroy () (at Assets/Scripts/UI/Chat/UIChat.cs:37)
+}</args></log4net.Error>
+2023-02-08 19:34:20,668 [ 1] INFO  Unity: Entity Character_17_来聊天 OnDestroy :ID:17 POS:(5000, 4000, 820) DIR:(100, 0, 0) SPD:0 
+2023-02-08 19:34:20,671 [ 1] INFO  Unity: Entity Character_13_天天太难 OnDestroy :ID:13 POS:(4938, 3944, 799) DIR:(-100, 7, 0) SPD:0 

@@ -23,7 +23,7 @@ public class TabView : MonoBehaviour {
     }
 
 
-    public void SelectTab(int index)
+    public void SelectTab(int index,bool action=true)
     {
         if (this.index != index)
         {
@@ -38,8 +38,9 @@ public class TabView : MonoBehaviour {
                     tabPages[i].SetActive(i == index);
             }
 
-            if (OnTabSelect != null)
-                OnTabSelect(index);
+            if (action)
+                if (OnTabSelect != null)
+                    OnTabSelect(index);
         }
     }
 }

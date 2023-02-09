@@ -1,175 +1,67 @@
-2023-02-04 17:43:59,116 [ 1] INFO  Unity: LoadingManager start
-2023-02-04 17:44:03,367 [ 1] INFO  Unity: DataManager > DataManager()
-2023-02-04 17:44:03,458 [ 1] INFO  Unity: MapDefine.txt
-2023-02-04 17:44:03,473 [ 1] INFO  Unity: CharacterDefine.txt
-2023-02-04 17:44:03,502 [ 1] INFO  Unity: TeleporterDefine.txt
-2023-02-04 17:44:03,512 [ 1] INFO  Unity: SpawnPointDefine.txt
-2023-02-04 17:44:03,528 [ 1] INFO  Unity: NpcDefine.txt
-2023-02-04 17:44:03,546 [ 1] INFO  Unity: ItemDefine.txt
-2023-02-04 17:44:12,745 [ 1] INFO  Unity: UserService->SendLoad: User:3 Password:3
-2023-02-04 17:44:12,747 [ 1] INFO  Unity: ConnectToServer() Start 
-2023-02-04 17:44:12,748 [ 1] INFO  Unity: DoConnect
-2023-02-04 17:44:12,751 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
-2023-02-04 17:44:12,755 [ 1] INFO  Unity: Connect[0] to server 127.0.0.1:8000
+2023-02-08 20:08:19,070 [ 1] INFO  Unity: LoadingManager start
+2023-02-08 20:08:23,422 [ 1] INFO  Unity: DataManager > DataManager()
+2023-02-08 20:08:23,572 [ 1] INFO  Unity: MapDefine.txt
+2023-02-08 20:08:23,594 [ 1] INFO  Unity: CharacterDefine.txt
+2023-02-08 20:08:23,620 [ 1] INFO  Unity: TeleporterDefine.txt
+2023-02-08 20:08:23,636 [ 1] INFO  Unity: SpawnPointDefine.txt
+2023-02-08 20:08:23,658 [ 1] INFO  Unity: NpcDefine.txt
+2023-02-08 20:08:23,689 [ 1] INFO  Unity: ItemDefine.txt
+2023-02-08 20:08:32,767 [ 1] INFO  Unity: UserService->SendLoad: User:5 Password:5
+2023-02-08 20:08:32,769 [ 1] INFO  Unity: ConnectToServer() Start 
+2023-02-08 20:08:32,772 [ 1] INFO  Unity: DoConnect
+2023-02-08 20:08:32,775 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
+2023-02-08 20:08:32,778 [ 1] INFO  Unity: Connect[0] to server 127.0.0.1:8000
 
-2023-02-04 17:44:14,796 [ 1] WARN  Unity: CloseConnection(), errorCode: 1005
-UnityEngine.Debug:LogWarning(Object)
-Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:180)
-Network.NetClient:DoConnect() (at Assets/Scripts/Network/NetClient.cs:277)
-Network.NetClient:Connect(Int32) (at Assets/Scripts/Network/NetClient.cs:169)
-Services.UserService:ConnectToServer() (at Assets/Scripts/Services/UserService.cs:65)
-Services.UserService:SendLoad(String, String) (at Assets/Scripts/Services/UserService.cs:175)
-UILoad:OnClickLoad() (at Assets/Scripts/UI/UILoad.cs:71)
-UnityEngine.EventSystems.EventSystem:Update()
-
-2023-02-04 17:44:14,802 [ 1] ERROR Unity: DoConnect SocketException:[10061,ConnectionRefused,10061]System.Net.Sockets.SocketException: 由于目标计算机积极拒绝，无法连接。
-
-  at System.Net.Sockets.Socket.Connect (System.Net.EndPoint remoteEP, Boolean requireSocketPolicy) [0x00000] in <filename unknown>:0 
-  at System.Net.Sockets.Socket+Worker.Connect () [0x00000] in <filename unknown>:0  
-UnityEngine.Debug:LogErrorFormat(String, Object[])
-Network.NetClient:DoConnect() (at Assets/Scripts/Network/NetClient.cs:279)
-Network.NetClient:Connect(Int32) (at Assets/Scripts/Network/NetClient.cs:169)
-Services.UserService:ConnectToServer() (at Assets/Scripts/Services/UserService.cs:65)
-Services.UserService:SendLoad(String, String) (at Assets/Scripts/Services/UserService.cs:175)
-UILoad:OnClickLoad() (at Assets/Scripts/UI/UILoad.cs:71)
-UnityEngine.EventSystems.EventSystem:Update()
-
-2023-02-04 17:44:14,803 [ 1] INFO  Unity: DoConnect
-2023-02-04 17:44:14,804 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
-2023-02-04 17:44:14,805 [ 1] INFO  Unity: Connect[1] to server 127.0.0.1:8000
-
-2023-02-04 17:44:16,861 [ 1] WARN  Unity: CloseConnection(), errorCode: 1005
-UnityEngine.Debug:LogWarning(Object)
-Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:180)
-Network.NetClient:DoConnect() (at Assets/Scripts/Network/NetClient.cs:277)
-Network.NetClient:Connect(Int32) (at Assets/Scripts/Network/NetClient.cs:169)
-Network.NetClient:KeepConnect() (at Assets/Scripts/Network/NetClient.cs:321)
-Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:438)
-
-2023-02-04 17:44:16,863 [ 1] ERROR Unity: DoConnect SocketException:[10061,ConnectionRefused,10061]System.Net.Sockets.SocketException: 由于目标计算机积极拒绝，无法连接。
-
-  at System.Net.Sockets.Socket.Connect (System.Net.EndPoint remoteEP, Boolean requireSocketPolicy) [0x00000] in <filename unknown>:0 
-  at System.Net.Sockets.Socket+Worker.Connect () [0x00000] in <filename unknown>:0  
-UnityEngine.Debug:LogErrorFormat(String, Object[])
-Network.NetClient:DoConnect() (at Assets/Scripts/Network/NetClient.cs:279)
-Network.NetClient:Connect(Int32) (at Assets/Scripts/Network/NetClient.cs:169)
-Network.NetClient:KeepConnect() (at Assets/Scripts/Network/NetClient.cs:321)
-Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:438)
-
-2023-02-04 17:44:16,909 [ 1] INFO  Unity: DoConnect
-2023-02-04 17:44:16,910 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
-2023-02-04 17:44:16,911 [ 1] INFO  Unity: Connect[2] to server 127.0.0.1:8000
-
-2023-02-04 17:44:18,939 [ 1] WARN  Unity: CloseConnection(), errorCode: 1005
-UnityEngine.Debug:LogWarning(Object)
-Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:180)
-Network.NetClient:DoConnect() (at Assets/Scripts/Network/NetClient.cs:277)
-Network.NetClient:Connect(Int32) (at Assets/Scripts/Network/NetClient.cs:169)
-Network.NetClient:KeepConnect() (at Assets/Scripts/Network/NetClient.cs:321)
-Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:438)
-
-2023-02-04 17:44:18,940 [ 1] ERROR Unity: DoConnect SocketException:[10061,ConnectionRefused,10061]System.Net.Sockets.SocketException: 由于目标计算机积极拒绝，无法连接。
-
-  at System.Net.Sockets.Socket.Connect (System.Net.EndPoint remoteEP, Boolean requireSocketPolicy) [0x00000] in <filename unknown>:0 
-  at System.Net.Sockets.Socket+Worker.Connect () [0x00000] in <filename unknown>:0  
-UnityEngine.Debug:LogErrorFormat(String, Object[])
-Network.NetClient:DoConnect() (at Assets/Scripts/Network/NetClient.cs:279)
-Network.NetClient:Connect(Int32) (at Assets/Scripts/Network/NetClient.cs:169)
-Network.NetClient:KeepConnect() (at Assets/Scripts/Network/NetClient.cs:321)
-Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:438)
-
-2023-02-04 17:44:18,942 [ 1] INFO  Unity: LoadingMesager::OnGameServerConnect :1 reason:Cannot connect to server
-2023-02-04 17:44:18,944 [ 1] INFO  Unity: 结果：Failed msg:服务器断开！
- RESULT:1 ERROR:Cannot connect to server
-2023-02-04 17:45:40,744 [ 1] INFO  Unity: UserService->SendLoad: User:3 Password:3
-2023-02-04 17:45:40,745 [ 1] INFO  Unity: ConnectToServer() Start 
-2023-02-04 17:45:40,747 [ 1] INFO  Unity: DoConnect
-2023-02-04 17:45:40,748 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
-2023-02-04 17:45:40,750 [ 1] INFO  Unity: Connect[3] to server 127.0.0.1:8000
-
-2023-02-04 17:45:40,751 [ 1] INFO  Unity: LoadingMesager::OnGameServerConnect :0 reason:Success
-2023-02-04 17:45:41,745 [ 1] INFO  Unity: UserService->OnUserLoad:Success [None]
-2023-02-04 17:45:45,783 [ 1] INFO  Unity: Select Character:[19]二人[Archer] 
-2023-02-04 17:45:47,300 [ 1] INFO  Unity: Select Character:[24]12333[Wizard] 
-2023-02-04 17:45:53,243 [ 1] INFO  Unity: creat character: class:Archer  name:fffa
-2023-02-04 17:45:53,244 [ 1] INFO  Unity: UserService->SendCharacterCreate: CharacterName :fffa Class:Archer
-2023-02-04 17:45:53,947 [ 1] INFO  Unity: UserService->OnUserCharacterCreate:Success [None]
-2023-02-04 17:45:53,949 [ 1] INFO  Unity: 角色创建成功
-2023-02-04 17:45:55,236 [ 1] INFO  Unity: Select Character:[27]fffa[Archer] 
-2023-02-04 17:45:55,543 [ 1] INFO  Unity: 进入游戏
-2023-02-04 17:45:56,168 [ 1] INFO  Unity: UserService->SendCharacterEnter: EnterCharacterID :0 EnterCharacterName:fffa EnterCharacter_Idx
-2023-02-04 17:45:56,211 [ 1] INFO  Unity: UserService->OnUserGameEnter:Success [None]
-2023-02-04 17:45:56,213 [ 1] INFO  Unity: ItemManager->InitItem :ItemID:1,Count:20
-2023-02-04 17:45:56,215 [ 1] INFO  Unity: ItemManager->InitItem :ItemID:2,Count:20
-2023-02-04 17:45:56,217 [ 1] INFO  Unity: BagService->SendBagSave
-2023-02-04 17:45:56,228 [ 1] INFO  Unity: GulidService->SendGulidList
-2023-02-04 17:45:56,231 [ 1] INFO  Unity: MapService->OnMapCharacterEnter :Map:1 Count:1
-2023-02-04 17:45:56,233 [ 1] INFO  Unity: CharacterManager->AddCharacter:CharacterId:0 CharacterName:fffa MapId:1 Entity:(9:pos:(5000,4000,820),dir:(100,0,0),spd:0
-2023-02-04 17:45:56,236 [ 1] INFO  Unity: EntityManager AddEntity EntityId :9 
-2023-02-04 17:45:57,169 [ 1] INFO  Unity: BagService->OnBagSave
-2023-02-04 17:45:57,194 [ 1] INFO  Unity: GulidService->OnGulidList
-2023-02-04 17:45:59,298 [ 1] WARN  Unity: DontDestroyOnLoad only work for root GameObjects or components on root GameObjects.
+2023-02-08 20:08:32,783 [ 1] INFO  Unity: LoadingMesager::OnGameServerConnect :0 reason:Success
+2023-02-08 20:08:32,966 [ 1] INFO  Unity: UserService->OnUserLoad:Success [None]
+2023-02-08 20:08:37,420 [ 1] INFO  Unity: Select Character:[33]来聊天[Wizard] 
+2023-02-08 20:08:37,918 [ 1] INFO  Unity: 进入游戏
+2023-02-08 20:08:38,592 [ 1] INFO  Unity: UserService->SendCharacterEnter: EnterCharacterID :0 EnterCharacterName:来聊天 EnterCharacter_Idx
+2023-02-08 20:08:38,671 [ 1] INFO  Unity: UserService->OnUserGameEnter:Success [None]
+2023-02-08 20:08:38,674 [ 1] INFO  Unity: ItemManager->InitItem :ItemID:1,Count:20
+2023-02-08 20:08:38,675 [ 1] INFO  Unity: ItemManager->InitItem :ItemID:2,Count:20
+2023-02-08 20:08:38,686 [ 1] INFO  Unity: GulidService->SendGulidList
+2023-02-08 20:08:38,687 [ 1] INFO  Unity: GulidService->OnGulidInfo
+2023-02-08 20:08:38,706 [ 1] INFO  Unity: MapService->OnMapCharacterEnter :Map:1 Count:2
+2023-02-08 20:08:38,710 [ 1] INFO  Unity: CharacterManager->AddCharacter:CharacterId:0 CharacterName:来聊天 MapId:1 Entity:(22:pos:(5000,4000,820),dir:(100,0,0),spd:0
+2023-02-08 20:08:38,712 [ 1] INFO  Unity: EntityManager AddEntity EntityId :22 
+2023-02-08 20:08:38,714 [ 1] INFO  Unity: CharacterManager->AddCharacter:CharacterId:0 CharacterName:天天太难 MapId:1 Entity:(13:pos:(4938,3944,799),dir:(-100,7,0),spd:0
+2023-02-08 20:08:38,716 [ 1] INFO  Unity: EntityManager AddEntity EntityId :13 
+2023-02-08 20:08:38,718 [ 1] INFO  Unity: FriendService->OnFriendList
+2023-02-08 20:08:38,719 [ 1] INFO  Unity: GulidService->OnGulidInfo
+2023-02-08 20:08:39,839 [ 1] INFO  Unity: GulidService->OnGulidList
+2023-02-08 20:08:41,967 [ 1] WARN  Unity: DontDestroyOnLoad only work for root GameObjects or components on root GameObjects.
 UnityEngine.Object:DontDestroyOnLoad(Object)
 MonoSingleton`1:Awake() (at Assets/Scripts/Utilities/MonoSingleton.cs:32)
 
-2023-02-04 17:45:59,301 [ 1] WARN  Unity: DontDestroyOnLoad only work for root GameObjects or components on root GameObjects.
+2023-02-08 20:08:41,970 [ 1] WARN  Unity: DontDestroyOnLoad only work for root GameObjects or components on root GameObjects.
 UnityEngine.Object:DontDestroyOnLoad(Object)
 MonoSingleton`1:Awake() (at Assets/Scripts/Utilities/MonoSingleton.cs:32)
 
-2023-02-04 17:45:59,302 [ 1] WARN  Unity: DontDestroyOnLoad only work for root GameObjects or components on root GameObjects.
+2023-02-08 20:08:41,971 [ 1] WARN  Unity: DontDestroyOnLoad only work for root GameObjects or components on root GameObjects.
 UnityEngine.Object:DontDestroyOnLoad(Object)
 MonoSingleton`1:Awake() (at Assets/Scripts/Utilities/MonoSingleton.cs:32)
 
-2023-02-04 17:45:59,304 [ 1] WARN  Unity: DontDestroyOnLoad only work for root GameObjects or components on root GameObjects.
+2023-02-08 20:08:41,972 [ 1] WARN  Unity: DontDestroyOnLoad only work for root GameObjects or components on root GameObjects.
 UnityEngine.Object:DontDestroyOnLoad(Object)
 MonoSingleton`1:Awake() (at Assets/Scripts/Utilities/MonoSingleton.cs:32)
 
-2023-02-04 17:45:59,369 [ 1] INFO  Unity: MinimapManager->UpdataMiniMap
-2023-02-04 17:45:59,370 [ 1] INFO  Unity: Load MiniMap Image :buluzheng
-2023-02-04 17:45:59,377 [ 1] INFO  Unity: Load MiniMap Image :buluzheng
-2023-02-04 17:45:59,381 [ 1] INFO  Unity: GameObjectManager->CreateCharacterObject CharacterId:9 CharacterName:fffa CharacterEntityId:9
-2023-02-04 17:45:59,445 [ 1] INFO  Unity: GameObjectManager->InitGameObject Player_character:9
-2023-02-04 17:45:59,446 [ 1] INFO  Unity: Load MiniMap Image :buluzheng
-2023-02-04 17:45:59,447 [ 1] INFO  Unity: Load MiniMap Image :buluzheng
-2023-02-04 17:46:01,440 [ 1] INFO  Unity: SetDirection:(0, 100, 0)
-2023-02-04 17:46:01,441 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:9 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2023-02-04 17:46:01,442 [ 1] INFO  Unity: MoveForward
-2023-02-04 17:46:01,445 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:9 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:300
-2023-02-04 17:46:01,717 [ 1] INFO  Unity: Stop
-2023-02-04 17:46:01,719 [ 1] INFO  Unity: MapService->SendMapEntitySync EntityId:9 Pos:SkillBridge.Message.NVector3 Dir:SkillBridge.Message.NVector3,Spd:0
-2023-02-04 17:46:07,117 [ 1] INFO  Unity: MapService->OnMapCharacterEnter :Map:1 Count:1
-2023-02-04 17:46:07,118 [ 1] INFO  Unity: CharacterManager->AddCharacter:CharacterId:0 CharacterName:55555 MapId:1 Entity:(10:pos:(5000,4000,820),dir:(100,0,0),spd:0
-2023-02-04 17:46:07,118 [ 1] INFO  Unity: EntityManager AddEntity EntityId :10 
-2023-02-04 17:46:07,119 [ 1] INFO  Unity: GameObjectManager->CreateCharacterObject CharacterId:10 CharacterName:55555 CharacterEntityId:10
-2023-02-04 17:46:10,455 [ 1] INFO  Unity: EntityController->OnEntityChanaged Id:10 POS:(5003, 3996, 820) Dir:(68, -73, 0),Speed:300
-2023-02-04 17:46:10,459 [ 1] INFO  Unity: MapService->OnMapEntitySync :Entitys:1
-EntityID:10  Enent:None Entity:None
-2023-02-04 17:46:10,478 [ 1] INFO  Unity: EntityController->OnEntityChanaged Id:10 POS:(5006, 3992, 820) Dir:(66, -75, 0),Speed:300
-2023-02-04 17:46:10,480 [ 1] INFO  Unity: MapService->OnMapEntitySync :Entitys:1
-EntityID:10  Enent:MoveFwd Entity:MoveFwd
-2023-02-04 17:46:10,678 [ 1] INFO  Unity: EntityController->OnEntityChanaged Id:10 POS:(5042, 3944, 820) Dir:(63, -78, 0),Speed:0
-2023-02-04 17:46:10,679 [ 1] INFO  Unity: MapService->OnMapEntitySync :Entitys:1
-EntityID:10  Enent:Idle Entity:Idle
-2023-02-04 17:46:42,916 [ 1] INFO  Unity: GulidService->SendGulidList
-2023-02-04 17:46:43,004 [ 1] INFO  Unity: GulidService->OnGulidList
-2023-02-04 17:46:56,154 [ 1] INFO  Unity: GulidService->SendGulidCreat
-2023-02-04 17:46:57,814 [ 1] INFO  Unity: GulidService->SendGulidCreat
-2023-02-04 17:48:04,916 [ 1] INFO  Unity: ProcessReceive exception:System.Net.Sockets.SocketException: 远程主机强迫关闭了一个现有的连接。
-
-  at System.Net.Sockets.Socket.Receive (System.Byte[] buffer, Int32 offset, Int32 size, SocketFlags flags) [0x00000] in <filename unknown>:0 
-  at Network.NetClient.ProcessRecv () [0x00084] in E:\极世界MMORPG\mymmo\Src\Client\Assets\Scripts\Network\NetClient.cs:346 
-
-2023-02-04 17:48:04,917 [ 1] WARN  Unity: CloseConnection(), errorCode: 1001
-UnityEngine.Debug:LogWarning(Object)
-Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:180)
-Network.NetClient:ProcessRecv() (at Assets/Scripts/Network/NetClient.cs:360)
-Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:440)
-
-2023-02-04 17:50:39,686 [ 1] INFO  Unity: Entity Character_9_fffa OnDestroy :ID:9 POS:(5000, 4085, 820) DIR:(0, 100, 0) SPD:0 
-2023-02-04 17:50:39,688 [ 1] INFO  Unity: Entity Character_10_55555 OnDestroy :ID:10 POS:(5042, 3944, 820) DIR:(63, -78, 0) SPD:0 
-2023-02-04 17:50:39,691 [ 1] INFO  Unity: OnDestroy NetworkManager.
-2023-02-04 17:50:39,693 [ 1] WARN  Unity: CloseConnection(), errorCode: 1007
+2023-02-08 20:08:42,042 [ 1] INFO  Unity: MinimapManager->UpdataMiniMap
+2023-02-08 20:08:42,044 [ 1] INFO  Unity: Load MiniMap Image :buluzheng
+2023-02-08 20:08:42,053 [ 1] INFO  Unity: Load MiniMap Image :buluzheng
+2023-02-08 20:08:42,056 [ 1] INFO  Unity: GameObjectManager->CreateCharacterObject CharacterId:22 CharacterName:来聊天 CharacterEntityId:22
+2023-02-08 20:08:42,120 [ 1] INFO  Unity: GameObjectManager->InitGameObject Player_character:22
+2023-02-08 20:08:42,124 [ 1] INFO  Unity: Load MiniMap Image :buluzheng
+2023-02-08 20:08:42,126 [ 1] INFO  Unity: Load MiniMap Image :buluzheng
+2023-02-08 20:08:42,320 [ 1] INFO  Unity: GameObjectManager->CreateCharacterObject CharacterId:13 CharacterName:天天太难 CharacterEntityId:13
+2023-02-08 20:10:25,793 [ 1] FATAL Unity: <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>{0
+{1}</format><args>{NullReferenceException: Object reference not set to an instance of an object, UIChat.OnDestroy () (at Assets/Scripts/UI/Chat/UIChat.cs:39)
+}</args></log4net.Error>
+2023-02-08 20:10:25,806 [ 1] INFO  Unity: OnDestroy NetworkManager.
+2023-02-08 20:10:25,808 [ 1] WARN  Unity: CloseConnection(), errorCode: 1007
 UnityEngine.Debug:LogWarning(Object)
 Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:180)
 Network.NetClient:OnDestroy() (at Assets/Scripts/Network/NetClient.cs:175)
 
+2023-02-08 20:10:25,823 [ 1] INFO  Unity: Entity Character_22_来聊天 OnDestroy :ID:22 POS:(5000, 4000, 820) DIR:(100, 0, 0) SPD:0 
+2023-02-08 20:10:25,825 [ 1] INFO  Unity: Entity Character_13_天天太难 OnDestroy :ID:13 POS:(4938, 3944, 799) DIR:(-100, 7, 0) SPD:0 

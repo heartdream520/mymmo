@@ -38,6 +38,7 @@ namespace GameServer.Managers
                 if(team.members.Count==0)
                 {
                     team.AddMember(leader);
+                    ChatManager.Instance.Team[team.id].Clear();
                     return team;
                 }
             }

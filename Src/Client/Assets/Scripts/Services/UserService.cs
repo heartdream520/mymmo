@@ -23,6 +23,7 @@ namespace Services
         //消息队列
         NetMessage pendingMessage = null;
         bool connected = false;
+        private bool exitGame;
 
         public UserService()
         {
@@ -209,7 +210,10 @@ namespace Services
             var cha = User.Instance.Info.Player.Characters[idx];
             Debug.LogFormat("UserService->SendCharacterEnter: EnterCharacterID :{0} EnterCharacterName:{1} EnterCharacter_Idx",
                 cha.EnityId, cha.Name,idx);
-            
+
+            ChatManager.Instance.Init();
+
+
             //发送消息到服务器
             NetMessage message = new NetMessage();
             message.Request = new NetMessageRequest();
@@ -227,8 +231,9 @@ namespace Services
                 this.ConnectToServer();
             }
         }
-        public void SendCharacterLeave()
+        public void SendCharacterLeave(bool exitGame=false)
         {
+            this.exitGame = exitGame;
             NCharacterInfo cha = User.Instance.CurrentCharacter;
             Debug.LogFormat("UserService->SendCharacterLeave: LeaveCharacterID :{0} LeaveCharacterName:{1}", 
                 cha.EnityId,cha.Name);
@@ -336,6 +341,14 @@ namespace Services
             Debug.LogFormat("UserService->OnUserGameLeave:{0} [{1}]", response.Result, response.Errormsg);
             MapService.Instance.CurrentMapId = 0;
             User.Instance.CurrentCharacter = null;
+            if(this.exitGame)
+            {
+#if UNITY_EDITOR
+                UnityEditor.EditorApplication.isPlaying = false;
+#else
+                Application.Quit();
+#endif
+            }
         }
     }
 }

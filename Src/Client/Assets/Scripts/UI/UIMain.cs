@@ -93,8 +93,10 @@ public class UIMain : MonoSingleton<UIMain> {
             if (go != null)
                 go.GetComponent<UITeam>().OnClick_Close();
         }
-
-
+    }
+    public void OnchickSetButton()
+    {
+        UIManager.Instance.Show<UISet>();
     }
 
 }

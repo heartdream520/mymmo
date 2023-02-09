@@ -62,8 +62,7 @@ public class LoadingManager : MonoBehaviour {
         FriendService.Instance.Init();
         TeamService.Instance.Init();
         GulidService.Instance.Init();
-        //ShopManager.Instance.Init();
-        //ChatService.Instance.Init();
+        ChatService.Instance.Init();
         //SoundManager.Instance.PlayMusic(SoundDefine.Music_Login);
         // Fake Loading Simulate
         for (float i = 0; i < 1;)

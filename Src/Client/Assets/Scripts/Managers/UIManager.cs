@@ -39,6 +39,11 @@ public class UIManager : Singleton<UIManager>{
         this.UIResources.Add(typeof(UIGulidList), new UIElement() { Resources = "UI/Gulid/UIGulidList", Cache = false, is_shop = true });
         this.UIResources.Add(typeof(UINoGulid), new UIElement() { Resources = "UI/Gulid/UINoGulid", Cache = false, is_shop = true });
         this.UIResources.Add(typeof(UIGulidApplies), new UIElement() { Resources = "UI/Gulid/UIGulidApplies", Cache = false, is_shop = true });
+
+        this.UIResources.Add(typeof(UISet), new UIElement() { Resources = "UI/Set/UISet", Cache = false, is_shop = true });
+
+        this.UIResources.Add(typeof(UIChat), new UIElement() { Resources = "UI/Chat/UIChat", Cache = false, is_shop = true });
+        this.UIResources.Add(typeof(UIPopCharMenu), new UIElement() { Resources = "UI/Menu/UIPopCharMenu", Cache = false, is_shop = true });
         User.Instance.CurrentCharacter_Set_Action += () =>
           {
               this.UIcnt = 0;

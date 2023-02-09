@@ -41,7 +41,7 @@ namespace GameServer
 
             TeamService.Instance.Init();
             GulidService.Instance.Init();
-
+            ChatService.Instance.Init();
             thread = new Thread(new ThreadStart(this.Update));
             //StatusManager.thread = new Thread(new ThreadStart(this.Update));
             return true;

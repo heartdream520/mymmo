@@ -23,7 +23,7 @@ public class UIFriendItem :ListView.ListViewItem
     
     private bool bg_is_app;
     [HideInInspector]
-    public NFriendInfo friendInfo;
+    public NFriendInfo info;
     private void Start()
     {
         this.normalBg = backGround.sprite;
@@ -47,7 +47,7 @@ public class UIFriendItem :ListView.ListViewItem
             this.backGround.color = disApplerColor;
         }
 
-        this.friendInfo = info;
+        this.info = info;
         listView.AddItem(this);
         if (this.name != null) this.name.text = info.friendInfo.Name;
         if (this.level != null) this.level.text = info.friendInfo.Level.ToString();

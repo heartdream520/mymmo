@@ -58,11 +58,11 @@ public class UIFriend : UIWindow
             MessageBox.Show("请选择要删除的好友");
             return;
         }
-        var box = MessageBox.Show(string.Format("确定要删除好友 {0} 吗？", selectedItem.friendInfo.friendInfo.Name),
+        var box = MessageBox.Show(string.Format("确定要删除好友 {0} 吗？", selectedItem.info.friendInfo.Name),
             "删除好友", MessageBoxType.Confirm, "确定", "取消");
         box.OnYes += () =>
           {
-              FriendService.Instance.SendFriendRemoveRequest(selectedItem.friendInfo.Id, selectedItem.friendInfo.friendInfo.Id);
+              FriendService.Instance.SendFriendRemoveRequest(selectedItem.info.Id, selectedItem.info.friendInfo.Id);
           }; 
     }
     public void OnchickAddFriendButton()
@@ -71,7 +71,13 @@ public class UIFriend : UIWindow
     }
     public void OnchickFriendChatButton()
     {
-        MessageBox.Show("功能暂未开放");
+        if (this.selectedItem == null)
+        {
+            MessageBox.Show("请选择要进行聊天的好友");
+            return;
+        }
+        ChatManager.Instance.privateId = this.selectedItem.info.friendInfo.Id;
+        ChatManager.Instance.privateName = this.selectedItem.info.friendInfo.Name;
     }
     public void OnchickFriendTeamInviteButton()
     {
@@ -80,15 +86,15 @@ public class UIFriend : UIWindow
             MessageBox.Show("请选择要邀请组队的好友");
             return;
         }
-        if(selectedItem.friendInfo.Status==0)
+        if(selectedItem.info.Status==0)
         {
             MessageBox.Show("请选择在线的好友");
             return;
         }
-        var box = MessageBox.Show(string.Format("确定要邀请[{0}]加入队伍吗？", selectedItem.friendInfo.friendInfo.Name), "组队邀请", MessageBoxType.Confirm);
+        var box = MessageBox.Show(string.Format("确定要邀请[{0}]加入队伍吗？", selectedItem.info.friendInfo.Name), "组队邀请", MessageBoxType.Confirm);
         box.OnYes = () =>
           {
-              TeamService.Instance.SendTeamInviteRequest(selectedItem.friendInfo.friendInfo.Id, selectedItem.friendInfo.friendInfo.Name);
+              TeamService.Instance.SendTeamInviteRequest(selectedItem.info.friendInfo.Id, selectedItem.info.friendInfo.Name);
           };
     }
 

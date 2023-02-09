@@ -45,6 +45,7 @@ namespace Network
             if (message.gulidLeave != null) { MessageDistributer<T>.Instance.RaiseEvent(sender, message.gulidLeave); }   
             if (message.gulidList != null) { MessageDistributer<T>.Instance.RaiseEvent(sender, message.gulidList); }   
             if (message.gulidAdmin != null) { MessageDistributer<T>.Instance.RaiseEvent(sender, message.gulidAdmin); }   
+            if (message.Chat != null) { MessageDistributer<T>.Instance.RaiseEvent(sender, message.Chat); }   
             
 
         }
@@ -91,6 +92,9 @@ namespace Network
             if (message.gulidLeave != null) { MessageDistributer<T>.Instance.RaiseEvent(sender, message.gulidLeave); }
             if (message.gulidList != null) { MessageDistributer<T>.Instance.RaiseEvent(sender, message.gulidList); }
             if (message.gulidAdmin != null) { MessageDistributer<T>.Instance.RaiseEvent(sender, message.gulidAdmin); }
+
+            if (message.Chat != null) { MessageDistributer<T>.Instance.RaiseEvent(sender, message.Chat); }
+
         }
     }
 }
