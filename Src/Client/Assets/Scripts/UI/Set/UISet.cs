@@ -19,6 +19,12 @@ public class UISet : UIWindow {
     }
     public void OnchickExitGame()
     {
+        
         UserService.Instance.SendCharacterLeave(true);
+    }
+    public void OnchickMusicSet()
+    {
+        this.OnClick_Close();
+        UIManager.Instance.Show<UIMusicSet>();
     }
 }

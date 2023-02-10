@@ -92,8 +92,10 @@ namespace Services
             {
                 MapDefine map = DataManager.Instance.Maps[mapId];
                 User.Instance.CurrentMapData = map;
-                MySceneManager.Instance.LoadScene(map.Resource);
+                MySceneManager.Instance.LoadScene(map.Resource,map);
+
                 
+
             }
             else
                 Debug.LogErrorFormat("EnterMap: Map {0} not existed", mapId);

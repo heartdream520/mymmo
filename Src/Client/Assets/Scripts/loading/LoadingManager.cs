@@ -3,6 +3,7 @@ using UnityEngine;
 using Services;
 using Assets.Scripts.Service;
 using Assets.Scripts.Services;
+using Assets.Scripts.UI.Set;
 //using Managers;
 
 public class LoadingManager : MonoBehaviour {
@@ -36,8 +37,8 @@ public class LoadingManager : MonoBehaviour {
         UITips.SetActive(true);
         Start_Panel.SetActive(true);
         UILoading.SetActive(true);
-        UILogin.SetActive(false);
-        yield return new WaitForSeconds(4f);
+        UILogin.SetActive(true);
+        yield return new WaitForSeconds(4.5f);
         Start_Panel.SetActive(false);
         /*
         yield return new WaitForSeconds(1f);
@@ -63,7 +64,7 @@ public class LoadingManager : MonoBehaviour {
         TeamService.Instance.Init();
         GulidService.Instance.Init();
         ChatService.Instance.Init();
-        //SoundManager.Instance.PlayMusic(SoundDefine.Music_Login);
+        SoundManager.Instance.PlayerMusic(SoundDefine.Music_Login);
         // Fake Loading Simulate
         for (float i = 0; i < 1;)
         {

@@ -1,4 +1,5 @@
 ﻿
+using Assets.Scripts.UI.Set;
 using Assets.Scripts.UI.UIQuest;
 using Models;
 using System;
@@ -44,6 +45,7 @@ public class UIManager : Singleton<UIManager>{
 
         this.UIResources.Add(typeof(UIChat), new UIElement() { Resources = "UI/Chat/UIChat", Cache = false, is_shop = true });
         this.UIResources.Add(typeof(UIPopCharMenu), new UIElement() { Resources = "UI/Menu/UIPopCharMenu", Cache = false, is_shop = true });
+        this.UIResources.Add(typeof(UIMusicSet), new UIElement() { Resources = "UI/Set/UIMusicSet", Cache = false, is_shop = true });
         User.Instance.CurrentCharacter_Set_Action += () =>
           {
               this.UIcnt = 0;
@@ -78,6 +80,7 @@ public class UIManager : Singleton<UIManager>{
                 }
                 info.Instance = (GameObject)GameObject.Instantiate(prefab);
             }
+            SoundManager.Instance.PlayerSound(SoundDefine.UI_Win_Open);
             return info.Instance.GetComponent<T>();
         }
         Debug.LogErrorFormat("UIManager->Show<T> Type:{0} not exist", type.Name);
@@ -90,6 +93,7 @@ public class UIManager : Singleton<UIManager>{
         //SoundManager.Instance.PlaySound("ui_close");
         if (this.UIResources.ContainsKey(type))
         {
+            SoundManager.Instance.PlayerSound(SoundDefine.UI_Win_Close);
             UIElement info = this.UIResources[type];
             if(info.Cache)
             {

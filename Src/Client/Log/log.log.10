@@ -1,100 +1,13 @@
-2023-02-08 19:31:43,611 [ 1] INFO  Unity: LoadingManager start
-2023-02-08 19:31:47,910 [ 1] INFO  Unity: DataManager > DataManager()
-2023-02-08 19:31:48,041 [ 1] INFO  Unity: MapDefine.txt
-2023-02-08 19:31:48,063 [ 1] INFO  Unity: CharacterDefine.txt
-2023-02-08 19:31:48,090 [ 1] INFO  Unity: TeleporterDefine.txt
-2023-02-08 19:31:48,106 [ 1] INFO  Unity: SpawnPointDefine.txt
-2023-02-08 19:31:48,134 [ 1] INFO  Unity: NpcDefine.txt
-2023-02-08 19:31:48,164 [ 1] INFO  Unity: ItemDefine.txt
-2023-02-08 19:31:51,838 [ 1] INFO  Unity: UserService->SendLoad: User:5 Password:5
-2023-02-08 19:31:51,841 [ 1] INFO  Unity: ConnectToServer() Start 
-2023-02-08 19:31:51,843 [ 1] INFO  Unity: DoConnect
-2023-02-08 19:31:51,846 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
-2023-02-08 19:31:51,850 [ 1] INFO  Unity: Connect[0] to server 127.0.0.1:8000
-
-2023-02-08 19:31:51,853 [ 1] INFO  Unity: LoadingMesager::OnGameServerConnect :0 reason:Success
-2023-02-08 19:31:52,025 [ 1] INFO  Unity: UserService->OnUserLoad:Success [None]
-2023-02-08 19:31:56,444 [ 1] INFO  Unity: Select Character:[33]来聊天[Wizard] 
-2023-02-08 19:31:57,056 [ 1] INFO  Unity: 进入游戏
-2023-02-08 19:31:57,746 [ 1] INFO  Unity: UserService->SendCharacterEnter: EnterCharacterID :0 EnterCharacterName:来聊天 EnterCharacter_Idx
-2023-02-08 19:31:57,809 [ 1] INFO  Unity: UserService->OnUserGameEnter:Success [None]
-2023-02-08 19:31:57,812 [ 1] INFO  Unity: ItemManager->InitItem :ItemID:1,Count:20
-2023-02-08 19:31:57,813 [ 1] INFO  Unity: ItemManager->InitItem :ItemID:2,Count:20
-2023-02-08 19:31:57,826 [ 1] INFO  Unity: GulidService->SendGulidList
-2023-02-08 19:31:57,828 [ 1] INFO  Unity: GulidService->OnGulidInfo
-2023-02-08 19:31:57,849 [ 1] INFO  Unity: MapService->OnMapCharacterEnter :Map:1 Count:2
-2023-02-08 19:31:57,852 [ 1] INFO  Unity: CharacterManager->AddCharacter:CharacterId:0 CharacterName:来聊天 MapId:1 Entity:(16:pos:(5000,4000,820),dir:(100,0,0),spd:0
-2023-02-08 19:31:57,856 [ 1] INFO  Unity: EntityManager AddEntity EntityId :16 
-2023-02-08 19:31:57,860 [ 1] INFO  Unity: CharacterManager->AddCharacter:CharacterId:0 CharacterName:天天太难 MapId:1 Entity:(13:pos:(4938,3944,799),dir:(-100,7,0),spd:0
-2023-02-08 19:31:57,863 [ 1] INFO  Unity: EntityManager AddEntity EntityId :13 
-2023-02-08 19:31:57,866 [ 1] INFO  Unity: FriendService->OnFriendList
-2023-02-08 19:31:57,867 [ 1] INFO  Unity: GulidService->OnGulidInfo
-2023-02-08 19:31:58,766 [ 1] INFO  Unity: GulidService->OnGulidList
-2023-02-08 19:32:01,437 [ 1] WARN  Unity: DontDestroyOnLoad only work for root GameObjects or components on root GameObjects.
-UnityEngine.Object:DontDestroyOnLoad(Object)
-MonoSingleton`1:Awake() (at Assets/Scripts/Utilities/MonoSingleton.cs:32)
-
-2023-02-08 19:32:01,438 [ 1] WARN  Unity: DontDestroyOnLoad only work for root GameObjects or components on root GameObjects.
-UnityEngine.Object:DontDestroyOnLoad(Object)
-MonoSingleton`1:Awake() (at Assets/Scripts/Utilities/MonoSingleton.cs:32)
-
-2023-02-08 19:32:01,439 [ 1] WARN  Unity: DontDestroyOnLoad only work for root GameObjects or components on root GameObjects.
-UnityEngine.Object:DontDestroyOnLoad(Object)
-MonoSingleton`1:Awake() (at Assets/Scripts/Utilities/MonoSingleton.cs:32)
-
-2023-02-08 19:32:01,440 [ 1] WARN  Unity: DontDestroyOnLoad only work for root GameObjects or components on root GameObjects.
-UnityEngine.Object:DontDestroyOnLoad(Object)
-MonoSingleton`1:Awake() (at Assets/Scripts/Utilities/MonoSingleton.cs:32)
-
-2023-02-08 19:32:01,539 [ 1] INFO  Unity: MinimapManager->UpdataMiniMap
-2023-02-08 19:32:01,540 [ 1] INFO  Unity: Load MiniMap Image :buluzheng
-2023-02-08 19:32:01,545 [ 1] INFO  Unity: Load MiniMap Image :buluzheng
-2023-02-08 19:32:01,549 [ 1] INFO  Unity: GameObjectManager->CreateCharacterObject CharacterId:16 CharacterName:来聊天 CharacterEntityId:16
-2023-02-08 19:32:01,614 [ 1] INFO  Unity: GameObjectManager->InitGameObject Player_character:16
-2023-02-08 19:32:01,616 [ 1] INFO  Unity: Load MiniMap Image :buluzheng
-2023-02-08 19:32:01,617 [ 1] INFO  Unity: Load MiniMap Image :buluzheng
-2023-02-08 19:32:01,818 [ 1] INFO  Unity: GameObjectManager->CreateCharacterObject CharacterId:13 CharacterName:天天太难 CharacterEntityId:13
-2023-02-08 19:32:09,984 [ 1] ERROR Unity: c:34:天天太难
-UnityEngine.Debug:LogError(Object)
-UIChat:OnchickChatLink(HyperText, LinkInfo) (at Assets/Scripts/UI/Chat/UIChat.cs:65)
-UnityEngine.Events.UnityEvent`2:Invoke(HyperText, LinkInfo)
-Candlelight.UI.HyperText:OnClickLink(Link) (at Assets/ThirdParty/Candlelight/Library/GUI/HyperText.cs:1383)
-Candlelight.UI.HyperText:OnPointerClick(PointerEventData) (at Assets/ThirdParty/Candlelight/Library/GUI/HyperText.cs:1916)
-UnityEngine.EventSystems.EventSystem:Update()
-
-2023-02-08 19:32:13,414 [ 1] INFO  Unity: 是否向[天天太难]发送组队申请
-2023-02-08 19:32:14,211 [ 1] INFO  Unity: TeamService->SendTeamInviteRequest Id:34 Name:天天太难
-2023-02-08 19:32:14,261 [ 1] INFO  Unity: TeamService->OnTeamInviteResponse
-2023-02-08 19:32:14,263 [ 1] INFO  Unity: 对方已经有队伍
-2023-02-08 19:32:20,407 [ 1] ERROR Unity: c:34:天天太难
-UnityEngine.Debug:LogError(Object)
-UIChat:OnchickChatLink(HyperText, LinkInfo) (at Assets/Scripts/UI/Chat/UIChat.cs:65)
-UnityEngine.Events.UnityEvent`2:Invoke(HyperText, LinkInfo)
-Candlelight.UI.HyperText:OnClickLink(Link) (at Assets/ThirdParty/Candlelight/Library/GUI/HyperText.cs:1383)
-Candlelight.UI.HyperText:OnPointerClick(PointerEventData) (at Assets/ThirdParty/Candlelight/Library/GUI/HyperText.cs:1916)
-UnityEngine.EventSystems.EventSystem:Update()
-
-2023-02-08 19:32:21,357 [ 1] INFO  Unity: 是否向[天天太难]发送组队申请
-2023-02-08 19:32:22,242 [ 1] INFO  Unity: TeamService->SendTeamInviteRequest Id:34 Name:天天太难
-2023-02-08 19:32:24,183 [ 1] INFO  Unity: FriendService->OnFriendList
-2023-02-08 19:32:24,185 [ 1] INFO  Unity: TeamService->OnTeamInfo
-2023-02-08 19:32:24,216 [ 1] INFO  Unity: FriendService->OnFriendList
-2023-02-08 19:32:24,218 [ 1] INFO  Unity: TeamService->OnTeamInviteResponse
-2023-02-08 19:32:24,220 [ 1] INFO  Unity: 组队成功
-2023-02-08 19:32:24,225 [ 1] INFO  Unity: TeamService->SendTeamInfo
-2023-02-08 19:32:24,234 [ 1] FATAL Unity: <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>{0
-{1}</format><args>{NullReferenceException: Object reference not set to an instance of an object, TabView+<Start>c__Iterator0.MoveNext () (at Assets/Scripts/UI/TabView/TabView.cs:18)
-UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) (at D:/unity/Runtime/Export/Coroutines.cs:17)
-}</args></log4net.Error>
-2023-02-08 19:32:24,356 [ 1] INFO  Unity: FriendService->OnFriendList
-2023-02-08 19:32:24,358 [ 1] INFO  Unity: TeamService->OnTeamInfo
-2023-02-08 19:32:57,773 [ 1] FATAL Unity: <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>{0
-{1}</format><args>{NullReferenceException: Object reference not set to an instance of an object, UIChat.OnDestroy () (at Assets/Scripts/UI/Chat/UIChat.cs:37)
-}</args></log4net.Error>
-2023-02-08 19:32:57,779 [ 1] INFO  Unity: Entity Character_16_来聊天 OnDestroy :ID:16 POS:(5000, 4000, 820) DIR:(100, 0, 0) SPD:0 
-2023-02-08 19:32:57,781 [ 1] INFO  Unity: Entity Character_13_天天太难 OnDestroy :ID:13 POS:(4938, 3944, 799) DIR:(-100, 7, 0) SPD:0 
-2023-02-08 19:32:57,789 [ 1] INFO  Unity: OnDestroy NetworkManager.
-2023-02-08 19:32:57,792 [ 1] WARN  Unity: CloseConnection(), errorCode: 1007
+2023-02-10 20:11:25,478 [ 1] INFO  Unity: LoadingManager start
+2023-02-10 20:11:30,484 [ 1] INFO  Unity: DataManager > DataManager()
+2023-02-10 20:11:30,582 [ 1] INFO  Unity: MapDefine.txt
+2023-02-10 20:11:30,596 [ 1] INFO  Unity: CharacterDefine.txt
+2023-02-10 20:11:30,623 [ 1] INFO  Unity: TeleporterDefine.txt
+2023-02-10 20:11:30,632 [ 1] INFO  Unity: SpawnPointDefine.txt
+2023-02-10 20:11:30,651 [ 1] INFO  Unity: NpcDefine.txt
+2023-02-10 20:11:30,669 [ 1] INFO  Unity: ItemDefine.txt
+2023-02-10 20:11:33,213 [ 1] INFO  Unity: OnDestroy NetworkManager.
+2023-02-10 20:11:33,215 [ 1] WARN  Unity: CloseConnection(), errorCode: 1007
 UnityEngine.Debug:LogWarning(Object)
 Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:180)
 Network.NetClient:OnDestroy() (at Assets/Scripts/Network/NetClient.cs:175)

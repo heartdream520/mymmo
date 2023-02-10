@@ -1,5 +1,6 @@
 ﻿using Assets.Scripts.Managers;
 using Assets.Scripts.Services;
+using Assets.Scripts.UI.Set;
 using Common.Data;
 using Models;
 using System;
@@ -28,6 +29,7 @@ public class UIFriend : UIWindow
     }
     private void OnFriendListViewSelected(ListView.ListViewItem arg0)
     {
+        SoundManager.Instance.PlayerSound(SoundDefine.UI_Click);
         this.selectedItem = (UIFriendItem)arg0;
     }
     private void RefreshUI()

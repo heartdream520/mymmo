@@ -2,6 +2,7 @@
 using Assets.Scripts.Models;
 using Assets.Scripts.Service;
 using Assets.Scripts.Services;
+using Assets.Scripts.UI.Set;
 using Assets.Scripts.UI.UIQuest;
 using Common.Data;
 using Models;

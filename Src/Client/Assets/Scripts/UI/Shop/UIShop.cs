@@ -1,4 +1,5 @@
-﻿using Common.Data;
+﻿using Assets.Scripts.UI.Set;
+using Common.Data;
 using Models;
 using System;
 using System.Collections;
@@ -59,6 +60,7 @@ public class UIShop : UIWindow
     {
         if (selectedItem != null)
             selectedItem.Selected = false;
+        SoundManager.Instance.PlayerSound(SoundDefine.UI_Click);
         selectedItem = uIShopItem;
     }
     public void OnChickBuy()

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using Services;
+using Assets.Scripts.UI.Set;
 
 public class UIRegister : MonoBehaviour {
 
@@ -36,6 +37,7 @@ public class UIRegister : MonoBehaviour {
             MessageBox.Show("注册成功！");
             return;
         }
+
         MessageBox.Show(string.Format("结果：{0} msg:{1}",result,msg));
     }
 	// Update is called once per frame
@@ -65,6 +67,7 @@ public class UIRegister : MonoBehaviour {
             MessageBox.Show("两次输入的密码不一致");
             return;
         }
+        SoundManager.Instance.PlayerSound(SoundDefine.UI_Click);
         UserService.Instance.SendRegister(this.username.text, this.password.text);
     }
 }

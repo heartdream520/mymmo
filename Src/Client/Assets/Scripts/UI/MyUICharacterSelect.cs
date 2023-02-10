@@ -7,6 +7,7 @@ using UnityEngine.EventSystems;
 using SkillBridge.Message;
 using System;
 using Models;
+using Assets.Scripts.UI.Set;
 
 public class MyUICharacterSelect : MonoBehaviour {
 
@@ -101,6 +102,7 @@ public class MyUICharacterSelect : MonoBehaviour {
 
     public void onchick_select_class_button(int cla)
     {
+        SoundManager.Instance.PlayerSound(SoundDefine.UI_Click);
         Now_Selected_Char =(CharacterClass) cla;
     }
     /// <summary>
@@ -118,6 +120,7 @@ public class MyUICharacterSelect : MonoBehaviour {
             MessageBox.Show("请输入昵称！");
             return;
         }
+        SoundManager.Instance.PlayerSound(SoundDefine.UI_Click);
         Debug.LogFormat("creat character: class:{0}  name:{1}", Now_Selected_Char, character_name_InputField.text);
         Services.UserService.Instance.SendCharacterCreate(Now_Selected_Char,character_name_InputField.text);
         

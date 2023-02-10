@@ -12,7 +12,7 @@ using SkillBridge.Message;
 using Models;
 using Assets.Scripts.Managers;
 using Assets.Scripts.Services;
-
+using Assets.Scripts.UI.Set;
 
 public class UICreatGulid : UIWindow {
 
@@ -28,7 +28,8 @@ public class UICreatGulid : UIWindow {
     }
     public void OnchickCreatGulidButton()
     {
-        if(string.IsNullOrEmpty(name.text))
+        SoundManager.Instance.PlayerSound(SoundDefine.UI_Click);
+        if (string.IsNullOrEmpty(name.text))
         {
             MessageBox.Show("请输入公会名称","公会");
             return;

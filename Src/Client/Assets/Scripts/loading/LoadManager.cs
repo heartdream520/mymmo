@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using Assets.Scripts.UI.Set;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -130,10 +131,12 @@ public class LoadManager :MonoSingleton<LoadManager>
 
     public void onchick_goto_enroll_button()
     {
+        SoundManager.Instance.PlayerSound(SoundDefine.UI_Click);
         Now_State = state.ENROLL;
     }
     public void onchick_goto_load_button()
     {
+        SoundManager.Instance.PlayerSound(SoundDefine.UI_Click);
         Now_State = state.LOAD;
     }
 

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using Assets.Scripts.UI.Set;
 
 public class lode_scene : MonoBehaviour
 {
@@ -31,6 +32,11 @@ public class lode_scene : MonoBehaviour
             yield return new WaitForEndOfFrame();
         }
         async.allowSceneActivation = true;
+        string music=GameDataManager.GetString("music");
+        if (!string.IsNullOrEmpty(music))
+        {
+            SoundManager.Instance.PlayerMusic(music);
+        }
         yield return null;
 
     }

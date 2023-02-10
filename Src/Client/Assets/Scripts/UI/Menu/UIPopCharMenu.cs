@@ -2,6 +2,7 @@
 using Assets.Scripts.Models;
 using Assets.Scripts.Service;
 using Assets.Scripts.Services;
+using Assets.Scripts.UI.Set;
 using SkillBridge.Message;
 using System;
 using System.Collections;
@@ -20,6 +21,7 @@ public class UIPopCharMenu : UIMenu
     }
     public void OnChat()
     {
+        SoundManager.Instance.PlayerSound(SoundDefine.UI_Click);
         ChatManager.Instance.StartPrivateChat(targerId, targerName);
         this.Root.GetComponent<UIChat>().RefreshUI();
         this.OnClick_Close();

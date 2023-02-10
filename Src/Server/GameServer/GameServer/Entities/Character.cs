@@ -129,7 +129,8 @@ namespace GameServer.Entities
             {
                 this.Gulid.timestamp = TimeUtil.timestamp;
                 var dbGulidMember = DBService.Instance.Entities.TGulidMembers.FirstOrDefault(v => v.CharacterId == this.Id);
-                dbGulidMember.LastLoadTime = DateTime.Now;
+                if (dbGulidMember != null)
+                    dbGulidMember.LastLoadTime = DateTime.Now;
                 this.Gulid.SendMessageToLoadMember();
             }
         }

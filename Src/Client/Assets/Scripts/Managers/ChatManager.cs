@@ -2,6 +2,7 @@
 using Assets.Scripts.Models;
 using Assets.Scripts.Service;
 using Assets.Scripts.Services;
+using Assets.Scripts.UI.Set;
 using Models;
 using SkillBridge.Message;
 using System;
@@ -118,6 +119,7 @@ namespace Assets.Scripts.Managers
                 if (User.Instance.TeamInfo == null)
                 {
                     this.AddSystemMessage("你没有加入任何队伍");
+                    SoundManager.Instance.PlayerSound(SoundDefine.UI_Message_Error);
                     return false;
                 }
             }
@@ -126,6 +128,7 @@ namespace Assets.Scripts.Managers
                 if (GulidManager.Instance.Gulid_Info==null)
                 {
                     this.AddSystemMessage("你没有加入任何公会");
+                    SoundManager.Instance.PlayerSound(SoundDefine.UI_Message_Error);
                     return false;
                 }
             }

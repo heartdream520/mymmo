@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Assets.Scripts.UI.Set;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -21,6 +22,7 @@ public class ListView : MonoBehaviour
             {
                 selectedItem.Selected = false;
             }
+            SoundManager.Instance.PlayerSound(SoundDefine.UI_Click);
             selectedItem = value;
             if (onItemSelected != null)
                 onItemSelected.Invoke((ListViewItem)value);

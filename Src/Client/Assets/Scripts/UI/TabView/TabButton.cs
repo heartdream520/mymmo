@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using Assets.Scripts.UI.Set;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -33,6 +34,7 @@ public class TabButton : MonoBehaviour {
 
     void OnClick()
     {
+        SoundManager.Instance.PlayerSound(SoundDefine.UI_Click);
         this.tabView.SelectTab(this.tabIndex);
     }
 

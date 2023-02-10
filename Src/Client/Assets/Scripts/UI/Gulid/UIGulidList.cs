@@ -8,6 +8,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using SkillBridge.Message;
+using Assets.Scripts.UI.Set;
 
 public class UIGulidList : UIWindow
 {
@@ -76,6 +77,7 @@ public class UIGulidList : UIWindow
             MessageBox.Show("请选择要加入的公会", "公会");
             return;
         }
+        SoundManager.Instance.PlayerSound(SoundDefine.UI_Click);
         GulidService.Instance.SendJoinGulidRequest(User.Instance.CurrentCharacter.Id,selected_Item.info.Id);
     }
 }

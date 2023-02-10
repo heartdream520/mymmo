@@ -1,5 +1,6 @@
 ﻿using Assets.Scripts.Managers;
 using Assets.Scripts.Models;
+using Assets.Scripts.UI.Set;
 using Common.Data;
 using Models;
 using SkillBridge.Message;
@@ -42,6 +43,7 @@ public class UICharEquip : UIWindow {
                 this.Char_attribute_Panel.SetActive(false);
                 this.Equip_attribute_Panel.SetActive(true);
                 this.Equip_attribute_Panel.GetComponent<Equip_attribute>().set_Equip_attribute(value.Item);
+                SoundManager.Instance.PlayerSound(SoundDefine.UI_Click);
             }
         }
     }

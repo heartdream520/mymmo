@@ -1,4 +1,5 @@
 ﻿using Assets.Scripts.Managers;
+using Assets.Scripts.UI.Set;
 using Common.Data;
 using Models;
 using SkillBridge.Message;
@@ -89,6 +90,7 @@ public class UIBag : UIWindow
     }
     public void OnReset()
     {
+        SoundManager.Instance.PlayerSound(SoundDefine.UI_Click);
         BagManager.Instance.Reset();
         this.clear_Bag();
         StartCoroutine(InitBags());

@@ -1,4 +1,5 @@
-﻿using Models;
+﻿using Assets.Scripts.UI.Set;
+using Models;
 using Services;
 using System;
 using System.Collections;
@@ -43,6 +44,10 @@ public class UICharacterView : MonoBehaviour {
             character_Scale.selected_character(value+1);
         }
     }
+    private void Start()
+    {
+        SoundManager.Instance.PlayerMusic(SoundDefine.Music_Select);
+    }
     private void OnEnable()
     {
         selectCharacterIdx = -1;
@@ -84,6 +89,8 @@ public class UICharacterView : MonoBehaviour {
     /// <param name="idx"></param>
     private void OnSelect_UI_character(int idx)
     {
+        if (this.selectCharacterIdx == idx) return;
+        SoundManager.Instance.PlayerSound(SoundDefine.UI_Click);
         var cha = User.Instance.Info.Player.Characters[idx];
         character_Scale.id= (int)cha.Class - 1;
         CurrectCharacter =(int)cha.Class - 1;
@@ -113,5 +120,9 @@ public class UICharacterView : MonoBehaviour {
                 //Debug.LogErrorFormat("TES函数执行了！");
             };
         }
+    }
+    public void OnChickButtonPlaySound()
+    {
+        SoundManager.Instance.PlayerSound(SoundDefine.UI_Click);
     }
 }

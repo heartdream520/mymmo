@@ -1,5 +1,6 @@
 ﻿using Assets.Scripts.Managers;
 using Assets.Scripts.Services;
+using Assets.Scripts.UI.Set;
 using Candlelight.UI;
 using Common.Data;
 using Models;
@@ -36,8 +37,8 @@ public class UIChat : UIWindow {
     {
         this.tabView.OnTabSelect -= this.OnDisPlayChannelSelect;
         ChatManager.Instance.OnChatAction -= this.RefreshUI;
-
-        InputManager.Instance.inputFields.Add(this.chatText);
+        if (InputManager.Instance.inputFields.Contains(this.chatText))
+            InputManager.Instance.inputFields.Remove(this.chatText);
 
     }
     private void OnDisPlayChannelSelect(int selected)
@@ -72,11 +73,12 @@ public class UIChat : UIWindow {
     }
     public void OnchickChatLink(HyperText text,HyperText.LinkInfo link)
     {
-        Debug.LogError(link.Name);
+        //Debug.LogError(link.Name);
         if (string.IsNullOrEmpty(link.Name))
             return;
         if(link.Name.StartsWith("c:"))
         {
+            SoundManager.Instance.PlayerSound(SoundDefine.UI_Click);
             string[] strs = link.Name.Split(":".ToCharArray());
             var menu = UIManager.Instance.Show<UIPopCharMenu>();
             menu.targerId = int.Parse(strs[1]);
@@ -129,8 +131,12 @@ public class UIChat : UIWindow {
             this.channelSelected_DropDown.value = (int)(ChatManager.Instance.sendChannel - 1);
         }
         else
+        {
             //改变成功刷新UI
             this.RefreshUI();
+            SoundManager.Instance.PlayerSound(SoundDefine.UI_Click);
+        }
+            
 
     }
 }

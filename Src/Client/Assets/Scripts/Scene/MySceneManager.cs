@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using Common.Data;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
@@ -18,9 +19,12 @@ public class MySceneManager : MonoSingleton<MySceneManager>
 		
 	}
 
-    public void LoadScene(string name)
+    public void LoadScene(string name,MapDefine map=null)
     {
         GameDataManager.SetString("lodeing_scene",name);
+        if(map!=null)
+        GameDataManager.SetString("music",map.Music);
+        else GameDataManager.SetString("music", "");
         UnityEngine.SceneManagement.SceneManager.LoadScene("Load_Scenes");
         //StartCoroutine(LoadLevel(name));
     }

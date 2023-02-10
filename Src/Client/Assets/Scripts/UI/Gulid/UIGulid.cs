@@ -8,7 +8,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using SkillBridge.Message;
-
+using Assets.Scripts.UI.Set;
 
 public class UIGulid :UIWindow
 { 
@@ -203,6 +203,7 @@ public class UIGulid :UIWindow
     }
     public void Onchick_申请列表()
     {
+        SoundManager.Instance.PlayerSound(SoundDefine.UI_Click);
         var x= UIManager.Instance.Show<UIGulidApplies>();
         x.UIGulid = this;
     }

@@ -17,7 +17,7 @@ namespace GameServer.Entities
         {
             this.owner = character;
         }
-        public int localIdx;
+        public int[] localIdx=new int[4] { 0, 1, 2, 3 };
         public int worldIdx;
         public int systemIdx;
         public int teamIdx;
@@ -30,7 +30,7 @@ namespace GameServer.Entities
                 message.Chat = new ChatResponse();
                 message.Chat.Result = Result.Success;
             }
-            this.localIdx = ChatManager.Instance.GetLocalMessage(this.owner.Info.mapId, localIdx, message.Chat.localMessages);
+            this.localIdx[owner.Info.mapId] = ChatManager.Instance.GetLocalMessage(this.owner.Info.mapId, localIdx[owner.Info.mapId], message.Chat.localMessages);
             this.worldIdx = ChatManager.Instance.GetWorldMessage( worldIdx, message.Chat.worldMessages);
             this.systemIdx = ChatManager.Instance.GetSystemMessage(systemIdx, message.Chat.systemMessages);
             if(this.owner.team!=null)

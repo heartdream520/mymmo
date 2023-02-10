@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using Assets.Scripts.UI.Set;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
@@ -48,6 +49,14 @@ public class UIMessageBox :MonoBehaviour
     /// <param name="btnCancel"></param>
     public void Init(string title, string message, MessageBoxType type = MessageBoxType.Information, string btnOK = "", string btnCancel = "")
     {
+        if(type==MessageBoxType.Error)
+        {
+            SoundManager.Instance.PlayerSound(SoundDefine.UI_Message_Error);
+        }
+        else
+        {
+            SoundManager.Instance.PlayerSound(SoundDefine.UI_Message_Info);
+        }
         if (!string.IsNullOrEmpty(title)) this.title.text = title;
         this.message.text = message;
         this.icons[0].enabled = type == MessageBoxType.Information;
@@ -65,7 +74,7 @@ public class UIMessageBox :MonoBehaviour
 
     public void OnClickYes()
     {
-        
+        SoundManager.Instance.PlayerSound(SoundDefine.UI_Accept);
         if (this.OnYes != null)
             this.OnYes();
         Destroy(this.gameObject);
@@ -73,7 +82,8 @@ public class UIMessageBox :MonoBehaviour
 
     public void OnClickNo()
     {
-        
+
+        SoundManager.Instance.PlayerSound(SoundDefine.UI_Click);
         if (this.OnNo != null)
             this.OnNo();
         Destroy(this.gameObject);

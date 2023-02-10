@@ -1,102 +1,14 @@
-2023-02-08 19:34:55,158 [ 1] INFO  Unity: LoadingManager start
-2023-02-08 19:34:59,549 [ 1] INFO  Unity: DataManager > DataManager()
-2023-02-08 19:34:59,676 [ 1] INFO  Unity: MapDefine.txt
-2023-02-08 19:34:59,701 [ 1] INFO  Unity: CharacterDefine.txt
-2023-02-08 19:34:59,736 [ 1] INFO  Unity: TeleporterDefine.txt
-2023-02-08 19:34:59,750 [ 1] INFO  Unity: SpawnPointDefine.txt
-2023-02-08 19:34:59,771 [ 1] INFO  Unity: NpcDefine.txt
-2023-02-08 19:34:59,796 [ 1] INFO  Unity: ItemDefine.txt
-2023-02-08 19:35:03,136 [ 1] INFO  Unity: UserService->SendLoad: User:5 Password:5
-2023-02-08 19:35:03,138 [ 1] INFO  Unity: ConnectToServer() Start 
-2023-02-08 19:35:03,139 [ 1] INFO  Unity: DoConnect
-2023-02-08 19:35:03,142 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
-2023-02-08 19:35:03,145 [ 1] INFO  Unity: Connect[0] to server 127.0.0.1:8000
-
-2023-02-08 19:35:03,164 [ 1] INFO  Unity: LoadingMesager::OnGameServerConnect :0 reason:Success
-2023-02-08 19:35:03,352 [ 1] INFO  Unity: UserService->OnUserLoad:Success [None]
-2023-02-08 19:35:07,709 [ 1] INFO  Unity: Select Character:[33]来聊天[Wizard] 
-2023-02-08 19:35:08,654 [ 1] INFO  Unity: 进入游戏
-2023-02-08 19:35:09,387 [ 1] INFO  Unity: UserService->SendCharacterEnter: EnterCharacterID :0 EnterCharacterName:来聊天 EnterCharacter_Idx
-2023-02-08 19:35:09,476 [ 1] INFO  Unity: UserService->OnUserGameEnter:Success [None]
-2023-02-08 19:35:09,479 [ 1] INFO  Unity: ItemManager->InitItem :ItemID:1,Count:20
-2023-02-08 19:35:09,481 [ 1] INFO  Unity: ItemManager->InitItem :ItemID:2,Count:20
-2023-02-08 19:35:09,494 [ 1] INFO  Unity: GulidService->SendGulidList
-2023-02-08 19:35:09,496 [ 1] INFO  Unity: GulidService->OnGulidInfo
-2023-02-08 19:35:09,499 [ 1] INFO  Unity: MapService->OnMapCharacterEnter :Map:1 Count:2
-2023-02-08 19:35:09,502 [ 1] INFO  Unity: CharacterManager->AddCharacter:CharacterId:0 CharacterName:来聊天 MapId:1 Entity:(18:pos:(5000,4000,820),dir:(100,0,0),spd:0
-2023-02-08 19:35:09,505 [ 1] INFO  Unity: EntityManager AddEntity EntityId :18 
-2023-02-08 19:35:09,506 [ 1] INFO  Unity: CharacterManager->AddCharacter:CharacterId:0 CharacterName:天天太难 MapId:1 Entity:(13:pos:(4938,3944,799),dir:(-100,7,0),spd:0
-2023-02-08 19:35:09,509 [ 1] INFO  Unity: EntityManager AddEntity EntityId :13 
-2023-02-08 19:35:09,511 [ 1] INFO  Unity: FriendService->OnFriendList
-2023-02-08 19:35:09,512 [ 1] INFO  Unity: GulidService->OnGulidInfo
-2023-02-08 19:35:10,618 [ 1] INFO  Unity: GulidService->OnGulidList
-2023-02-08 19:35:12,855 [ 1] WARN  Unity: DontDestroyOnLoad only work for root GameObjects or components on root GameObjects.
-UnityEngine.Object:DontDestroyOnLoad(Object)
-MonoSingleton`1:Awake() (at Assets/Scripts/Utilities/MonoSingleton.cs:32)
-
-2023-02-08 19:35:12,859 [ 1] WARN  Unity: DontDestroyOnLoad only work for root GameObjects or components on root GameObjects.
-UnityEngine.Object:DontDestroyOnLoad(Object)
-MonoSingleton`1:Awake() (at Assets/Scripts/Utilities/MonoSingleton.cs:32)
-
-2023-02-08 19:35:12,861 [ 1] WARN  Unity: DontDestroyOnLoad only work for root GameObjects or components on root GameObjects.
-UnityEngine.Object:DontDestroyOnLoad(Object)
-MonoSingleton`1:Awake() (at Assets/Scripts/Utilities/MonoSingleton.cs:32)
-
-2023-02-08 19:35:12,864 [ 1] WARN  Unity: DontDestroyOnLoad only work for root GameObjects or components on root GameObjects.
-UnityEngine.Object:DontDestroyOnLoad(Object)
-MonoSingleton`1:Awake() (at Assets/Scripts/Utilities/MonoSingleton.cs:32)
-
-2023-02-08 19:35:12,943 [ 1] INFO  Unity: MinimapManager->UpdataMiniMap
-2023-02-08 19:35:12,945 [ 1] INFO  Unity: Load MiniMap Image :buluzheng
-2023-02-08 19:35:12,952 [ 1] INFO  Unity: Load MiniMap Image :buluzheng
-2023-02-08 19:35:12,956 [ 1] INFO  Unity: GameObjectManager->CreateCharacterObject CharacterId:18 CharacterName:来聊天 CharacterEntityId:18
-2023-02-08 19:35:13,022 [ 1] INFO  Unity: GameObjectManager->InitGameObject Player_character:18
-2023-02-08 19:35:13,027 [ 1] INFO  Unity: Load MiniMap Image :buluzheng
-2023-02-08 19:35:13,030 [ 1] INFO  Unity: Load MiniMap Image :buluzheng
-2023-02-08 19:35:13,222 [ 1] INFO  Unity: GameObjectManager->CreateCharacterObject CharacterId:13 CharacterName:天天太难 CharacterEntityId:13
-2023-02-08 19:35:21,256 [ 1] ERROR Unity: c:34:天天太难
-UnityEngine.Debug:LogError(Object)
-UIChat:OnchickChatLink(HyperText, LinkInfo) (at Assets/Scripts/UI/Chat/UIChat.cs:65)
-UnityEngine.Events.UnityEvent`2:Invoke(HyperText, LinkInfo)
-Candlelight.UI.HyperText:OnClickLink(Link) (at Assets/ThirdParty/Candlelight/Library/GUI/HyperText.cs:1383)
-Candlelight.UI.HyperText:OnPointerClick(PointerEventData) (at Assets/ThirdParty/Candlelight/Library/GUI/HyperText.cs:1916)
-UnityEngine.EventSystems.EventSystem:Update()
-
-2023-02-08 19:35:22,234 [ 1] INFO  Unity: 是否向[天天太难]发送组队申请
-2023-02-08 19:35:23,021 [ 1] INFO  Unity: TeamService->SendTeamInviteRequest Id:34 Name:天天太难
-2023-02-08 19:35:24,500 [ 1] INFO  Unity: FriendService->OnFriendList
-2023-02-08 19:35:24,501 [ 1] INFO  Unity: TeamService->OnTeamInfo
-2023-02-08 19:35:24,529 [ 1] INFO  Unity: FriendService->OnFriendList
-2023-02-08 19:35:24,531 [ 1] INFO  Unity: TeamService->OnTeamInviteResponse
-2023-02-08 19:35:24,532 [ 1] INFO  Unity: 组队成功
-2023-02-08 19:35:24,536 [ 1] INFO  Unity: TeamService->SendTeamInfo
-2023-02-08 19:35:24,542 [ 1] FATAL Unity: <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>{0
-{1}</format><args>{NullReferenceException: Object reference not set to an instance of an object, TabView+<Start>c__Iterator0.MoveNext () (at Assets/Scripts/UI/TabView/TabView.cs:18)
-UnityEngine.SetupCoroutine.InvokeMoveNext (IEnumerator enumerator, IntPtr returnValueAddress) (at D:/unity/Runtime/Export/Coroutines.cs:17)
-}</args></log4net.Error>
-2023-02-08 19:35:24,623 [ 1] INFO  Unity: FriendService->OnFriendList
-2023-02-08 19:35:24,625 [ 1] INFO  Unity: TeamService->OnTeamInfo
-2023-02-08 19:35:41,558 [ 1] ERROR Unity: c:34:天天太难
-UnityEngine.Debug:LogError(Object)
-UIChat:OnchickChatLink(HyperText, LinkInfo) (at Assets/Scripts/UI/Chat/UIChat.cs:65)
-UnityEngine.Events.UnityEvent`2:Invoke(HyperText, LinkInfo)
-Candlelight.UI.HyperText:OnClickLink(Link) (at Assets/ThirdParty/Candlelight/Library/GUI/HyperText.cs:1383)
-Candlelight.UI.HyperText:OnPointerClick(PointerEventData) (at Assets/ThirdParty/Candlelight/Library/GUI/HyperText.cs:1916)
-UnityEngine.EventSystems.EventSystem:Update()
-
-2023-02-08 19:35:45,259 [ 1] ERROR Unity: 
-UnityEngine.Debug:LogError(Object)
-UIChat:OnchickChatLink(HyperText, LinkInfo) (at Assets/Scripts/UI/Chat/UIChat.cs:65)
-UnityEngine.Events.UnityEvent`2:Invoke(HyperText, LinkInfo)
-Candlelight.UI.HyperText:OnClickLink(Link) (at Assets/ThirdParty/Candlelight/Library/GUI/HyperText.cs:1383)
-Candlelight.UI.HyperText:OnPointerClick(PointerEventData) (at Assets/ThirdParty/Candlelight/Library/GUI/HyperText.cs:1916)
-UnityEngine.EventSystems.EventSystem:Update()
-
-2023-02-08 19:35:50,786 [ 1] INFO  Unity: OnDestroy NetworkManager.
-2023-02-08 19:35:50,787 [ 1] WARN  Unity: CloseConnection(), errorCode: 1007
+2023-02-10 20:12:53,173 [ 1] INFO  Unity: LoadingManager start
+2023-02-10 20:12:58,117 [ 1] INFO  Unity: DataManager > DataManager()
+2023-02-10 20:12:58,204 [ 1] INFO  Unity: MapDefine.txt
+2023-02-10 20:12:58,220 [ 1] INFO  Unity: CharacterDefine.txt
+2023-02-10 20:12:58,249 [ 1] INFO  Unity: TeleporterDefine.txt
+2023-02-10 20:12:58,258 [ 1] INFO  Unity: SpawnPointDefine.txt
+2023-02-10 20:12:58,271 [ 1] INFO  Unity: NpcDefine.txt
+2023-02-10 20:12:58,292 [ 1] INFO  Unity: ItemDefine.txt
+2023-02-10 20:13:03,285 [ 1] INFO  Unity: OnDestroy NetworkManager.
+2023-02-10 20:13:03,286 [ 1] WARN  Unity: CloseConnection(), errorCode: 1007
 UnityEngine.Debug:LogWarning(Object)
 Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:180)
 Network.NetClient:OnDestroy() (at Assets/Scripts/Network/NetClient.cs:175)
 
-2023-02-08 19:35:50,805 [ 1] INFO  Unity: Entity Character_18_来聊天 OnDestroy :ID:18 POS:(5000, 4000, 820) DIR:(100, 0, 0) SPD:0 
-2023-02-08 19:35:50,807 [ 1] INFO  Unity: Entity Character_13_天天太难 OnDestroy :ID:13 POS:(4938, 3944, 799) DIR:(-100, 7, 0) SPD:0 

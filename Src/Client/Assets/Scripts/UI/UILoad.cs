@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using Services;
+using Assets.Scripts.UI.Set;
 
 public class UILoad : MonoBehaviour
 {
@@ -40,8 +41,10 @@ public class UILoad : MonoBehaviour
         }
         if (result == SkillBridge.Message.Result.Success)
         {
+            
             //MessageBox.Show("登录成功！");
             MySceneManager.Instance.LoadScene("CharSelect");
+            
             return;
         }
         MessageBox.Show(string.Format("结果：{0} msg:{1}", result, msg));
@@ -68,6 +71,7 @@ public class UILoad : MonoBehaviour
             MessageBox.Show("请输入密码");
             return;
         }
+        SoundManager.Instance.PlayerSound(SoundDefine.UI_Click);
         UserService.Instance.SendLoad(this.username.text, this.password.text);
     }
 

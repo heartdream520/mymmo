@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using Assets.Scripts.UI.Set;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
@@ -52,6 +53,7 @@ public class UIInputBox : MonoBehaviour
     /// <param name="btnCancel"></param>
     public void Init(string title, string message, string btnOK = "", string btnCancel = "",string tips="")
     {
+        SoundManager.Instance.PlayerSound(SoundDefine.UI_Message_Info);
         if (!string.IsNullOrEmpty(title)) this.title.text = title;
         this.message.text = message;
 
@@ -75,6 +77,7 @@ public class UIInputBox : MonoBehaviour
         if (string.IsNullOrEmpty(this.InputField.text))
         {
             this.tips.text = this.emptyTips;
+            
             return;
         }
         if(this.Onsumbit!=null)
@@ -83,6 +86,7 @@ public class UIInputBox : MonoBehaviour
             if(! this.Onsumbit(this.InputField.text,out tips))
             {
                 this.tips.text = tips;
+                SoundManager.Instance.PlayerSound(SoundDefine.UI_Message_Error);
                 return;
             }
         }
@@ -94,7 +98,7 @@ public class UIInputBox : MonoBehaviour
 
     public void OnClickNo()
     {
-
+        SoundManager.Instance.PlayerSound(SoundDefine.UI_Message_Error);
         if (this.OnNo != null)
             this.OnNo();
         Destroy(this.gameObject);

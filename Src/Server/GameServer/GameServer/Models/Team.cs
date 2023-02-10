@@ -61,7 +61,7 @@ namespace GameServer.Models
         }
         public void PostProcess(NetMessageResponse message)
         {
-            if(message.teamInfo==null)
+           // if(message.teamInfo==null)
             {
                 message.teamInfo = new TeamInfoResponse();
                 message.teamInfo.Result = Result.Success;
